@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 include_once "../engine/loader.php";
 
 if($_POST['action'] == "login"){
@@ -7,9 +7,9 @@ if($_POST['action'] == "login"){
     $Users->upass = $_POST['upass'];
 
     try {
-        if ($conn->LoginUser()) {
+        if ($Users->LoginUser()) {
             echo "1";
-        } elseif (!$conn->LoginUser()) {
+        } elseif (!$Users->LoginUser()) {
             echo "2";
         } else{
             echo "0";

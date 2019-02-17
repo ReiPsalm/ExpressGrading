@@ -2715,3 +2715,907 @@
 - 00:00:42.343 DEBUG: OnBrowserDestroyed()
 - 00:00:42.625 INFO: Ended application
 - 00:00:42.625 INFO: --------------------------------------------------------
+- 00:15:27.016 INFO: --------------------------------------------------------
+- 00:15:27.016 INFO: Started application
+- 00:15:27.016 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:15:27.016 INFO: Log level = DEBUG4
+- 00:15:27.016 INFO: Starting Mongoose 3.9c web server
+- 00:15:27.016 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:15:27.016 INFO: Index files: index.html,index.php
+- 00:15:27.016 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:15:27.016 INFO: CGI pattern: **.php$
+- 00:15:27.016 INFO: Hide files patterns: 
+- 00:15:27.016 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:15:27.016 INFO: Web server url: http://127.0.0.1:51388/
+- 00:15:27.016 INFO: remote_debugging_port = 65047
+- 00:15:27.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=65047
+- 00:15:27.359 DEBUG: App::OnContextInitialized()
+- 00:15:27.359 DEBUG: Window max width/height = 1286/690
+- 00:15:27.359 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:15:27.359 DEBUG: GetBrowserWindow(): not found, hwnd = 1051140
+- 00:15:27.375 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:15:27.375 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:15:27.375 DEBUG: StoreBrowserWindow(): hwnd = 1051140
+- 00:15:28.469 DEBUG: ClientHandler::OnAfterCreated()
+- 00:15:28.469 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:15:28.547 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:15:29.016 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=43CA1D41F9DEE648B303261537EE4C93 --mojo-platform-channel-handle=1692 /prefetch:2
+[0218/001529.204:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:15:29.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=FEEE05CCB0C75E552DF51B7BACB2F121 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=FEEE05CCB0C75E552DF51B7BACB2F121 --renderer-client-id=3 --mojo-platform-channel-handle=2424 /prefetch:1
+- 00:15:29.031 DEBUG: OnBrowserCreated()
+- 00:15:31.890 DEBUG: OnContextCreated()
+- 00:15:31.562 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:15:31.562 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:15:31.562 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:15:31.562 INFO: GET 200 /
+- 00:15:31.562 INFO: GET 200 /build/library/css/normalize.css
+- 00:15:31.562 INFO: GET 200 /build/library/css/main.css
+- 00:15:31.562 INFO: GET 200 /build/library/css/animate.css
+- 00:15:31.578 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:15:31.578 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:15:31.609 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:15:31.625 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:15:31.625 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:15:31.625 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:15:31.625 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:15:31.625 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:15:31.656 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:15:31.672 INFO: GET 200 /build/library/css/responsive.css
+- 00:15:31.672 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:15:31.672 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:15:31.672 INFO: GET 200 /build/library/css/style.css
+- 00:15:31.672 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:15:31.672 INFO: GET 200 /build/library/js/wow.min.js
+- 00:15:31.687 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:15:31.687 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:15:31.687 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:15:31.687 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:15:31.687 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:15:31.703 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/tab.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:15:31.781 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:15:31.953 INFO: GET 200 /build/library/js/plugins.js
+- 00:15:31.953 INFO: GET 200 /build/library/js/main.js
+- 00:15:31.953 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:15:32.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51388/
+- 00:15:43.781 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51388/
+- 00:15:44.109 DEBUG: OnContextCreated()
+- 00:15:44.797 INFO: GET 200 /
+- 00:15:44.797 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:15:44.797 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:15:44.797 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:15:44.797 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:15:44.797 INFO: GET 200 /build/library/css/animate.css
+- 00:15:44.797 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:15:44.812 INFO: GET 200 /build/library/css/normalize.css
+- 00:15:44.812 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:15:44.812 INFO: GET 200 /build/library/css/main.css
+- 00:15:44.812 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:15:44.812 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:15:44.828 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:15:44.844 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:15:44.844 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:15:44.844 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:15:44.844 INFO: GET 200 /build/library/css/responsive.css
+- 00:15:44.844 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:15:44.844 INFO: GET 200 /build/library/css/style.css
+- 00:15:44.859 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:15:44.859 INFO: GET 200 /build/library/js/wow.min.js
+- 00:15:44.859 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:15:44.859 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:15:44.859 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:15:44.859 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:15:44.875 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:15:44.875 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:15:44.875 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:15:44.875 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:15:44.891 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:15:44.891 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:15:44.969 INFO: GET 200 /build/library/js/tab.js
+- 00:15:44.969 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:15:44.969 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:15:44.969 INFO: GET 200 /build/library/js/plugins.js
+- 00:15:44.969 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:15:44.969 INFO: GET 200 /build/library/js/main.js
+- 00:15:45.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51388/
+- 00:15:48.766 DEBUG: ClientHandler::OnAfterCreated()
+- 00:15:48.766 DEBUG: GetBrowserWindow(): not found, hwnd = 5637188
+- 00:15:48.766 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:15:48.766 DEBUG: StoreBrowserWindow(): hwnd = 5637188
+- 00:15:48.766 DEBUG: Centering popup window relative to its parent
+- 00:15:48.766 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:15:49.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=50181A930F455D6CAB79354E51D9C6A8 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=50181A930F455D6CAB79354E51D9C6A8 --renderer-client-id=4 --mojo-platform-channel-handle=3404 /prefetch:1
+- 00:15:49.015 DEBUG: OnBrowserCreated()
+- 00:15:49.047 DEBUG: OnContextCreated()
+- 00:15:49.578 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:15:49.000 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:15:49.062 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:16:32.312 DEBUG: OnBeforeClose() hwnd=5637188
+- 00:16:32.312 DEBUG: RemoveBrowserWindow(): hwnd = 5637188
+- 00:16:33.984 DEBUG: WM_DESTROY
+- 00:16:33.984 DEBUG: RemoveBrowserWindow(): hwnd = 1051140
+- 00:16:33.984 INFO: Stopping Mongoose web server
+- 00:16:33.984 DEBUG: Mongoose webserver stopped immediately
+- 00:16:33.031 DEBUG: OnBeforeClose() hwnd=4852428
+- 00:16:33.031 DEBUG: RemoveBrowserWindow(): hwnd = 4852428
+- 00:16:33.031 DEBUG: GetBrowserWindow(): not found, hwnd = 4852428
+- 00:16:33.031 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:16:33.031 DEBUG: Calling CefQuitMessageLoop()
+- 00:16:34.406 INFO: Ended application
+- 00:16:34.406 INFO: --------------------------------------------------------
+- 00:16:37.031 INFO: --------------------------------------------------------
+- 00:16:37.031 INFO: Started application
+- 00:16:37.031 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:16:37.031 INFO: Log level = DEBUG4
+- 00:16:37.031 INFO: Starting Mongoose 3.9c web server
+- 00:16:37.031 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:16:37.031 INFO: Index files: index.html,index.php
+- 00:16:37.031 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:16:37.031 INFO: CGI pattern: **.php$
+- 00:16:37.031 INFO: Hide files patterns: 
+- 00:16:37.031 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:16:37.047 INFO: Web server url: http://127.0.0.1:51468/
+- 00:16:37.047 INFO: remote_debugging_port = 61129
+- 00:16:37.047 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=61129
+- 00:16:37.141 DEBUG: App::OnContextInitialized()
+- 00:16:37.141 DEBUG: Window max width/height = 1286/690
+- 00:16:37.141 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:16:37.141 DEBUG: GetBrowserWindow(): not found, hwnd = 1509884
+- 00:16:37.141 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:16:37.141 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:16:37.141 DEBUG: StoreBrowserWindow(): hwnd = 1509884
+- 00:16:37.172 DEBUG: ClientHandler::OnAfterCreated()
+- 00:16:37.172 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:16:37.187 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:16:37.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=3570A36B33BC8EEC11C0FC59FDFF49F4 --mojo-platform-channel-handle=1704 /prefetch:2
+- 00:16:37.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=289400AC47A09FF39FF1658EE9793800 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=289400AC47A09FF39FF1658EE9793800 --renderer-client-id=3 --mojo-platform-channel-handle=2260 /prefetch:1
+[0218/001637.727:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:16:37.046 DEBUG: OnBrowserCreated()
+[0218/001637.793:ERROR:block_files.cc(479)] Failed to open C:\Users\user\Desktop\ExpressGrading\webcache\Cache\data_3
+[0218/001637.794:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0218/001637.794:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Users\user\Desktop\ExpressGrading\webcache\Cache to C:\Users\user\Desktop\ExpressGrading\webcache\old_Cache_000
+[0218/001637.794:ERROR:disk_cache.cc(132)] Unable to create cache
+- 00:16:38.500 INFO: GET 200 /
+- 00:16:38.500 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:16:38.500 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:16:38.500 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:16:38.500 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:16:38.500 INFO: GET 200 /build/library/css/animate.css
+- 00:16:38.500 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:16:38.234 DEBUG: OnContextCreated()
+- 00:16:38.516 INFO: GET 200 /build/library/css/normalize.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/main.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/style.css
+- 00:16:38.516 INFO: GET 200 /build/library/css/responsive.css
+- 00:16:38.516 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:16:38.516 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:16:38.516 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/wow.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/tab.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/plugins.js
+- 00:16:38.531 INFO: GET 200 /build/library/js/main.js
+- 00:16:38.531 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:16:39.062 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:16:51.828 DEBUG: ClientHandler::OnAfterCreated()
+- 00:16:51.828 DEBUG: GetBrowserWindow(): not found, hwnd = 9374376
+- 00:16:51.828 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:16:51.828 DEBUG: StoreBrowserWindow(): hwnd = 9374376
+- 00:16:51.828 DEBUG: Centering popup window relative to its parent
+- 00:16:51.828 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:16:52.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=84E509DAB68DD8729F398160A2252041 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=84E509DAB68DD8729F398160A2252041 --renderer-client-id=4 --mojo-platform-channel-handle=3528 /prefetch:1
+- 00:16:52.031 DEBUG: OnBrowserCreated()
+- 00:16:52.046 DEBUG: OnContextCreated()
+- 00:16:52.937 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:16:52.047 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:16:52.047 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:16:52.047 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:16:52.047 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:16:52.047 INFO: GET 200 /build/library/css/animate.css
+- 00:16:52.047 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:16:52.078 INFO: GET 200 /build/library/css/normalize.css
+- 00:16:52.078 INFO: GET 200 /build/library/css/main.css
+- 00:16:52.078 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:16:52.094 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:16:52.094 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/style.css
+- 00:16:52.109 INFO: GET 200 /build/library/css/responsive.css
+- 00:16:52.156 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:16:52.219 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:16:52.219 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:17:00.672 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:17:03.172 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:17:03.422 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:22:38.375 DEBUG: OnBeforeClose() hwnd=9374376
+- 00:22:38.406 DEBUG: RemoveBrowserWindow(): hwnd = 9374376
+- 00:22:39.562 DEBUG: OnBrowserDestroyed()
+- 00:22:44.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:22:49.250 INFO: GET 200 /
+- 00:22:49.078 DEBUG: OnContextCreated()
+- 00:22:49.469 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:22:49.469 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:22:50.547 INFO: GET 200 /build/library/css/normalize.css
+- 00:22:50.562 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:22:50.578 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:22:50.625 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:22:50.641 INFO: GET 200 /build/library/css/main.css
+- 00:22:50.719 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:22:50.734 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:22:50.750 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:22:50.797 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:22:50.812 INFO: GET 200 /build/library/css/style.css
+- 00:22:50.844 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:22:50.875 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:22:50.875 INFO: GET 200 /build/library/css/responsive.css
+- 00:22:50.156 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:22:50.172 INFO: GET 200 /build/library/css/animate.css
+- 00:22:50.391 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:22:50.391 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:22:50.406 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:22:50.406 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:22:50.406 INFO: GET 200 /build/library/js/wow.min.js
+- 00:22:50.406 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:22:50.437 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:22:50.469 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:22:50.484 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:22:50.516 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:22:50.547 INFO: GET 200 /build/library/js/tab.js
+- 00:22:51.609 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:22:51.609 INFO: GET 200 /build/library/js/plugins.js
+- 00:22:51.609 INFO: GET 200 /build/library/js/main.js
+- 00:22:51.641 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:22:51.656 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:22:51.672 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:22:51.687 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:22:51.297 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:22:51.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:27:39.719 DEBUG: ClientHandler::OnAfterCreated()
+- 00:27:39.719 DEBUG: GetBrowserWindow(): not found, hwnd = 5834190
+- 00:27:39.719 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:27:39.719 DEBUG: StoreBrowserWindow(): hwnd = 5834190
+- 00:27:39.734 DEBUG: Centering popup window relative to its parent
+- 00:27:39.859 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:27:40.016 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=04075D2EAB9D4FD79DB9A44D6E52D8EC --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=04075D2EAB9D4FD79DB9A44D6E52D8EC --renderer-client-id=5 --mojo-platform-channel-handle=2268 /prefetch:1
+- 00:27:40.031 DEBUG: OnBrowserCreated()
+- 00:27:40.203 DEBUG: OnContextCreated()
+- 00:27:40.125 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:27:40.297 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/animate.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/normalize.css
+- 00:27:40.297 INFO: GET 200 /build/library/css/main.css
+- 00:27:40.312 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:27:40.312 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:27:40.312 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/style.css
+- 00:27:40.328 INFO: GET 200 /build/library/css/responsive.css
+- 00:27:40.375 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:27:40.531 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:27:41.547 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:27:48.547 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:27:52.656 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:27:52.656 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:30:42.734 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:30:42.094 DEBUG: OnContextCreated()
+- 00:30:42.875 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:30:47.734 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:30:47.765 DEBUG: OnContextCreated()
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.498:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+- 00:30:47.047 INFO: GET 200 /
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+[0218/003047.499:ERROR:CONSOLE(3700)] "console.assert", source: chrome-devtools://devtools/inspector.js (3700)
+- 00:30:47.047 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:30:47.047 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:30:47.047 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:30:47.047 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:30:47.047 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:30:47.047 INFO: GET 200 /build/library/css/animate.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/normalize.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/main.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:30:47.094 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:30:47.109 INFO: GET 200 /build/library/css/responsive.css
+- 00:30:47.109 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:30:47.109 INFO: GET 200 /build/library/css/style.css
+- 00:30:47.109 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:30:47.109 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:30:47.125 INFO: GET 200 /build/library/js/wow.min.js
+- 00:30:47.125 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:30:47.125 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/tab.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/plugins.js
+- 00:30:47.141 INFO: GET 200 /build/library/js/main.js
+- 00:30:47.141 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:30:47.312 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:30:47.312 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:30:47.312 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:30:47.328 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:30:51.359 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:30:53.328 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:30:53.344 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:35:33.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:35:33.046 DEBUG: OnContextCreated()
+- 00:35:33.312 INFO: GET 200 /
+- 00:35:33.312 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:35:33.328 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:35:33.328 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:35:33.328 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:35:33.328 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:35:33.328 INFO: GET 200 /build/library/css/animate.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/normalize.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/main.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/responsive.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:35:33.344 INFO: GET 200 /build/library/css/style.css
+- 00:35:33.344 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/wow.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:35:33.375 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:35:33.391 INFO: GET 200 /build/library/js/tab.js
+- 00:35:33.391 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:35:33.391 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:35:33.391 INFO: GET 200 /build/library/js/plugins.js
+- 00:35:33.391 INFO: GET 200 /build/library/js/main.js
+- 00:35:33.391 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:35:34.844 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:35:34.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:35:34.859 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:35:34.875 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:41:02.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:41:03.156 DEBUG: OnContextCreated()
+- 00:41:03.437 INFO: GET 200 /
+- 00:41:03.437 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:41:03.437 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:41:03.437 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:41:03.437 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:41:03.437 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:41:03.437 INFO: GET 200 /build/library/css/animate.css
+- 00:41:03.453 INFO: GET 200 /build/library/css/normalize.css
+- 00:41:03.453 INFO: GET 200 /build/library/css/main.css
+- 00:41:03.453 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:41:03.453 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:41:03.453 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/style.css
+- 00:41:03.484 INFO: GET 200 /build/library/css/responsive.css
+- 00:41:03.484 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:41:03.500 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:41:03.500 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:41:03.500 INFO: GET 200 /build/library/js/wow.min.js
+- 00:41:03.500 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:41:03.500 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:41:03.516 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/tab.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/plugins.js
+- 00:41:03.531 INFO: GET 200 /build/library/js/main.js
+- 00:41:03.531 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:41:04.766 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:41:04.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:41:04.766 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:41:04.781 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:41:09.469 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:41:11.656 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:41:11.656 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:41:31.703 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:41:32.734 DEBUG: OnContextCreated()
+- 00:41:32.000 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:41:32.000 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:41:32.000 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:41:32.000 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:41:32.000 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:41:32.016 INFO: GET 200 /
+- 00:41:32.016 INFO: GET 200 /build/library/css/normalize.css
+- 00:41:32.016 INFO: GET 200 /build/library/css/animate.css
+- 00:41:32.016 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:41:32.016 INFO: GET 200 /build/library/css/main.css
+- 00:41:32.016 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:41:32.031 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:41:32.031 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:41:32.047 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:41:32.047 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:41:32.047 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:41:32.047 INFO: GET 200 /build/library/css/responsive.css
+- 00:41:32.047 INFO: GET 200 /build/library/css/style.css
+- 00:41:32.047 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:41:32.047 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:41:32.047 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:41:32.047 INFO: GET 200 /build/library/js/wow.min.js
+- 00:41:32.047 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/tab.js
+- 00:41:32.078 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:41:32.094 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:41:32.094 INFO: GET 200 /build/library/js/plugins.js
+- 00:41:32.109 INFO: GET 200 /build/library/js/main.js
+- 00:41:32.109 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:41:33.594 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:41:33.594 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:41:33.609 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:41:33.609 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:41:39.500 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:41:41.219 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:41:41.219 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:42:15.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:42:16.640 DEBUG: OnContextCreated()
+- 00:42:16.906 INFO: GET 200 /
+- 00:42:16.922 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:42:16.922 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:42:16.922 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:42:16.922 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:42:16.922 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:42:16.922 INFO: GET 200 /build/library/css/animate.css
+- 00:42:16.937 INFO: GET 200 /build/library/css/normalize.css
+- 00:42:16.937 INFO: GET 200 /build/library/css/main.css
+- 00:42:16.937 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:42:16.937 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/style.css
+- 00:42:16.969 INFO: GET 200 /build/library/css/responsive.css
+- 00:42:16.969 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:42:16.984 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:42:16.984 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:42:16.000 INFO: GET 200 /build/library/js/wow.min.js
+- 00:42:16.000 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:42:16.000 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:42:16.000 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:42:16.016 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:42:16.016 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:42:16.016 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:42:16.016 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:42:16.016 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/tab.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/plugins.js
+- 00:42:16.031 INFO: GET 200 /build/library/js/main.js
+- 00:42:16.031 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:42:16.187 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:42:16.203 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:42:16.219 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:42:16.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:42:21.000 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:42:22.266 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:42:22.281 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:43:01.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:43:02.109 DEBUG: OnContextCreated()
+- 00:43:02.391 INFO: GET 200 /
+- 00:43:02.391 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:43:02.391 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:43:02.391 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:43:02.391 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:43:02.391 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:43:02.391 INFO: GET 200 /build/library/css/animate.css
+- 00:43:02.406 INFO: GET 200 /build/library/css/normalize.css
+- 00:43:02.406 INFO: GET 200 /build/library/css/main.css
+- 00:43:02.406 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/style.css
+- 00:43:02.422 INFO: GET 200 /build/library/css/responsive.css
+- 00:43:02.422 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/wow.min.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:43:02.437 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:43:02.453 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:43:02.453 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:43:02.453 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:43:02.453 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/tab.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/plugins.js
+- 00:43:02.469 INFO: GET 200 /build/library/js/main.js
+- 00:43:02.469 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:43:03.672 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:43:03.687 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:43:03.687 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 00:43:03.687 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:43:05.516 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:43:07.141 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:43:07.141 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:48:13.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 00:48:14.765 DEBUG: OnContextCreated()
+- 00:48:14.031 INFO: GET 200 /build/library/css/owl.carousel.css
+- 00:48:14.031 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 00:48:14.031 INFO: GET 200 /build/library/css/owl.theme.css
+- 00:48:14.031 INFO: GET 200 /build/library/css/owl.transitions.css
+- 00:48:14.031 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 00:48:14.047 INFO: GET 200 /
+- 00:48:14.047 INFO: GET 200 /build/library/css/normalize.css
+- 00:48:14.047 INFO: GET 200 /build/library/css/animate.css
+- 00:48:14.047 INFO: GET 200 /build/library/css/main.css
+- 00:48:14.047 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 00:48:14.047 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 00:48:14.062 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/responsive.css
+- 00:48:14.078 INFO: GET 200 /build/library/css/style.css
+- 00:48:14.094 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/wow.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 00:48:14.094 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/tab.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 00:48:14.109 INFO: GET 200 /build/library/js/plugins.js
+- 00:48:14.125 INFO: GET 200 /build/library/js/main.js
+- 00:48:14.125 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:48:14.406 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js.map
+- 00:48:14.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 00:48:14.406 INFO: GET 200 /build/library/css/bootstrap.min.css.map
+- 00:48:14.422 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css.map
+- 01:18:21.016 DEBUG: OnBeforeClose() hwnd=5834190
+- 01:18:21.031 DEBUG: RemoveBrowserWindow(): hwnd = 5834190
+- 01:18:22.906 DEBUG: OnBrowserDestroyed()
+- 01:18:23.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:18:25.500 INFO: GET 200 /
+- 01:18:26.296 DEBUG: OnContextCreated()
+- 01:18:26.828 INFO: GET 200 /build/library/css/owl.transitions.css
+- 01:18:26.844 INFO: GET 200 /build/library/css/owl.theme.css
+- 01:18:26.844 INFO: GET 200 /build/library/css/owl.carousel.css
+- 01:18:26.953 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 01:18:26.984 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 01:18:26.016 INFO: GET 200 /build/library/css/main.css
+- 01:18:26.031 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 01:18:26.187 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 01:18:26.297 INFO: GET 200 /build/library/css/animate.css
+- 01:18:26.328 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 01:18:26.328 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 01:18:26.328 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 01:18:26.422 INFO: GET 200 /build/library/css/normalize.css
+- 01:18:26.469 INFO: GET 200 /build/library/css/style.css
+- 01:18:26.469 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 01:18:26.484 INFO: GET 200 /build/library/js/wow.min.js
+- 01:18:26.484 INFO: GET 200 /build/library/css/responsive.css
+- 01:18:27.766 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 01:18:28.000 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 01:18:28.047 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 01:18:28.047 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 01:18:28.078 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 01:18:28.141 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 01:18:28.219 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 01:18:28.312 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 01:18:28.312 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 01:18:28.312 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 01:18:28.328 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 01:18:28.328 INFO: GET 200 /build/library/js/plugins.js
+- 01:18:28.328 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 01:18:28.328 INFO: GET 200 /build/library/js/tab.js
+- 01:18:28.344 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 01:18:28.406 INFO: GET 200 /build/comps/applet/appscript.js
+- 01:18:28.469 INFO: GET 200 /build/library/js/main.js
+- 01:18:28.484 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 01:18:28.500 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 01:18:29.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 01:20:14.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:20:14.593 DEBUG: OnContextCreated()
+- 01:20:14.859 INFO: GET 200 /
+- 01:20:14.875 INFO: GET 200 /build/library/css/font-awesome.min.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/owl.carousel.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/owl.theme.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/owl.transitions.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/animate.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/bootstrap.min.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/main.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/normalize.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/morrisjs/morris.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/scrollbar/jquery.mCustomScrollbar.min.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/metisMenu/metisMenu.min.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/metisMenu/metisMenu-vertical.css
+- 01:20:14.875 INFO: GET 200 /build/library/css/calendar/fullcalendar.min.css
+- 01:20:14.891 INFO: GET 200 /build/library/css/calendar/fullcalendar.print.min.css
+- 01:20:14.891 INFO: GET 200 /build/library/css/form/all-type-forms.css
+- 01:20:14.891 INFO: GET 200 /build/library/css/responsive.css
+- 01:20:14.891 INFO: GET 200 /build/library/css/style.css
+- 01:20:14.891 INFO: GET 200 /build/library/js/vendor/modernizr-2.8.3.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/bootstrap.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/vendor/jquery-1.12.4.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/wow.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/jquery-price-slider.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/jquery.meanmenu.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/owl.carousel.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/jquery.scrollUp.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/jquery.sticky.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/scrollbar/mCustomScrollbar-active.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/metisMenu/metisMenu.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/metisMenu/metisMenu-active.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/tab.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/icheck/icheck.min.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/icheck/icheck-active.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/plugins.js
+- 01:20:14.891 INFO: GET 200 /build/library/js/main.js
+- 01:20:14.891 INFO: GET 200 /build/comps/applet/appscript.js
+- 01:20:14.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 01:45:54.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:45:56.844 INFO: GET 200 /
+- 01:45:56.828 DEBUG: OnContextCreated()
+- 01:45:56.281 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/css/animate.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/css/style.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 01:45:56.297 INFO: GET 200 /build/library/css/theme/default.css
+- 01:45:56.297 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:45:56.312 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 01:45:56.344 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 01:45:56.375 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 01:45:56.375 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 01:45:56.375 INFO: GET 200 /build/library/js/apps.min.js
+- 01:45:56.391 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 01:45:56.437 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 01:45:57.203 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 01:46:00.031 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:46:00.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 01:46:44.016 INFO: GET 404 /assets/css/theme/blue.css
+- 01:47:01.078 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:47:02.250 DEBUG: OnContextCreated()
+- 01:47:02.516 INFO: GET 200 /
+- 01:47:02.531 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/css/animate.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/css/style.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 01:47:02.531 INFO: GET 200 /build/library/css/theme/default.css
+- 01:47:02.531 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 01:47:02.531 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 01:47:02.531 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:47:02.547 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 01:47:02.547 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 01:47:02.547 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 01:47:02.547 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 01:47:02.547 INFO: GET 200 /build/library/js/apps.min.js
+- 01:47:03.906 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:47:03.016 INFO: GET 404 /assets/css/theme/blue.css
+- 01:47:03.016 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 01:47:03.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 01:48:22.797 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:48:22.016 INFO: GET 200 /
+- 01:48:22.765 DEBUG: OnContextCreated()
+- 01:48:22.031 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/css/animate.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/css/style.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 01:48:22.047 INFO: GET 200 /build/library/css/theme/default.css
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 01:48:22.047 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 01:48:22.047 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 01:48:22.047 INFO: GET 200 /build/library/js/apps.min.js
+- 01:48:22.125 INFO: GET 200 /build/comps/applet/appscript.js
+- 01:48:22.375 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:48:22.406 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 01:48:22.437 INFO: GET 404 /assets/css/theme/blue.css
+- 01:48:23.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 01:50:11.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 01:50:12.984 INFO: GET 200 /
+- 01:50:12.734 DEBUG: OnContextCreated()
+- 01:50:12.000 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 01:50:12.000 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 01:50:12.000 INFO: GET 200 /build/library/css/animate.min.css
+- 01:50:12.000 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 01:50:12.000 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 01:50:12.016 INFO: GET 200 /build/library/css/style.min.css
+- 01:50:12.016 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 01:50:12.016 INFO: GET 200 /build/library/css/theme/default.css
+- 01:50:12.016 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:50:12.016 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 01:50:12.016 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 01:50:12.031 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 01:50:12.031 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 01:50:12.031 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 01:50:12.031 INFO: GET 200 /build/library/js/apps.min.js
+- 01:50:12.031 INFO: GET 200 /build/comps/applet/appscript.js
+- 01:50:13.672 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 01:50:13.687 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 01:50:13.734 INFO: GET 404 /assets/css/theme/blue.css
+- 01:50:13.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 02:00:36.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 02:00:37.391 INFO: GET 200 /
+- 02:00:37.187 DEBUG: OnContextCreated()
+- 02:00:38.609 INFO: GET 200 /build/library/css/animate.min.css
+- 02:00:38.609 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 02:00:38.609 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 02:00:38.609 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 02:00:38.609 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 02:00:38.656 INFO: GET 200 /build/library/css/style.min.css
+- 02:00:38.656 INFO: GET 404 /build/library/plugins/pace/pace.min.js
+- 02:00:38.656 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:00:38.656 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:00:38.687 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 02:00:38.719 INFO: GET 200 /build/comps/applet/appscript.js
+- 02:00:38.719 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 02:00:38.750 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 02:00:38.766 INFO: GET 200 /build/library/js/apps.min.js
+- 02:00:38.781 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 02:00:38.812 INFO: GET 200 /build/library/css/theme/default.css
+- 02:00:38.875 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:00:38.984 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 02:00:38.016 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:00:38.281 INFO: GET 404 /assets/css/theme/blue.css
+- 02:00:38.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 02:01:35.375 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 02:01:36.328 DEBUG: OnContextCreated()
+- 02:01:36.594 INFO: GET 200 /
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/css/animate.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/css/style.min.css
+- 02:01:36.625 INFO: GET 200 /build/library/css/theme/default.css
+- 02:01:36.625 INFO: GET 404 /build/library/plugins/pace/pace.min.js
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 02:01:36.625 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 02:01:36.625 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:01:36.625 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 02:01:36.625 INFO: GET 200 /build/library/js/apps.min.js
+- 02:01:36.641 INFO: GET 200 /build/comps/applet/appscript.js
+- 02:01:36.844 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:01:36.891 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:01:36.906 INFO: GET 404 /assets/css/theme/blue.css
+- 02:01:36.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 02:02:21.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:51468/
+- 02:02:21.171 DEBUG: OnContextCreated()
+- 02:02:21.437 INFO: GET 200 /
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 02:02:21.437 INFO: GET 200 /build/library/css/animate.min.css
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 02:02:21.437 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 02:02:21.437 INFO: GET 200 /build/library/css/style.min.css
+- 02:02:21.437 INFO: GET 404 /build/library/plugins/pace/pace.min.js
+- 02:02:21.437 INFO: GET 200 /build/library/css/theme/default.css
+- 02:02:21.437 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 02:02:21.437 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 02:02:21.437 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 02:02:21.437 INFO: GET 200 /build/library/js/apps.min.js
+- 02:02:21.437 INFO: GET 200 /build/comps/applet/appscript.js
+- 02:02:22.922 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:02:22.953 INFO: GET 404 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:02:22.969 INFO: GET 404 /assets/css/theme/blue.css
+- 02:02:22.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:51468/
+- 02:02:59.812 DEBUG: WM_DESTROY
+- 02:02:59.812 DEBUG: RemoveBrowserWindow(): hwnd = 1509884
+- 02:02:59.812 INFO: Stopping Mongoose web server
+- 02:02:59.812 DEBUG: Mongoose webserver stopped immediately
+- 02:02:59.906 DEBUG: OnBeforeClose() hwnd=2361844
+- 02:02:59.906 DEBUG: RemoveBrowserWindow(): hwnd = 2361844
+- 02:02:59.906 DEBUG: GetBrowserWindow(): not found, hwnd = 2361844
+- 02:02:59.906 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 02:02:59.906 DEBUG: Calling CefQuitMessageLoop()
+- 02:03:00.687 DEBUG: OnBrowserDestroyed()
+- 02:03:03.875 INFO: Ended application
+- 02:03:03.875 INFO: --------------------------------------------------------

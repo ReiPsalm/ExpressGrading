@@ -12,7 +12,7 @@ function UserLogin() {
             url:'build/comps/cabinet/exec.php',
             success: function(data){
                 if(data == "1"){
-                    alert("success");
+                    window.location.href = "_comps/_build/views/home.php";
                 }else if(data == "2"){
                     alert("invalid");
                 }else if(data == "0"){

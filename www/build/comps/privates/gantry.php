@@ -14,7 +14,7 @@ class HostDb extends SQLite3{
     // public $connection;
 
     /*function for the connection*/
-    public function connect_Db(){
+    public function __construct(){
         //open the file (mine is not in a subfolder but you can also have a choice pod)
         $openFile = fopen(__DIR__."\.dtn", "r") or die("Unable to open file!");
         //read the content of the file making the content to be read as pain text
@@ -25,10 +25,7 @@ class HostDb extends SQLite3{
         //check the key first
         if($this->db_pkey == "G-KaPdRgUkXp2s5v8y/B?E(H+MbQeThV"){
             //try connection
-            $myPDO = $this->open('../privates/expgrading.db');
-            //it will return the value in the connection (this is not visible or mapasa as a string, to echo the conn will only cause error)
-            // return $this->connection;
-            return $myPDO;
+            $this->open('../privates/expgrading.db');
 
         }elseif($this->db_pkey){
             echo "Error Connecting Server!";

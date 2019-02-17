@@ -1,153 +1,96 @@
 
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
 
+<!-- Mirrored from seantheme.com/color-admin-v1.9/admin/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2016 04:05:16 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Express Classroom Management</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon
-		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/bootstrap.min.css">
-    <!-- Bootstrap CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/font-awesome.min.css">
-    <!-- owl.carousel CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/owl.carousel.css">
-    <link rel="stylesheet" href="build/library/css/owl.theme.css">
-    <link rel="stylesheet" href="build/library/css/owl.transitions.css">
-    <!-- animate CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/animate.css">
-    <!-- normalize CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/normalize.css">
-    <!-- main CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/main.css">
-    <!-- morrisjs CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/morrisjs/morris.css">
-    <!-- mCustomScrollbar CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <!-- metisMenu CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/metisMenu/metisMenu.min.css">
-    <link rel="stylesheet" href="build/library/css/metisMenu/metisMenu-vertical.css">
-    <!-- calendar CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/calendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="build/library/css/calendar/fullcalendar.print.min.css">
-    <!-- forms CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/form/all-type-forms.css">
-    <!-- style CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/style.css">
-    <!-- responsive CSS
-		============================================ -->
-    <link rel="stylesheet" href="build/library/css/responsive.css">
-    <!-- modernizr JS
-		============================================ -->
-    <script src="build/library/js/vendor/modernizr-2.8.3.min.js"></script>
+	<meta charset="utf-8" />
+	<title>Color Admin | Login Page</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link href="build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+	<link href="build/library/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="build/library/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="build/library/css/animate.min.css" rel="stylesheet" />
+	<link href="build/library/css/style.min.css" rel="stylesheet" />
+	<link href="build/library/css/style-responsive.min.css" rel="stylesheet" />
+	<link href="build/library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="build/library/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
 </head>
-
-<body>
-    <!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-	<div class="error-pagewrap">
-		<div class="error-page-int">
-			<div class="text-center m-b-md custom-login">
-				<h3>CLASSROOM MANAGEMENT</h3>
-				<p>Please Provide your account credentials to login</p>
-			</div>
-			<div class="content-error">
-				<div class="hpanel">
-                    <div class="panel-body">
-                        <form action="#" id="loginForm">
-                            <div class="form-group">
-                                <label class="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@gmail.com" required="" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label" for="password">Password</label>
-                                <input type="password" placeholder="******" required="" name="password" id="password" class="form-control">
-                            </div>
-                            <button class="btn btn-success btn-block loginbtn" id="login">Login</button>
-                        </form>
-                    </div>
+<body class="pace-top">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+	    <!-- begin login -->
+        <div class="login bg-black animated fadeInDown">
+            <!-- begin brand -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> Grading Express
+                    <small>enter account details to login</small>
                 </div>
-			</div>
-			<div class="text-center login-footer">
-				<p>Copyright © 2018. All rights reserved. Template by Colorlib</p>
-			</div>
-		</div>   
-    </div>
-    <!-- jquery
-		============================================ -->
-    <script src="build/library/js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="build/library/js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="build/library/js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="build/library/js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="build/library/js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="build/library/js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="build/library/js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="build/library/js/jquery.scrollUp.min.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="build/library/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="build/library/js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="build/library/js/metisMenu/metisMenu.min.js"></script>
-    <script src="build/library/js/metisMenu/metisMenu-active.js"></script>
-    <!-- tab JS
-		============================================ -->
-    <script src="build/library/js/tab.js"></script>
-    <!-- icheck JS
-		============================================ -->
-    <script src="build/library/js/icheck/icheck.min.js"></script>
-    <script src="build/library/js/icheck/icheck-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="build/library/js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="build/library/js/main.js"></script>
-
-    <script>
-    $(document).ready(function() {
-        UserLogin();
-    });
-    </script>
-    <!-- Custom JQuery
-		============================================ -->
-    <script src="build/comps/applet/appscript.js"></script>
+            </div>
+            <!-- end brand -->
+            <div class="login-content">
+                <form class="margin-bottom-0">
+                    <div class="form-group m-b-20">
+                        <input type="email" id="username" class="form-control input-lg" placeholder="Email Address" />
+                    </div>
+                    <div class="form-group m-b-20">
+                        <input type="text" id="password" class="form-control input-lg" placeholder="Password" />
+                    </div>
+                    <div class="login-buttons">
+                        <button type="submit" id="login" class="btn btn-success btn-block btn-lg">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end login -->
+        
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="build/library/plugins/jquery/jquery-1.9.1.min.js"></script>
+	<script src="build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="build/library/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="assets/crossbrowserjs/respond.min.js"></script>
+		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="build/library/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="build/library/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="build/library/js/apps.min.js"></script>
+  <script src="build/comps/applet/appscript.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<script>
+		$(document).ready(function() {
+      App.init();
+      UserLogin();
+		});
+	</script>
 </body>
 
+<!-- Mirrored from seantheme.com/color-admin-v1.9/admin/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2016 04:05:16 GMT -->
 </html>
+

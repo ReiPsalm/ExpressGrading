@@ -1,5 +1,5 @@
 <?php
-class Users{
+class UsersClass{
     private $conn;
 
     public $uname;
@@ -12,10 +12,10 @@ class Users{
     public function LoginUser(){
         try{
             $sql = "SELECT * FROM tbl_users WHERE user_name='".$this->uname."' AND user_pass='".$this->upass."'";
-            $result = $conn->query($sql);
+            $result = $this->conn->query($sql);
             $row =  $result->fetchArray();
 
-            if($row['user_name'] == $this->uname && $row['user_pass'] == $this->user_pass){
+            if($row['user_name'] == $this->uname && $row['user_pass'] == $this->upass){
                 return true;
             }else{
                 return false;
