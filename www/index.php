@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login | Kiaalap - Kiaalap Admin Template</title>
+    <title>Express Classroom Management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -69,8 +69,8 @@
 	<div class="error-pagewrap">
 		<div class="error-page-int">
 			<div class="text-center m-b-md custom-login">
-				<h3>WELCOME USER!</h3>
-				<p>Please Provide your login credentials to login</p>
+				<h3>CLASSROOM MANAGEMENT</h3>
+				<p>Please Provide your account credentials to login</p>
 			</div>
 			<div class="content-error">
 				<div class="hpanel">
@@ -78,15 +78,13 @@
                         <form action="#" id="loginForm">
                             <div class="form-group">
                                 <label class="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
-                                <span class="help-block small">Your unique username to app</span>
+                                <input type="text" placeholder="example@gmail.com" required="" name="username" id="username" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                                <span class="help-block small">Yur strong password</span>
+                                <input type="password" placeholder="******" required="" name="password" id="password" class="form-control">
                             </div>
-                            <button class="btn btn-success btn-block loginbtn">Login</button>
+                            <button class="btn btn-success btn-block loginbtn" id="login">Login</button>
                         </form>
                     </div>
                 </div>
@@ -141,9 +139,15 @@
     <!-- main JS
 		============================================ -->
     <script src="build/library/js/main.js"></script>
-    <!-- tawk chat JS
+
+    <script>
+    $(document).ready(function() {
+        UserLogin();
+    });
+    </script>
+    <!-- Custom JQuery
 		============================================ -->
-    <script src="build/library/js/tawk-chat.js"></script>
+    <script src="build/comps/applet/appscript.js"></script>
 </body>
 
 </html>
