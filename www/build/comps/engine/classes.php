@@ -16,6 +16,9 @@ class UsersClass{
             $row =  $result->fetchArray();
 
             if($row['user_name'] == $this->uname && $row['user_pass'] == $this->upass){
+                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['user_name'] = $row['user_name'];
+                $_SESSION['user_pass'] = $row['user_pass'];
                 return true;
             }else{
                 return false;

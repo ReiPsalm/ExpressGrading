@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(isset($_SESSION['user_id'])){
+    header("location:build/comps/view/home.php");
+}
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
