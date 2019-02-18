@@ -13,7 +13,7 @@ if(isset($_SESSION['user_id'])){
 <!-- Mirrored from seantheme.com/color-admin-v1.9/admin/html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2016 04:05:16 GMT -->
 <head>
 	<meta charset="utf-8" />
-	<title>Color Admin | Login Page</title>
+	<title>Express Grading</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -45,7 +45,7 @@ if(isset($_SESSION['user_id'])){
             <!-- begin brand -->
             <div class="login-header">
                 <div class="brand">
-                    <span class="logo"></span> Grading Express
+				<img src="build/library/img/logoB.png" height="39" width="35" /> Express Grading
                     <small>enter account details to login</small>
                 </div>
             </div>

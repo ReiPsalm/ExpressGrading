@@ -4436,3 +4436,1201 @@
 - 02:56:25.828 DEBUG: Calling CefQuitMessageLoop()
 - 02:56:26.406 INFO: Ended application
 - 02:56:26.406 INFO: --------------------------------------------------------
+- 22:10:03.015 INFO: --------------------------------------------------------
+- 22:10:03.015 INFO: Started application
+- 22:10:03.015 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 22:10:03.015 INFO: Log level = DEBUG4
+- 22:10:03.015 INFO: Starting Mongoose 3.9c web server
+- 22:10:03.031 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 22:10:03.031 INFO: Index files: index.html,index.php
+- 22:10:03.031 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 22:10:03.031 INFO: CGI pattern: **.php$
+- 22:10:03.031 INFO: Hide files patterns: 
+- 22:10:03.031 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 22:10:03.031 INFO: Web server url: http://127.0.0.1:52083/
+- 22:10:03.031 INFO: remote_debugging_port = 63275
+- 22:10:03.031 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=63275
+- 22:10:05.015 DEBUG: App::OnContextInitialized()
+- 22:10:05.015 DEBUG: Window max width/height = 1286/690
+- 22:10:05.015 DEBUG: Window max size exceeded, new width/height = 900/690
+- 22:10:05.015 DEBUG: GetBrowserWindow(): not found, hwnd = 394572
+- 22:10:05.015 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 22:10:05.015 DEBUG: BrowserWindow::CreateBrowserControl()
+- 22:10:05.015 DEBUG: StoreBrowserWindow(): hwnd = 394572
+- 22:10:05.047 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=EB8866E86CE4DDFEB6A35AC991696B9A --mojo-platform-channel-handle=1732 /prefetch:2
+- 22:10:06.922 DEBUG: ClientHandler::OnAfterCreated()
+- 22:10:06.922 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 22:10:06.015 DEBUG: OnLoadingStateChange: loading=1, url=
+- 22:10:06.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=0C6363B4FB13D551AA022504ABB201C0 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=0C6363B4FB13D551AA022504ABB201C0 --renderer-client-id=3 --mojo-platform-channel-handle=2252 /prefetch:1
+- 22:10:08.468 DEBUG: OnBrowserCreated()
+[0218/221008.682:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 22:10:14.609 INFO: GET 200 /
+- 22:10:15.172 INFO: GET 200 /build/library/css/animate.min.css
+- 22:10:15.172 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 22:10:15.297 INFO: GET 200 /build/library/css/style.min.css
+- 22:10:15.297 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 22:10:15.484 INFO: GET 200 /build/library/css/theme/default.css
+- 22:10:15.578 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 22:10:15.609 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 22:10:15.734 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 22:10:16.953 DEBUG: OnContextCreated()
+- 22:10:16.125 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 22:10:16.172 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 22:10:16.281 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 22:10:16.406 INFO: GET 200 /build/comps/applet/appscript.js
+- 22:10:16.437 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 22:10:16.547 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 22:10:16.609 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 22:10:16.781 INFO: GET 200 /build/library/js/apps.min.js
+- 22:10:17.828 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 22:10:18.203 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/
+- 22:11:00.687 INFO: POST 200 /build/comps/cabinet/exec.php
+- 22:11:00.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/
+- 22:11:01.000 INFO: GET 200 /build/comps/view/home.php
+- 22:11:01.015 DEBUG: OnContextCreated()
+- 22:11:01.109 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 22:11:01.109 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 22:11:01.140 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 22:11:01.187 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 22:11:01.187 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 22:11:01.328 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 22:11:01.328 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 22:11:02.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 22:12:11.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 22:12:11.547 INFO: GET 200 /build/comps/view/home.php
+- 22:12:11.531 DEBUG: OnContextCreated()
+- 22:12:11.609 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 22:12:11.609 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 22:12:11.609 INFO: GET 200 /build/library/css/animate.min.css
+- 22:12:11.609 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 22:12:11.609 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 22:12:11.609 INFO: GET 200 /build/library/css/style.min.css
+- 22:12:11.625 INFO: GET 200 /build/library/css/theme/default.css
+- 22:12:11.625 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 22:12:11.656 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 22:12:11.687 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 22:12:11.703 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 22:12:11.797 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 22:12:11.828 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 22:12:11.828 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 22:12:11.828 INFO: GET 200 /build/library/js/apps.min.js
+- 22:12:11.828 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 22:12:11.828 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 22:12:11.844 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 22:12:11.859 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 22:12:12.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 22:18:55.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 22:18:55.312 DEBUG: OnContextCreated()
+- 22:18:55.359 INFO: GET 200 /build/comps/view/home.php
+- 22:18:55.359 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 22:18:55.359 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 22:18:55.359 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 22:18:55.359 INFO: GET 200 /build/library/css/animate.min.css
+- 22:18:55.359 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 22:18:55.359 INFO: GET 200 /build/library/css/style.min.css
+- 22:18:55.375 INFO: GET 200 /build/library/css/theme/default.css
+- 22:18:55.375 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 22:18:55.437 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 22:18:55.515 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 22:18:55.531 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 22:18:55.578 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 22:18:55.640 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 22:18:55.640 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 22:18:55.640 INFO: GET 200 /build/library/js/apps.min.js
+- 22:18:55.656 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 22:18:55.656 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 22:18:55.656 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 22:18:55.656 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 22:18:56.984 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:03:20.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:03:21.281 INFO: GET 200 /build/comps/view/home.php
+- 23:03:21.375 DEBUG: OnContextCreated()
+- 23:03:21.547 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:03:21.562 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:03:21.562 INFO: GET 200 /build/library/css/animate.min.css
+- 23:03:21.594 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:03:21.609 INFO: GET 200 /build/library/css/theme/default.css
+- 23:03:21.640 INFO: GET 200 /build/library/css/style.min.css
+- 23:03:21.672 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:03:21.687 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:03:21.765 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:03:21.812 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 23:03:21.828 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:03:21.828 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:03:21.844 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 23:03:21.875 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:03:22.875 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 23:03:22.906 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:03:22.000 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:03:22.078 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:03:22.109 INFO: GET 200 /build/library/js/apps.min.js
+- 23:03:22.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:00.140 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:00.203 DEBUG: OnContextCreated()
+- 23:05:00.250 INFO: GET 200 /build/comps/view/home.php
+- 23:05:00.250 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:05:00.250 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:05:00.250 INFO: GET 200 /build/library/css/animate.min.css
+- 23:05:00.250 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:05:00.250 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:05:00.250 INFO: GET 200 /build/library/css/style.min.css
+- 23:05:00.265 INFO: GET 200 /build/library/css/theme/default.css
+- 23:05:00.265 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:05:00.406 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:05:00.500 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 23:05:00.500 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:05:00.500 INFO: GET 200 /build/library/js/apps.min.js
+- 23:05:00.500 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 23:05:00.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:45.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:46.859 DEBUG: OnContextCreated()
+- 23:05:46.906 INFO: GET 200 /build/comps/view/home.php
+- 23:05:46.906 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:05:46.906 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:05:46.906 INFO: GET 200 /build/library/css/animate.min.css
+- 23:05:46.906 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:05:46.922 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:05:46.922 INFO: GET 200 /build/library/css/style.min.css
+- 23:05:46.922 INFO: GET 200 /build/library/css/theme/default.css
+- 23:05:46.922 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:05:46.969 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:05:46.015 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:05:46.015 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:05:46.125 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:05:46.125 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:05:46.125 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 23:05:46.125 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 23:05:46.125 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:05:46.125 INFO: GET 200 /build/library/js/apps.min.js
+- 23:05:46.125 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:05:46.125 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 23:05:46.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:49.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/comps/view/home.php
+- 23:05:49.531 INFO: GET 404 /build/engine/terminator.php
+- 23:05:49.500 DEBUG: OnContextCreated()
+- 23:05:49.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/engine/terminator.php
+- 23:05:55.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/engine/terminator.php
+- 23:05:55.953 INFO: GET 404 /build/engine/terminator.php
+- 23:05:55.906 DEBUG: OnContextCreated()
+- 23:05:55.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/engine/terminator.php
+- 23:06:28.125 DEBUG: ClientHandler::OnAfterCreated()
+- 23:06:28.125 DEBUG: GetBrowserWindow(): not found, hwnd = 3081268
+- 23:06:28.125 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 23:06:28.125 DEBUG: StoreBrowserWindow(): hwnd = 3081268
+- 23:06:28.140 DEBUG: Centering popup window relative to its parent
+- 23:06:28.297 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:06:28.015 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=A5BA677753E01AB0E4E6E6DAEE1B3EC2 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=A5BA677753E01AB0E4E6E6DAEE1B3EC2 --renderer-client-id=4 --mojo-platform-channel-handle=3580 /prefetch:1
+- 23:06:29.109 DEBUG: OnBrowserCreated()
+- 23:06:29.578 DEBUG: OnContextCreated()
+- 23:06:29.687 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 23:06:35.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52083/build/engine/terminator.php
+- 23:06:35.219 INFO: GET 404 /build/engine/terminator.php
+- 23:06:35.172 DEBUG: OnContextCreated()
+- 23:06:35.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52083/build/engine/terminator.php
+- 23:07:16.344 DEBUG: OnBeforeClose() hwnd=3081268
+- 23:07:16.344 DEBUG: RemoveBrowserWindow(): hwnd = 3081268
+- 23:07:18.296 DEBUG: OnBrowserDestroyed()
+- 23:07:18.359 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:18.469 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:18.578 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:18.687 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:18.797 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:19.906 DEBUG: GetBrowserWindow(): not found, hwnd = 460178
+- 23:07:21.859 DEBUG: WM_DESTROY
+- 23:07:21.859 DEBUG: RemoveBrowserWindow(): hwnd = 394572
+- 23:07:21.859 INFO: Stopping Mongoose web server
+- 23:07:21.859 DEBUG: Mongoose webserver stopped immediately
+- 23:07:22.984 DEBUG: OnBeforeClose() hwnd=657322
+- 23:07:22.984 DEBUG: RemoveBrowserWindow(): hwnd = 657322
+- 23:07:22.984 DEBUG: GetBrowserWindow(): not found, hwnd = 657322
+- 23:07:22.984 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:07:22.984 DEBUG: Calling CefQuitMessageLoop()
+- 23:07:22.062 DEBUG: OnBrowserDestroyed()
+- 23:07:22.375 INFO: Ended application
+- 23:07:22.375 INFO: --------------------------------------------------------
+- 23:07:27.000 INFO: --------------------------------------------------------
+- 23:07:27.000 INFO: Started application
+- 23:07:27.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:07:27.000 INFO: Log level = DEBUG4
+- 23:07:27.015 INFO: Starting Mongoose 3.9c web server
+- 23:07:27.015 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:07:27.015 INFO: Index files: index.html,index.php
+- 23:07:27.015 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:07:27.015 INFO: CGI pattern: **.php$
+- 23:07:27.015 INFO: Hide files patterns: 
+- 23:07:27.015 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:07:27.015 INFO: Web server url: http://127.0.0.1:52817/
+- 23:07:27.015 INFO: remote_debugging_port = 49360
+- 23:07:27.015 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=49360
+- 23:07:27.062 DEBUG: App::OnContextInitialized()
+- 23:07:27.062 DEBUG: Window max width/height = 1286/690
+- 23:07:27.062 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:07:27.062 DEBUG: GetBrowserWindow(): not found, hwnd = 2034678
+- 23:07:27.062 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:07:27.078 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:07:27.078 DEBUG: StoreBrowserWindow(): hwnd = 2034678
+- 23:07:27.140 DEBUG: ClientHandler::OnAfterCreated()
+- 23:07:27.140 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:07:27.156 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:07:27.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=5E4395F8E785BFD0D2694D55907DE87B --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=5E4395F8E785BFD0D2694D55907DE87B --renderer-client-id=3 --mojo-platform-channel-handle=2368 /prefetch:1
+- 23:07:27.031 DEBUG: OnBrowserCreated()
+- 23:07:28.015 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=7B93A663D0DF8AD353AB021BE044775B --mojo-platform-channel-handle=1692 /prefetch:2
+[0218/230728.187:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:07:29.375 INFO: GET 200 /
+- 23:07:29.375 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:07:29.375 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:07:29.375 INFO: GET 200 /build/library/css/animate.min.css
+- 23:07:29.375 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:07:29.375 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:07:29.375 INFO: GET 200 /build/library/css/style.min.css
+- 23:07:29.390 INFO: GET 200 /build/library/css/theme/default.css
+- 23:07:29.390 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:07:29.203 DEBUG: OnContextCreated()
+- 23:07:29.453 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:07:29.453 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:07:29.453 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:07:29.453 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:07:29.453 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:07:29.453 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:07:29.468 INFO: GET 200 /build/library/js/apps.min.js
+- 23:07:29.515 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:07:29.578 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:07:29.718 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52817/
+- 23:07:54.921 INFO: POST 200 /build/comps/cabinet/exec.php
+- 23:08:02.312 INFO: POST 200 /build/comps/cabinet/exec.php
+- 23:08:02.312 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52817/
+- 23:08:02.203 DEBUG: OnContextCreated()
+- 23:08:02.406 INFO: GET 200 /build/comps/view/home.php
+- 23:08:02.421 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:08:02.453 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 23:08:02.453 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 23:08:02.453 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:08:02.453 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:08:02.484 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 23:08:03.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52817/build/comps/view/home.php
+- 23:08:08.171 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52817/build/comps/view/home.php
+- 23:08:08.390 INFO: GET 302 /build/comps/engine/terminator.php
+- 23:08:08.531 INFO: GET 200 /
+- 23:08:08.359 DEBUG: OnContextCreated()
+- 23:08:08.546 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:08:08.562 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:08:08.593 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52817/
+- 23:08:11.562 DEBUG: WM_DESTROY
+- 23:08:11.562 DEBUG: RemoveBrowserWindow(): hwnd = 2034678
+- 23:08:11.562 INFO: Stopping Mongoose web server
+- 23:08:11.562 DEBUG: Mongoose webserver stopped immediately
+- 23:08:11.562 DEBUG: OnBeforeClose() hwnd=3671066
+- 23:08:11.562 DEBUG: RemoveBrowserWindow(): hwnd = 3671066
+- 23:08:11.562 DEBUG: GetBrowserWindow(): not found, hwnd = 3671066
+- 23:08:11.562 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:08:11.562 DEBUG: Calling CefQuitMessageLoop()
+- 23:08:11.625 INFO: Ended application
+- 23:08:11.625 INFO: --------------------------------------------------------
+- 23:08:43.000 INFO: --------------------------------------------------------
+- 23:08:43.016 INFO: Started application
+- 23:08:43.016 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:08:43.016 INFO: Log level = DEBUG4
+- 23:08:43.016 INFO: Starting Mongoose 3.9c web server
+- 23:08:43.016 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:08:43.016 INFO: Index files: index.html,index.php
+- 23:08:43.016 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:08:43.016 INFO: CGI pattern: **.php$
+- 23:08:43.016 INFO: Hide files patterns: 
+- 23:08:43.016 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:08:43.016 INFO: Web server url: http://127.0.0.1:52859/
+- 23:08:43.016 INFO: remote_debugging_port = 51206
+- 23:08:43.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=51206
+- 23:08:43.063 DEBUG: App::OnContextInitialized()
+- 23:08:43.063 DEBUG: Window max width/height = 1286/690
+- 23:08:43.063 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:08:43.063 DEBUG: GetBrowserWindow(): not found, hwnd = 198032
+- 23:08:43.063 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:08:43.063 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:08:43.063 DEBUG: StoreBrowserWindow(): hwnd = 198032
+- 23:08:43.109 DEBUG: ClientHandler::OnAfterCreated()
+- 23:08:43.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:08:43.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:08:43.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=814CA50CCB5B002ADF8A934F7E75D66E --mojo-platform-channel-handle=1688 /prefetch:2
+- 23:08:43.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=9451ADB78157887C15C2A66A6A4FA271 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=9451ADB78157887C15C2A66A6A4FA271 --renderer-client-id=3 --mojo-platform-channel-handle=2488 /prefetch:1
+- 23:08:43.047 DEBUG: OnBrowserCreated()
+[0218/230843.261:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:08:45.969 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:08:45.969 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:08:45.969 INFO: GET 200 /build/library/css/animate.min.css
+- 23:08:45.969 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:08:45.969 INFO: GET 200 /build/library/css/style.min.css
+- 23:08:45.969 INFO: GET 200 /
+- 23:08:45.969 INFO: GET 200 /build/library/css/theme/default.css
+- 23:08:45.969 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:08:45.969 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:08:45.797 DEBUG: OnContextCreated()
+- 23:08:45.000 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:08:45.000 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:08:45.000 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:08:45.016 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:08:45.016 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:08:45.016 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:08:45.031 INFO: GET 200 /build/library/js/apps.min.js
+- 23:08:45.031 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:08:45.203 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:08:45.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52859/
+- 23:08:49.125 DEBUG: WM_DESTROY
+- 23:08:49.125 DEBUG: RemoveBrowserWindow(): hwnd = 198032
+- 23:08:49.125 INFO: Stopping Mongoose web server
+- 23:08:49.125 DEBUG: Mongoose webserver stopped immediately
+- 23:08:49.125 DEBUG: OnBeforeClose() hwnd=198092
+- 23:08:49.125 DEBUG: RemoveBrowserWindow(): hwnd = 198092
+- 23:08:49.125 DEBUG: GetBrowserWindow(): not found, hwnd = 198092
+- 23:08:49.125 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:08:49.125 DEBUG: Calling CefQuitMessageLoop()
+- 23:08:50.984 INFO: Ended application
+- 23:08:50.984 INFO: --------------------------------------------------------
+- 23:09:13.000 INFO: --------------------------------------------------------
+- 23:09:13.000 INFO: Started application
+- 23:09:13.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:09:13.000 INFO: Log level = DEBUG4
+- 23:09:13.000 INFO: Starting Mongoose 3.9c web server
+- 23:09:13.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:09:13.000 INFO: Index files: index.html,index.php
+- 23:09:13.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:09:13.000 INFO: CGI pattern: **.php$
+- 23:09:13.000 INFO: Hide files patterns: 
+- 23:09:13.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:09:13.000 INFO: Web server url: http://127.0.0.1:52878/
+- 23:09:13.000 INFO: remote_debugging_port = 65468
+- 23:09:13.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=65468
+- 23:09:13.031 DEBUG: App::OnContextInitialized()
+- 23:09:13.031 DEBUG: Window max width/height = 1286/690
+- 23:09:13.031 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:09:13.047 DEBUG: GetBrowserWindow(): not found, hwnd = 198388
+- 23:09:13.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:09:13.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:09:13.047 DEBUG: StoreBrowserWindow(): hwnd = 198388
+- 23:09:13.125 DEBUG: ClientHandler::OnAfterCreated()
+- 23:09:13.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:09:13.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=FB6AB7F10DE3C46845EB4600FE7D6033 --mojo-platform-channel-handle=1692 /prefetch:2
+- 23:09:13.140 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:09:13.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=EC1A5DAA9794F3043AC5C3EB0F5384AA --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=EC1A5DAA9794F3043AC5C3EB0F5384AA --renderer-client-id=3 --mojo-platform-channel-handle=2548 /prefetch:1
+[0218/230913.948:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:09:13.032 DEBUG: OnBrowserCreated()
+- 23:09:15.594 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:09:15.594 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:09:15.594 INFO: GET 200 /build/library/css/animate.min.css
+- 23:09:15.594 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:09:15.594 INFO: GET 200 /build/library/css/style.min.css
+- 23:09:15.594 INFO: GET 200 /
+- 23:09:15.407 DEBUG: OnContextCreated()
+- 23:09:15.594 INFO: GET 200 /build/library/css/theme/default.css
+- 23:09:15.594 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:09:15.594 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:09:15.656 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:09:15.656 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:09:15.656 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:09:15.656 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:09:15.656 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:09:15.656 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:09:15.687 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:09:15.687 INFO: GET 200 /build/library/js/apps.min.js
+- 23:09:15.844 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:09:15.984 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52878/
+- 23:09:22.734 DEBUG: ClientHandler::OnAfterCreated()
+- 23:09:22.734 DEBUG: GetBrowserWindow(): not found, hwnd = 395092
+- 23:09:22.734 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 23:09:22.734 DEBUG: StoreBrowserWindow(): hwnd = 395092
+- 23:09:22.734 DEBUG: Centering popup window relative to its parent
+- 23:09:22.734 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:09:22.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=53D897BD26D87531D57E95C21D870FB8 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=53D897BD26D87531D57E95C21D870FB8 --renderer-client-id=4 --mojo-platform-channel-handle=2960 /prefetch:1
+- 23:09:22.031 DEBUG: OnBrowserCreated()
+- 23:09:22.047 DEBUG: OnContextCreated()
+- 23:09:22.078 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 23:09:37.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52878/
+- 23:09:37.453 DEBUG: OnContextCreated()
+- 23:09:37.656 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:09:37.656 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:09:37.656 INFO: GET 200 /build/library/css/animate.min.css
+- 23:09:37.656 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:09:37.656 INFO: GET 200 /build/library/css/style.min.css
+- 23:09:37.656 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:09:37.656 INFO: GET 200 /
+- 23:09:37.656 INFO: GET 200 /build/library/css/theme/default.css
+- 23:09:37.672 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:09:37.672 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:09:37.672 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:09:37.687 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:09:37.703 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:09:37.719 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:09:37.734 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:09:37.734 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:09:37.734 INFO: GET 200 /build/library/js/apps.min.js
+- 23:09:37.984 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:09:37.156 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52878/
+- 23:11:11.906 DEBUG: OnBeforeClose() hwnd=395092
+- 23:11:11.906 DEBUG: RemoveBrowserWindow(): hwnd = 395092
+- 23:21:43.937 DEBUG: WM_DESTROY
+- 23:21:43.937 DEBUG: RemoveBrowserWindow(): hwnd = 198388
+- 23:21:43.937 INFO: Stopping Mongoose web server
+- 23:21:43.937 DEBUG: Mongoose webserver stopped immediately
+- 23:21:43.937 DEBUG: OnBeforeClose() hwnd=198476
+- 23:21:43.937 DEBUG: RemoveBrowserWindow(): hwnd = 198476
+- 23:21:43.937 DEBUG: GetBrowserWindow(): not found, hwnd = 198476
+- 23:21:43.937 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:21:43.937 DEBUG: Calling CefQuitMessageLoop()
+- 23:21:43.187 INFO: Ended application
+- 23:21:43.187 INFO: --------------------------------------------------------
+- 23:22:02.000 INFO: --------------------------------------------------------
+- 23:22:02.000 INFO: Started application
+- 23:22:02.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:22:02.000 INFO: Log level = DEBUG4
+- 23:22:02.000 INFO: Starting Mongoose 3.9c web server
+- 23:22:02.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:22:02.000 INFO: Index files: index.html,index.php
+- 23:22:02.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:22:02.000 INFO: CGI pattern: **.php$
+- 23:22:02.000 INFO: Hide files patterns: 
+- 23:22:02.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:22:02.016 INFO: Web server url: http://127.0.0.1:52943/
+- 23:22:02.016 INFO: remote_debugging_port = 51211
+- 23:22:02.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=51211
+- 23:22:02.047 DEBUG: App::OnContextInitialized()
+- 23:22:02.047 DEBUG: Window max width/height = 1286/690
+- 23:22:02.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:22:02.047 DEBUG: GetBrowserWindow(): not found, hwnd = 722322
+- 23:22:02.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:22:02.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:22:02.047 DEBUG: StoreBrowserWindow(): hwnd = 722322
+- 23:22:03.094 DEBUG: ClientHandler::OnAfterCreated()
+- 23:22:03.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:22:03.109 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:22:03.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=CFB5E784B2316BDABF5BBE25CA937B46 --mojo-platform-channel-handle=1696 /prefetch:2
+- 23:22:03.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=34A906E111C7C42166CFBB70A83DE52E --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=34A906E111C7C42166CFBB70A83DE52E --renderer-client-id=3 --mojo-platform-channel-handle=2344 /prefetch:1
+- 23:22:03.047 DEBUG: OnBrowserCreated()
+[0218/232203.111:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:22:04.547 INFO: GET 200 /
+- 23:22:04.547 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:22:04.547 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:22:04.547 INFO: GET 200 /build/library/css/animate.min.css
+- 23:22:04.547 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:22:04.547 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:22:04.547 INFO: GET 200 /build/library/css/style.min.css
+- 23:22:04.391 DEBUG: OnContextCreated()
+- 23:22:04.547 INFO: GET 200 /build/library/css/theme/default.css
+- 23:22:04.547 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:22:04.609 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:22:04.609 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:22:04.609 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:22:04.609 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:22:04.609 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:22:04.625 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:22:04.641 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:22:04.641 INFO: GET 200 /build/library/js/apps.min.js
+- 23:22:04.766 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:22:04.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52943/
+- 23:22:08.391 DEBUG: WM_DESTROY
+- 23:22:08.391 DEBUG: RemoveBrowserWindow(): hwnd = 722322
+- 23:22:08.391 INFO: Stopping Mongoose web server
+- 23:22:08.391 DEBUG: Mongoose webserver stopped immediately
+- 23:22:08.391 DEBUG: OnBeforeClose() hwnd=264008
+- 23:22:08.391 DEBUG: RemoveBrowserWindow(): hwnd = 264008
+- 23:22:08.391 DEBUG: GetBrowserWindow(): not found, hwnd = 264008
+- 23:22:08.391 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:22:08.391 DEBUG: Calling CefQuitMessageLoop()
+- 23:22:08.250 DEBUG: OnBrowserDestroyed()
+- 23:22:08.516 INFO: Ended application
+- 23:22:08.516 INFO: --------------------------------------------------------
+- 23:22:48.000 INFO: --------------------------------------------------------
+- 23:22:48.000 INFO: Started application
+- 23:22:48.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:22:48.000 INFO: Log level = DEBUG4
+- 23:22:48.000 INFO: Starting Mongoose 3.9c web server
+- 23:22:48.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:22:48.000 INFO: Index files: index.html,index.php
+- 23:22:48.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:22:48.000 INFO: CGI pattern: **.php$
+- 23:22:48.000 INFO: Hide files patterns: 
+- 23:22:48.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:22:48.000 INFO: Web server url: http://127.0.0.1:52969/
+- 23:22:48.000 INFO: remote_debugging_port = 51574
+- 23:22:48.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=51574
+- 23:22:49.047 DEBUG: App::OnContextInitialized()
+- 23:22:49.047 DEBUG: Window max width/height = 1286/690
+- 23:22:49.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:22:49.047 DEBUG: GetBrowserWindow(): not found, hwnd = 395084
+- 23:22:49.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:22:49.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:22:49.047 DEBUG: StoreBrowserWindow(): hwnd = 395084
+- 23:22:49.078 DEBUG: ClientHandler::OnAfterCreated()
+- 23:22:49.078 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:22:49.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:22:49.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=570E117FF8FC5298FAFC3F4F600B3C79 --mojo-platform-channel-handle=1700 /prefetch:2
+- 23:22:49.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=FA87AB0B440D72D095263284740876CE --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=FA87AB0B440D72D095263284740876CE --renderer-client-id=3 --mojo-platform-channel-handle=2404 /prefetch:1
+- 23:22:49.032 DEBUG: OnBrowserCreated()
+[0218/232249.195:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:22:51.110 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:22:51.110 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:22:51.110 INFO: GET 200 /build/library/css/animate.min.css
+- 23:22:51.110 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:22:51.110 INFO: GET 200 /build/library/css/style.min.css
+- 23:22:51.110 INFO: GET 200 /
+- 23:22:51.954 DEBUG: OnContextCreated()
+- 23:22:51.110 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:22:51.110 INFO: GET 200 /build/library/css/theme/default.css
+- 23:22:51.110 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:22:51.125 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:22:51.141 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:22:51.141 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:22:51.141 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:22:51.141 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:22:51.141 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:22:51.172 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:22:51.172 INFO: GET 200 /build/library/js/apps.min.js
+- 23:22:51.313 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:22:51.453 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52969/
+- 23:22:54.172 DEBUG: WM_DESTROY
+- 23:22:54.172 DEBUG: RemoveBrowserWindow(): hwnd = 395084
+- 23:22:54.172 INFO: Stopping Mongoose web server
+- 23:22:54.172 DEBUG: Mongoose webserver stopped immediately
+- 23:22:54.172 DEBUG: OnBeforeClose() hwnd=918882
+- 23:22:54.172 DEBUG: RemoveBrowserWindow(): hwnd = 918882
+- 23:22:54.172 DEBUG: GetBrowserWindow(): not found, hwnd = 918882
+- 23:22:54.172 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:22:54.172 DEBUG: Calling CefQuitMessageLoop()
+- 23:22:54.266 INFO: Ended application
+- 23:22:54.266 INFO: --------------------------------------------------------
+- 23:24:37.000 INFO: --------------------------------------------------------
+- 23:24:37.000 INFO: Started application
+- 23:24:37.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:24:37.000 INFO: Log level = DEBUG4
+- 23:24:37.000 INFO: Starting Mongoose 3.9c web server
+- 23:24:37.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:24:37.000 INFO: Index files: index.html,index.php
+- 23:24:37.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:24:37.000 INFO: CGI pattern: **.php$
+- 23:24:37.000 INFO: Hide files patterns: 
+- 23:24:37.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:24:37.000 INFO: Web server url: http://127.0.0.1:52991/
+- 23:24:37.000 INFO: remote_debugging_port = 65298
+- 23:24:37.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=65298
+- 23:24:37.047 DEBUG: App::OnContextInitialized()
+- 23:24:37.047 DEBUG: Window max width/height = 1286/690
+- 23:24:37.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:24:37.047 DEBUG: GetBrowserWindow(): not found, hwnd = 593348
+- 23:24:37.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:24:37.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:24:37.047 DEBUG: StoreBrowserWindow(): hwnd = 593348
+- 23:24:37.078 DEBUG: ClientHandler::OnAfterCreated()
+- 23:24:37.078 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:24:37.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:24:37.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=7230A9859DB3493EDBF43B14D905DF2F --mojo-platform-channel-handle=1712 /prefetch:2
+- 23:24:37.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=B678BBE01B2CD2E6E6FC62D881D0D22B --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=B678BBE01B2CD2E6E6FC62D881D0D22B --renderer-client-id=3 --mojo-platform-channel-handle=2384 /prefetch:1
+- 23:24:37.031 DEBUG: OnBrowserCreated()
+[0218/232437.462:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:24:40.969 INFO: GET 200 /
+- 23:24:40.969 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:24:40.969 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:24:40.969 INFO: GET 200 /build/library/css/animate.min.css
+- 23:24:40.969 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:24:40.969 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:24:40.969 INFO: GET 200 /build/library/css/style.min.css
+- 23:24:40.813 DEBUG: OnContextCreated()
+- 23:24:40.969 INFO: GET 200 /build/library/css/theme/default.css
+- 23:24:40.969 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:24:40.031 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:24:40.140 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:24:40.140 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:24:40.140 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:24:40.140 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:24:40.140 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:24:40.140 INFO: GET 200 /build/library/js/apps.min.js
+- 23:24:40.140 INFO: GET 200 /build/library/img/logoB.png
+- 23:24:40.203 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:24:40.312 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52991/
+- 23:24:45.031 DEBUG: WM_DESTROY
+- 23:24:45.031 DEBUG: RemoveBrowserWindow(): hwnd = 593348
+- 23:24:45.031 INFO: Stopping Mongoose web server
+- 23:24:45.031 DEBUG: Mongoose webserver stopped immediately
+- 23:24:45.031 DEBUG: OnBeforeClose() hwnd=723406
+- 23:24:45.031 DEBUG: RemoveBrowserWindow(): hwnd = 723406
+- 23:24:45.031 DEBUG: GetBrowserWindow(): not found, hwnd = 723406
+- 23:24:45.031 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:24:45.031 DEBUG: Calling CefQuitMessageLoop()
+- 23:24:45.187 INFO: Ended application
+- 23:24:45.187 INFO: --------------------------------------------------------
+- 23:25:49.000 INFO: --------------------------------------------------------
+- 23:25:49.000 INFO: Started application
+- 23:25:49.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:25:49.000 INFO: Log level = DEBUG4
+- 23:25:49.000 INFO: Starting Mongoose 3.9c web server
+- 23:25:49.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:25:49.000 INFO: Index files: index.html,index.php
+- 23:25:49.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:25:49.000 INFO: CGI pattern: **.php$
+- 23:25:49.000 INFO: Hide files patterns: 
+- 23:25:49.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:25:49.000 INFO: Web server url: http://127.0.0.1:53014/
+- 23:25:49.000 INFO: remote_debugging_port = 60735
+- 23:25:49.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=60735
+- 23:25:49.031 DEBUG: App::OnContextInitialized()
+- 23:25:49.031 DEBUG: Window max width/height = 1286/690
+- 23:25:49.031 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:25:49.031 DEBUG: GetBrowserWindow(): not found, hwnd = 1444270
+- 23:25:49.031 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:25:49.031 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:25:49.046 DEBUG: StoreBrowserWindow(): hwnd = 1444270
+- 23:25:49.093 DEBUG: ClientHandler::OnAfterCreated()
+- 23:25:49.093 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:25:49.109 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:25:49.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=71EE6094F6B4956F1F105ADAD3E87423 --mojo-platform-channel-handle=1192 /prefetch:2
+- 23:25:49.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=BAD8E772FB0200EFA9165B8336802C69 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=BAD8E772FB0200EFA9165B8336802C69 --renderer-client-id=3 --mojo-platform-channel-handle=2272 /prefetch:1
+- 23:25:49.031 DEBUG: OnBrowserCreated()
+[0218/232549.906:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:25:51.468 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:25:51.468 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:25:51.468 INFO: GET 200 /build/library/css/animate.min.css
+- 23:25:51.468 INFO: GET 200 /
+- 23:25:51.468 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:25:51.468 INFO: GET 200 /build/library/css/style.min.css
+- 23:25:51.468 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:25:51.328 DEBUG: OnContextCreated()
+- 23:25:51.468 INFO: GET 200 /build/library/css/theme/default.css
+- 23:25:51.468 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:25:51.515 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:25:51.593 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:25:51.593 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:25:51.593 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:25:51.593 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:25:51.593 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:25:51.593 INFO: GET 200 /build/library/img/logoB.png
+- 23:25:51.609 INFO: GET 200 /build/library/js/apps.min.js
+- 23:25:51.703 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:25:51.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53014/
+- 23:26:00.375 DEBUG: WM_DESTROY
+- 23:26:00.375 DEBUG: RemoveBrowserWindow(): hwnd = 1444270
+- 23:26:00.375 INFO: Stopping Mongoose web server
+- 23:26:00.375 DEBUG: Mongoose webserver stopped immediately
+- 23:26:00.375 DEBUG: OnBeforeClose() hwnd=658884
+- 23:26:00.375 DEBUG: RemoveBrowserWindow(): hwnd = 658884
+- 23:26:00.375 DEBUG: GetBrowserWindow(): not found, hwnd = 658884
+- 23:26:00.375 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:26:00.375 DEBUG: Calling CefQuitMessageLoop()
+- 23:26:00.468 INFO: Ended application
+- 23:26:00.468 INFO: --------------------------------------------------------
+- 23:26:09.000 INFO: --------------------------------------------------------
+- 23:26:09.000 INFO: Started application
+- 23:26:09.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:26:09.000 INFO: Log level = DEBUG4
+- 23:26:09.000 INFO: Starting Mongoose 3.9c web server
+- 23:26:09.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:26:09.000 INFO: Index files: index.html,index.php
+- 23:26:09.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:26:09.000 INFO: CGI pattern: **.php$
+- 23:26:09.000 INFO: Hide files patterns: 
+- 23:26:09.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:26:09.000 INFO: Web server url: http://127.0.0.1:53034/
+- 23:26:09.000 INFO: remote_debugging_port = 59659
+- 23:26:09.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=59659
+- 23:26:09.047 DEBUG: App::OnContextInitialized()
+- 23:26:09.047 DEBUG: Window max width/height = 1286/690
+- 23:26:09.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:26:09.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1574216
+- 23:26:09.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:26:09.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:26:09.047 DEBUG: StoreBrowserWindow(): hwnd = 1574216
+- 23:26:09.109 DEBUG: ClientHandler::OnAfterCreated()
+- 23:26:09.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:26:09.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=E00B7E6A7BD617C42CBB38F419F78160 --mojo-platform-channel-handle=1688 /prefetch:2
+- 23:26:09.016 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=4C6A8965D062900EF66F9A680DCA7959 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=4C6A8965D062900EF66F9A680DCA7959 --renderer-client-id=3 --mojo-platform-channel-handle=2424 /prefetch:1
+[0218/232609.680:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:26:09.047 DEBUG: OnBrowserCreated()
+- 23:26:11.531 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:26:11.531 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:26:11.531 INFO: GET 200 /build/library/css/animate.min.css
+- 23:26:11.547 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:26:11.547 INFO: GET 200 /build/library/css/style.min.css
+- 23:26:11.547 INFO: GET 200 /
+- 23:26:11.391 DEBUG: OnContextCreated()
+- 23:26:11.547 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:26:11.547 INFO: GET 200 /build/library/css/theme/default.css
+- 23:26:11.547 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:26:11.594 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:26:11.594 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:26:11.594 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:26:11.594 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:26:11.594 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:26:11.594 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:26:11.656 INFO: GET 200 /build/library/js/apps.min.js
+- 23:26:11.687 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:26:11.687 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:26:11.687 INFO: GET 200 /build/library/img/logoB.png
+- 23:26:11.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53034/
+- 23:26:15.187 DEBUG: WM_DESTROY
+- 23:26:15.187 DEBUG: RemoveBrowserWindow(): hwnd = 1574216
+- 23:26:15.187 INFO: Stopping Mongoose web server
+- 23:26:15.187 DEBUG: Mongoose webserver stopped immediately
+- 23:26:15.187 DEBUG: OnBeforeClose() hwnd=1705792
+- 23:26:15.187 DEBUG: RemoveBrowserWindow(): hwnd = 1705792
+- 23:26:15.187 DEBUG: GetBrowserWindow(): not found, hwnd = 1705792
+- 23:26:15.187 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:26:15.187 DEBUG: Calling CefQuitMessageLoop()
+- 23:26:15.047 DEBUG: OnBrowserDestroyed()
+- 23:26:15.297 INFO: Ended application
+- 23:26:15.297 INFO: --------------------------------------------------------
+- 23:26:22.000 INFO: --------------------------------------------------------
+- 23:26:22.000 INFO: Started application
+- 23:26:22.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:26:22.000 INFO: Log level = DEBUG4
+- 23:26:22.000 INFO: Starting Mongoose 3.9c web server
+- 23:26:22.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:26:22.000 INFO: Index files: index.html,index.php
+- 23:26:22.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:26:22.000 INFO: CGI pattern: **.php$
+- 23:26:22.000 INFO: Hide files patterns: 
+- 23:26:22.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:26:22.000 INFO: Web server url: http://127.0.0.1:53055/
+- 23:26:22.000 INFO: remote_debugging_port = 62945
+- 23:26:22.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=62945
+- 23:26:22.047 DEBUG: App::OnContextInitialized()
+- 23:26:22.047 DEBUG: Window max width/height = 1286/690
+- 23:26:22.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:26:22.047 DEBUG: GetBrowserWindow(): not found, hwnd = 2819422
+- 23:26:22.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:26:22.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:26:22.047 DEBUG: StoreBrowserWindow(): hwnd = 2819422
+- 23:26:22.109 DEBUG: ClientHandler::OnAfterCreated()
+- 23:26:22.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:26:22.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:26:22.016 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=6365B9144D5361FBC64809CBD981C473 --mojo-platform-channel-handle=1704 /prefetch:2
+- 23:26:22.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=AE5C79754319056EC11AC1B6E1DD09E6 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=AE5C79754319056EC11AC1B6E1DD09E6 --renderer-client-id=3 --mojo-platform-channel-handle=2556 /prefetch:1
+- 23:26:22.031 DEBUG: OnBrowserCreated()
+[0218/232622.516:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:26:23.515 INFO: GET 200 /
+- 23:26:23.359 DEBUG: OnContextCreated()
+- 23:26:23.531 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/css/animate.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/css/style.min.css
+- 23:26:23.531 INFO: GET 200 /build/library/css/theme/default.css
+- 23:26:23.531 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:26:23.578 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:26:23.640 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:26:23.656 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:26:23.656 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:26:23.656 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:26:23.656 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:26:23.656 INFO: GET 200 /build/library/img/logoB.png
+- 23:26:23.656 INFO: GET 200 /build/library/js/apps.min.js
+- 23:26:23.656 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:26:24.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53055/
+- 23:26:26.047 DEBUG: WM_DESTROY
+- 23:26:26.047 DEBUG: RemoveBrowserWindow(): hwnd = 2819422
+- 23:26:26.047 INFO: Stopping Mongoose web server
+- 23:26:26.047 DEBUG: Mongoose webserver stopped immediately
+- 23:26:26.047 DEBUG: OnBeforeClose() hwnd=4984142
+- 23:26:26.047 DEBUG: RemoveBrowserWindow(): hwnd = 4984142
+- 23:26:26.047 DEBUG: GetBrowserWindow(): not found, hwnd = 4984142
+- 23:26:26.047 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:26:26.047 DEBUG: Calling CefQuitMessageLoop()
+- 23:26:26.109 INFO: Ended application
+- 23:26:26.109 INFO: --------------------------------------------------------
+- 23:26:33.000 INFO: --------------------------------------------------------
+- 23:26:33.000 INFO: Started application
+- 23:26:33.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:26:33.000 INFO: Log level = DEBUG4
+- 23:26:33.000 INFO: Starting Mongoose 3.9c web server
+- 23:26:33.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:26:33.000 INFO: Index files: index.html,index.php
+- 23:26:33.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:26:33.000 INFO: CGI pattern: **.php$
+- 23:26:33.000 INFO: Hide files patterns: 
+- 23:26:33.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:26:33.000 INFO: Web server url: http://127.0.0.1:53075/
+- 23:26:33.000 INFO: remote_debugging_port = 60964
+- 23:26:33.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=60964
+- 23:26:33.046 DEBUG: App::OnContextInitialized()
+- 23:26:33.046 DEBUG: Window max width/height = 1286/690
+- 23:26:33.046 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:26:33.046 DEBUG: GetBrowserWindow(): not found, hwnd = 1967448
+- 23:26:33.046 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:26:33.046 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:26:33.046 DEBUG: StoreBrowserWindow(): hwnd = 1967448
+- 23:26:33.109 DEBUG: ClientHandler::OnAfterCreated()
+- 23:26:33.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:26:33.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:26:33.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=8995449E7C582FFF4F1B41162FBFA796 --mojo-platform-channel-handle=1684 /prefetch:2
+- 23:26:33.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=158C905A19B83206AB9B6C0E3B520E85 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=158C905A19B83206AB9B6C0E3B520E85 --renderer-client-id=3 --mojo-platform-channel-handle=2400 /prefetch:1
+- 23:26:33.032 DEBUG: OnBrowserCreated()
+[0218/232633.666:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:26:35.000 INFO: GET 200 /
+- 23:26:35.000 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/css/animate.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/css/style.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:26:35.000 INFO: GET 200 /build/library/css/theme/default.css
+- 23:26:35.000 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:26:35.829 DEBUG: OnContextCreated()
+- 23:26:35.031 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:26:35.109 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:26:35.109 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:26:35.109 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:26:35.109 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:26:35.109 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:26:35.109 INFO: GET 200 /build/library/img/logoB.png
+- 23:26:35.109 INFO: GET 200 /build/library/js/apps.min.js
+- 23:26:35.125 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:26:35.265 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53075/
+- 23:26:39.609 DEBUG: WM_DESTROY
+- 23:26:39.609 DEBUG: RemoveBrowserWindow(): hwnd = 1967448
+- 23:26:39.609 INFO: Stopping Mongoose web server
+- 23:26:39.609 DEBUG: Mongoose webserver stopped immediately
+- 23:26:39.609 DEBUG: OnBeforeClose() hwnd=2100986
+- 23:26:39.609 DEBUG: RemoveBrowserWindow(): hwnd = 2100986
+- 23:26:39.609 DEBUG: GetBrowserWindow(): not found, hwnd = 2100986
+- 23:26:39.609 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:26:39.609 DEBUG: Calling CefQuitMessageLoop()
+- 23:26:39.703 INFO: Ended application
+- 23:26:39.703 INFO: --------------------------------------------------------
+- 23:26:47.000 INFO: --------------------------------------------------------
+- 23:26:47.000 INFO: Started application
+- 23:26:47.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:26:47.000 INFO: Log level = DEBUG4
+- 23:26:47.000 INFO: Starting Mongoose 3.9c web server
+- 23:26:47.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:26:47.000 INFO: Index files: index.html,index.php
+- 23:26:47.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:26:47.000 INFO: CGI pattern: **.php$
+- 23:26:47.000 INFO: Hide files patterns: 
+- 23:26:47.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:26:47.015 INFO: Web server url: http://127.0.0.1:53095/
+- 23:26:47.015 INFO: remote_debugging_port = 61524
+- 23:26:47.015 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=61524
+- 23:26:47.046 DEBUG: App::OnContextInitialized()
+- 23:26:47.046 DEBUG: Window max width/height = 1286/690
+- 23:26:47.046 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:26:47.046 DEBUG: GetBrowserWindow(): not found, hwnd = 4916532
+- 23:26:47.046 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:26:47.046 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:26:47.062 DEBUG: StoreBrowserWindow(): hwnd = 4916532
+- 23:26:47.093 DEBUG: ClientHandler::OnAfterCreated()
+- 23:26:47.093 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:26:47.109 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:26:47.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=CA0C0C0F23616CC2BE52E4CFCE3CE8D0 --mojo-platform-channel-handle=1720 /prefetch:2
+- 23:26:47.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=0E1AA033FAFA70F187D9CEDD61DA268B --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=0E1AA033FAFA70F187D9CEDD61DA268B --renderer-client-id=3 --mojo-platform-channel-handle=2388 /prefetch:1
+- 23:26:47.031 DEBUG: OnBrowserCreated()
+[0218/232647.663:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:26:48.468 INFO: GET 200 /
+- 23:26:48.484 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:26:48.484 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:26:48.484 INFO: GET 200 /build/library/css/animate.min.css
+- 23:26:48.484 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:26:48.484 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:26:48.484 INFO: GET 200 /build/library/css/style.min.css
+- 23:26:48.328 DEBUG: OnContextCreated()
+- 23:26:48.484 INFO: GET 200 /build/library/css/theme/default.css
+- 23:26:48.484 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:26:48.515 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:26:49.609 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:26:49.609 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:26:49.609 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:26:49.609 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:26:49.609 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:26:49.609 INFO: GET 200 /build/library/img/logoB.png
+- 23:26:49.625 INFO: GET 200 /build/library/js/apps.min.js
+- 23:26:49.703 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:26:49.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53095/
+- 23:26:54.281 DEBUG: WM_DESTROY
+- 23:26:54.281 DEBUG: RemoveBrowserWindow(): hwnd = 4916532
+- 23:26:54.281 INFO: Stopping Mongoose web server
+- 23:26:54.281 DEBUG: Mongoose webserver stopped immediately
+- 23:26:54.296 DEBUG: OnBeforeClose() hwnd=723906
+- 23:26:54.296 DEBUG: RemoveBrowserWindow(): hwnd = 723906
+- 23:26:54.296 DEBUG: GetBrowserWindow(): not found, hwnd = 723906
+- 23:26:54.296 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:26:54.296 DEBUG: Calling CefQuitMessageLoop()
+- 23:26:54.140 DEBUG: OnBrowserDestroyed()
+- 23:26:54.515 INFO: Ended application
+- 23:26:54.515 INFO: --------------------------------------------------------
+- 23:27:02.000 INFO: --------------------------------------------------------
+- 23:27:02.000 INFO: Started application
+- 23:27:02.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:27:02.015 INFO: Log level = DEBUG4
+- 23:27:02.015 INFO: Starting Mongoose 3.9c web server
+- 23:27:02.015 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:27:02.015 INFO: Index files: index.html,index.php
+- 23:27:02.015 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:27:02.015 INFO: CGI pattern: **.php$
+- 23:27:02.015 INFO: Hide files patterns: 
+- 23:27:02.015 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:27:02.015 INFO: Web server url: http://127.0.0.1:53115/
+- 23:27:02.015 INFO: remote_debugging_port = 63060
+- 23:27:02.015 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=63060
+- 23:27:02.062 DEBUG: App::OnContextInitialized()
+- 23:27:02.062 DEBUG: Window max width/height = 1286/690
+- 23:27:02.062 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:27:02.078 DEBUG: GetBrowserWindow(): not found, hwnd = 1248228
+- 23:27:02.078 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:27:02.078 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:27:02.078 DEBUG: StoreBrowserWindow(): hwnd = 1248228
+- 23:27:02.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=CF61E1C3D5074AD149CD5355820A9D69 --mojo-platform-channel-handle=1700 /prefetch:2
+- 23:27:02.156 DEBUG: ClientHandler::OnAfterCreated()
+- 23:27:02.156 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:27:02.156 DEBUG: OnLoadingStateChange: loading=1, url=
+[0218/232702.795:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:27:02.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=7AFECA6155973058F03F944A12D7479D --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=7AFECA6155973058F03F944A12D7479D --renderer-client-id=3 --mojo-platform-channel-handle=2172 /prefetch:1
+- 23:27:02.047 DEBUG: OnBrowserCreated()
+- 23:27:05.515 INFO: GET 200 /
+- 23:27:05.531 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:27:05.531 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:27:05.531 INFO: GET 200 /build/library/css/animate.min.css
+- 23:27:05.531 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:27:05.531 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:27:05.531 INFO: GET 200 /build/library/css/style.min.css
+- 23:27:05.297 DEBUG: OnContextCreated()
+- 23:27:05.531 INFO: GET 200 /build/library/css/theme/default.css
+- 23:27:05.531 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:27:05.609 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:27:05.671 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:27:05.671 INFO: GET 200 /build/library/img/logoA.png
+- 23:27:05.671 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:27:05.671 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:27:05.671 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:27:05.671 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:27:05.671 INFO: GET 200 /build/library/js/apps.min.js
+- 23:27:05.718 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:27:05.796 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53115/
+- 23:27:09.968 DEBUG: WM_DESTROY
+- 23:27:09.968 DEBUG: RemoveBrowserWindow(): hwnd = 1248228
+- 23:27:09.968 INFO: Stopping Mongoose web server
+- 23:27:09.968 DEBUG: Mongoose webserver stopped immediately
+- 23:27:09.968 DEBUG: OnBeforeClose() hwnd=5573966
+- 23:27:09.968 DEBUG: RemoveBrowserWindow(): hwnd = 5573966
+- 23:27:09.968 DEBUG: GetBrowserWindow(): not found, hwnd = 5573966
+- 23:27:09.968 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:27:09.968 DEBUG: Calling CefQuitMessageLoop()
+- 23:27:09.046 INFO: Ended application
+- 23:27:09.046 INFO: --------------------------------------------------------
+- 23:27:14.000 INFO: --------------------------------------------------------
+- 23:27:14.000 INFO: Started application
+- 23:27:14.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:27:14.000 INFO: Log level = DEBUG4
+- 23:27:14.000 INFO: Starting Mongoose 3.9c web server
+- 23:27:14.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:27:14.000 INFO: Index files: index.html,index.php
+- 23:27:14.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:27:14.000 INFO: CGI pattern: **.php$
+- 23:27:14.000 INFO: Hide files patterns: 
+- 23:27:14.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:27:14.000 INFO: Web server url: http://127.0.0.1:53134/
+- 23:27:14.015 INFO: remote_debugging_port = 54983
+- 23:27:14.015 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=54983
+- 23:27:14.047 DEBUG: App::OnContextInitialized()
+- 23:27:14.047 DEBUG: Window max width/height = 1286/690
+- 23:27:14.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:27:14.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1313764
+- 23:27:14.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:27:14.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:27:14.047 DEBUG: StoreBrowserWindow(): hwnd = 1313764
+- 23:27:14.109 DEBUG: ClientHandler::OnAfterCreated()
+- 23:27:14.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:27:14.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:27:14.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=7C639719D806FD36590A50EDB879FF01 --mojo-platform-channel-handle=1732 /prefetch:2
+- 23:27:14.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=CFCD8974A065F3B13048C07B0A37F7BD --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=CFCD8974A065F3B13048C07B0A37F7BD --renderer-client-id=3 --mojo-platform-channel-handle=2228 /prefetch:1
+[0218/232714.857:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:27:14.031 DEBUG: OnBrowserCreated()
+- 23:27:16.359 INFO: GET 200 /
+- 23:27:16.359 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:27:16.359 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:27:16.359 INFO: GET 200 /build/library/css/animate.min.css
+- 23:27:16.359 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:27:16.359 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:27:16.359 INFO: GET 200 /build/library/css/style.min.css
+- 23:27:16.203 DEBUG: OnContextCreated()
+- 23:27:16.359 INFO: GET 200 /build/library/css/theme/default.css
+- 23:27:16.359 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:27:16.406 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:27:16.468 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:27:16.468 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:27:16.468 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:27:16.468 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:27:16.468 INFO: GET 200 /build/library/js/apps.min.js
+- 23:27:16.468 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:27:16.468 INFO: GET 200 /build/library/img/logoB.png
+- 23:27:16.562 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:27:16.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53134/
+- 23:27:25.406 DEBUG: WM_DESTROY
+- 23:27:25.406 DEBUG: RemoveBrowserWindow(): hwnd = 1313764
+- 23:27:25.406 INFO: Stopping Mongoose web server
+- 23:27:25.406 DEBUG: Mongoose webserver stopped immediately
+- 23:27:25.406 DEBUG: OnBeforeClose() hwnd=2558802
+- 23:27:25.406 DEBUG: RemoveBrowserWindow(): hwnd = 2558802
+- 23:27:25.406 DEBUG: GetBrowserWindow(): not found, hwnd = 2558802
+- 23:27:25.406 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:27:25.406 DEBUG: Calling CefQuitMessageLoop()
+- 23:27:25.484 INFO: Ended application
+- 23:27:25.484 INFO: --------------------------------------------------------
+- 23:27:32.000 INFO: --------------------------------------------------------
+- 23:27:32.000 INFO: Started application
+- 23:27:32.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:27:32.000 INFO: Log level = DEBUG4
+- 23:27:32.000 INFO: Starting Mongoose 3.9c web server
+- 23:27:32.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:27:32.000 INFO: Index files: index.html,index.php
+- 23:27:32.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:27:32.000 INFO: CGI pattern: **.php$
+- 23:27:32.000 INFO: Hide files patterns: 
+- 23:27:32.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:27:32.000 INFO: Web server url: http://127.0.0.1:53154/
+- 23:27:32.000 INFO: remote_debugging_port = 61007
+- 23:27:32.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=61007
+- 23:27:32.047 DEBUG: App::OnContextInitialized()
+- 23:27:32.047 DEBUG: Window max width/height = 1286/690
+- 23:27:32.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:27:32.047 DEBUG: GetBrowserWindow(): not found, hwnd = 3278174
+- 23:27:32.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:27:32.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:27:32.047 DEBUG: StoreBrowserWindow(): hwnd = 3278174
+- 23:27:32.094 DEBUG: ClientHandler::OnAfterCreated()
+- 23:27:32.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:27:32.110 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:27:32.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=046272D778FD5DA43CBB31BA11C570EE --mojo-platform-channel-handle=1696 /prefetch:2
+- 23:27:32.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=8037DD016756DD75311876813B001826 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=8037DD016756DD75311876813B001826 --renderer-client-id=3 --mojo-platform-channel-handle=2532 /prefetch:1
+[0218/232732.651:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:27:32.047 DEBUG: OnBrowserCreated()
+- 23:27:34.235 INFO: GET 200 /
+- 23:27:34.235 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:27:34.235 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:27:34.235 INFO: GET 200 /build/library/css/animate.min.css
+- 23:27:34.235 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:27:34.235 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:27:34.235 INFO: GET 200 /build/library/css/style.min.css
+- 23:27:34.094 DEBUG: OnContextCreated()
+- 23:27:34.235 INFO: GET 200 /build/library/css/theme/default.css
+- 23:27:34.235 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:27:34.297 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:27:34.360 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:27:34.360 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:27:34.360 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:27:34.360 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:27:34.360 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:27:34.360 INFO: GET 200 /build/library/img/logoB.png
+- 23:27:34.360 INFO: GET 200 /build/library/js/apps.min.js
+- 23:27:34.422 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:27:35.531 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53154/
+- 23:27:37.985 DEBUG: WM_DESTROY
+- 23:27:37.985 DEBUG: RemoveBrowserWindow(): hwnd = 3278174
+- 23:27:37.985 INFO: Stopping Mongoose web server
+- 23:27:37.985 DEBUG: Mongoose webserver stopped immediately
+- 23:27:37.985 DEBUG: OnBeforeClose() hwnd=2360682
+- 23:27:37.985 DEBUG: RemoveBrowserWindow(): hwnd = 2360682
+- 23:27:37.985 DEBUG: GetBrowserWindow(): not found, hwnd = 2360682
+- 23:27:37.985 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:27:37.985 DEBUG: Calling CefQuitMessageLoop()
+- 23:27:37.844 DEBUG: OnBrowserDestroyed()
+- 23:27:37.078 INFO: Ended application
+- 23:27:37.078 INFO: --------------------------------------------------------
+- 23:27:42.000 INFO: --------------------------------------------------------
+- 23:27:42.000 INFO: Started application
+- 23:27:42.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:27:42.000 INFO: Log level = DEBUG4
+- 23:27:42.000 INFO: Starting Mongoose 3.9c web server
+- 23:27:42.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:27:42.000 INFO: Index files: index.html,index.php
+- 23:27:42.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:27:42.000 INFO: CGI pattern: **.php$
+- 23:27:42.000 INFO: Hide files patterns: 
+- 23:27:42.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:27:42.000 INFO: Web server url: http://127.0.0.1:53173/
+- 23:27:42.000 INFO: remote_debugging_port = 49394
+- 23:27:42.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=49394
+- 23:27:42.047 DEBUG: App::OnContextInitialized()
+- 23:27:42.047 DEBUG: Window max width/height = 1286/690
+- 23:27:42.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:27:42.047 DEBUG: GetBrowserWindow(): not found, hwnd = 986094
+- 23:27:42.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:27:42.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:27:42.047 DEBUG: StoreBrowserWindow(): hwnd = 986094
+- 23:27:42.094 DEBUG: ClientHandler::OnAfterCreated()
+- 23:27:42.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:27:42.110 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:27:42.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=75AF6CC962BEC59A68BB83D916E77167 --mojo-platform-channel-handle=1692 /prefetch:2
+- 23:27:42.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=FA740CB39B77610C93ED1FE9FEF0F434 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=FA740CB39B77610C93ED1FE9FEF0F434 --renderer-client-id=3 --mojo-platform-channel-handle=2556 /prefetch:1
+- 23:27:43.031 DEBUG: OnBrowserCreated()
+[0218/232743.019:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:27:44.969 INFO: GET 200 /
+- 23:27:44.985 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:27:44.985 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:27:44.985 INFO: GET 200 /build/library/css/animate.min.css
+- 23:27:44.985 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:27:44.985 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:27:44.985 INFO: GET 200 /build/library/css/style.min.css
+- 23:27:44.813 DEBUG: OnContextCreated()
+- 23:27:44.985 INFO: GET 200 /build/library/css/theme/default.css
+- 23:27:44.985 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:27:44.016 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:27:44.078 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:27:44.078 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:27:44.078 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:27:44.078 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:27:44.078 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:27:44.078 INFO: GET 200 /build/library/img/logoB.png
+- 23:27:44.078 INFO: GET 200 /build/library/js/apps.min.js
+- 23:27:44.110 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:27:45.235 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53173/
+- 23:27:50.813 DEBUG: WM_DESTROY
+- 23:27:50.813 DEBUG: RemoveBrowserWindow(): hwnd = 986094
+- 23:27:50.813 INFO: Stopping Mongoose web server
+- 23:27:50.813 DEBUG: Mongoose webserver stopped immediately
+- 23:27:50.828 DEBUG: OnBeforeClose() hwnd=657778
+- 23:27:50.828 DEBUG: RemoveBrowserWindow(): hwnd = 657778
+- 23:27:50.828 DEBUG: GetBrowserWindow(): not found, hwnd = 657778
+- 23:27:50.828 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:27:50.828 DEBUG: Calling CefQuitMessageLoop()
+- 23:27:50.907 INFO: Ended application
+- 23:27:50.907 INFO: --------------------------------------------------------
+- 23:27:59.000 INFO: --------------------------------------------------------
+- 23:27:59.000 INFO: Started application
+- 23:27:59.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:27:59.000 INFO: Log level = DEBUG4
+- 23:27:59.000 INFO: Starting Mongoose 3.9c web server
+- 23:27:59.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:27:59.000 INFO: Index files: index.html,index.php
+- 23:27:59.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:27:59.000 INFO: CGI pattern: **.php$
+- 23:27:59.000 INFO: Hide files patterns: 
+- 23:27:59.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:27:59.016 INFO: Web server url: http://127.0.0.1:53193/
+- 23:27:59.016 INFO: remote_debugging_port = 52073
+- 23:27:59.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=52073
+- 23:27:59.063 DEBUG: App::OnContextInitialized()
+- 23:27:59.063 DEBUG: Window max width/height = 1286/690
+- 23:27:59.063 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:27:59.063 DEBUG: GetBrowserWindow(): not found, hwnd = 2426700
+- 23:27:59.063 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:27:59.063 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:27:59.063 DEBUG: StoreBrowserWindow(): hwnd = 2426700
+- 23:27:59.125 DEBUG: ClientHandler::OnAfterCreated()
+- 23:27:59.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:28:00.141 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:28:00.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=2B22D59BCE18632FAF857290ADBF4541 --mojo-platform-channel-handle=1704 /prefetch:2
+- 23:28:00.015 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=A4AAB8CFDCD4C43A362BC4D5E3958DDF --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=A4AAB8CFDCD4C43A362BC4D5E3958DDF --renderer-client-id=3 --mojo-platform-channel-handle=2412 /prefetch:1
+[0218/232800.064:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:28:00.047 DEBUG: OnBrowserCreated()
+- 23:28:01.047 DEBUG: WM_DESTROY
+- 23:28:01.047 DEBUG: RemoveBrowserWindow(): hwnd = 2426700
+- 23:28:01.047 INFO: Stopping Mongoose web server
+- 23:28:01.047 DEBUG: Mongoose webserver stopped immediately
+- 23:28:01.047 DEBUG: OnBeforeClose() hwnd=2688832
+- 23:28:01.047 DEBUG: RemoveBrowserWindow(): hwnd = 2688832
+- 23:28:01.047 DEBUG: GetBrowserWindow(): not found, hwnd = 2688832
+- 23:28:01.047 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 23:28:01.047 DEBUG: Calling CefQuitMessageLoop()
+- 23:28:01.125 INFO: Ended application
+- 23:28:01.125 INFO: --------------------------------------------------------

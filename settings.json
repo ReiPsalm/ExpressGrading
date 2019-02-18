@@ -10,8 +10,8 @@
         "log_file": "debug.log"
     },
     "main_window": {
-        "title": "CLASSROOM MANAGEMENT",
-        "icon": "",
+        "title": "Express Grading",
+        "icon": "www/build/library/img/faviconb.ico",
         "default_size": [900, 700],
         "minimum_size": [640, 480],
         "maximum_size": [0, 0],

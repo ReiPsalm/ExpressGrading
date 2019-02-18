@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_id'])){
 <!-- Mirrored from seantheme.com/color-admin-v1.9/admin/html/page_with_footer.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2016 04:05:06 GMT -->
 <head>
 	<meta charset="utf-8" />
-	<title>Color Admin | Page with Footer</title>
+	<title>Express Grading</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -50,15 +50,8 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #content -->
 		<div id="content" class="content">
-			<!-- begin breadcrumb -->
-			<ol class="breadcrumb pull-right">
-				<li><a href="javascript:;">Home</a></li>
-				<li><a href="javascript:;">Page Options</a></li>
-				<li class="active">Page with Footer</li>
-			</ol>
-			<!-- end breadcrumb -->
 			<!-- begin page-header -->
-			<h1 class="page-header">Page with Footer <small>header small text goes here...</small></h1>
+			<h1 class="page-header">Dashboard</h1>
 			<!-- end page-header -->
 			
 			<div class="panel panel-inverse">
@@ -80,7 +73,7 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
-		    &copy; 2014 Color Admin Responsive Admin Template - Sean Ngu All Rights Reserved
+		    &copy; <a href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
 		</div>
 		<!-- end #footer -->
 		
