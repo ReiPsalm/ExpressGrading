@@ -83,8 +83,8 @@
             </li>
             <li class="dropdown navbar-user">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="assets/img/user-13.jpg" alt="" /> 
-                    <span class="hidden-xs">Adam Schwartz</span> <b class="caret"></b>
+                    <img src="../../library/img/user-13.jpg" alt="" /> 
+                    <span class="hidden-xs"><?php echo $_SESSION['ins_fname']." ".$_SESSION['ins_lname']; ?></span> <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu animated fadeInLeft">
                     <li class="arrow"></li>

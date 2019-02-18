@@ -5634,3 +5634,899 @@
 - 23:28:01.047 DEBUG: Calling CefQuitMessageLoop()
 - 23:28:01.125 INFO: Ended application
 - 23:28:01.125 INFO: --------------------------------------------------------
+- 23:36:28.000 INFO: --------------------------------------------------------
+- 23:36:28.000 INFO: Started application
+- 23:36:28.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 23:36:28.000 INFO: Log level = DEBUG4
+- 23:36:28.000 INFO: Starting Mongoose 3.9c web server
+- 23:36:28.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 23:36:28.000 INFO: Index files: index.html,index.php
+- 23:36:28.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 23:36:28.000 INFO: CGI pattern: **.php$
+- 23:36:28.000 INFO: Hide files patterns: 
+- 23:36:28.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 23:36:28.000 INFO: Web server url: http://127.0.0.1:53214/
+- 23:36:28.000 INFO: remote_debugging_port = 63870
+- 23:36:28.015 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=63870
+- 23:36:28.140 DEBUG: App::OnContextInitialized()
+- 23:36:28.140 DEBUG: Window max width/height = 1286/690
+- 23:36:28.140 DEBUG: Window max size exceeded, new width/height = 900/690
+- 23:36:28.140 DEBUG: GetBrowserWindow(): not found, hwnd = 591774
+- 23:36:28.140 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 23:36:28.140 DEBUG: BrowserWindow::CreateBrowserControl()
+- 23:36:28.156 DEBUG: StoreBrowserWindow(): hwnd = 591774
+- 23:36:28.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=2B1B40C79D758E71368F961726B14979 --mojo-platform-channel-handle=1692 /prefetch:2
+- 23:36:28.218 DEBUG: ClientHandler::OnAfterCreated()
+- 23:36:28.218 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 23:36:28.234 DEBUG: OnLoadingStateChange: loading=1, url=
+- 23:36:28.016 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=5D823FE5AE3B5CAC3C2638422792C03C --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=5D823FE5AE3B5CAC3C2638422792C03C --renderer-client-id=3 --mojo-platform-channel-handle=2436 /prefetch:1
+[0218/233628.535:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 23:36:28.047 DEBUG: OnBrowserCreated()
+- 23:36:30.687 INFO: GET 200 /
+- 23:36:30.687 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 23:36:30.687 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 23:36:30.687 INFO: GET 200 /build/library/css/animate.min.css
+- 23:36:30.687 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 23:36:30.687 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 23:36:30.687 INFO: GET 200 /build/library/css/style.min.css
+- 23:36:30.391 DEBUG: OnContextCreated()
+- 23:36:30.687 INFO: GET 200 /build/library/css/theme/default.css
+- 23:36:30.687 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 23:36:30.750 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 23:36:31.812 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:36:31.843 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 23:36:31.937 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 23:36:31.984 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:36:31.984 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 23:36:31.984 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 23:36:31.984 INFO: GET 200 /build/comps/applet/appscript.js
+- 23:36:31.984 INFO: GET 200 /build/library/js/apps.min.js
+- 23:36:31.984 INFO: GET 200 /build/library/img/logoB.png
+- 23:36:31.515 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/
+- 23:36:46.078 INFO: POST 200 /build/comps/cabinet/exec.php
+- 23:36:46.078 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53214/
+- 23:36:46.032 DEBUG: OnContextCreated()
+- 23:36:46.343 INFO: GET 200 /build/comps/view/home.php
+- 23:36:46.343 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 23:36:46.343 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:36:46.359 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 23:36:46.359 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 23:36:46.359 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 23:36:46.500 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 23:36:48.203 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/build/comps/view/home.php
+- 00:00:31.921 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53214/build/comps/view/home.php
+- 00:00:31.750 INFO: GET 302 /build/comps/engine/terminator.php
+- 00:00:32.890 INFO: GET 200 /
+- 00:00:32.610 DEBUG: OnContextCreated()
+- 00:00:32.921 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:00:32.921 INFO: GET 304 /build/library/img/logoB.png
+- 00:00:32.937 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:00:32.968 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/
+- 00:08:54.296 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53214/
+- 00:08:54.250 DEBUG: OnContextCreated()
+- 00:08:54.546 INFO: GET 200 /
+- 00:08:54.640 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:08:54.640 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:08:54.656 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:08:54.671 INFO: GET 200 /build/library/css/animate.min.css
+- 00:08:54.750 INFO: GET 200 /build/library/css/style.min.css
+- 00:08:54.750 INFO: GET 200 /build/library/css/theme/default.css
+- 00:08:55.796 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:08:55.968 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:08:55.000 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:08:55.015 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:08:55.156 INFO: GET 200 /build/library/img/logoB.png
+- 00:08:55.171 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:08:55.234 INFO: GET 200 /build/library/js/apps.min.js
+- 00:08:55.281 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:08:55.296 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:08:55.437 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:08:55.484 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:08:55.703 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/
+- 00:09:13.906 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:09:23.531 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:09:23.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53214/
+- 00:09:23.391 DEBUG: OnContextCreated()
+- 00:09:23.687 INFO: GET 200 /build/comps/view/home.php
+- 00:09:24.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/build/comps/view/home.php
+- 00:09:31.328 DEBUG: ClientHandler::OnAfterCreated()
+- 00:09:31.328 DEBUG: GetBrowserWindow(): not found, hwnd = 1902036
+- 00:09:31.328 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:09:31.328 DEBUG: StoreBrowserWindow(): hwnd = 1902036
+- 00:09:31.343 DEBUG: Centering popup window relative to its parent
+- 00:09:31.406 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:09:31.016 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=9EBB6316D74691E6AFCA1E5467326C0E --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=9EBB6316D74691E6AFCA1E5467326C0E --renderer-client-id=4 --mojo-platform-channel-handle=3024 /prefetch:1
+- 00:09:31.063 DEBUG: OnBrowserCreated()
+- 00:09:31.125 DEBUG: OnContextCreated()
+- 00:09:32.187 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:09:38.500 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53214/build/comps/view/home.php
+- 00:09:38.407 DEBUG: OnContextCreated()
+- 00:09:38.718 INFO: GET 200 /build/comps/view/home.php
+- 00:09:38.718 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/css/animate.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/css/style.min.css
+- 00:09:38.718 INFO: GET 200 /build/library/css/theme/default.css
+- 00:09:39.796 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:09:39.015 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53214/build/comps/view/home.php
+- 00:09:59.875 DEBUG: OnBeforeClose() hwnd=1902036
+- 00:09:59.875 DEBUG: RemoveBrowserWindow(): hwnd = 1902036
+- 00:09:59.828 DEBUG: OnBrowserDestroyed()
+- 00:10:01.328 DEBUG: WM_DESTROY
+- 00:10:01.328 DEBUG: RemoveBrowserWindow(): hwnd = 591774
+- 00:10:01.328 INFO: Stopping Mongoose web server
+- 00:10:01.328 DEBUG: Mongoose webserver stopped immediately
+- 00:10:02.937 DEBUG: OnBeforeClose() hwnd=1245692
+- 00:10:02.937 DEBUG: RemoveBrowserWindow(): hwnd = 1245692
+- 00:10:02.937 DEBUG: GetBrowserWindow(): not found, hwnd = 1245692
+- 00:10:02.937 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:10:02.937 DEBUG: Calling CefQuitMessageLoop()
+- 00:10:02.735 DEBUG: OnBrowserDestroyed()
+- 00:10:02.718 INFO: Ended application
+- 00:10:02.718 INFO: --------------------------------------------------------
+- 00:15:01.000 INFO: --------------------------------------------------------
+- 00:15:01.000 INFO: Started application
+- 00:15:01.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:15:01.000 INFO: Log level = DEBUG4
+- 00:15:01.000 INFO: Starting Mongoose 3.9c web server
+- 00:15:01.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:15:01.000 INFO: Index files: index.html,index.php
+- 00:15:01.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:15:01.000 INFO: CGI pattern: **.php$
+- 00:15:01.000 INFO: Hide files patterns: 
+- 00:15:01.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:15:01.000 INFO: Web server url: http://127.0.0.1:53372/
+- 00:15:01.000 INFO: remote_debugging_port = 58565
+- 00:15:01.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=58565
+- 00:15:01.047 DEBUG: App::OnContextInitialized()
+- 00:15:01.047 DEBUG: Window max width/height = 1286/690
+- 00:15:01.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:15:01.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1640558
+- 00:15:01.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:15:02.078 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:15:02.078 DEBUG: StoreBrowserWindow(): hwnd = 1640558
+- 00:15:02.125 DEBUG: ClientHandler::OnAfterCreated()
+- 00:15:02.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:15:02.140 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:15:02.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=FFD1A3AB0AD55DBA4370493323D7E0DE --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=FFD1A3AB0AD55DBA4370493323D7E0DE --renderer-client-id=3 --mojo-platform-channel-handle=2380 /prefetch:1
+- 00:15:02.125 DEBUG: OnBrowserCreated()
+- 00:15:02.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=35DCBB795C660D87F0BD3A6CD43CA81F --mojo-platform-channel-handle=1688 /prefetch:2
+[0219/001502.553:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:15:03.531 INFO: GET 200 /
+- 00:15:03.531 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:15:03.531 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:15:03.531 INFO: GET 200 /build/library/css/animate.min.css
+- 00:15:03.531 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:15:03.531 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:15:03.531 INFO: GET 200 /build/library/css/style.min.css
+- 00:15:03.360 DEBUG: OnContextCreated()
+- 00:15:03.547 INFO: GET 200 /build/library/css/theme/default.css
+- 00:15:03.547 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:15:03.593 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:15:03.687 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:15:03.687 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:15:03.687 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:15:03.687 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:15:03.703 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:15:03.703 INFO: GET 200 /build/library/img/logoB.png
+- 00:15:03.703 INFO: GET 200 /build/library/js/apps.min.js
+- 00:15:03.765 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:15:03.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53372/
+- 00:15:16.750 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:15:16.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53372/
+- 00:15:16.719 DEBUG: OnContextCreated()
+- 00:15:16.906 INFO: GET 200 /build/comps/view/home.php
+- 00:15:16.968 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53372/build/comps/view/home.php
+- 00:15:24.703 DEBUG: WM_DESTROY
+- 00:15:24.703 DEBUG: RemoveBrowserWindow(): hwnd = 1640558
+- 00:15:24.703 INFO: Stopping Mongoose web server
+- 00:15:24.703 DEBUG: Mongoose webserver stopped immediately
+- 00:15:24.703 DEBUG: OnBeforeClose() hwnd=2294596
+- 00:15:24.703 DEBUG: RemoveBrowserWindow(): hwnd = 2294596
+- 00:15:24.703 DEBUG: GetBrowserWindow(): not found, hwnd = 2294596
+- 00:15:24.703 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:15:24.703 DEBUG: Calling CefQuitMessageLoop()
+- 00:15:24.843 INFO: Ended application
+- 00:15:24.843 INFO: --------------------------------------------------------
+- 00:16:42.000 INFO: --------------------------------------------------------
+- 00:16:42.000 INFO: Started application
+- 00:16:42.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:16:42.000 INFO: Log level = DEBUG4
+- 00:16:42.000 INFO: Starting Mongoose 3.9c web server
+- 00:16:42.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:16:42.000 INFO: Index files: index.html,index.php
+- 00:16:42.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:16:42.000 INFO: CGI pattern: **.php$
+- 00:16:42.000 INFO: Hide files patterns: 
+- 00:16:42.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:16:42.000 INFO: Web server url: http://127.0.0.1:53397/
+- 00:16:42.000 INFO: remote_debugging_port = 60055
+- 00:16:42.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=60055
+- 00:16:42.047 DEBUG: App::OnContextInitialized()
+- 00:16:42.047 DEBUG: Window max width/height = 1286/690
+- 00:16:42.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:16:42.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1704510
+- 00:16:42.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:16:42.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:16:42.047 DEBUG: StoreBrowserWindow(): hwnd = 1704510
+- 00:16:42.094 DEBUG: ClientHandler::OnAfterCreated()
+- 00:16:42.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:16:42.109 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:16:42.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=FA38C1A65F08E9640451371EA8583AB1 --mojo-platform-channel-handle=1704 /prefetch:2
+- 00:16:42.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=44D5A2E64AC55E9D942B5B2FE71BB9B2 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=44D5A2E64AC55E9D942B5B2FE71BB9B2 --renderer-client-id=3 --mojo-platform-channel-handle=2188 /prefetch:1
+[0219/001642.389:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:16:42.031 DEBUG: OnBrowserCreated()
+- 00:16:43.469 INFO: GET 200 /
+- 00:16:43.469 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:16:43.469 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:16:43.469 INFO: GET 200 /build/library/css/animate.min.css
+- 00:16:43.469 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:16:43.469 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:16:43.469 INFO: GET 200 /build/library/css/style.min.css
+- 00:16:43.266 DEBUG: OnContextCreated()
+- 00:16:43.469 INFO: GET 200 /build/library/css/theme/default.css
+- 00:16:43.469 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:16:43.547 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:16:43.656 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:16:43.656 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:16:43.656 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:16:43.656 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:16:43.656 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:16:43.656 INFO: GET 200 /build/library/img/logoB.png
+- 00:16:43.656 INFO: GET 200 /build/library/js/apps.min.js
+- 00:16:43.797 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:16:44.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53397/
+- 00:16:56.109 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:16:56.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53397/
+- 00:16:56.016 DEBUG: OnContextCreated()
+- 00:16:56.219 INFO: GET 200 /build/comps/view/home.php
+- 00:16:56.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53397/build/comps/view/home.php
+- 00:17:08.844 INFO: GET 302 /build/comps/view/home.php
+- 00:17:08.984 INFO: GET 200 /
+- 00:17:08.000 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:17:08.000 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:17:08.000 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:17:08.016 INFO: GET 200 /build/library/css/animate.min.css
+- 00:17:08.016 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:17:08.016 INFO: GET 200 /build/library/css/style.min.css
+- 00:17:08.016 INFO: GET 200 /build/library/css/theme/default.css
+- 00:17:08.031 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:17:08.125 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:17:08.125 INFO: GET 200 /build/library/img/logoB.png
+- 00:17:08.328 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:17:08.344 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:17:08.344 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:17:08.344 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:17:08.344 INFO: GET 200 /build/library/js/apps.min.js
+- 00:17:08.344 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:17:08.344 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:17:08.469 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:17:09.984 INFO: GET 404 /favicon.ico
+- 00:17:13.703 DEBUG: WM_DESTROY
+- 00:17:13.703 DEBUG: RemoveBrowserWindow(): hwnd = 1704510
+- 00:17:13.703 INFO: Stopping Mongoose web server
+- 00:17:13.703 DEBUG: Mongoose webserver stopped immediately
+- 00:17:13.703 DEBUG: OnBeforeClose() hwnd=1312398
+- 00:17:13.703 DEBUG: RemoveBrowserWindow(): hwnd = 1312398
+- 00:17:13.703 DEBUG: GetBrowserWindow(): not found, hwnd = 1312398
+- 00:17:13.703 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:17:13.703 DEBUG: Calling CefQuitMessageLoop()
+- 00:17:13.750 INFO: Ended application
+- 00:17:13.750 INFO: --------------------------------------------------------
+- 00:18:28.000 INFO: --------------------------------------------------------
+- 00:18:28.000 INFO: Started application
+- 00:18:28.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:18:28.000 INFO: Log level = DEBUG4
+- 00:18:28.000 INFO: Starting Mongoose 3.9c web server
+- 00:18:28.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:18:28.000 INFO: Index files: index.html,index.php
+- 00:18:28.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:18:28.000 INFO: CGI pattern: **.php$
+- 00:18:28.000 INFO: Hide files patterns: 
+- 00:18:28.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:18:28.000 INFO: Web server url: http://127.0.0.1:53506/
+- 00:18:28.000 INFO: remote_debugging_port = 61413
+- 00:18:28.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=61413
+- 00:18:28.047 DEBUG: App::OnContextInitialized()
+- 00:18:28.047 DEBUG: Window max width/height = 1286/690
+- 00:18:28.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:18:28.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1442346
+- 00:18:28.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:18:28.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:18:28.047 DEBUG: StoreBrowserWindow(): hwnd = 1442346
+- 00:18:28.109 DEBUG: ClientHandler::OnAfterCreated()
+- 00:18:28.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:18:28.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:18:28.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=1922D53428CFB7491E93C8DB69C50719 --mojo-platform-channel-handle=1692 /prefetch:2
+- 00:18:28.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=F1FBE4EA9A2A664A0A7920E73EE39F9C --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=F1FBE4EA9A2A664A0A7920E73EE39F9C --renderer-client-id=3 --mojo-platform-channel-handle=2556 /prefetch:1
+[0219/001828.458:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:18:28.047 DEBUG: OnBrowserCreated()
+- 00:18:29.406 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/css/animate.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/css/style.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/css/theme/default.css
+- 00:18:29.406 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:18:29.406 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:18:29.219 DEBUG: OnContextCreated()
+- 00:18:29.406 INFO: GET 200 /
+- 00:18:29.500 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:18:29.500 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:18:29.500 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:18:29.500 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:18:29.500 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:18:29.500 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:18:29.578 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:18:29.578 INFO: GET 200 /build/library/js/apps.min.js
+- 00:18:29.578 INFO: GET 200 /build/library/img/logoB.png
+- 00:18:30.015 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:18:30.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53506/
+- 00:18:56.594 INFO: GET 200 /
+- 00:18:56.640 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/css/animate.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/css/style.min.css
+- 00:18:56.640 INFO: GET 200 /build/library/css/theme/default.css
+- 00:18:56.656 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:18:56.687 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:18:56.687 INFO: GET 200 /build/library/img/logoB.png
+- 00:18:57.984 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:18:57.984 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:18:57.984 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:18:57.000 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:18:57.015 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:18:57.015 INFO: GET 200 /build/library/js/apps.min.js
+- 00:18:57.015 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:18:57.109 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:18:57.719 INFO: GET 404 /favicon.ico
+- 00:19:01.078 DEBUG: ClientHandler::OnAfterCreated()
+- 00:19:01.078 DEBUG: GetBrowserWindow(): not found, hwnd = 3278668
+- 00:19:01.078 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:19:01.078 DEBUG: StoreBrowserWindow(): hwnd = 3278668
+- 00:19:01.094 DEBUG: Centering popup window relative to its parent
+- 00:19:01.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:19:01.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=47DA13A181F2D042A00D5597791B628A --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=47DA13A181F2D042A00D5597791B628A --renderer-client-id=4 --mojo-platform-channel-handle=3416 /prefetch:1
+- 00:19:01.016 DEBUG: OnBrowserCreated()
+- 00:19:01.031 DEBUG: OnContextCreated()
+- 00:19:01.328 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:19:17.656 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:19:17.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53506/
+- 00:19:18.703 DEBUG: OnContextCreated()
+- 00:19:18.906 INFO: GET 200 /build/comps/view/home.php
+- 00:19:18.015 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53506/build/comps/view/home.php
+- 00:20:18.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53506/build/comps/view/home.php
+- 00:20:18.844 DEBUG: OnContextCreated()
+- 00:20:18.047 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/css/animate.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/css/style.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/css/theme/default.css
+- 00:20:18.047 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:20:18.047 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:20:18.062 INFO: GET 200 /build/comps/view/home.php
+- 00:20:18.187 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:20:18.281 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:20:18.281 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:20:18.281 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:20:18.281 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:20:18.281 INFO: GET 200 /build/library/js/apps.min.js
+- 00:20:18.312 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:20:18.312 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:20:18.344 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:20:18.359 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:20:18.406 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 00:20:19.297 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 00:20:19.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53506/build/comps/view/home.php
+- 00:20:23.094 DEBUG: OnBeforeClose() hwnd=3278668
+- 00:20:23.094 DEBUG: RemoveBrowserWindow(): hwnd = 3278668
+- 00:20:35.437 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53506/build/comps/view/home.php
+- 00:20:35.703 INFO: GET 302 /build/comps/engine/terminator.php
+- 00:20:37.094 DEBUG: OnContextCreated()
+- 00:20:37.281 INFO: GET 200 /
+- 00:20:37.297 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:20:37.328 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:20:37.390 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53506/
+- 00:20:39.390 DEBUG: WM_DESTROY
+- 00:20:39.390 DEBUG: RemoveBrowserWindow(): hwnd = 1442346
+- 00:20:39.390 INFO: Stopping Mongoose web server
+- 00:20:39.390 DEBUG: Mongoose webserver stopped immediately
+- 00:20:39.453 DEBUG: OnBeforeClose() hwnd=1442300
+- 00:20:39.453 DEBUG: RemoveBrowserWindow(): hwnd = 1442300
+- 00:20:39.453 DEBUG: GetBrowserWindow(): not found, hwnd = 1442300
+- 00:20:39.453 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:20:39.453 DEBUG: Calling CefQuitMessageLoop()
+- 00:20:39.500 INFO: Ended application
+- 00:20:39.500 INFO: --------------------------------------------------------
+- 00:21:08.000 INFO: --------------------------------------------------------
+- 00:21:08.000 INFO: Started application
+- 00:21:08.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 00:21:08.000 INFO: Log level = DEBUG4
+- 00:21:08.000 INFO: Starting Mongoose 3.9c web server
+- 00:21:08.000 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 00:21:08.000 INFO: Index files: index.html,index.php
+- 00:21:08.000 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 00:21:08.000 INFO: CGI pattern: **.php$
+- 00:21:08.000 INFO: Hide files patterns: 
+- 00:21:08.000 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 00:21:08.000 INFO: Web server url: http://127.0.0.1:53714/
+- 00:21:08.000 INFO: remote_debugging_port = 63376
+- 00:21:08.000 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=63376
+- 00:21:08.047 DEBUG: App::OnContextInitialized()
+- 00:21:08.047 DEBUG: Window max width/height = 1286/690
+- 00:21:08.047 DEBUG: Window max size exceeded, new width/height = 900/690
+- 00:21:08.047 DEBUG: GetBrowserWindow(): not found, hwnd = 3081578
+- 00:21:08.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 00:21:08.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 00:21:08.047 DEBUG: StoreBrowserWindow(): hwnd = 3081578
+- 00:21:08.094 DEBUG: ClientHandler::OnAfterCreated()
+- 00:21:08.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 00:21:08.110 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:21:08.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=CC653F4BD78BA4E03D7B85B7B56BE8D1 --mojo-platform-channel-handle=1700 /prefetch:2
+- 00:21:08.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=BCB141721863885F8F31BA932F564E2B --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=BCB141721863885F8F31BA932F564E2B --renderer-client-id=3 --mojo-platform-channel-handle=2420 /prefetch:1
+[0219/002108.479:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 00:21:08.078 DEBUG: OnBrowserCreated()
+- 00:21:09.469 INFO: GET 200 /
+- 00:21:09.469 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:21:09.469 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:21:09.469 INFO: GET 200 /build/library/css/animate.min.css
+- 00:21:09.469 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:21:09.469 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:21:09.469 INFO: GET 200 /build/library/css/style.min.css
+- 00:21:09.312 DEBUG: OnContextCreated()
+- 00:21:09.485 INFO: GET 200 /build/library/css/theme/default.css
+- 00:21:09.485 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:21:09.579 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:21:09.625 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:21:09.625 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:21:09.625 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:21:09.625 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:21:09.625 INFO: GET 200 /build/library/js/apps.min.js
+- 00:21:09.641 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:21:10.766 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:21:10.782 INFO: GET 200 /build/library/img/logoB.png
+- 00:21:10.954 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/
+- 00:21:25.891 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:21:30.063 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:22:29.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/
+- 00:22:29.937 DEBUG: OnContextCreated()
+- 00:22:29.094 INFO: GET 200 /
+- 00:22:29.094 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:22:29.094 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:22:29.094 INFO: GET 200 /build/library/css/animate.min.css
+- 00:22:29.094 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:22:29.094 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:22:29.094 INFO: GET 200 /build/library/css/style.min.css
+- 00:22:29.110 INFO: GET 200 /build/library/css/theme/default.css
+- 00:22:29.110 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:22:29.172 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:22:29.219 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:22:29.219 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:22:29.282 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:22:29.313 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:22:29.344 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:22:29.344 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:22:29.344 INFO: GET 200 /build/library/js/apps.min.js
+- 00:22:29.344 INFO: GET 200 /build/library/img/logoB.png
+- 00:22:29.375 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:22:29.688 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/
+- 00:22:41.500 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:22:50.125 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:22:53.579 DEBUG: ClientHandler::OnAfterCreated()
+- 00:22:53.579 DEBUG: GetBrowserWindow(): not found, hwnd = 5443322
+- 00:22:53.579 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 00:22:53.579 DEBUG: StoreBrowserWindow(): hwnd = 5443322
+- 00:22:53.579 DEBUG: Centering popup window relative to its parent
+- 00:22:53.594 DEBUG: OnLoadingStateChange: loading=1, url=
+- 00:22:53.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=94480EAB5174A72FFFBC321BE03B9757 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=94480EAB5174A72FFFBC321BE03B9757 --renderer-client-id=4 --mojo-platform-channel-handle=3232 /prefetch:1
+- 00:22:54.015 DEBUG: OnBrowserCreated()
+- 00:22:54.047 DEBUG: OnContextCreated()
+- 00:22:54.907 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:22:57.829 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:23:01.235 DEBUG: OnLoadingStateChange: loading=1, url=chrome-devtools://devtools/inspector.html
+- 00:23:01.266 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 00:23:17.157 DEBUG: OnBeforeClose() hwnd=5443322
+- 00:23:17.157 DEBUG: RemoveBrowserWindow(): hwnd = 5443322
+- 00:23:18.688 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/
+- 00:23:19.718 DEBUG: OnContextCreated()
+- 00:23:19.891 INFO: GET 200 /
+- 00:23:19.891 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/css/animate.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/css/style.min.css
+- 00:23:19.891 INFO: GET 200 /build/library/css/theme/default.css
+- 00:23:19.891 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:23:19.954 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:23:19.016 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:23:19.032 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:23:19.032 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:23:19.032 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:23:19.032 INFO: GET 200 /build/library/js/apps.min.js
+- 00:23:19.032 INFO: GET 200 /build/comps/applet/appscript.js
+- 00:23:19.032 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:23:19.047 INFO: GET 200 /build/library/img/logoB.png
+- 00:23:19.188 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/
+- 00:23:27.344 INFO: POST 200 /build/comps/cabinet/exec.php
+- 00:23:27.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/
+- 00:23:27.297 DEBUG: OnContextCreated()
+- 00:23:27.454 INFO: GET 200 /build/comps/view/home.php
+- 00:23:27.469 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:23:27.469 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:23:27.469 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:23:27.469 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 00:23:27.516 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:23:28.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:37:53.063 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:37:56.734 DEBUG: OnContextCreated()
+- 00:37:56.922 INFO: GET 200 /build/comps/view/home.php
+- 00:37:56.000 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:37:56.000 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:37:56.000 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:37:56.016 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:37:56.047 INFO: GET 200 /build/library/css/animate.min.css
+- 00:37:56.047 INFO: GET 200 /build/library/css/style.min.css
+- 00:37:56.063 INFO: GET 200 /build/library/css/theme/default.css
+- 00:37:56.219 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:37:56.266 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:37:56.282 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:37:56.282 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:37:56.313 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:37:56.329 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:37:56.344 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:37:56.344 INFO: GET 404 /build/comps/view/assets/img/user-13.jpg
+- 00:37:56.375 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:37:56.454 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:37:56.485 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:37:56.485 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:37:56.704 INFO: GET 200 /build/library/js/apps.min.js
+- 00:37:57.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:38:12.438 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:38:13.078 DEBUG: OnContextCreated()
+- 00:38:13.235 INFO: GET 200 /build/comps/view/home.php
+- 00:38:13.235 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/css/animate.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/css/style.min.css
+- 00:38:13.250 INFO: GET 200 /build/library/css/theme/default.css
+- 00:38:13.360 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:38:13.407 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:38:13.407 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:38:13.469 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:38:13.469 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:38:13.469 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:38:13.469 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:38:13.469 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:38:13.469 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:38:13.469 INFO: GET 200 /build/library/js/apps.min.js
+- 00:38:13.516 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:38:13.516 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:38:13.688 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:40:02.172 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:40:02.140 DEBUG: OnContextCreated()
+- 00:40:02.297 INFO: GET 200 /build/comps/view/home.php
+- 00:40:02.313 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/css/animate.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/css/style.min.css
+- 00:40:02.313 INFO: GET 200 /build/library/css/theme/default.css
+- 00:40:02.313 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:40:02.438 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:40:02.485 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:40:02.516 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:40:02.516 INFO: GET 200 /build/library/js/apps.min.js
+[0219/004002.809:INFO:CONSOLE(0)] "Failed to decode downloaded font: http://fonts.gstatic.com/stats/Open+Sans/normal/400", source: http://127.0.0.1:53714/build/comps/view/home.php (0)
+- 00:40:02.579 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:40:02.579 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:40:03.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:40:47.454 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:40:47.406 DEBUG: OnContextCreated()
+- 00:40:47.579 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:40:47.579 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:40:47.579 INFO: GET 200 /build/library/css/animate.min.css
+- 00:40:47.579 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:40:47.579 INFO: GET 200 /build/library/css/style.min.css
+- 00:40:47.579 INFO: GET 200 /build/comps/view/home.php
+- 00:40:47.579 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:40:47.579 INFO: GET 200 /build/library/css/theme/default.css
+- 00:40:47.579 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:40:47.672 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:40:48.797 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:40:48.797 INFO: GET 200 /build/library/js/apps.min.js
+- 00:40:48.797 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:40:48.797 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:40:48.797 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:40:48.985 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:42:03.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:42:03.234 DEBUG: OnContextCreated()
+- 00:42:03.391 INFO: GET 200 /build/comps/view/home.php
+- 00:42:03.407 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/css/animate.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/css/style.min.css
+- 00:42:03.407 INFO: GET 200 /build/library/css/theme/default.css
+- 00:42:03.407 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:42:03.454 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:42:03.500 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:42:03.500 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:42:03.563 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:42:03.563 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:42:03.563 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:42:03.563 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:42:03.563 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:42:03.563 INFO: GET 200 /build/library/js/apps.min.js
+- 00:42:03.579 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:42:03.625 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:42:03.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:43:42.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:43:42.765 DEBUG: OnContextCreated()
+- 00:43:42.922 INFO: GET 200 /build/comps/view/home.php
+- 00:43:42.938 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/css/animate.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/css/style.min.css
+- 00:43:42.938 INFO: GET 200 /build/library/css/theme/default.css
+- 00:43:42.938 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:43:42.000 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:43:42.032 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:43:42.032 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:43:42.032 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:43:42.032 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:43:42.032 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:43:42.032 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:43:42.094 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:43:42.172 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:43:42.172 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:43:42.172 INFO: GET 200 /build/library/js/apps.min.js
+- 00:43:42.313 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:48:07.782 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:48:07.906 DEBUG: OnContextCreated()
+- 00:48:07.063 INFO: GET 200 /build/comps/view/home.php
+- 00:48:07.063 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:48:07.063 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:48:07.063 INFO: GET 200 /build/library/css/animate.min.css
+- 00:48:07.063 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:48:07.063 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:48:07.063 INFO: GET 200 /build/library/css/style.min.css
+- 00:48:07.079 INFO: GET 200 /build/library/css/theme/default.css
+- 00:48:07.079 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:48:07.125 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:48:07.157 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:48:07.172 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:48:07.235 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:48:07.297 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:48:07.313 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:48:07.313 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:48:07.313 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:48:07.313 INFO: GET 200 /build/library/js/apps.min.js
+- 00:48:07.313 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:48:07.313 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:48:07.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:48:43.954 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:48:43.953 DEBUG: OnContextCreated()
+- 00:48:43.110 INFO: GET 200 /build/comps/view/home.php
+- 00:48:43.110 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:48:43.110 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:48:43.110 INFO: GET 200 /build/library/css/animate.min.css
+- 00:48:43.110 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:48:43.110 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:48:43.110 INFO: GET 200 /build/library/css/style.min.css
+- 00:48:43.125 INFO: GET 200 /build/library/css/theme/default.css
+- 00:48:43.125 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:48:43.172 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:48:43.235 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:48:43.235 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:48:43.235 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:48:43.235 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:48:43.235 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:48:43.235 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:48:43.250 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:48:43.250 INFO: GET 200 /build/library/js/apps.min.js
+- 00:48:43.282 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:48:43.282 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:48:43.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:50:07.313 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:50:07.265 DEBUG: OnContextCreated()
+- 00:50:07.438 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:50:07.438 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:50:07.438 INFO: GET 200 /build/library/css/animate.min.css
+- 00:50:07.438 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:50:07.438 INFO: GET 200 /build/library/css/style.min.css
+- 00:50:07.438 INFO: GET 200 /build/comps/view/home.php
+- 00:50:07.438 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:50:07.438 INFO: GET 200 /build/library/css/theme/default.css
+- 00:50:07.438 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:50:07.485 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:50:07.532 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:50:07.532 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:50:07.532 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:50:07.532 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:50:07.532 INFO: GET 200 /build/library/js/apps.min.js
+- 00:50:07.532 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:50:07.532 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:50:07.594 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:50:07.594 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:50:07.594 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:50:08.813 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:50:43.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:50:45.625 DEBUG: OnContextCreated()
+- 00:50:45.782 INFO: GET 200 /build/comps/view/home.php
+- 00:50:45.782 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:50:45.782 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:50:45.797 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:50:45.797 INFO: GET 200 /build/library/css/animate.min.css
+- 00:50:45.797 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:50:45.797 INFO: GET 200 /build/library/css/style.min.css
+- 00:50:45.797 INFO: GET 200 /build/library/css/theme/default.css
+- 00:50:45.829 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:50:45.860 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:50:45.922 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:50:45.922 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:50:45.922 INFO: GET 200 /build/library/js/apps.min.js
+- 00:50:45.954 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:50:45.954 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:50:45.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:53:15.235 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:53:15.312 DEBUG: OnContextCreated()
+- 00:53:15.485 INFO: GET 200 /build/comps/view/home.php
+- 00:53:15.485 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/css/animate.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/css/style.min.css
+- 00:53:15.485 INFO: GET 200 /build/library/css/theme/default.css
+- 00:53:15.485 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:53:15.563 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:53:15.657 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:53:15.657 INFO: GET 200 /build/library/js/apps.min.js
+- 00:53:15.657 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:53:15.657 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:53:15.657 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:53:16.860 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:53:46.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:53:46.984 DEBUG: OnContextCreated()
+- 00:53:46.141 INFO: GET 200 /build/comps/view/home.php
+- 00:53:46.157 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/css/animate.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/css/style.min.css
+- 00:53:46.157 INFO: GET 200 /build/library/css/theme/default.css
+- 00:53:46.157 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:53:46.204 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:53:46.250 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:53:46.250 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:53:46.250 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:53:46.250 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:53:46.250 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:53:46.250 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:53:46.250 INFO: GET 200 /build/library/js/apps.min.js
+- 00:53:46.391 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:53:46.391 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:53:46.391 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:53:46.485 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:54:25.204 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:54:25.172 DEBUG: OnContextCreated()
+- 00:54:25.329 INFO: GET 200 /build/comps/view/home.php
+- 00:54:25.344 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:54:25.344 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:54:25.344 INFO: GET 200 /build/library/css/animate.min.css
+- 00:54:25.344 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:54:25.344 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:54:25.344 INFO: GET 200 /build/library/css/style.min.css
+- 00:54:25.360 INFO: GET 200 /build/library/css/theme/default.css
+- 00:54:25.360 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:54:25.391 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:54:25.422 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:54:25.438 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:54:25.438 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:54:25.438 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:54:25.438 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:54:25.438 INFO: GET 200 /build/library/js/apps.min.js
+- 00:54:25.438 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:54:25.579 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:54:25.579 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:54:25.579 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:54:25.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:54:58.782 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:54:58.781 DEBUG: OnContextCreated()
+- 00:54:58.938 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:54:58.938 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:54:58.938 INFO: GET 200 /build/library/css/animate.min.css
+- 00:54:58.938 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:54:58.938 INFO: GET 200 /build/library/css/style.min.css
+- 00:54:58.938 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:54:58.938 INFO: GET 200 /build/comps/view/home.php
+- 00:54:58.938 INFO: GET 200 /build/library/css/theme/default.css
+- 00:54:58.969 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:54:58.063 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:54:58.125 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:54:58.125 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:54:58.125 INFO: GET 200 /build/library/js/apps.min.js
+- 00:54:58.157 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:54:58.157 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:54:58.282 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:57:59.407 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:57:59.422 DEBUG: OnContextCreated()
+- 00:57:59.579 INFO: GET 200 /build/comps/view/home.php
+- 00:57:59.579 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 00:57:59.579 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 00:57:59.579 INFO: GET 200 /build/library/css/animate.min.css
+- 00:57:59.579 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 00:57:59.594 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 00:57:59.594 INFO: GET 200 /build/library/css/style.min.css
+- 00:57:59.594 INFO: GET 200 /build/library/css/theme/default.css
+- 00:57:59.594 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 00:57:59.641 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 00:57:59.688 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:57:59.688 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 00:58:00.766 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 00:58:00.797 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 00:58:00.797 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 00:58:00.797 INFO: GET 200 /build/library/js/apps.min.js
+- 00:58:00.797 INFO: GET 404 /build/comps/view/assets/img/user-2.jpg
+- 00:58:00.797 INFO: GET 404 /build/comps/view/assets/img/user-1.jpg
+- 00:58:00.797 INFO: GET 200 /build/library/img/user-13.jpg
+- 00:58:00.829 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 00:58:00.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:59:27.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53714/build/comps/view/home.php
+- 00:59:27.704 INFO: GET 302 /build/comps/engine/terminator.php
+- 00:59:28.734 DEBUG: OnContextCreated()
+- 00:59:28.907 INFO: GET 200 /
+- 00:59:28.907 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:59:28.907 INFO: GET 304 /build/library/img/logoB.png
+- 00:59:28.954 INFO: GET 404 /build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 00:59:28.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53714/
+- 00:59:30.032 DEBUG: WM_DESTROY
+- 00:59:30.032 DEBUG: RemoveBrowserWindow(): hwnd = 3081578
+- 00:59:30.032 INFO: Stopping Mongoose web server
+- 00:59:30.032 DEBUG: Mongoose webserver stopped immediately
+- 00:59:30.141 DEBUG: OnBeforeClose() hwnd=7081294
+- 00:59:30.141 DEBUG: RemoveBrowserWindow(): hwnd = 7081294
+- 00:59:30.141 DEBUG: GetBrowserWindow(): not found, hwnd = 7081294
+- 00:59:30.141 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 00:59:30.141 DEBUG: Calling CefQuitMessageLoop()
+- 00:59:30.156 DEBUG: OnBrowserDestroyed()
+- 00:59:31.891 INFO: Ended application
+- 00:59:31.891 INFO: --------------------------------------------------------

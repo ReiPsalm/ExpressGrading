@@ -73,7 +73,7 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
-		    &copy; <a href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
+		    Copyright &copy; <a href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
 		</div>
 		<!-- end #footer -->
 		
