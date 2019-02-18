@@ -56,7 +56,7 @@ if(isset($_SESSION['user_id'])){
                         <input type="email" id="username" class="form-control input-lg" placeholder="Email Address" />
                     </div>
                     <div class="form-group m-b-20">
-                        <input type="text" id="password" class="form-control input-lg" placeholder="Password" />
+                        <input type="password" id="password" class="form-control input-lg" placeholder="Password" />
                     </div>
                     <div class="login-buttons">
                         <button type="submit" id="login" class="btn btn-success btn-block btn-lg">Login</button>
