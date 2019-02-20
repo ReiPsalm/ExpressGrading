@@ -17,21 +17,23 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <li class="nav-header">Navigation</li>
-            <li><a href="javascript:;"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+            <li><a href="home.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
             <li class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
-                    <i class="fa fa-table"></i> 
-                    <span>Class Record</span>
+                    <i class="fa fa-sliders"></i> 
+                    <span>Class Record Setup</span>
                 </a>
                 <ul class="sub-menu">
-                    <li><a href="javascript:;">Section</a></li>
-                    <li><a href="javascript:;">Subject</a></li>
-                    <li><a href="javascript:;">School</a></li>
-                    <li><a href="javascript:;">College Dean</a></li>
-                    <li><a href="javascript:;">Department</a></li>
+                    <li><a href="course.php">Course</a></li>
+                    <li><a href="section.php">Section</a></li>
+                    <li><a href="subject.php">Subject</a></li>
+                    <li><a href="School.php">School</a></li>
+                    <li><a href="dean.php">College Dean</a></li>
+                    <li><a href="department.php">Department</a></li>
                 </ul>
             </li>
+            <li><a href="javascript:;"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
             <li class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
@@ -39,8 +41,7 @@
                     <span>Master List</span>
                 </a>
                 <ul class="sub-menu">
-                    <li><a href="javascript:;">Add Student</a></li>
-                    <li><a href="javascript:;">Student List</a></li>
+                    <li><a href="student.php">Student List</a></li>
                 </ul>
             </li>
             <li class="has-sub">
