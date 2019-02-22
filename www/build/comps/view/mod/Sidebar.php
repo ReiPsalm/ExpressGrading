@@ -33,7 +33,6 @@
                     <li><a href="department.php">Department</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:;"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
             <li class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>
@@ -44,6 +43,8 @@
                     <li><a href="student.php">Student List</a></li>
                 </ul>
             </li>
+            <li><a href="javascript:;"><i class="fa fa-group"></i> <span>Class Attendance</span></a></li>
+            <li><a href="javascript:;"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
             <li class="has-sub">
                 <a href="javascript:;">
                     <b class="caret pull-right"></b>

@@ -27,6 +27,9 @@ if(isset($_SESSION['user_id'])){
 	<link href="build/library/css/style.min.css" rel="stylesheet" />
 	<link href="build/library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="build/library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- Lobibox return messages -->
+    <link rel="stylesheet" href="build/library/plugins/lobibox-master/demo/demo.css"/>
+    <link rel="stylesheet" href="build/library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -71,7 +74,7 @@ if(isset($_SESSION['user_id'])){
 	
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="build/library/plugins/jquery/jquery-1.9.1.min.js"></script>
-	<script src="build/library/library/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
+	<script src="build/library/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
 	<script src="build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 	<script src="build/library/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!--[if lt IE 9]>
@@ -85,13 +88,16 @@ if(isset($_SESSION['user_id'])){
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="build/library/js/apps.min.js"></script>
-  <script src="build/comps/applet/appscript.js"></script>
+  	<script src="build/comps/applet/appscript.js"></script>
+	<!-- Modal alerts -->
+	<script src="build/library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="build/library/plugins/lobibox-master/demo/demo.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
-      App.init();
-      UserLogin();
+			App.init();
+			Appex.UserLogin();
 		});
 	</script>
 </body>

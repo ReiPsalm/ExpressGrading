@@ -30,6 +30,9 @@ if(!isset($_SESSION['user_id'])){
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
+	<link href="../../library/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<script src="../../library/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
@@ -57,19 +60,68 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">
 			        <div class="panel-heading-btn">
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						<button href="#exp_modal" data-toggle="modal" class="btn btn-xs btn-info" title="Add course">
+							<i class="fa fa-plus" ></i> Add Course
+						</button>
 			        </div>
-			        <h4 class="panel-title">Panel Title here</h4>
+			        <h4 class="panel-title">Course List</h4>
 			    </div>
 			    <div class="panel-body">
-			        Panel Content Here
+					<table id="data-table" class="table table-striped table-bordered">
+						<thead>
+						<tr>
+							<th>Course ID</th>
+							<th>Course Name</th>
+							<th>Action</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
 			    </div>
 			</div>
 		</div>
 		<!-- end #content -->
+		
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new couse</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Input course<i class="text text-danger">*</i></label>
+                                <div class="row row-space-10">
+                                    <div class="col-md-4 m-b-15">
+                                        <input type="text" class="form-control" id="mname" placeholder="Course Name" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
@@ -98,6 +150,15 @@ if(!isset($_SESSION['user_id'])){
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="../../library/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../../library/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.colvis.min.html"></script>
+	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
