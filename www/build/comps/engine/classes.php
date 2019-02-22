@@ -28,8 +28,6 @@ class UsersClass{
             }else{
                 return false;
             }
-
-            return $row;
         }catch (PDOException $e) {
             echo "Connection Error: " . $e->getMessage();
         }
