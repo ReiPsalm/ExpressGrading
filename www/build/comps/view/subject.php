@@ -104,8 +104,17 @@ if(!isset($_SESSION['user_id'])){
                             <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input subject<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="Subject Name" />
+                                    <div class="col-md-12 m-b-15">
+                                        <input type="text" class="form-control" id="subj" placeholder="Subject Name" />
+                                    </div>
+                                </div>
+								<label class="control-label">Input School year<i class="text text-danger">*</i></label>
+                                <div class="row row-space-10">
+                                    <div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="fsy" placeholder="From School year" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="tsy" placeholder="To School year" />
                                     </div>
                                 </div>
                             </form>

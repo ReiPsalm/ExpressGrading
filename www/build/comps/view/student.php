@@ -60,6 +60,9 @@ if(!isset($_SESSION['user_id'])){
 						<button href="#exp_modal" data-toggle="modal" class="btn btn-xs btn-info" title="Add course">
 							<i class="fa fa-plus" ></i> Add Student
 						</button>
+						<button href="#exp_modalb" data-toggle="modal" class="btn btn-xs btn-warning" title="Add course">
+							<i class="fa fa-cloud-upload" ></i> Upload CSV
+						</button>
 			        </div>
 			        <h4 class="panel-title">Student List</h4>
 			    </div>

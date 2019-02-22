@@ -11,7 +11,7 @@ class UsersClass{
 
     public function LoginUser(){
         try{
-            $sql = "select * from tbl_users left join tbl_instructor on tbl_users.ins_id=tbl_instructor.ins_id where tbl_users.user_name='".$this->uname."' and tbl_users.user_pass='".$this->upass."'";
+            $sql = "SELECT * FROM tbl_users LEFT JOIN tbl_instructor ON tbl_users.ins_id=tbl_instructor.ins_id WHERE tbl_users.user_name='".$this->uname."' AND tbl_users.user_pass='".$this->upass."'";
             $result = $this->conn->query($sql);
             $row =  $result->fetchArray();
 
@@ -30,6 +30,41 @@ class UsersClass{
             }
         }catch (PDOException $e) {
             echo "Connection Error: " . $e->getMessage();
+        }
+    }
+}
+
+class CourseMod{
+    private $conn;
+
+    public $coursedesc;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveCourse(){
+        try{
+            $sqlSaveCourse = "INSERT INTO tbl_course (course_desc) VALUES ('".$this->coursedesc."')";
+            if($this->conn->exec($sqlSaveCourse)){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetCourse(){
+        try{
+            $sqlGetCourse = "SELECT * FROM tbl_course";
+            $resultCourse = $this->conn->query($sqlGetCourse);
+
+            return $resultCourse;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
         }
     }
 }

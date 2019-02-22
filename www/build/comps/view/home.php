@@ -53,6 +53,53 @@ if(!isset($_SESSION['user_id'])){
 			<!-- begin page-header -->
 			<h1 class="page-header">Dashboard</h1>
 			<!-- end page-header -->
+
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-3 -->
+				<div class="col-md-4 col-sm-6">
+					<div class="widget widget-stats bg-red">
+						<div class="stats-icon"><i class="fa fa-thumbs-down"></i></div>
+						<div class="stats-info">
+							<h4>FAILING STUDENTS</h4>
+							<p>10</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-md-4 col-sm-6">
+					<div class="widget widget-stats bg-orange">
+						<div class="stats-icon"><i class="fa fa-warning"></i></div>
+						<div class="stats-info">
+							<h4>WARNING STUDENTS</h4>
+							<p>5</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-md-4 col-sm-6">
+					<div class="widget widget-stats bg-green">
+						<div class="stats-icon"><i class="fa fa-thumbs-up"></i></div>
+						<div class="stats-info">
+							<h4>DILIGENT STUDENTS</h4>
+							<p>20</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-circle-o-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+			</div>
+			<!-- end row -->
 			
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">

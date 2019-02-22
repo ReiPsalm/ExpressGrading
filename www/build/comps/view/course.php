@@ -27,6 +27,9 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- Lobibox return messages -->
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -104,11 +107,11 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input course<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="Course Name" />
+                                        <input type="text" class="form-control" id="course" placeholder="Course Name" />
                                     </div>
                                 </div>
                             </form>
@@ -157,14 +160,19 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
-	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.colvis.min.html"></script>
 	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
+	<script src="../applet/appscript.js"></script>
+	<!-- Modal alerts -->
+	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.SaveCourse();
+			Appex.EmployeeTable();
 		});
 	</script>
 </body>

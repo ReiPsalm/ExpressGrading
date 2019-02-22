@@ -6,5 +6,6 @@ include_once "classes.php";
 $coms = new HostDb();
 
 $Users = new UsersClass($coms);
+$Courses = new CourseMod($coms);
 
 ?>

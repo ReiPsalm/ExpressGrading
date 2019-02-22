@@ -104,7 +104,7 @@ if(!isset($_SESSION['user_id'])){
                             <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input section<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+                                    <div class="col-md-12 m-b-15">
                                         <input type="text" class="form-control" id="mname" placeholder="Section Name" />
                                     </div>
                                 </div>

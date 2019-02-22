@@ -9,9 +9,21 @@ if($_POST['action'] == "login"){
     try {
         if ($Users->LoginUser()) {
             echo "1";
-        } elseif (!$Users->LoginUser()) {
+        }elseif (!$Users->LoginUser()) {
             echo "2";
-        } else{
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "savecourse"){
+    $Courses->coursedesc = $_POST['course'];
+    
+    try{
+        if ($Courses->SaveCourse()) {
+            echo "1";
+        }else{
             echo "0";
         }
     }catch(PDOException $e){
