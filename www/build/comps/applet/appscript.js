@@ -197,6 +197,30 @@ Appex = {
     SaveStudent: function(){
         $('#savedt').click(function (e) {
             e.preventDefault();
+            var studid = $('#studid').val();
+            var fname = $('#fname').val();
+            var mname = $('#mname').val();
+            var lname = $('#lname').val();
+            var exname = $('#exname').val();
+            var yrlvl = $('#yrlvl').val();
+            var course = $('#course').val();
+            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&course='+course;
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expform').trigger('reset');
+                    }
+                }
+            });
         });
     }
 }

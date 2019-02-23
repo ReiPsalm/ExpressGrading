@@ -112,9 +112,12 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input student<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
+									<div class="col-md-4 m-b-15">
+                                        <input type="text" class="form-control" id="studid" placeholder="Student ID" />
+                                    </div>
                                     <div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="fname" placeholder="Firstname" />
                                     </div>
@@ -125,7 +128,7 @@ if(!isset($_SESSION['user_id'])){
                                         <input type="text" class="form-control" id="lname" placeholder="Lastname" />
                                     </div>
 									<div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="lname" placeholder="Ext. name" />
+                                        <input type="text" class="form-control" id="exname" placeholder="Ext. name" />
                                     </div>
                                 </div>
 								<div class="row row-space-10">
@@ -140,8 +143,10 @@ if(!isset($_SESSION['user_id'])){
 										</select>
 									</div>
 									<div class="col-md-4 m-b-15">
-										<select id="yrlvl" class="form-control">
+										<select id="course" class="form-control">
 											<option value="">Select Course</option>
+											<option value="10">Animation</option>
+											<option value="8">Accountancy</option>
 										</select>
 									</div>
                                 </div>
@@ -179,7 +184,11 @@ if(!isset($_SESSION['user_id'])){
                             </div>
                             <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Select File<i class="text text-danger">*</i></label>
-                                
+								<div class="row row-space-10">
+									<div class="col-md-8 m-b-15">
+										<input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
+									</div>
+								</div>
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
@@ -239,6 +248,8 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.SeTupTable('getStudentdb');
+			Appex.SaveStudent();
 		});
 	</script>
 </body>

@@ -41,6 +41,23 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "savestud"){
+    $Students->studid = $_POST['studid'];
+    $Students->fname = $_POST['fname'];
+    $Students->mname = $_POST['mname'];
+    $Students->lname = $_POST['lname'];
+    $Students->exname = $_POST['exname'];
+    $Students->yrlvl = $_POST['yrlvl'];
+    $Students->course = $_POST['course'];
+    try{
+        if ($Students->SaveStud()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }

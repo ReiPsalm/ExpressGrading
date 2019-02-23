@@ -61,9 +61,9 @@ class CourseMod{
     public function GetCourse(){
         try{
             $sqlGetCourse = "SELECT * FROM tbl_course";
-            $restCourse = $this->conn->query($sqlGetCourse);
+            $restGetCourse = $this->conn->query($sqlGetCourse);
 
-            return $restCourse;
+            return $GetCourse;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
@@ -88,6 +88,48 @@ class CourseMod{
             }else{
                 return false;
             }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class StudentMod{
+    private $conn;
+
+    public $studid;
+    public $fname;
+    public $mname;
+    public $lname;
+    public $exname;
+    public $yrlvl;
+    public $course;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveStud(){
+        try{
+            $sqlSaveStud = "INSERT INTO tbl_student ";
+            $sqlSaveStud .= "(stud_id,stud_fname,stud_mname,stud_lname,stud_extname,stud_yearlvl,course_id) ";
+            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->fname."','".$this->mname."','".$this->lname."','".$this->exname."','".$this->yrlvl."','".$this->course."')";
+            if($this->conn->exec($sqlSaveStud)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetStud(){
+        try{
+            $sqlGetStud = "SELECT * FROM tbl_student";
+            $resGetStud = $this->conn->query($sqlGetStud);
+
+            return $resGetStud;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
