@@ -4,7 +4,7 @@ Appex = {
     /**
     * Write message for notification
     *
-    * @memberOf notif
+    * @memberOf Appex
     * @param {String} type be default|info|warning|error|success}
     * @param {String} title Notification title
     * @param {String} path audio path INTERNAL: build/library EXTERNAL: ../../
@@ -26,14 +26,12 @@ Appex = {
         });//lobibox end
     },
     /**
-    * Write XMLreqyest for modal
+    * Write XMLrequest for modal
     *
-    * @memberOf notif
-    * @param {String} type be default|info|warning|error|success}
-    * @param {String} title Notification title
-    * @param {String} path audio path INTERNAL: build/library EXTERNAL: ../../
-    * @param {String} position be top left|top right|top center|bottom left|bottom right|bottom center
-    * @param {String} setmsg Notification message
+    * @memberOf Appex
+    * @param {String} dataID Data id
+    * @param {String} dataSrc File name
+    * @param {String} domID ID name
     */
     GetSetupData: function (dataID,dataSrc,domID){
         var xmlhttp = new XMLHttpRequest();
@@ -194,6 +192,11 @@ Appex = {
                 }
             });
             /*end swal*/
+        });
+    },
+    SaveStudent: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
         });
     }
 }

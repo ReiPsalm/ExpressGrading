@@ -15025,3 +15025,378 @@
 - 14:39:14.250 DEBUG: OnBrowserDestroyed()
 - 14:39:15.985 INFO: Ended application
 - 14:39:15.985 INFO: --------------------------------------------------------
+- 14:40:15.016 INFO: --------------------------------------------------------
+- 14:40:15.016 INFO: Started application
+- 14:40:15.016 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 14:40:15.016 INFO: Log level = DEBUG4
+- 14:40:15.016 INFO: Starting Mongoose 3.9c web server
+- 14:40:15.016 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 14:40:15.016 INFO: Index files: index.html,index.php
+- 14:40:15.016 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 14:40:15.016 INFO: CGI pattern: **.php$
+- 14:40:15.016 INFO: Hide files patterns: 
+- 14:40:15.016 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:40:15.016 INFO: Web server url: http://127.0.0.1:50697/
+- 14:40:15.016 INFO: remote_debugging_port = 54203
+- 14:40:15.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=54203
+- 14:40:16.234 DEBUG: App::OnContextInitialized()
+- 14:40:16.234 DEBUG: Window max width/height = 1286/690
+- 14:40:16.234 DEBUG: Window max size exceeded, new width/height = 900/690
+- 14:40:16.234 DEBUG: GetBrowserWindow(): not found, hwnd = 3277798
+- 14:40:16.234 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:40:16.266 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:40:16.266 DEBUG: StoreBrowserWindow(): hwnd = 3277798
+- 14:40:16.359 DEBUG: ClientHandler::OnAfterCreated()
+- 14:40:16.359 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:40:16.391 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:40:16.016 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=90F9559850E26E2E10ACE8B469BE861C --mojo-platform-channel-handle=1696 /prefetch:2
+[0223/144016.844:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:40:16.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=85F49DB8C5E108F133F91E7369DE0E2B --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=85F49DB8C5E108F133F91E7369DE0E2B --renderer-client-id=3 --mojo-platform-channel-handle=2416 /prefetch:1
+- 14:40:16.094 DEBUG: OnBrowserCreated()
+- 14:40:18.094 INFO: GET 200 /
+- 14:40:18.109 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 14:40:18.109 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 14:40:18.109 INFO: GET 200 /build/library/css/animate.min.css
+- 14:40:18.109 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 14:40:18.109 INFO: GET 200 /build/library/css/style.min.css
+- 14:40:18.109 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 14:40:18.000 DEBUG: OnContextCreated()
+- 14:40:18.109 INFO: GET 200 /build/library/css/theme/default.css
+- 14:40:18.109 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 14:40:18.109 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 14:40:18.141 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 14:40:19.406 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 14:40:19.484 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 14:40:19.531 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 14:40:19.625 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 14:40:19.656 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 14:40:19.672 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 14:40:19.672 INFO: GET 200 /build/library/js/apps.min.js
+- 14:40:19.703 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:40:19.703 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 14:40:19.703 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:40:19.703 INFO: GET 200 /build/library/img/logoB.png
+- 14:40:19.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/
+- 14:40:22.078 DEBUG: ClientHandler::OnAfterCreated()
+- 14:40:22.078 DEBUG: GetBrowserWindow(): not found, hwnd = 2491664
+- 14:40:22.078 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 14:40:22.078 DEBUG: StoreBrowserWindow(): hwnd = 2491664
+- 14:40:22.078 DEBUG: Centering popup window relative to its parent
+- 14:40:22.078 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:40:22.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=51A499338C5440542DF0B4345C12ED50 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=51A499338C5440542DF0B4345C12ED50 --renderer-client-id=4 --mojo-platform-channel-handle=3596 /prefetch:1
+- 14:40:22.032 DEBUG: OnBrowserCreated()
+- 14:40:22.047 DEBUG: OnContextCreated()
+- 14:40:23.328 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 14:40:23.516 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:40:40.500 INFO: POST 200 /build/comps/cabinet/exec.php
+- 14:40:40.500 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/
+- 14:40:40.500 DEBUG: OnContextCreated()
+- 14:40:40.609 INFO: GET 200 /build/comps/view/home.php
+- 14:40:40.609 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 14:40:40.734 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 14:40:41.375 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:40:41.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/home.php
+- 14:41:00.281 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/home.php
+- 14:41:00.266 DEBUG: OnContextCreated()
+- 14:41:00.375 INFO: GET 200 /build/comps/view/subject.php
+- 14:41:00.391 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 14:41:00.391 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 14:41:00.391 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 14:41:00.391 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 14:41:00.469 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 14:41:00.500 INFO: GET 304 /build/comps/applet/appscript.js
+- 14:41:00.500 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 14:41:00.500 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 14:41:00.500 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:41:00.500 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 14:41:00.609 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:41:00.781 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:43:05.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:43:05.391 DEBUG: OnContextCreated()
+- 14:43:05.500 INFO: GET 200 /build/comps/view/subject.php
+- 14:43:05.500 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 14:43:05.516 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 14:43:05.516 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 14:43:05.516 INFO: GET 200 /build/library/css/animate.min.css
+- 14:43:05.531 INFO: GET 200 /build/library/css/style.min.css
+- 14:43:05.531 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 14:43:05.531 INFO: GET 200 /build/library/css/theme/default.css
+- 14:43:05.531 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 14:43:05.531 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 14:43:05.531 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 14:43:05.609 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 14:43:05.641 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 14:43:05.641 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 14:43:05.641 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 14:43:05.719 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 14:43:05.781 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 14:43:05.781 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 14:43:05.859 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 14:43:05.906 INFO: GET 200 /build/library/js/apps.min.js
+- 14:43:05.953 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:43:05.000 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 14:43:05.000 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:43:05.000 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 14:43:05.000 INFO: GET 200 /build/library/img/logoB.png
+- 14:43:05.000 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 14:43:05.000 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 14:43:05.109 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:43:06.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:43:14.672 DEBUG: OnBeforeClose() hwnd=2491664
+- 14:43:14.672 DEBUG: RemoveBrowserWindow(): hwnd = 2491664
+- 14:43:31.875 DEBUG: ClientHandler::OnAfterCreated()
+- 14:43:31.875 DEBUG: GetBrowserWindow(): not found, hwnd = 1049964
+- 14:43:31.875 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 14:43:31.875 DEBUG: StoreBrowserWindow(): hwnd = 1049964
+- 14:43:31.875 DEBUG: Centering popup window relative to its parent
+- 14:43:31.875 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:43:31.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=64100EAF253EF4272D8021CED14EC176 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=64100EAF253EF4272D8021CED14EC176 --renderer-client-id=5 --mojo-platform-channel-handle=3556 /prefetch:1
+- 14:43:31.031 DEBUG: OnBrowserCreated()
+- 14:43:31.031 DEBUG: OnContextCreated()
+- 14:43:31.094 DEBUG: OnLoadingStateChange: loading=0, url=chrome-devtools://devtools/inspector.html
+- 14:43:32.266 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:44:27.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:44:27.860 DEBUG: OnContextCreated()
+- 14:44:27.969 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 14:44:27.969 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 14:44:27.984 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 14:44:27.984 INFO: GET 200 /build/library/css/animate.min.css
+- 14:44:27.984 INFO: GET 200 /build/library/css/style.min.css
+- 14:44:27.984 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 14:44:27.984 INFO: GET 200 /build/comps/view/subject.php
+- 14:44:27.984 INFO: GET 200 /build/library/css/theme/default.css
+- 14:44:27.016 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 14:44:27.016 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 14:44:27.016 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 14:44:27.016 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 14:44:27.016 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 14:44:27.063 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 14:44:27.063 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 14:44:27.094 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 14:44:27.172 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 14:44:27.172 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 14:44:28.266 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 14:44:28.313 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 14:44:28.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 14:44:28.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 14:44:28.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 14:44:28.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 14:44:28.328 INFO: GET 200 /build/library/js/apps.min.js
+- 14:44:28.406 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:44:28.406 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:44:28.406 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 14:44:28.406 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 14:44:28.406 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 14:44:28.406 INFO: GET 200 /build/library/img/logoB.png
+- 14:44:28.406 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 14:44:28.453 INFO: GET 404 /build/library/plugins/jquery/dist/jquery-migrate.min.map
+- 14:44:28.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:46:21.281 DEBUG: OnBeforeClose() hwnd=1049964
+- 14:46:21.281 DEBUG: RemoveBrowserWindow(): hwnd = 1049964
+- 14:46:24.031 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/subject.php
+- 14:46:24.985 DEBUG: OnContextCreated()
+- 14:46:24.094 INFO: GET 200 /build/comps/view/student.php
+- 14:46:24.125 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:46:25.281 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 14:47:15.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 14:47:15.860 DEBUG: OnContextCreated()
+- 14:47:15.969 INFO: GET 200 /build/comps/view/student.php
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/css/animate.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/css/style.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/css/theme/default.css
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 14:47:15.984 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 14:47:15.016 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 14:47:15.016 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 14:47:15.031 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 14:47:15.031 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 14:47:15.125 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 14:47:15.172 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 14:47:15.203 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 14:47:15.203 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 14:47:15.203 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 14:47:15.203 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 14:47:15.203 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 14:47:15.219 INFO: GET 200 /build/library/img/logoB.png
+- 14:47:15.219 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 14:47:16.219 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 14:47:16.266 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 14:47:16.266 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 14:47:16.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 14:47:16.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 14:47:16.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 14:47:16.375 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 14:47:16.375 INFO: GET 200 /build/library/js/apps.min.js
+- 14:47:16.375 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 14:47:16.375 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:47:16.422 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 14:47:16.422 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:47:16.422 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 14:47:16.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 14:48:00.281 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 14:48:00.235 DEBUG: OnContextCreated()
+- 14:48:00.359 INFO: GET 200 /build/comps/view/student.php
+- 14:48:00.359 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/css/animate.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/css/style.min.css
+- 14:48:00.359 INFO: GET 200 /build/library/css/theme/default.css
+- 14:48:00.375 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 14:48:00.375 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 14:48:00.375 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 14:48:00.375 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 14:48:00.375 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 14:48:00.453 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 14:48:00.453 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 14:48:00.531 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 14:48:00.563 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 14:48:00.578 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 14:48:00.641 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 14:48:00.672 INFO: GET 200 /build/library/js/apps.min.js
+- 14:48:00.688 INFO: GET 200 /build/comps/applet/appscript.js
+- 14:48:00.688 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 14:48:00.750 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 14:48:00.750 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 14:48:00.750 INFO: GET 200 /build/library/img/logoB.png
+- 14:48:00.750 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 14:48:00.750 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 14:48:00.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:07:24.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:07:26.234 INFO: GET 200 /build/comps/view/student.php
+- 15:07:26.125 DEBUG: OnContextCreated()
+- 15:07:26.313 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 15:07:26.344 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 15:07:26.344 INFO: GET 200 /build/library/css/theme/default.css
+- 15:07:26.375 INFO: GET 200 /build/library/css/style.min.css
+- 15:07:26.391 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 15:07:26.406 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 15:07:26.422 INFO: GET 200 /build/library/css/animate.min.css
+- 15:07:26.422 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 15:07:26.453 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 15:07:26.500 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 15:07:26.516 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 15:07:26.516 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 15:07:26.516 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 15:07:26.547 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 15:07:26.797 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 15:07:26.813 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 15:07:26.813 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 15:07:26.828 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 15:07:26.828 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 15:07:26.844 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 15:07:26.938 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 15:07:26.984 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 15:07:26.984 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 15:07:26.984 INFO: GET 200 /build/library/img/logoB.png
+- 15:07:26.000 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 15:07:26.016 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 15:07:26.078 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 15:07:26.078 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 15:07:27.250 INFO: GET 200 /build/comps/applet/appscript.js
+- 15:07:27.297 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 15:07:27.297 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 15:07:27.328 INFO: GET 200 /build/library/js/apps.min.js
+- 15:07:27.344 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 15:07:27.375 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 15:07:27.391 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 15:07:27.438 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 15:07:27.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:19:00.188 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:19:02.797 INFO: GET 200 /build/comps/view/student.php
+- 15:19:02.860 DEBUG: OnContextCreated()
+- 15:19:03.234 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 15:19:03.250 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 15:19:03.266 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 15:19:03.281 INFO: GET 200 /build/library/css/animate.min.css
+- 15:19:03.297 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 15:19:03.297 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 15:19:03.313 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 15:19:03.328 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 15:19:03.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 15:19:03.375 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 15:19:03.484 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert.css
+- 15:19:03.484 INFO: GET 200 /build/library/css/theme/default.css
+- 15:19:03.484 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 15:19:03.016 INFO: GET 200 /build/library/css/style.min.css
+- 15:19:04.344 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 15:19:04.344 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 15:19:04.359 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 15:19:04.406 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 15:19:04.422 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 15:19:04.422 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 15:19:04.422 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 15:19:04.484 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 15:19:04.688 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 15:19:05.016 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 15:19:05.016 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 15:19:05.031 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 15:19:06.219 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 15:19:06.281 INFO: GET 200 /build/library/img/logoB.png
+- 15:19:06.453 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 15:19:06.531 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 15:19:06.609 INFO: GET 200 /build/library/js/apps.min.js
+- 15:19:06.656 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 15:19:06.688 INFO: GET 200 /build/comps/applet/appscript.js
+- 15:19:06.734 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 15:19:06.766 INFO: GET 200 /build/library/plugins/sweetalert-master/dist/sweetalert-dev.js
+- 15:19:06.906 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 15:19:06.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:19:08.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/student.php
+- 15:19:09.266 DEBUG: OnContextCreated()
+- 15:19:09.375 INFO: GET 200 /build/comps/view/attendance.php
+- 15:19:09.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/build/comps/view/attendance.php
+- 15:27:05.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:50697/build/comps/view/attendance.php
+- 15:27:05.000 INFO: GET 302 /build/comps/engine/terminator.php
+- 15:27:05.047 DEBUG: OnContextCreated()
+- 15:27:05.172 INFO: GET 200 /
+- 15:27:05.172 INFO: GET 304 /build/comps/applet/appscript.js
+- 15:27:06.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:50697/
+- 15:27:07.156 DEBUG: WM_DESTROY
+- 15:27:07.156 DEBUG: RemoveBrowserWindow(): hwnd = 3277798
+- 15:27:07.156 INFO: Stopping Mongoose web server
+- 15:27:07.156 DEBUG: Mongoose webserver stopped immediately
+- 15:27:08.250 DEBUG: OnBeforeClose() hwnd=4980914
+- 15:27:08.250 DEBUG: RemoveBrowserWindow(): hwnd = 4980914
+- 15:27:08.250 DEBUG: GetBrowserWindow(): not found, hwnd = 4980914
+- 15:27:08.250 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 15:27:08.250 DEBUG: Calling CefQuitMessageLoop()
+- 15:27:08.375 DEBUG: OnBrowserDestroyed()
+- 15:27:08.047 INFO: Ended application
+- 15:27:08.047 INFO: --------------------------------------------------------

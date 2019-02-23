@@ -118,37 +118,68 @@ if(!isset($_SESSION['user_id'])){
                                     <div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="fname" placeholder="Firstname" />
                                     </div>
-                                </div>
-								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+									<div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="mname" placeholder="Middlename" />
                                     </div>
-                                </div>
-								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+									<div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="lname" placeholder="Lastname" />
                                     </div>
-                                </div>
-								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+									<div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="lname" placeholder="Ext. name" />
                                     </div>
                                 </div>
-								<div class="col-md-4 m-b-15">
-									<select id="yrlvl" class="form-control">
-										<option value="">Select Level</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</div>
-								<div class="col-md-4 m-b-15">
-									<select id="yrlvl" class="form-control">
-										<option value="">Select Course</option>
-									</select>
-								</div>
+								<div class="row row-space-10">
+									<div class="col-md-4 m-b-15">
+										<select id="yrlvl" class="form-control">
+											<option value="">Select Level</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+									<div class="col-md-4 m-b-15">
+										<select id="yrlvl" class="form-control">
+											<option value="">Select Course</option>
+										</select>
+									</div>
+                                </div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Upload Masterlist</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>File type should be on <i class="text text-danger"><b>".CSV format"</b></i> any invalid file will be discarded.</i>
+                                </p>
+                            </div>
+                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Select File<i class="text text-danger">*</i></label>
+                                
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>

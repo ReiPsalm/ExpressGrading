@@ -77,6 +77,7 @@ if(!isset($_SESSION['user_id'])){
 						<tr>
 							<th>Course ID</th>
 							<th>Course Name</th>
+							<th>Course Term/SY</th>
 							<th>Action</th>
 						</tr>
 						</thead>
@@ -118,12 +119,20 @@ if(!isset($_SESSION['user_id'])){
                                 </div>
 								<label class="control-label">Input School year<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-6 m-b-15">
+                                    <div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="fsy" placeholder="From School year" />
                                     </div>
-									<div class="col-md-6 m-b-15">
+									<div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="tsy" placeholder="To School year" />
                                     </div>
+									<div class="col-md-4 m-b-15">
+										<select id="yrlvl" class="form-control">
+											<option value="">Select Term</option>
+											<option value="1">1st Term</option>
+											<option value="2">2nd Term</option>
+											<option value="3">Summer Term</option>
+										</select>
+									</div>
                                 </div>
                             </form>
                             <div class="pull-right">

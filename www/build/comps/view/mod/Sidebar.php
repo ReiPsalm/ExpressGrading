@@ -34,8 +34,8 @@
                 </ul>
             </li>
             <li><a href="student.php"><i class="fa fa-clipboard"></i> <span>Master List</span></a></li>
-            <li><a href="javascript:;"><i class="fa fa-group"></i> <span>Class Attendance</span></a></li>
-            <li><a href="javascript:;"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
+            <li><a href="attendance.php"><i class="fa fa-group"></i> <span>Class Attendance</span></a></li>
+            <li><a href="classrecord.php"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
