@@ -73,7 +73,7 @@ Appex = {
                 { "mData": "DataDesc", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#peach_modal_edit" data-toggle="modal" onclick="GetEmployeeData(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataCourse(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
     
@@ -123,12 +123,66 @@ Appex = {
                     if(data == "1"){
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getCourse');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
                     }
                 }
             });
+        });
+    },
+    GetDataCourse: function(dataval){
+        var dataID = dataval;
+        var dataSrc = 'getCoursedb';
+        var domID = 'ExpEditform';
+
+        Appex.GetSetupData(dataID,dataSrc,domID);
+        // console.log("DataID: "+dataID);
+    },
+    UpdateCourse: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var newCoursedesc = $('#upcourse').val();
+                    var FormVal = 'action=editcourse&course='+newCoursedesc;
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                                $('#Expform').trigger('reset');
+                                $("#exp_modal").modal("hide");
+                                Appex.SeTupTable('getCourse');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#Expform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
         });
     }
 }

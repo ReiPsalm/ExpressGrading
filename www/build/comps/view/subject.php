@@ -27,9 +27,17 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- Lobibox return messages -->
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
+
+	<link href="../../library/plugins/sweetalert-master/dist/sweetalert.css" rel="stylesheet">
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
+	<link href="../../library/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<script src="../../library/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
@@ -156,7 +164,21 @@ if(!isset($_SESSION['user_id'])){
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="../../library/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../../library/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
+	<script src="../applet/appscript.js"></script>
+	<script src="../../library/js/apps.min.js"></script>
+	<!-- Modal alerts -->
+	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
+	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>

@@ -30,6 +30,8 @@ if(!isset($_SESSION['user_id'])){
 	<!-- Lobibox return messages -->
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
+
+	<link href="../../library/plugins/sweetalert-master/dist/sweetalert.css" rel="stylesheet">
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -98,7 +100,7 @@ if(!isset($_SESSION['user_id'])){
                                     <i class="fa fa-times"></i>
                                 </button>
                             </div>
-                            <h4 class="panel-title">Add new couse</h4>
+                            <h4 class="panel-title">Add new course</h4>
                         </div>
                         <div class="panel-body">
                             <div class="m-b-15 border-bottom-1">
@@ -107,10 +109,10 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input course<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+                                    <div class="col-md-12 m-b-15">
                                         <input type="text" class="form-control" id="course" placeholder="Course Name" />
                                     </div>
                                 </div>
@@ -136,7 +138,7 @@ if(!isset($_SESSION['user_id'])){
                                     <i class="fa fa-times"></i>
                                 </button>
                             </div>
-                            <h4 class="panel-title">Add new couse</h4>
+                            <h4 class="panel-title">Update course</h4>
                         </div>
                         <div class="panel-body">
                             <div class="m-b-15 border-bottom-1">
@@ -145,17 +147,12 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
-                                <label class="control-label">Input course<i class="text text-danger">*</i></label>
-                                <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="course" placeholder="Course Name" />
-                                    </div>
-                                </div>
+                            <form id="ExpEditform" method="POST" class="border-bottom-1 m-b-15">
+                                
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
-                                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>
@@ -166,7 +163,7 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
-		    Copyright &copy; <a href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
+		    Copyright &copy; <a target="_blank" href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
 		</div>
 		<!-- end #footer -->
 		
@@ -204,6 +201,7 @@ if(!isset($_SESSION['user_id'])){
 	<!-- Modal alerts -->
 	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
 	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
+	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
@@ -211,6 +209,7 @@ if(!isset($_SESSION['user_id'])){
 			App.init();
 			Appex.SaveCourse();
 			Appex.SeTupTable('getCourse');
+			Appex.UpdateCourse();
 		});
 	</script>
 </body>
