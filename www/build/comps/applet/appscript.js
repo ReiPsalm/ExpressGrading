@@ -76,7 +76,7 @@ Appex = {
             });
         });
     },
-    EmployeeTable: function(){
+    SeTupTable: function(jsonSource){
         $('#data-table').dataTable().fnClearTable();
         $("#data-table").dataTable().fnDestroy();
     
@@ -101,7 +101,7 @@ Appex = {
                 });
             },
     
-            "sAjaxSource": "../engine/getCourse.php",
+            "sAjaxSource": "../engine/"+jsonSource+".php",
             "sAjaxDataProp": "",
             "iDisplayLength": 10,
             "scrollCollapse": false,
@@ -110,11 +110,11 @@ Appex = {
             "ordering": true,
             "columns": [
     
-                { "mData": "CourseID", sDefaultContent: ""},
-                { "mData": "CourseDesc", sDefaultContent: ""},
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "DataDesc", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.CourseID+'" href="#peach_modal_edit" data-toggle="modal" onclick="GetEmployeeData(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#peach_modal_edit" data-toggle="modal" onclick="GetEmployeeData(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
     

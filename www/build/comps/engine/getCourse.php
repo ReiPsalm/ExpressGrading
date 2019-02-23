@@ -7,8 +7,8 @@ $getData = $Courses->GetCourse();
 $outp = "[";
 while($row = $getData->fetchArray(SQLITE3_ASSOC)) {
     if ($outp != "[") {$outp .= ",";}
-    $outp .= '{"CourseID":"'  . $row["course_id"] . '",';
-    $outp .= '"CourseDesc":"'. $row["course_desc"].'"}';
+    $outp .= '{"DataID":"'  . $row["course_id"] . '",';
+    $outp .= '"DataDesc":"'. $row["course_desc"].'"}';
 }
 $outp .="]";
 

@@ -12386,3 +12386,235 @@
 - 02:07:57.016 DEBUG: OnBrowserDestroyed()
 - 02:08:01.625 INFO: Ended application
 - 02:08:01.625 INFO: --------------------------------------------------------
+- 02:37:26.000 INFO: --------------------------------------------------------
+- 02:37:26.000 INFO: Started application
+- 02:37:26.000 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 02:37:26.000 INFO: Log level = DEBUG4
+- 02:37:26.000 INFO: Starting Mongoose 3.9c web server
+- 02:37:26.016 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 02:37:26.016 INFO: Index files: index.html,index.php
+- 02:37:26.016 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 02:37:26.016 INFO: CGI pattern: **.php$
+- 02:37:26.016 INFO: Hide files patterns: 
+- 02:37:26.016 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 02:37:26.016 INFO: Web server url: http://127.0.0.1:62609/
+- 02:37:26.016 INFO: remote_debugging_port = 52127
+- 02:37:26.016 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=52127
+- 02:37:28.063 DEBUG: App::OnContextInitialized()
+- 02:37:28.063 DEBUG: Window max width/height = 1286/690
+- 02:37:28.063 DEBUG: Window max size exceeded, new width/height = 900/690
+- 02:37:28.063 DEBUG: GetBrowserWindow(): not found, hwnd = 985336
+- 02:37:28.063 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 02:37:28.063 DEBUG: BrowserWindow::CreateBrowserControl()
+- 02:37:28.063 DEBUG: StoreBrowserWindow(): hwnd = 985336
+- 02:37:29.485 DEBUG: ClientHandler::OnAfterCreated()
+- 02:37:29.485 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 02:37:30.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=DB135265A9BBD6C36EC2C78D342E6EAF --mojo-platform-channel-handle=1692 /prefetch:2
+- 02:37:31.375 DEBUG: OnLoadingStateChange: loading=1, url=
+- 02:37:31.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=748970423B8DA77B8C020CFFC8BEBE31 --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=748970423B8DA77B8C020CFFC8BEBE31 --renderer-client-id=3 --mojo-platform-channel-handle=2268 /prefetch:1
+- 02:37:31.218 DEBUG: OnBrowserCreated()
+[0223/023733.194:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 02:37:36.641 INFO: GET 200 /
+- 02:37:36.140 DEBUG: OnContextCreated()
+- 02:37:36.813 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 02:37:36.813 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 02:37:36.828 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 02:37:36.828 INFO: GET 200 /build/library/css/animate.min.css
+- 02:37:36.828 INFO: GET 200 /build/library/css/style.min.css
+- 02:37:36.860 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 02:37:36.907 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 02:37:36.907 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 02:37:36.203 INFO: GET 200 /build/library/css/theme/default.css
+- 02:37:37.407 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 02:37:37.547 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 02:37:37.594 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 02:37:37.703 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 02:37:37.078 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 02:37:38.328 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 02:37:38.485 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 02:37:38.657 INFO: GET 200 /build/library/js/apps.min.js
+- 02:37:38.813 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 02:37:38.813 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 02:37:38.828 INFO: GET 200 /build/library/img/logoB.png
+- 02:37:38.922 INFO: GET 200 /build/comps/applet/appscript.js
+- 02:37:39.782 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62609/
+- 02:37:50.719 INFO: POST 200 /build/comps/cabinet/exec.php
+- 02:37:50.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62609/
+- 02:37:50.953 INFO: GET 200 /build/comps/view/home.php
+- 02:37:50.406 DEBUG: OnContextCreated()
+- 02:37:50.047 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 02:37:51.219 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 02:37:53.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62609/build/comps/view/home.php
+- 03:01:49.860 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:62609/build/comps/view/home.php
+- 03:01:49.172 INFO: GET 302 /build/comps/engine/terminator.php
+- 03:01:49.313 INFO: GET 200 /
+- 03:01:50.718 DEBUG: OnContextCreated()
+- 03:01:50.328 INFO: GET 304 /build/comps/applet/appscript.js
+- 03:01:50.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:62609/
+- 03:01:51.094 DEBUG: WM_DESTROY
+- 03:01:51.094 DEBUG: RemoveBrowserWindow(): hwnd = 985336
+- 03:01:51.094 INFO: Stopping Mongoose web server
+- 03:01:51.094 DEBUG: Mongoose webserver stopped immediately
+- 03:01:51.157 DEBUG: OnBeforeClose() hwnd=986310
+- 03:01:51.157 DEBUG: RemoveBrowserWindow(): hwnd = 986310
+- 03:01:51.157 DEBUG: GetBrowserWindow(): not found, hwnd = 986310
+- 03:01:51.157 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 03:01:51.157 DEBUG: Calling CefQuitMessageLoop()
+- 03:01:52.734 DEBUG: OnBrowserDestroyed()
+- 03:01:52.891 INFO: Ended application
+- 03:01:52.891 INFO: --------------------------------------------------------
+- 10:35:16.000 INFO: --------------------------------------------------------
+- 10:35:16.031 INFO: Started application
+- 10:35:16.031 INFO: Logging to: C:\Users\user\Desktop\ExpressGrading\debug.log
+- 10:35:16.031 INFO: Log level = DEBUG4
+- 10:35:16.031 INFO: Starting Mongoose 3.9c web server
+- 10:35:16.031 INFO: WWW directory: C:\Users\user\Desktop\ExpressGrading\www
+- 10:35:16.031 INFO: Index files: index.html,index.php
+- 10:35:16.031 INFO: CGI interpreter: C:\Users\user\Desktop\ExpressGrading\php\php-cgi.exe
+- 10:35:16.031 INFO: CGI pattern: **.php$
+- 10:35:16.031 INFO: Hide files patterns: 
+- 10:35:16.031 INFO: CGI environment variables set: TMP=C:\Users\user\AppData\Local\Temp\,TEMP=C:\Users\user\AppData\Local\Temp\,TMPDIR=C:\Users\user\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 10:35:16.031 INFO: Web server url: http://127.0.0.1:63285/
+- 10:35:16.031 INFO: remote_debugging_port = 59013
+- 10:35:16.031 DEBUG: Command line string for the browser process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --remote-debugging-port=59013
+- 10:35:17.266 DEBUG: App::OnContextInitialized()
+- 10:35:17.266 DEBUG: Window max width/height = 1286/690
+- 10:35:17.266 DEBUG: Window max size exceeded, new width/height = 900/690
+- 10:35:17.266 DEBUG: GetBrowserWindow(): not found, hwnd = 459798
+- 10:35:17.266 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 10:35:17.297 DEBUG: BrowserWindow::CreateBrowserControl()
+- 10:35:17.297 DEBUG: StoreBrowserWindow(): hwnd = 459798
+- 10:35:17.406 DEBUG: ClientHandler::OnAfterCreated()
+- 10:35:17.406 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 10:35:17.422 DEBUG: OnLoadingStateChange: loading=1, url=
+- 10:35:19.000 DEBUG: Command line string for the gpu-process process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0x5916 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=22.20.16.4708 --gpu-driver-date=6-16-2017 --gpu-secondary-vendor-ids=0x10de --gpu-secondary-device-ids=0x134d --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --service-request-channel-token=3B3F4DD6E489C5F405147F189CB591E1 --mojo-platform-channel-handle=1692 /prefetch:2
+- 10:35:20.000 DEBUG: Command line string for the renderer process: "C:\Users\user\Desktop\ExpressGrading\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=23DB55DB717DB69A79F6320DA3C7471D --lang=en-US --lang=en-US --log-file="C:\Users\user\Desktop\ExpressGrading\debug.log" --enable-pinch --device-scale-factor=1 --num-raster-threads=2 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=23DB55DB717DB69A79F6320DA3C7471D --renderer-client-id=3 --mojo-platform-channel-handle=2100 /prefetch:1
+[0223/103520.411:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 10:35:20.297 DEBUG: OnBrowserCreated()
+- 10:35:23.391 INFO: GET 200 /
+- 10:35:24.906 DEBUG: OnContextCreated()
+- 10:35:24.766 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 10:35:24.812 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 10:35:24.812 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 10:35:24.828 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 10:35:24.828 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 10:35:24.859 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 10:35:24.859 INFO: GET 200 /build/library/css/theme/default.css
+- 10:35:24.000 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 10:35:24.125 INFO: GET 200 /build/library/css/animate.min.css
+- 10:35:24.187 INFO: GET 200 /build/library/css/style.min.css
+- 10:35:25.234 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 10:35:25.359 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 10:35:26.672 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 10:35:26.406 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 10:35:26.406 INFO: GET 200 /build/comps/applet/appscript.js
+- 10:35:26.453 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 10:35:26.469 INFO: GET 200 /build/library/img/logoB.png
+- 10:35:26.484 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 10:35:26.531 INFO: GET 200 /build/library/js/apps.min.js
+- 10:35:27.578 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 10:35:27.578 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 10:35:29.594 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/
+- 10:35:46.266 INFO: POST 200 /build/comps/cabinet/exec.php
+- 10:35:46.344 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 10:35:47.203 INFO: GET 206 /build/library/plugins/lobibox-master/sounds/sound6.ogg
+- 10:35:56.094 INFO: POST 200 /build/comps/cabinet/exec.php
+- 10:35:56.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/
+- 10:35:56.266 INFO: GET 200 /build/comps/view/home.php
+[0223/103556.794:WARNING:audio_sync_reader.cc(188)] AudioSyncReader::Read timed out, audio glitch count=1
+- 10:35:56.641 DEBUG: OnContextCreated()
+- 10:35:56.391 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 10:35:57.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/home.php
+- 10:36:04.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/home.php
+- 10:36:04.031 DEBUG: OnContextCreated()
+- 10:36:04.734 INFO: GET 200 /build/comps/view/student.php
+- 10:36:04.812 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/student.php
+- 10:40:08.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/student.php
+- 10:40:08.594 DEBUG: OnContextCreated()
+- 10:40:08.297 INFO: GET 200 /build/comps/view/course.php
+- 10:40:08.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 10:40:08.328 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 10:40:08.328 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 10:40:08.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 10:40:08.359 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 10:40:08.391 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 10:40:08.437 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 10:40:08.453 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 10:40:08.500 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 10:40:09.641 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 10:40:09.641 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 10:40:09.641 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 10:40:09.781 INFO: GET 200 /build/library/plugins/bootstrap/fonts/glyphicons-halflings-regular.html
+- 10:40:09.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 10:40:09.094 INFO: GET 200 /build/comps/engine/getCourse.php?_=1550889608797
+[0223/104009.547:INFO:CONSOLE(98)] "[object Object]", source: http://127.0.0.1:63285/build/comps/applet/appscript.js (98)
+- 10:58:35.062 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 10:58:37.000 INFO: GET 200 /build/comps/view/course.php
+- 10:58:37.328 DEBUG: OnContextCreated()
+- 10:58:37.109 INFO: GET 200 /build/library/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css
+- 10:58:37.141 INFO: GET 200 /build/library/plugins/font-awesome/css/font-awesome.min.css
+- 10:58:37.172 INFO: GET 200 /build/library/plugins/bootstrap/css/bootstrap.min.css
+- 10:58:37.203 INFO: GET 200 /build/library/css/style.min.css
+- 10:58:37.203 INFO: GET 200 /build/library/css/style-responsive.min.css
+- 10:58:37.203 INFO: GET 200 /build/library/css/animate.min.css
+- 10:58:37.219 INFO: GET 200 /build/library/css/theme/default.css
+- 10:58:37.297 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.css
+- 10:58:37.328 INFO: GET 200 /build/library/plugins/lobibox-master/dist/css/lobibox.min.css
+- 10:58:37.344 INFO: GET 200 /build/library/plugins/DataTables/media/css/dataTables.bootstrap.min.css
+- 10:58:37.344 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css
+- 10:58:37.344 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css
+- 10:58:37.484 INFO: GET 200 /build/library/plugins/pace/pace.min.js
+- 10:58:38.609 INFO: GET 200 /build/library/plugins/jquery/jquery-1.9.1.min.js
+- 10:58:38.641 INFO: GET 200 /build/library/plugins/jquery/jquery-migrate-1.1.0.min.js
+- 10:58:38.766 INFO: GET 200 /build/library/plugins/slimscroll/jquery.slimscroll.min.js
+- 10:58:38.781 INFO: GET 200 /build/library/plugins/jquery-cookie/jquery.cookie.js
+- 10:58:38.781 INFO: GET 200 /build/library/plugins/bootstrap/js/bootstrap.min.js
+- 10:58:38.797 INFO: GET 200 /build/library/plugins/font-awesome/fonts/fontawesome-webfonte0a5.html?v=4.3.0
+- 10:58:38.812 INFO: GET 200 /build/library/plugins/DataTables/media/js/dataTables.bootstrap.min.js
+- 10:58:38.844 INFO: GET 200 /build/library/plugins/jquery-ui/ui/minified/jquery-ui.min.js
+- 10:58:38.844 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js
+- 10:58:38.859 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js
+- 10:58:38.875 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js
+- 10:58:38.891 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js
+- 10:58:38.000 INFO: GET 200 /build/library/plugins/DataTables/media/js/jquery.dataTables.js
+- 10:58:38.391 INFO: GET 200 /build/library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js
+- 10:58:38.484 INFO: GET 200 /build/comps/applet/appscript.js
+- 10:58:38.500 INFO: GET 200 /build/library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js
+- 10:58:38.531 INFO: GET 200 /build/library/plugins/lobibox-master/js/lobibox.js
+- 10:58:38.547 INFO: GET 200 /build/library/js/apps.min.js
+- 10:58:39.594 INFO: GET 200 /build/library/plugins/lobibox-master/demo/demo.js
+- 10:58:39.750 INFO: GET 200 /build/library/img/logoB.png
+- 10:58:39.766 INFO: GET 200 /build/library/img/SammySusana.jpg
+- 10:58:39.156 INFO: GET 200 /build/library/plugins/bootstrap/fonts/glyphicons-halflings-regular.html
+- 10:58:39.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 10:58:40.922 INFO: GET 200 /build/comps/engine/getCourse.php?_=1550890719229
+[0223/105840.377:INFO:CONSOLE(98)] "[object Object]", source: http://127.0.0.1:63285/build/comps/applet/appscript.js (98)
+- 10:59:33.437 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 10:59:34.234 DEBUG: OnContextCreated()
+- 10:59:34.937 INFO: GET 200 /build/comps/view/subject.php
+- 10:59:34.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/subject.php
+- 11:00:44.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/subject.php
+- 11:00:44.203 DEBUG: OnContextCreated()
+- 11:00:44.906 INFO: GET 200 /build/comps/view/course.php
+- 11:00:44.937 INFO: GET 200 /build/comps/applet/appscript.js
+- 11:00:44.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 11:00:44.266 INFO: GET 200 /build/comps/engine/getCourse.php?_=1550890844388
+[0223/110044.723:INFO:CONSOLE(98)] "[object Object]", source: http://127.0.0.1:63285/build/comps/applet/appscript.js (98)
+- 11:01:34.062 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:63285/build/comps/view/course.php
+- 11:01:34.250 INFO: GET 302 /build/comps/engine/terminator.php
+- 11:01:34.719 DEBUG: OnContextCreated()
+- 11:01:34.422 INFO: GET 200 /
+- 11:01:34.422 INFO: GET 304 /build/comps/applet/appscript.js
+- 11:01:34.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:63285/
+- 11:01:37.797 DEBUG: WM_DESTROY
+- 11:01:37.797 DEBUG: RemoveBrowserWindow(): hwnd = 459798
+- 11:01:37.797 INFO: Stopping Mongoose web server
+- 11:01:37.797 DEBUG: Mongoose webserver stopped immediately
+- 11:01:37.844 DEBUG: OnBeforeClose() hwnd=787006
+- 11:01:37.844 DEBUG: RemoveBrowserWindow(): hwnd = 787006
+- 11:01:37.844 DEBUG: GetBrowserWindow(): not found, hwnd = 787006
+- 11:01:37.844 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 11:01:37.844 DEBUG: Calling CefQuitMessageLoop()
+- 11:01:37.453 DEBUG: OnBrowserDestroyed()
+- 11:01:38.328 INFO: Ended application
+- 11:01:38.328 INFO: --------------------------------------------------------
