@@ -49,7 +49,7 @@ if(isset($_SESSION['user_id'])){
             <div class="login-header">
                 <div class="brand">
 				<img src="build/library/img/logoB.png" height="39" width="35" /> Express Grading
-                    <small>enter account details to login</small>
+                    <small>Desktop application class record</small>
                 </div>
             </div>
             <!-- end brand -->
@@ -68,6 +68,9 @@ if(isset($_SESSION['user_id'])){
             </div>
         </div>
         <!-- end login -->
+		<center>
+			Copyright &copy; <a target="_blank" href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
+		</center>
         
 	</div>
 	<!-- end page container -->

@@ -53,20 +53,7 @@ if(!isset($_SESSION['user_id'])){
 			<!-- begin page-header -->
 			<h1 class="page-header">Attendance Module</h1>
 			<!-- end page-header -->
-            <form id="Expform" method="POST" class="border-bottom-1 m-b-15">
-                <label class="control-label">Input course<i class="text text-danger">*</i></label>
-                <div class="row row-space-10">
-                    <div class="col-md-12 m-b-15">
-                        <select id="yrlvl" class="form-control">
-                            <option value="">Select Section</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-            <div class="pull-right">
-                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
-                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
-            </div>
+
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">
 			        <div class="panel-heading-btn">
@@ -78,9 +65,49 @@ if(!isset($_SESSION['user_id'])){
 			        <h4 class="panel-title">Attendance</h4>
 			    </div>
 			    <div class="panel-body">
-			        Panel Content Here
+                    <form id="Expform" method="POST" class="border-bottom-1 m-b-15">
+                        <label class="control-label">Select Section<i class="text text-danger">*</i></label>
+                        <div class="row row-space-10">
+                            <div class="col-md-6 m-b-15">
+                                <select id="yrlvl" class="form-control">
+                                    <option value="">Select Section</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1112322</td>
+                                <td>Nicky Almera</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm">Present</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Absent</button>
+                                    <button type="button" class="btn btn-info btn-sm">Excused</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0399311232</td>
+                                <td>Edmund Wong</td>
+                                <td>
+                                    <button type="button" class="btn btn-success btn-sm ">Present</button>
+                                    <button type="button" class="btn btn-danger btn-sm">Absent</button>
+                                    <button type="button" class="btn btn-info btn-sm">Excused</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 			    </div>
 			</div>
+
 		</div>
 		<!-- end #content -->
 		
