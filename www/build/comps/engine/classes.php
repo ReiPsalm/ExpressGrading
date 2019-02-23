@@ -79,5 +79,18 @@ class CourseMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+    
+    public function EditCourse(){
+        try{
+            $sqlEditCourse = "UPDATE tbl_course SET  course_desc='".$this->coursedesc."' WHERE course_id='".$this->courseid."'";
+            if($this->conn->exec($sqlEditCourse)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
 }
 ?>

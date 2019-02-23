@@ -29,6 +29,18 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "editcourse"){
+    $Courses->courseid = $_POST['idData'];
+    $Courses->coursedesc = $_POST['newcourse'];
+    try{
+        if ($Courses->EditCourse()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }

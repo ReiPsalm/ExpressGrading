@@ -25,6 +25,16 @@ Appex = {
             msg: setmsg
         });//lobibox end
     },
+    /**
+    * Write XMLreqyest for modal
+    *
+    * @memberOf notif
+    * @param {String} type be default|info|warning|error|success}
+    * @param {String} title Notification title
+    * @param {String} path audio path INTERNAL: build/library EXTERNAL: ../../
+    * @param {String} position be top left|top right|top center|bottom left|bottom right|bottom center
+    * @param {String} setmsg Notification message
+    */
     GetSetupData: function (dataID,dataSrc,domID){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -76,7 +86,6 @@ Appex = {
                         $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataCourse(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
-    
             ]
         });
     },
@@ -158,7 +167,9 @@ Appex = {
             function(isConfirm){
                 if (isConfirm) {
                     var newCoursedesc = $('#upcourse').val();
-                    var FormVal = 'action=editcourse&course='+newCoursedesc;
+                    var idData = $('#dataid').val();
+                    var FormVal = 'action=editcourse&newcourse='+newCoursedesc+'&idData='+idData;
+                    console.log(FormVal);
                     $.ajax({
                         type:'POST',
                         data:FormVal,
@@ -166,9 +177,9 @@ Appex = {
                         url:'../cabinet/exec.php',
                         success: function(data){
                             if(data == "1"){
-                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#Expform').trigger('reset');
-                                $("#exp_modal").modal("hide");
+                                $("#exp_modalb").modal("hide");
                                 Appex.SeTupTable('getCourse');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
