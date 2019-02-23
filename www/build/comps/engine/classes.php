@@ -38,6 +38,7 @@ class CourseMod{
     private $conn;
 
     public $coursedesc;
+    public $courseid;
 
     public function __construct($db_get){
         $this->conn = $db_get;
@@ -60,9 +61,20 @@ class CourseMod{
     public function GetCourse(){
         try{
             $sqlGetCourse = "SELECT * FROM tbl_course";
-            $resultCourse = $this->conn->query($sqlGetCourse);
+            $restCourse = $this->conn->query($sqlGetCourse);
 
-            return $resultCourse;
+            return $restCourse;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetCourse(){
+        try{
+            $sqlGetSetCourse = "SELECT * FROM tbl_course WHERE course_id='".$this->courseid."'";
+            $resGetSetCourse = $this->conn->query($sqlGetSetCourse);
+
+            return $resGetSetCourse;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

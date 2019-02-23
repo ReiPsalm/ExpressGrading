@@ -25,6 +25,61 @@ Appex = {
             msg: setmsg
         });//lobibox end
     },
+    GetSetupData: function (dataID,dataSrc,domID){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
+        xmlhttp.send();
+    },
+    SeTupTable: function(jsonSource){
+        $('#data-table').dataTable().fnClearTable();
+        $("#data-table").dataTable().fnDestroy();
+    
+        clientTableData = $('#data-table').DataTable({
+            responsive: true,
+            bAutoWidth:false,
+            dom:"Bfrtip",
+            buttons:[{extend:"csv",className:"btn-sm"}],
+    
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+    
+            "sAjaxSource": "../engine/"+jsonSource+".php",
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "columns": [
+    
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "DataDesc", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#peach_modal_edit" data-toggle="modal" onclick="GetEmployeeData(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                    }
+                },
+    
+            ]
+        });
+    },
     UserLogin: function () {
         $('#login').click(function (e) {
             e.preventDefault();
@@ -75,50 +130,5 @@ Appex = {
                 }
             });
         });
-    },
-    SeTupTable: function(jsonSource){
-        $('#data-table').dataTable().fnClearTable();
-        $("#data-table").dataTable().fnDestroy();
-    
-        clientTableData = $('#data-table').DataTable({
-            responsive: true,
-            bAutoWidth:false,
-            dom:"Bfrtip",
-            buttons:[{extend:"csv",className:"btn-sm"}],
-    
-            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
-                oSettings.jqXHR = $.ajax( {
-                    "dataType": 'json',
-                    "type": "GET",
-                    "url": sSource,
-                    "cache": false,
-                    "data": aoData,
-                    "success": function (data) {
-                        clientList = data;
-                        console.log(clientList);
-                        fnCallback(clientList);
-                    }
-                });
-            },
-    
-            "sAjaxSource": "../engine/"+jsonSource+".php",
-            "sAjaxDataProp": "",
-            "iDisplayLength": 10,
-            "scrollCollapse": false,
-            "paging": true,
-            "searching": true,
-            "ordering": true,
-            "columns": [
-    
-                { "mData": "DataID", sDefaultContent: ""},
-                { "mData": "DataDesc", sDefaultContent: ""},
-                { sDefaultContent: "" ,
-                    "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#peach_modal_edit" data-toggle="modal" onclick="GetEmployeeData(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
-                    }
-                },
-    
-            ]
-        });
-    }/*.--end ajax*/
+    }
 }
