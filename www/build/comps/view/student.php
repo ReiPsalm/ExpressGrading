@@ -68,7 +68,7 @@ if(!isset($_SESSION['user_id'])){
 						<button href="#exp_modal" data-toggle="modal" class="btn btn-xs btn-info" title="Add course">
 							<i class="fa fa-plus" ></i> Add Student
 						</button>
-						<button href="#exp_modalb" data-toggle="modal" class="btn btn-xs btn-warning" title="Add course">
+						<button href="#exp_modalc" data-toggle="modal" class="btn btn-xs btn-warning" title="Add course">
 							<i class="fa fa-cloud-upload" ></i> Upload CSV
 						</button>
 			        </div>
@@ -145,8 +145,6 @@ if(!isset($_SESSION['user_id'])){
 									<div class="col-md-4 m-b-15">
 										<select id="course" class="form-control">
 											<option value="">Select Course</option>
-											<option value="10">Animation</option>
-											<option value="8">Accountancy</option>
 										</select>
 									</div>
                                 </div>
@@ -164,6 +162,40 @@ if(!isset($_SESSION['user_id'])){
 
 		<!-- #modal-dialog -->
         <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new student</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalc">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="panel panel-inverse" data-sortable-id="form-validation-1">
@@ -248,8 +280,9 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.SeTupTable('getStudentdb');
+			Appex.SeTupTable('getStudentdb','getEditStudent');
 			Appex.SaveStudent();
+			Appex.GetDataSets('getCourseOpt','course');
 		});
 	</script>
 </body>

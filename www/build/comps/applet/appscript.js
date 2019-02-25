@@ -43,7 +43,31 @@ Appex = {
         xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
         xmlhttp.send();
     },
-    SeTupTable: function(jsonSource){
+    /**
+    * Write XMLrequest for fetching all data
+    *
+    * @memberOf Appex
+    * @param {String} dataSrc File name
+    * @param {String} domID ID name
+    */
+    GetDataSets: function (dataSrc,domID){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
+            }
+        };
+        xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
+        xmlhttp.send();
+    },
+    /**
+    * Write generic DataTable
+    * NOTE: still in further modification
+    * @memberOf Appex
+    * @param {String} jsonSource json srouce for the table data
+    * @param {String} domID file source for the modal form and any html elements
+    */
+    SeTupTable: function(jsonSource,SrcData){
         $('#data-table').dataTable().fnClearTable();
         $("#data-table").dataTable().fnDestroy();
     
@@ -81,11 +105,19 @@ Appex = {
                 { "mData": "DataDesc", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataCourse(this.value)" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
             ]
         });
+    },
+    GetDataModal: function(dataval,SrcData){
+        var dataID = dataval;
+        var dataSrc = SrcData;
+        var domID = 'ExpEditform';
+
+        Appex.GetSetupData(dataID,dataSrc,domID);
+        console.log(dataID+' '+dataSrc);
     },
     UserLogin: function () {
         $('#login').click(function (e) {
@@ -139,14 +171,6 @@ Appex = {
                 }
             });
         });
-    },
-    GetDataCourse: function(dataval){
-        var dataID = dataval;
-        var dataSrc = 'getCoursedb';
-        var domID = 'ExpEditform';
-
-        Appex.GetSetupData(dataID,dataSrc,domID);
-        // console.log("DataID: "+dataID);
     },
     UpdateCourse: function(){
         $('#editdt').click(function (e) {

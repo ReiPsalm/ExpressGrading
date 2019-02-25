@@ -63,7 +63,7 @@ class CourseMod{
             $sqlGetCourse = "SELECT * FROM tbl_course";
             $restGetCourse = $this->conn->query($sqlGetCourse);
 
-            return $GetCourse;
+            return $restGetCourse;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
@@ -130,6 +130,17 @@ class StudentMod{
             $resGetStud = $this->conn->query($sqlGetStud);
 
             return $resGetStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetStud(){
+        try{
+            $sqlGetSetStud = "SELECT * FROM tbl_student WHERE stud_id='".$this->studid."'";
+            $resGetSetStud = $this->conn->query($sqlGetSetStud);
+
+            return $resGetSetStud;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

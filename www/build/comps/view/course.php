@@ -208,7 +208,7 @@ if(!isset($_SESSION['user_id'])){
 		$(document).ready(function() {
 			App.init();
 			Appex.SaveCourse();
-			Appex.SeTupTable('getCourse');
+			Appex.SeTupTable('getCourse','getCoursedb');
 			Appex.UpdateCourse();
 		});
 	</script>
