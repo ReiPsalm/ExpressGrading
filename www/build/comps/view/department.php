@@ -109,17 +109,50 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input department<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="Department Name" />
+                                    <div class="col-md-12 m-b-15">
+                                        <input type="text" class="form-control" id="deptdesc" placeholder="Department Name" />
                                     </div>
                                 </div>
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new department</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>
@@ -175,6 +208,9 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.SaveDept();
+			Appex.SeTupTable('getDeptdb','getEditDept');
+			Appex.UpdateDept();
 		});
 	</script>
 </body>

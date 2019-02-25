@@ -8,4 +8,6 @@ $coms = new HostDb();
 $Users = new UsersClass($coms);
 $Courses = new CourseMod($coms);
 $Students = new StudentMod($coms);
+$Dept = new DeptMod($coms);
+$Dean = new DeanMod($coms);
 ?>

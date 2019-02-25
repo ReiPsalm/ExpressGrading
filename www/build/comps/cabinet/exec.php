@@ -58,6 +58,45 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "savedept"){
+    $Dept->deptdesc = $_POST['deptdesc'];
+    
+    try{
+        if ($Dept->SaveDept()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "editDept"){
+    $Dept->deptid = $_POST['idData'];
+    $Dept->deptdesc = $_POST['newDept'];
+    try{
+        if ($Dept->EditDept()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "savedean"){
+    $Dean->fname = $_POST['fname'];
+    $Dean->mname = $_POST['mname'];
+    $Dean->lname = $_POST['lname'];
+    $Dean->ename = $_POST['ename'];
+    $Dean->dept = $_POST['dept'];
+    try{
+        if ($Dean->SaveDean()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }

@@ -34,6 +34,66 @@ class UsersClass{
     }
 }
 
+class DeptMod{
+    private $conn;
+
+    public $deptid;
+    public $deptdesc;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveDept(){
+        try{
+            $sqlSaveDept = "INSERT INTO tbl_department (dept_desc) VALUES ('".$this->deptdesc."')";
+            if($this->conn->exec($sqlSaveDept)){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetDept(){
+        try{
+            $sqlGetDept = "SELECT * FROM tbl_department";
+            $restGetDept = $this->conn->query($sqlGetDept);
+
+            return $restGetDept;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetDept(){
+        try{
+            $sqlGetSetDept = "SELECT * FROM tbl_department WHERE dept_id='".$this->deptid."'";
+            $resGetSetDept = $this->conn->query($sqlGetSetDept);
+
+            return $resGetSetDept;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditDept(){
+        try{
+            $sqlEditDept = "UPDATE tbl_department SET  dept_desc='".$this->deptdesc."' WHERE dept_id='".$this->deptid."'";
+            if($this->conn->exec($sqlEditDept)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
 class CourseMod{
     private $conn;
 
@@ -88,6 +148,58 @@ class CourseMod{
             }else{
                 return false;
             }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class DeanMod{
+    private $conn;
+
+    public $deanid;
+    public $fname;
+    public $mname;
+    public $lname;
+    public $ename;
+    public $dept;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveDean(){
+        try{
+            $sqlSaveDean = "INSERT INTO tbl_dean ";
+            $sqlSaveDean .= "(dean_fname,dean_mname,dean_lname,dean_extname,dept_id) ";
+            $sqlSaveDean .= "VALUES ('".$this->fname."','".$this->mname."','".$this->lname."','".$this->ename."','".$this->dept."')";
+            if($this->conn->exec($sqlSaveDean)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetDean(){
+        try{
+            $sqlGetDean= "SELECT * FROM tbl_dean";
+            $resGetDean = $this->conn->query($sqlGetDean);
+
+            return $resGetDean;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetDean(){
+        try{
+            $sqlGetSetDean = "SELECT * FROM tbl_dean WHERE dean_id='".$this->deanid."'";
+            $resGetSetDean = $this->conn->query($sqlGetSetDean);
+
+            return $resGetSetDean;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

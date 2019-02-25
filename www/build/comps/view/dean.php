@@ -110,27 +110,30 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input dean<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+                                    <div class="col-md-6 m-b-15">
                                         <input type="text" class="form-control" id="fname" placeholder="Firstname" />
                                     </div>
-                                </div>
-								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+									<div class="col-md-6 m-b-15">
                                         <input type="text" class="form-control" id="mname" placeholder="Middlename" />
                                     </div>
                                 </div>
 								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
+                                    <div class="col-md-6 m-b-15">
                                         <input type="text" class="form-control" id="lname" placeholder="Lastname" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="ename" placeholder="Ext. name" />
                                     </div>
                                 </div>
 								<div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="ename" placeholder="Ext. name" />
-                                    </div>
+									<div class="col-md-6 m-b-15">
+										<select id="dept" class="form-control">
+											<option value="">Select Department</option>
+										</select>
+									</div>
                                 </div>
                             </form>
                             <div class="pull-right">
@@ -143,7 +146,42 @@ if(!isset($_SESSION['user_id'])){
                 </div>
             </div>
         </div>
-		
+
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new dean</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
 		    Copyright &copy; <a target="_blank" href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
@@ -191,6 +229,9 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetDataSets('getDeptOpt','dept');
+			Appex.SeTupTable('getDeandb','getEditDean');
+			Appex.SaveDean();
 		});
 	</script>
 </body>
