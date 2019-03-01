@@ -110,7 +110,7 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input subject<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-12 m-b-15">
@@ -120,25 +120,22 @@ if(!isset($_SESSION['user_id'])){
 								<label class="control-label">Input School year<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-6 m-b-15">
-                                        <input type="text" class="form-control" id="fsy" placeholder="From School year" />
-                                    </div>
-									<div class="col-md-6 m-b-15">
-                                        <input type="text" class="form-control" id="tsy" placeholder="To School year" />
+                                        <input type="text" class="form-control" id="fsy" placeholder="School year [0000-0000]" />
                                     </div>
                                 </div>
 								<label class="control-label">Term and Section<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
 									<div class="col-md-6 m-b-15">
-										<select id="yrlvl" class="form-control">
+										<select id="term" class="form-control">
 											<option value="">Select Term</option>
-											<option value="1">1st Term</option>
-											<option value="2">2nd Term</option>
-											<option value="3">Summer Term</option>
+											<option value="1st Term">1st Term</option>
+											<option value="2nd Term">2nd Term</option>
+											<option value="Summer Term">Summer Term</option>
 										</select>
 									</div>
 									<div class="col-md-6 m-b-15">
 										<select id="section" class="form-control">
-											<option value="">Select Section</option>
+											
 										</select>
 									</div>
                                 </div>
@@ -146,6 +143,40 @@ if(!isset($_SESSION['user_id'])){
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Update subject</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Update</button>
                             </div>
                         </div>
                     </div>
@@ -201,6 +232,10 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetDataSets('getSecOpt','section');
+			Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+			Appex.SaveSubj();
+			Appex.UpdateSubj();
 		});
 	</script>
 </body>

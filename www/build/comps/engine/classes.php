@@ -358,7 +358,6 @@ class SubjMod{
 
     public $subjdesc;
     public $subjid;
-    public $subjtd;
     public $subjsy;
     public $subjterm;
     public $Secid;
@@ -368,7 +367,56 @@ class SubjMod{
     }
 
     public function SaveSubj(){
-        
+        try{
+            $sqlSaveSubj = "INSERT INTO tbl_subject ";
+            $sqlSaveSubj .= "(subj_desc,subj_sy,subj_term,Sec_id) ";
+            $sqlSaveSubj .= "VALUES ('".$this->subjdesc."','".$this->subjsy."','".$this->subjterm."','".$this->Secid."')";
+            if($this->conn->exec($sqlSaveSubj)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSubj(){
+        try{
+            $sqlGetSubj= "SELECT * FROM tbl_subject";
+            $resGetSubj = $this->conn->query($sqlGetSubj);
+
+            return $resGetSubj;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetSubj(){
+        try{
+            $sqlGetSetSubj = "SELECT * FROM tbl_subject WHERE subj_id='".$this->subjid."'";
+            $resGetSetSubj = $this->conn->query($sqlGetSetSubj);
+
+            return $resGetSetSubj;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditSubj(){
+        try{
+            $sqlEditSubj = "UPDATE tbl_subject SET  ";
+            $sqlEditSubj .= "subj_desc='".$this->subjdesc."',subj_sy='".$this->subjsy."',";
+            $sqlEditSubj .= "subj_term='".$this->subjterm."',Sec_id='".$this->Secid."' ";
+            $sqlEditSubj .= "WHERE subj_id='".$this->subjid."'";
+            if($this->conn->exec($sqlEditSubj)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
     }
 }
 ?>

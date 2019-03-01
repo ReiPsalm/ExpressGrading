@@ -148,6 +148,134 @@ Appex = {
         });
     
     },
+    /**
+    * DT for subject "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
+    * NOTE: nag labad pa ako head saon to populate the columns base on dynamic json data... :3
+    * @memberOf Appex
+    * @param {String} jsonSource json srouce for the table data
+    * @param {String} domID file source for the modal form and any html elements
+    */
+    SeTupSubjTable: function(jsonSource,SrcData){
+        $('#data-table').dataTable().fnClearTable();
+        $("#data-table").dataTable().fnDestroy();
+
+        clientTableData = $('#data-table').DataTable({
+            responsive: true,
+            bAutoWidth:false,
+            dom:"Bfrtip",
+            buttons:[{extend:"csv",className:"btn-sm"}],
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/"+jsonSource+".php",
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "DataDesc", sDefaultContent: ""},
+                { "mData": "Data_A", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                    }
+                },
+            ]
+        });
+    },
+    UpdateSubj: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var dataid = $('#dataid').val();
+                    var subj = $('#upsubj').val();
+                    var sy = $('#upfsy').val();
+                    var term = $('#upterm').val();
+                    var secid = $('#upsection').val();
+                    var FormVal = 'action=upsubj&dataid='+dataid+'&subj='+subj+'&sy='+sy+'&term='+term+'&secid='+secid;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#Expform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#Expform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    },
+    SaveSubj: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
+            var subj = $('#upsubj').val();
+            var sy = $('#upfsy').val();
+            var term = $('#upterm').val();
+            var secid = $('#upsection').val();
+            var FormVal = 'action=savesubj&subj='+subj+'&sy='+sy+'&term='+term+'&secid='+secid;
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                        Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expform').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
     SaveCourse: function(){
         $('#savedt').click(function (e) {
             e.preventDefault();

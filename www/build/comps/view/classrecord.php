@@ -51,7 +51,7 @@ if(!isset($_SESSION['user_id'])){
 		<!-- begin #content -->
 		<div id="content" class="content">
 			<!-- begin page-header -->
-			<h1 class="page-header">Dashboard</h1>
+			<h1 class="page-header">Class Record Module</h1>
 			<!-- end page-header -->
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">
