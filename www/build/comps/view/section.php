@@ -109,17 +109,51 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                            <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input section<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-12 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="Section Name" />
+                                        <input type="text" class="form-control" id="section" placeholder="Section Name" />
                                     </div>
                                 </div>
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new section</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>
@@ -167,7 +201,7 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../applet/appscript.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<!-- Modal alerts -->
-	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
 	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
 	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
@@ -175,6 +209,9 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.SaveSection();
+			Appex.SeTupTable('getSecdb','getEditSec');
+			Appex.UpdateSection();
 		});
 	</script>
 </body>

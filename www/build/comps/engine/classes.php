@@ -94,6 +94,66 @@ class DeptMod{
     }
 }
 
+class SectionMod{
+    private $conn;
+
+    public $secdesc;
+    public $secid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveSec(){
+        try{
+            $sqlSaveSec = "INSERT INTO tbl_section (Sec_desc) VALUES ('".$this->secdesc."')";
+            if($this->conn->exec($sqlSaveSec)){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetSec(){
+        try{
+            $sqlGetSec = "SELECT * FROM tbl_section";
+            $restGetSec = $this->conn->query($sqlGetSec);
+
+            return $restGetSec;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetSec(){
+        try{
+            $sqlGetSetSec = "SELECT * FROM tbl_section WHERE Sec_id='".$this->secid."'";
+            $resGetSetSec = $this->conn->query($sqlGetSetSec);
+
+            return $resGetSetSec;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditSec(){
+        try{
+            $sqlEditSec = "UPDATE tbl_section SET  Sec_desc='".$this->secdesc."' WHERE Sec_id='".$this->secid."'";
+            if($this->conn->exec($sqlEditSec)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
 class CourseMod{
     private $conn;
 
@@ -204,6 +264,23 @@ class DeanMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+
+    public function EditDean(){
+        try{
+            $sqlEditDean = "UPDATE tbl_dean SET  ";
+            $sqlEditDean .= "dean_fname='".$this->fname."',dean_mname='".$this->mname."',";
+            $sqlEditDean .= "dean_lname='".$this->lname."',dean_extname='".$this->ename."',";
+            $sqlEditDean .= "dept_id='".$this->dept."' ";
+            $sqlEditDean .= "WHERE dean_id='".$this->deanid."'";
+            if($this->conn->exec($sqlEditDean)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
 }
 
 class StudentMod{
@@ -256,6 +333,42 @@ class StudentMod{
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
+    }
+
+    public function EditStud(){
+        try{
+            $sqlEditStud = "UPDATE tbl_student SET  ";
+            $sqlEditStud .= "stud_fname='".$this->fname."',stud_mname='".$this->mname."',";
+            $sqlEditStud .= "stud_lname='".$this->lname."',stud_extname='".$this->exname."',";
+            $sqlEditStud .= "stud_yearlvl='".$this->yrlvl."',course_id='".$this->course."' ";
+            $sqlEditStud .= "WHERE stud_id='".$this->studid."'";
+            if($this->conn->exec($sqlEditStud)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class SubjMod{
+    private $conn;
+
+    public $subjdesc;
+    public $subjid;
+    public $subjtd;
+    public $subjsy;
+    public $subjterm;
+    public $Secid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveSubj(){
+        
     }
 }
 ?>

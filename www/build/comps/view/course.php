@@ -199,7 +199,7 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
 	<!-- Modal alerts -->
-	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
 	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
 	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->

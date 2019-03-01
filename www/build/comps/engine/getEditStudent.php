@@ -7,7 +7,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
 <label class="control-label">Input student<i class="text text-danger">*</i></label>
 <div class="row row-space-10">
     <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" disabled="disabled" id="upstudid" placeholder="<?php echo $row['stud_id']; ?>" />
+        <input type="text" class="form-control" disabled="disabled" id="upstudid" value="<?php echo $row['stud_id']; ?>" />
     </div>
     <div class="col-md-4 m-b-15">
         <input type="text" class="form-control" id="upfname" placeholder="<?php echo $row['stud_fname']; ?>" />
@@ -36,6 +36,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
     <div class="col-md-4 m-b-15">
         <select id="upcourse" class="form-control">
             <option value="">Select Course</option>
+            <?php include_once "getCourseOpt.php"; ?>
         </select>
     </div>
 </div>

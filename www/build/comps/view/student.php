@@ -272,7 +272,7 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../applet/appscript.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<!-- Modal alerts -->
-	<script src="../..//library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
 	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
 	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
@@ -283,6 +283,7 @@ if(!isset($_SESSION['user_id'])){
 			Appex.SeTupTable('getStudentdb','getEditStudent');
 			Appex.SaveStudent();
 			Appex.GetDataSets('getCourseOpt','course');
+			Appex.UpdateStud();
 		});
 	</script>
 </body>

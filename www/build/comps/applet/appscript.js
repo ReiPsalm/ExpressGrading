@@ -172,6 +172,76 @@ Appex = {
             });
         });
     },
+    SaveSection: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
+            var section = $('#section').val();
+            var FormVal = 'action=savesec&secdesc='+section;
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getSecdb','getEditSec');
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expform').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
+    UpdateSection: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var newSec = $('#upsection').val();
+                    var idData = $('#dataid').val();
+                    var FormVal = 'action=editsec&newsec='+newSec+'&idData='+idData;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#Expform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupTable('getSecdb','getEditSec');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#Expform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    },
     UpdateCourse: function(){
         $('#editdt').click(function (e) {
             e.preventDefault();
@@ -246,12 +316,12 @@ Appex = {
                         success: function(data){
                             if(data == "1"){
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
-                                $('#Expform').trigger('reset');
+                                $('#ExpEditform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
                                 Appex.SeTupTable('getDeptdb');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
-                                $('#Expform').trigger('reset');
+                                $('#ExpEditform').trigger('reset');
                             }
                         }
                     });
@@ -291,6 +361,57 @@ Appex = {
                     }
                 }
             });
+        });
+    },
+    UpdateStud: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var studid = $('#upstudid').val();
+                    var fname = $('#upfname').val();
+                    var mname = $('#upmname').val();
+                    var lname = $('#uplname').val();
+                    var exname = $('#upexname').val();
+                    var yrlvl = $('#upyrlvl').val();
+                    var course = $('#upcourse').val();
+                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&course='+course;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#ExpEditform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupTable('getStudentdb','getEditStudent');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#ExpEditform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
         });
     },
     SaveDept: function(){
@@ -346,4 +467,54 @@ Appex = {
             });
         });
     },
+    UpdateDean: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var dataid = $('#dataid').val();
+                    var fname = $('#upfname').val();
+                    var mname = $('#upmname').val();
+                    var lname = $('#uplname').val();
+                    var ename = $('#upename').val();
+                    var dept = $('#updept').val();
+                    var FormVal = 'action=editdean&dataid='+dataid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&ename='+ename+'&dept='+dept;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#ExpEditform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupTable('getDeandb','getEditDean');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#ExpEditform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    }
 }

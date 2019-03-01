@@ -232,6 +232,7 @@ if(!isset($_SESSION['user_id'])){
 			Appex.GetDataSets('getDeptOpt','dept');
 			Appex.SeTupTable('getDeandb','getEditDean');
 			Appex.SaveDean();
+			Appex.UpdateDean();
 		});
 	</script>
 </body>

@@ -17,6 +17,30 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "savesec"){
+    $Section->secdesc = $_POST['secdesc'];
+    
+    try{
+        if ($Section->SaveSec()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "editsec"){
+    $Section->secid = $_POST['idData'];
+    $Section->secdesc = $_POST['newsec'];
+    try{
+        if ($Section->EditSec()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else if($_POST['action'] == "savecourse"){
     $Courses->coursedesc = $_POST['course'];
     
@@ -58,6 +82,23 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "editstud"){
+    $Students->studid = $_POST['studid'];
+    $Students->fname = $_POST['fname'];
+    $Students->mname = $_POST['mname'];
+    $Students->lname = $_POST['lname'];
+    $Students->exname = $_POST['exname'];
+    $Students->yrlvl = $_POST['yrlvl'];
+    $Students->course = $_POST['course'];
+    try{
+        if ($Students->EditStud()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else if($_POST['action'] == "savedept"){
     $Dept->deptdesc = $_POST['deptdesc'];
     
@@ -90,6 +131,22 @@ if($_POST['action'] == "login"){
     $Dean->dept = $_POST['dept'];
     try{
         if ($Dean->SaveDean()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "editdean"){
+    $Dean->deanid = $_POST['dataid'];
+    $Dean->fname = $_POST['fname'];
+    $Dean->mname = $_POST['mname'];
+    $Dean->lname = $_POST['lname'];
+    $Dean->ename = $_POST['ename'];
+    $Dean->dept = $_POST['dept'];
+    try{
+        if ($Dean->EditDean()) {
             echo "1";
         }else{
             echo "0";
