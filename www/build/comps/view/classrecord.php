@@ -73,26 +73,19 @@ if(!isset($_SESSION['user_id'])){
 			    <div class="panel-body">
 					<form id="ExpformSort" method="POST" class="border-bottom-1 m-b-15">
 						<div class="row row-space-10">
-							<div class="col-md-6 m-b-15">
+							<div class="col-md-4 m-b-15">
 								<select id="yrlvl" class="form-control">
 									<option value="">Select School Year</option>
 								</select>
 							</div>
-							<div class="col-md-6 m-b-15">
+							<div class="col-md-4 m-b-15">
 								<select id="yrlvl" class="form-control">
 									<option value="">Select Term</option>
 								</select>
 							</div>
-						</div>
-						<div class="row row-space-10">
-							<div class="col-md-6 m-b-15">
+							<div class="col-md-4 m-b-15">
 								<select id="yrlvl" class="form-control">
 									<option value="">Select Subject</option>
-								</select>
-							</div>
-							<div class="col-md-6 m-b-15">
-								<select id="yrlvl" class="form-control">
-									<option value="">Select Section</option>
 								</select>
 							</div>
 						</div>
@@ -108,7 +101,20 @@ if(!isset($_SESSION['user_id'])){
 			        <h4 class="panel-title">Class Record</h4>
 			    </div>
 			    <div class="panel-body">
-					
+					<table id="data-table" class="table table-striped table-bordered">
+						<thead>
+						<tr>
+							<th>Class ID</th>
+							<th>Subject</th>
+							<th>Section</th>
+							<th>Time/Day</th>
+							<th>Action</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
 			    </div>
 			</div>
 		</div>
