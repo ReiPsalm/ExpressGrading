@@ -77,7 +77,6 @@ if(!isset($_SESSION['user_id'])){
 						<tr>
 							<th>Subject ID</th>
 							<th>Subject Name</th>
-							<th>Subject Term/SY</th>
 							<th>Action</th>
 						</tr>
 						</thead>
@@ -116,28 +115,6 @@ if(!isset($_SESSION['user_id'])){
                                     <div class="col-md-12 m-b-15">
                                         <input type="text" class="form-control" id="subj" placeholder="Subject Name" />
                                     </div>
-                                </div>
-								<label class="control-label">Input School year<i class="text text-danger">*</i></label>
-                                <div class="row row-space-10">
-                                    <div class="col-md-6 m-b-15">
-                                        <input type="text" class="form-control" id="fsy" placeholder="School year [0000-0000]" />
-                                    </div>
-                                </div>
-								<label class="control-label">Term and Section<i class="text text-danger">*</i></label>
-                                <div class="row row-space-10">
-									<div class="col-md-6 m-b-15">
-										<select id="term" class="form-control">
-											<option value="">Select Term</option>
-											<option value="1st Term">1st Term</option>
-											<option value="2nd Term">2nd Term</option>
-											<option value="Summer Term">Summer Term</option>
-										</select>
-									</div>
-									<div class="col-md-6 m-b-15">
-										<select id="section" class="form-control">
-											
-										</select>
-									</div>
                                 </div>
                             </form>
                             <div class="pull-right">
@@ -232,8 +209,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets('getSecOpt','section');
-			Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+			Appex.SeTupTable('getSubjdb','getEditsubj');
 			Appex.SaveSubj();
 			Appex.UpdateSubj();
 		});

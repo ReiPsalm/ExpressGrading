@@ -155,7 +155,7 @@ Appex = {
     * @param {String} jsonSource json srouce for the table data
     * @param {String} domID file source for the modal form and any html elements
     */
-    SeTupSubjTable: function(jsonSource,SrcData){
+    SeTupCLTable: function(jsonSource,SrcData){
         $('#data-table').dataTable().fnClearTable();
         $("#data-table").dataTable().fnDestroy();
 
@@ -218,10 +218,7 @@ Appex = {
                 if (isConfirm) {
                     var dataid = $('#dataid').val();
                     var subj = $('#upsubj').val();
-                    var sy = $('#upfsy').val();
-                    var term = $('#upterm').val();
-                    var secid = $('#upsection').val();
-                    var FormVal = 'action=upsubj&dataid='+dataid+'&subj='+subj+'&sy='+sy+'&term='+term+'&secid='+secid;
+                    var FormVal = 'action=upsubj&dataid='+dataid+'&subj='+subj;
                     console.log(FormVal);
                     $.ajax({
                         type:'POST',
@@ -233,7 +230,7 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#Expform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
-                                Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+                                Appex.SeTupTable('getSubjdb','getEditsubj');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                                 $('#Expform').trigger('reset');
@@ -253,10 +250,7 @@ Appex = {
         $('#savedt').click(function (e) {
             e.preventDefault();
             var subj = $('#upsubj').val();
-            var sy = $('#upfsy').val();
-            var term = $('#upterm').val();
-            var secid = $('#upsection').val();
-            var FormVal = 'action=savesubj&subj='+subj+'&sy='+sy+'&term='+term+'&secid='+secid;
+            var FormVal = 'action=savesubj&subj='+subj;
             $.ajax({
                 type:'POST',
                 data:FormVal,
@@ -267,7 +261,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
-                        Appex.SeTupSubjTable('getSubjdb','getEditsubj');
+                        Appex.SeTupTable('getSubjdb','getEditsubj');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');

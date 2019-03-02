@@ -369,8 +369,8 @@ class SubjMod{
     public function SaveSubj(){
         try{
             $sqlSaveSubj = "INSERT INTO tbl_subject ";
-            $sqlSaveSubj .= "(subj_desc,subj_sy,subj_term,Sec_id) ";
-            $sqlSaveSubj .= "VALUES ('".$this->subjdesc."','".$this->subjsy."','".$this->subjterm."','".$this->Secid."')";
+            $sqlSaveSubj .= "(subj_desc) ";
+            $sqlSaveSubj .= "VALUES ('".$this->subjdesc."')";
             if($this->conn->exec($sqlSaveSubj)){
                 return true;
             }else{
@@ -406,8 +406,7 @@ class SubjMod{
     public function EditSubj(){
         try{
             $sqlEditSubj = "UPDATE tbl_subject SET  ";
-            $sqlEditSubj .= "subj_desc='".$this->subjdesc."',subj_sy='".$this->subjsy."',";
-            $sqlEditSubj .= "subj_term='".$this->subjterm."',Sec_id='".$this->Secid."' ";
+            $sqlEditSubj .= "subj_desc='".$this->subjdesc."' ";
             $sqlEditSubj .= "WHERE subj_id='".$this->subjid."'";
             if($this->conn->exec($sqlEditSubj)){
                 return true;

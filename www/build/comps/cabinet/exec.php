@@ -156,9 +156,6 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "savesubj"){
     $subject->subjdesc = $_POST['subj'];
-    $subject->subjsy = $_POST['sy'];
-    $subject->subjterm = $_POST['term'];
-    $subject->Secid = $_POST['secid'];
     try{
         if ($subject->SaveSubj()) {
             echo "1";
@@ -171,9 +168,6 @@ if($_POST['action'] == "login"){
 }else if($_POST['action'] == "upsubj"){
     $subject->subjid = $_POST['dataid'];
     $subject->subjdesc = $_POST['subj'];
-    $subject->subjsy = $_POST['sy'];
-    $subject->subjterm = $_POST['term'];
-    $subject->Secid = $_POST['secid'];
     try{
         if ($subject->EditSubj()) {
             echo "1";
