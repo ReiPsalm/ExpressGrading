@@ -12,4 +12,6 @@ $Dept = new DeptMod($coms);
 $Dean = new DeanMod($coms);
 $Section = new SectionMod($coms);
 $subject = new SubjMod($coms);
+
+$tbljoins = new TblJoinsMod($coms);
 ?>

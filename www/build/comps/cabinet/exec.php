@@ -72,6 +72,7 @@ if($_POST['action'] == "login"){
     $Students->lname = $_POST['lname'];
     $Students->exname = $_POST['exname'];
     $Students->yrlvl = $_POST['yrlvl'];
+    $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];
     try{
         if ($Students->SaveStud()) {
@@ -89,6 +90,7 @@ if($_POST['action'] == "login"){
     $Students->lname = $_POST['lname'];
     $Students->exname = $_POST['exname'];
     $Students->yrlvl = $_POST['yrlvl'];
+    $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];
     try{
         if ($Students->EditStud()) {
@@ -156,6 +158,7 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "savesubj"){
     $subject->subjdesc = $_POST['subj'];
+    $subject->subjdesc = $_POST['subj'];
     try{
         if ($subject->SaveSubj()) {
             echo "1";
@@ -168,6 +171,7 @@ if($_POST['action'] == "login"){
 }else if($_POST['action'] == "upsubj"){
     $subject->subjid = $_POST['dataid'];
     $subject->subjdesc = $_POST['subj'];
+    $subject->Secid = $_POST['secid'];
     try{
         if ($subject->EditSubj()) {
             echo "1";

@@ -29,6 +29,19 @@ Appex = {
     * Write XMLrequest for modal
     *
     * @memberOf Appex
+    * @param {String} placeholder Select placeholder
+    * @param {String} domcl class name
+    */
+    SelectSearch: function(placeholder,domcl){
+        $("."+domcl+"").select2({
+            placeholder: ""+placeholder+"",
+            width: 'resolve'
+        });
+    },
+    /**
+    * Write XMLrequest for modal
+    *
+    * @memberOf Appex
     * @param {String} dataID Data id
     * @param {String} dataSrc File name
     * @param {String} domID ID name
@@ -218,7 +231,8 @@ Appex = {
                 if (isConfirm) {
                     var dataid = $('#dataid').val();
                     var subj = $('#upsubj').val();
-                    var FormVal = 'action=upsubj&dataid='+dataid+'&subj='+subj;
+                    var secid = $('#upSec').val();
+                    var FormVal = 'action=upsubj&dataid='+dataid+'&subj='+subj+'&secid='+secid;
                     console.log(FormVal);
                     $.ajax({
                         type:'POST',
@@ -250,7 +264,8 @@ Appex = {
         $('#savedt').click(function (e) {
             e.preventDefault();
             var subj = $('#upsubj').val();
-            var FormVal = 'action=savesubj&subj='+subj;
+            var secid = $('#Sec').val();
+            var FormVal = 'action=savesubj&subj='+subj+'&secid='+secid;
             $.ajax({
                 type:'POST',
                 data:FormVal,
@@ -465,8 +480,9 @@ Appex = {
             var lname = $('#lname').val();
             var exname = $('#exname').val();
             var yrlvl = $('#yrlvl').val();
+            var subj = $('#subj').val();
             var course = $('#course').val();
-            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&course='+course;
+            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
             $.ajax({
                 type:'POST',
                 data:FormVal,
@@ -477,6 +493,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getStudentdb','getEditStudent');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -507,9 +524,10 @@ Appex = {
                     var lname = $('#uplname').val();
                     var exname = $('#upexname').val();
                     var yrlvl = $('#upyrlvl').val();
+                    var subj = $('#upsubj').val();
                     var course = $('#upcourse').val();
-                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&course='+course;
-                    console.log(FormVal);
+                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
+                    
                     $.ajax({
                         type:'POST',
                         data:FormVal,

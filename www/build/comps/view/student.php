@@ -27,6 +27,7 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="../../library/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
 	<!-- Lobibox return messages -->
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
@@ -130,8 +131,6 @@ if(!isset($_SESSION['user_id'])){
 									<div class="col-md-4 m-b-15">
                                         <input type="text" class="form-control" id="exname" placeholder="Ext. name" />
                                     </div>
-                                </div>
-								<div class="row row-space-10">
 									<div class="col-md-4 m-b-15">
 										<select id="yrlvl" class="form-control">
 											<option value="">Select Level</option>
@@ -142,12 +141,22 @@ if(!isset($_SESSION['user_id'])){
 											<option value="5">5</option>
 										</select>
 									</div>
-									<div class="col-md-4 m-b-15">
-										<select id="course" class="form-control">
-											<option value="">Select Course</option>
+                                </div>
+								<label class="control-label">Subject<i class="text text-danger">*</i></label>
+								<div class="row row-space-10">
+									<div class="col-md-12 m-b-15">
+										<select id="subj" class="subj-select2 form-control" multiple="multiple" style="width: 100%">
 										</select>
 									</div>
                                 </div>
+								<label class="control-label">Course<i class="text text-danger">*</i></label>
+								<div class="row row-space-10">
+									<div class="col-md-12 m-b-15">
+										<select id="course" class="course-select2 form-control" style="width: 100%">
+											<option value="">Select Course</option>
+										</select>
+									</div>
+								</div>
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
@@ -171,7 +180,7 @@ if(!isset($_SESSION['user_id'])){
                                     <i class="fa fa-times"></i>
                                 </button>
                             </div>
-                            <h4 class="panel-title">Add new student</h4>
+                            <h4 class="panel-title">Update student</h4>
                         </div>
                         <div class="panel-body">
                             <div class="m-b-15 border-bottom-1">
@@ -214,10 +223,27 @@ if(!isset($_SESSION['user_id'])){
                                     <i>File type should be on <i class="text text-danger"><b>".CSV format"</b></i> any invalid file will be discarded.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
-                                <label class="control-label">Select File<i class="text text-danger">*</i></label>
+                            <form id="ExpMLform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
 								<div class="row row-space-10">
-									<div class="col-md-8 m-b-15">
+									<div class="col-md-6 m-b-15">
+										<select id="yrlvl" class="form-control">
+											<option value="">Select School Year</option>
+										</select>
+									</div>
+									<div class="col-md-6 m-b-15">
+										<select id="yrlvl" class="form-control">
+											<option value="">Select Term</option>
+										</select>
+									</div>
+									<div class="col-md-12 m-b-15">
+										<select id="subjcsv" class="subjcsv-select2 form-control" style="width: 100%">
+											<option value="">Select Subject</option>
+										</select>
+									</div>
+								</div>
+								<label class="control-label">Select File<i class="text text-danger">*</i></label>
+								<div class="row row-space-10">
+									<div class="col-md-12 m-b-15">
 										<input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
 									</div>
 								</div>
@@ -268,9 +294,9 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
-	<script src="../../library/js/apps.min.js"></script>
 	<!-- Modal alerts -->
 	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
 	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
@@ -283,7 +309,12 @@ if(!isset($_SESSION['user_id'])){
 			Appex.SeTupTable('getStudentdb','getEditStudent');
 			Appex.SaveStudent();
 			Appex.GetDataSets('getCourseOpt','course');
+			Appex.GetDataSets('getSubjOpt','subj');
+			Appex.GetDataSets('getSubjOpt','subjcsv');
 			Appex.UpdateStud();
+			Appex.SelectSearch('Sort Subject','subjcsv-select2');
+			Appex.SelectSearch('Select Subject','subj-select2');
+			Appex.SelectSearch('Select Course','course-select2');
 		});
 	</script>
 </body>

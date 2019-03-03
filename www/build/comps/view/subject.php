@@ -112,8 +112,12 @@ if(!isset($_SESSION['user_id'])){
                             <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input subject<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-12 m-b-15">
+                                    <div class="col-md-6 m-b-15">
                                         <input type="text" class="form-control" id="subj" placeholder="Subject Name" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+										<select id="Sec" class="form-control">
+										</select>
                                     </div>
                                 </div>
                             </form>
@@ -209,6 +213,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetDataSets('getSecOpt','Sec');
 			Appex.SeTupTable('getSubjdb','getEditsubj');
 			Appex.SaveSubj();
 			Appex.UpdateSubj();

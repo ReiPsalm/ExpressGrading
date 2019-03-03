@@ -292,6 +292,7 @@ class StudentMod{
     public $lname;
     public $exname;
     public $yrlvl;
+    public $subj;
     public $course;
 
     public function __construct($db_get){
@@ -301,8 +302,8 @@ class StudentMod{
     public function SaveStud(){
         try{
             $sqlSaveStud = "INSERT INTO tbl_student ";
-            $sqlSaveStud .= "(stud_id,stud_fname,stud_mname,stud_lname,stud_extname,stud_yearlvl,course_id) ";
-            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->fname."','".$this->mname."','".$this->lname."','".$this->exname."','".$this->yrlvl."','".$this->course."')";
+            $sqlSaveStud .= "(stud_id,stud_fname,stud_mname,stud_lname,stud_extname,stud_yearlvl,stud_classes,course_id) ";
+            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->fname."','".$this->mname."','".$this->lname."','".$this->exname."','".$this->yrlvl."','".$this->subj."','".$this->course."')";
             if($this->conn->exec($sqlSaveStud)){
                 return true;
             }else{
@@ -340,7 +341,8 @@ class StudentMod{
             $sqlEditStud = "UPDATE tbl_student SET  ";
             $sqlEditStud .= "stud_fname='".$this->fname."',stud_mname='".$this->mname."',";
             $sqlEditStud .= "stud_lname='".$this->lname."',stud_extname='".$this->exname."',";
-            $sqlEditStud .= "stud_yearlvl='".$this->yrlvl."',course_id='".$this->course."' ";
+            $sqlEditStud .= "stud_yearlvl='".$this->yrlvl."',stud_classes='".$this->subj."',";
+            $sqlEditStud .= "course_id='".$this->course."' ";
             $sqlEditStud .= "WHERE stud_id='".$this->studid."'";
             if($this->conn->exec($sqlEditStud)){
                 return true;
@@ -369,8 +371,8 @@ class SubjMod{
     public function SaveSubj(){
         try{
             $sqlSaveSubj = "INSERT INTO tbl_subject ";
-            $sqlSaveSubj .= "(subj_desc) ";
-            $sqlSaveSubj .= "VALUES ('".$this->subjdesc."')";
+            $sqlSaveSubj .= "(subj_desc,Sec_id) ";
+            $sqlSaveSubj .= "VALUES ('".$this->subjdesc."','".$this->Secid."')";
             if($this->conn->exec($sqlSaveSubj)){
                 return true;
             }else{
@@ -406,7 +408,7 @@ class SubjMod{
     public function EditSubj(){
         try{
             $sqlEditSubj = "UPDATE tbl_subject SET  ";
-            $sqlEditSubj .= "subj_desc='".$this->subjdesc."' ";
+            $sqlEditSubj .= "subj_desc='".$this->subjdesc."',Sec_id='".$this->Secid."' ";
             $sqlEditSubj .= "WHERE subj_id='".$this->subjid."'";
             if($this->conn->exec($sqlEditSubj)){
                 return true;
@@ -416,6 +418,16 @@ class SubjMod{
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
+    }
+}
+
+class TblJoinsMod{
+    private $conn;
+
+    public $id;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
     }
 }
 ?>

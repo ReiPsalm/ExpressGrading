@@ -10,19 +10,17 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
         <input type="text" class="form-control" disabled="disabled" id="upstudid" value="<?php echo $row['stud_id']; ?>" />
     </div>
     <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upfname" placeholder="<?php echo $row['stud_fname']; ?>" />
+        <input type="text" class="form-control" id="upfname" value="<?php echo $row['stud_fname']; ?>" />
     </div>
     <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upmname" placeholder="<?php echo $row['stud_mname']; ?>" />
+        <input type="text" class="form-control" id="upmname" value="<?php echo $row['stud_mname']; ?>" />
     </div>
     <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="uplname" placeholder="<?php echo $row['stud_lname']; ?>" />
+        <input type="text" class="form-control" id="uplname" value="<?php echo $row['stud_lname']; ?>" />
     </div>
     <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upexname" placeholder="<?php echo $row['stud_extname']; ?>" />
+        <input type="text" class="form-control" id="upexname" value="<?php echo $row['stud_extname']; ?>" />
     </div>
-</div>
-<div class="row row-space-10">
     <div class="col-md-4 m-b-15">
         <select id="upyrlvl" class="form-control">
             <option value="">Select Level</option>
@@ -33,9 +31,19 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
             <option value="5">5</option>
         </select>
     </div>
-    <div class="col-md-4 m-b-15">
+</div>
+<label class="control-label">Update Subject<i class="text text-danger">*</i></label>
+<div class="row row-space-10">
+    <div class="col-md-12 m-b-15">
+        <select id="upsubj" class="form-control" multiple="multiple">
+            <?php include_once "getSubjOpt.php"; ?>
+        </select>
+    </div>
+</div>
+<label class="control-label">Update Course<i class="text text-danger">*</i></label>
+<div class="row row-space-10">
+    <div class="col-md-12 m-b-15">
         <select id="upcourse" class="form-control">
-            <option value="">Select Course</option>
             <?php include_once "getCourseOpt.php"; ?>
         </select>
     </div>
