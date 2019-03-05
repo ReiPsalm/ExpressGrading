@@ -650,5 +650,59 @@ Appex = {
             });
             /*end swal*/
         });
+    },
+    UploadMl: function(){
+        $('#csvdt').click(function (e) {
+            e.preventDefault();
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv)$/;
+            if (regex.test($("#csvUpload").val().toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var students = new Array();
+                        var rows = e.target.result.split("\r\n");
+                        for (var i = 0; i < rows.length; i++) {
+                            var cells = rows[i].split(",");
+                            if (cells.length > 1) {
+                                var student = {};
+                                student.Id = cells[0];
+                                student.Name = cells[1];
+                                student.Level = cells[2];
+                                student.Course = cells[3];
+                                students.push(student);
+                            }
+                        }
+                        
+                        var coursecsv = $('#coursecsv').val();
+                        var subjcsv = $('#subjcsv').val();
+                        var FormVal = 'action=uploadcsv&coursecsv='+coursecsv+'&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
+                        // console.log(FormVal);
+                        $.ajax({
+                            type:'POST',
+                            data:FormVal,
+                            cache:false,
+                            url:'../cabinet/exec.php',
+                            success: function(data){
+                                console.log(data);
+                                // if(data == "1"){
+                                //     Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                                //     $('#ExpMLform').trigger('reset');
+                                //     $("#exp_modal").modal("hide");
+                                //     // Appex.SeTupTable('getDeptdb');
+                                // }else{
+                                //     Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                //     $('#ExpMLform').trigger('reset');
+                                // }
+                            }
+                        });
+                    }
+                    reader.readAsText($("#csvUpload")[0].files[0]);
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid CSV file.");
+            }
+        });
     }
 }

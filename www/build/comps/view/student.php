@@ -216,16 +216,6 @@ if(!isset($_SESSION['user_id'])){
                             </div>
                             <form id="ExpMLform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
 								<div class="row row-space-10">
-									<div class="col-md-6 m-b-15">
-										<select id="sy" class="form-control">
-											<option value="">Select School Year</option>
-										</select>
-									</div>
-									<div class="col-md-6 m-b-15">
-										<select id="term" class="form-control">
-											<option value="">Select Term</option>
-										</select>
-									</div>
 									<div class="col-md-12 m-b-15">
 										<select id="subjcsv" class="subjcsv-select2 form-control" style="width: 100%">
 											<option value="">Select Subject</option>
@@ -235,13 +225,13 @@ if(!isset($_SESSION['user_id'])){
 								<label class="control-label">Select File<i class="text text-danger">*</i></label>
 								<div class="row row-space-10">
 									<div class="col-md-12 m-b-15">
-										<input type="file" class="form-control" name="fileToUpload" id="fileToUpload">
+										<input type="file" class="form-control" accept=".csv"  id="csvUpload">
 									</div>
 								</div>
                             </form>
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
-                                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                                <button type="submit" id="csvdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>
@@ -306,6 +296,7 @@ if(!isset($_SESSION['user_id'])){
 			Appex.SelectSearch('Sort Subject','subjcsv-select2');
 			Appex.SelectSearch('Select Subject','subj-select2');
 			Appex.SelectSearch('Select Course','course-select2');
+			Appex.UploadMl();
 		});
 	</script>
 </body>

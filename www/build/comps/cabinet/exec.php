@@ -175,6 +175,12 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "uploadcsv"){
+    try{
+        var_dump(json_decode($_POST['students']));
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }
