@@ -476,13 +476,10 @@ Appex = {
             e.preventDefault();
             var studid = $('#studid').val();
             var fname = $('#fname').val();
-            var mname = $('#mname').val();
-            var lname = $('#lname').val();
-            var exname = $('#exname').val();
             var yrlvl = $('#yrlvl').val();
             var subj = $('#subj').val();
             var course = $('#course').val();
-            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
+            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
             $.ajax({
                 type:'POST',
                 data:FormVal,
@@ -520,13 +517,10 @@ Appex = {
                 if (isConfirm) {
                     var studid = $('#upstudid').val();
                     var fname = $('#upfname').val();
-                    var mname = $('#upmname').val();
-                    var lname = $('#uplname').val();
-                    var exname = $('#upexname').val();
                     var yrlvl = $('#upyrlvl').val();
                     var subj = $('#upsubj').val();
                     var course = $('#upcourse').val();
-                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
+                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
                     
                     $.ajax({
                         type:'POST',

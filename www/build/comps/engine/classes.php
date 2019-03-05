@@ -287,10 +287,7 @@ class StudentMod{
     private $conn;
 
     public $studid;
-    public $fname;
-    public $mname;
-    public $lname;
-    public $exname;
+    public $name;
     public $yrlvl;
     public $subj;
     public $course;
@@ -302,8 +299,8 @@ class StudentMod{
     public function SaveStud(){
         try{
             $sqlSaveStud = "INSERT INTO tbl_student ";
-            $sqlSaveStud .= "(stud_id,stud_fname,stud_mname,stud_lname,stud_extname,stud_yearlvl,stud_classes,course_id) ";
-            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->fname."','".$this->mname."','".$this->lname."','".$this->exname."','".$this->yrlvl."','".$this->subj."','".$this->course."')";
+            $sqlSaveStud .= "(stud_id,stud_name,stud_yearlvl,stud_classes,course_id) ";
+            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->name."','".$this->yrlvl."','".$this->subj."','".$this->course."')";
             if($this->conn->exec($sqlSaveStud)){
                 return true;
             }else{
@@ -339,8 +336,7 @@ class StudentMod{
     public function EditStud(){
         try{
             $sqlEditStud = "UPDATE tbl_student SET  ";
-            $sqlEditStud .= "stud_fname='".$this->fname."',stud_mname='".$this->mname."',";
-            $sqlEditStud .= "stud_lname='".$this->lname."',stud_extname='".$this->exname."',";
+            $sqlEditStud .= "stud_name='".$this->name."',";
             $sqlEditStud .= "stud_yearlvl='".$this->yrlvl."',stud_classes='".$this->subj."',";
             $sqlEditStud .= "course_id='".$this->course."' ";
             $sqlEditStud .= "WHERE stud_id='".$this->studid."'";
@@ -428,6 +424,18 @@ class TblJoinsMod{
 
     public function __construct($db_get){
         $this->conn = $db_get;
+    }
+
+    public function getSubSec(){
+        try{
+            $sqlgetSubSec = "SELECT * FROM tbl_subject";
+            $sqlgetSubSec .= " INNER JOIN tbl_section ON  tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $resgetSubSec = $this->conn->query($sqlgetSubSec);
+
+            return $resgetSubSec;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
     }
 }
 ?>

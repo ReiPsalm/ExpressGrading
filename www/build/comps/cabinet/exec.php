@@ -67,10 +67,7 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "savestud"){
     $Students->studid = $_POST['studid'];
-    $Students->fname = $_POST['fname'];
-    $Students->mname = $_POST['mname'];
-    $Students->lname = $_POST['lname'];
-    $Students->exname = $_POST['exname'];
+    $Students->name = $_POST['fname'];
     $Students->yrlvl = $_POST['yrlvl'];
     $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];
@@ -85,10 +82,7 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "editstud"){
     $Students->studid = $_POST['studid'];
-    $Students->fname = $_POST['fname'];
-    $Students->mname = $_POST['mname'];
-    $Students->lname = $_POST['lname'];
-    $Students->exname = $_POST['exname'];
+    $Students->name = $_POST['fname'];
     $Students->yrlvl = $_POST['yrlvl'];
     $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];

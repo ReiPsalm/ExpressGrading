@@ -8,7 +8,7 @@ $outp = "[";
 while($row = $getData->fetchArray(SQLITE3_ASSOC)) {
     if ($outp != "[") {$outp .= ",";}
     $outp .= '{"DataID":"'  . $row["stud_id"] . '",';
-    $outp .= '"DataDesc":"'. $row["stud_lname"].', '.$row["stud_fname"].' '.$row["stud_mname"]. ' '.$row['stud_extname'].'"}';
+    $outp .= '"DataDesc":"'.$row["stud_name"].'"}';
 }
 $outp .="]";
 

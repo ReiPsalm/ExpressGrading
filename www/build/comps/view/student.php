@@ -116,22 +116,13 @@ if(!isset($_SESSION['user_id'])){
                             <form id="Expform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
                                 <label class="control-label">Input student<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-									<div class="col-md-4 m-b-15">
+									<div class="col-md-6 m-b-15">
                                         <input type="text" class="form-control" id="studid" placeholder="Student ID" />
                                     </div>
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="fname" placeholder="Firstname" />
+                                    <div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="fname" placeholder="Student name" />
                                     </div>
-									<div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="Middlename" />
-                                    </div>
-									<div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="lname" placeholder="Lastname" />
-                                    </div>
-									<div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="exname" placeholder="Ext. name" />
-                                    </div>
-									<div class="col-md-4 m-b-15">
+									<div class="col-md-12 m-b-15">
 										<select id="yrlvl" class="form-control">
 											<option value="">Select Level</option>
 											<option value="1">1</option>
@@ -226,12 +217,12 @@ if(!isset($_SESSION['user_id'])){
                             <form id="ExpMLform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
 								<div class="row row-space-10">
 									<div class="col-md-6 m-b-15">
-										<select id="yrlvl" class="form-control">
+										<select id="sy" class="form-control">
 											<option value="">Select School Year</option>
 										</select>
 									</div>
 									<div class="col-md-6 m-b-15">
-										<select id="yrlvl" class="form-control">
+										<select id="term" class="form-control">
 											<option value="">Select Term</option>
 										</select>
 									</div>

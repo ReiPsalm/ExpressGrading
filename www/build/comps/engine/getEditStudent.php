@@ -6,22 +6,13 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
 ?>
 <label class="control-label">Input student<i class="text text-danger">*</i></label>
 <div class="row row-space-10">
-    <div class="col-md-4 m-b-15">
+    <div class="col-md-6 m-b-15">
         <input type="text" class="form-control" disabled="disabled" id="upstudid" value="<?php echo $row['stud_id']; ?>" />
     </div>
-    <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upfname" value="<?php echo $row['stud_fname']; ?>" />
+    <div class="col-md-6 m-b-15">
+        <input type="text" class="form-control" id="upfname" value="<?php echo $row['stud_name']; ?>" />
     </div>
-    <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upmname" value="<?php echo $row['stud_mname']; ?>" />
-    </div>
-    <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="uplname" value="<?php echo $row['stud_lname']; ?>" />
-    </div>
-    <div class="col-md-4 m-b-15">
-        <input type="text" class="form-control" id="upexname" value="<?php echo $row['stud_extname']; ?>" />
-    </div>
-    <div class="col-md-4 m-b-15">
+    <div class="col-md-12 m-b-15">
         <select id="upyrlvl" class="form-control">
             <option value="">Select Level</option>
             <option value="1">1</option>
