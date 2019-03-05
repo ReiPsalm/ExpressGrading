@@ -199,6 +199,17 @@ class CourseMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+
+    public function GetSetCourseid(){
+        try{
+            $sqlGetSetCourse = "SELECT * FROM tbl_course WHERE course_desc='".$this->coursedesc."'";
+            $resGetSetCourse = $this->conn->query($sqlGetSetCourse);
+
+            return $resGetSetCourse;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
     
     public function EditCourse(){
         try{

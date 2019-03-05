@@ -675,24 +675,23 @@ Appex = {
                         
                         var coursecsv = $('#coursecsv').val();
                         var subjcsv = $('#subjcsv').val();
-                        var FormVal = 'action=uploadcsv&coursecsv='+coursecsv+'&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
-                        // console.log(FormVal);
+                        var FormVal = 'action=uploadcsv&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
                         $.ajax({
                             type:'POST',
                             data:FormVal,
                             cache:false,
                             url:'../cabinet/exec.php',
                             success: function(data){
-                                console.log(data);
-                                // if(data == "1"){
-                                //     Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
-                                //     $('#ExpMLform').trigger('reset');
-                                //     $("#exp_modal").modal("hide");
-                                //     // Appex.SeTupTable('getDeptdb');
-                                // }else{
-                                //     Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
-                                //     $('#ExpMLform').trigger('reset');
-                                // }
+                                // console.log(JSON.stringify(students));
+                                if(data == data){
+                                    Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                                    $('#ExpMLform').trigger('reset');
+                                    $("#exp_modalc").modal("hide");
+                                    Appex.SeTupTable('getStudentdb','getEditStudent');
+                                }else if(data == "0"){
+                                    Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                    $('#ExpMLform').trigger('reset');
+                                }
                             }
                         });
                     }

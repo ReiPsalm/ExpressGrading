@@ -176,8 +176,32 @@ if($_POST['action'] == "login"){
         echo 'Connection Error :'.$e->getMessage();
     }
 }else if($_POST['action'] == "uploadcsv"){
+    $sample = json_decode($_POST['students'],true);
     try{
-        var_dump(json_decode($_POST['students']));
+        $i=0;
+        foreach ($sample as $val) {
+
+            $Courses->coursedesc = $val['Course'];
+            $getData = $Courses->GetSetCourseid();
+            $row = $getData->fetchArray(SQLITE3_ASSOC);
+
+            $Students->studid = $val['Id'];
+            $Students->name = $val['Name'];
+            $Students->yrlvl = $val['Level'];
+            $Students->subj = $_POST['subjcsv'];
+            $Students->course = $row['course_id'];
+            try{
+                if ($Students->SaveStud()) {
+                    echo "1";
+                }else{
+                    echo "0";
+                }
+            }catch(PDOException $e){
+                echo 'Connection Error :'.$e->getMessage();
+            }
+            
+            $i++;
+        }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
