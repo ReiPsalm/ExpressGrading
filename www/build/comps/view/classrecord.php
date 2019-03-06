@@ -27,6 +27,7 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<link href="../../library/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
 	<!-- Lobibox return messages -->
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
     <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
@@ -68,36 +69,6 @@ if(!isset($_SESSION['user_id'])){
 							<i class="fa fa-plus"></i> New Class Record
 						</button>
 			        </div>
-			        <h4 class="panel-title">Search Class Record</h4>
-			    </div>
-			    <div class="panel-body">
-					<form id="ExpformSort" method="POST" class="border-bottom-1 m-b-15">
-						<div class="row row-space-10">
-							<div class="col-md-4 m-b-15">
-								<select id="yrlvl" class="form-control">
-									<option value="">Select School Year</option>
-								</select>
-							</div>
-							<div class="col-md-4 m-b-15">
-								<select id="yrlvl" class="form-control">
-									<option value="">Select Term</option>
-								</select>
-							</div>
-							<div class="col-md-4 m-b-15">
-								<select id="yrlvl" class="form-control">
-									<option value="">Select Subject</option>
-								</select>
-							</div>
-						</div>
-					</form>
-					<div class="pull-right">
-						<button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-search"></i> Search</button>
-					</div>
-			    </div>
-			</div>
-
-			<div class="panel panel-inverse">
-			    <div class="panel-heading">
 			        <h4 class="panel-title">Class Record</h4>
 			    </div>
 			    <div class="panel-body">
@@ -105,9 +76,12 @@ if(!isset($_SESSION['user_id'])){
 						<thead>
 						<tr>
 							<th>Class ID</th>
+							<th>School year</th>
+							<th>Term</th>
 							<th>Subject</th>
 							<th>Section</th>
 							<th>Time/Day</th>
+							<th>School</th>
 							<th>Action</th>
 						</tr>
 						</thead>
@@ -119,6 +93,67 @@ if(!isset($_SESSION['user_id'])){
 			</div>
 		</div>
 		<!-- end #content -->
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new course</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="Expform" method="POST" class="border-bottom-1 m-b-15">
+								<div class="row row-space-10">
+									<div class="col-md-6 m-b-15">
+										<input type="text" class="mclsy form-control" id="mclsy" placeholder="Shool Year" />
+									</div>
+									<div class="col-md-6 m-b-15">
+										<input type="text" class="mcltd form-control" id="mcltd" placeholder="Time/Day" />
+									</div>
+								</div>
+								<div class="row row-space-10">
+									<div class="col-md-12 m-b-15">
+										<select id="mclsch" class="mclsch form-control" style="width: 100%">
+											<option value="">Select School</option>
+										</select>
+									</div>
+									<div class="col-md-12 m-b-15">
+										<select id="mclt" class="mclt form-control" style="width: 100%">
+											<option value="">Select Term</option>
+											<option value="First">First Term</option>
+											<option value="Second">Second Term</option>
+											<option value="Summer">Summer Term</option>
+										</select>
+									</div>
+									<div class="col-md-12 m-b-15">
+										<select id="mclsubj" class="mclsubj form-control" style="width: 100%">
+											<option value="">Select Subject</option>
+										</select>
+									</div>
+								</div>
+							</form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
@@ -155,6 +190,8 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../../library/plugins/masked-input/masked-input.min.js"></script>
+	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
 	<!-- Modal alerts -->
@@ -166,6 +203,13 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetDataSets('getSubjOpts','mclsubj');
+			Appex.SelectSearch('Select Subject','mclsubj');
+			Appex.SelectSearch('Select Term','mclt');
+			Appex.MaskedInput('mcltd','99:99-99:99/aaa');
+			Appex.MaskedInput('mclsy','9999-9999');
+			Appex.SaveCLr();
+			Appex.SeTupCLTable('getClassdb');
 		});
 	</script>
 </body>

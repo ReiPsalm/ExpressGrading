@@ -179,28 +179,65 @@ if($_POST['action'] == "login"){
     $sample = json_decode($_POST['students'],true);
     try{
         $i=0;
-        foreach ($sample as $val) {
+        foreach ($sample as $val) {            
 
-            $Courses->coursedesc = $val['Course'];
-            $getData = $Courses->GetSetCourseid();
-            $row = $getData->fetchArray(SQLITE3_ASSOC);
-
+            //check existing student and update current classes
             $Students->studid = $val['Id'];
-            $Students->name = $val['Name'];
-            $Students->yrlvl = $val['Level'];
-            $Students->subj = $_POST['subjcsv'];
-            $Students->course = $row['course_id'];
-            try{
-                if ($Students->SaveStud()) {
-                    echo "1";
-                }else{
-                    echo "0";
+            $getData = $Students->GetSetStud();
+            $subj = $getData->fetchArray(SQLITE3_ASSOC);
+            $row = count($getData);
+            if($row >= 1){
+                try{
+                    $Students->studid = $val['Id'];
+                    $Students->subj = $subj['stud_classes'].','.$_POST['subjcsv'];
+                    if ($Students->UpStudSubj()) {
+                        echo "1";
+                    }else{
+                        echo "0";
+                    }
+                }catch(PDOException $e){
+                    echo 'Connection Error :'.$e->getMessage();
                 }
-            }catch(PDOException $e){
-                echo 'Connection Error :'.$e->getMessage();
+            }else{
+
+                //fetch courseid
+                $Courses->coursedesc = $val['Course'];
+                $getData = $Courses->GetSetCourseid();
+                $row = $getData->fetchArray(SQLITE3_ASSOC);
+                
+                $Students->studid = $val['Id'];
+                $Students->name = $val['Name'];
+                $Students->yrlvl = $val['Level'];
+                $Students->subj = $_POST['subjcsv'];
+                $Students->course = $row['course_id'];
+                try{
+                    if ($Students->SaveStud()) {
+                        echo "1";
+                    }else{
+                        echo "0";
+                    }
+                }catch(PDOException $e){
+                    echo 'Connection Error :'.$e->getMessage();
+                }
             }
             
             $i++;
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "SaveCLr"){
+    $classR->term = $_POST['mclt'];
+    $classR->sy = $_POST['mclsy'];
+    $classR->timeDay = $_POST['mcltd'];
+    $classR->subjid = $_POST['mclsubj'];
+    $classR->schid = $_POST['mclsch'];
+
+    try{
+        if ($classR->AddCLr()) {
+            echo "1";
+        }else{
+            echo "0";
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();

@@ -42,6 +42,16 @@ Appex = {
     * Write XMLrequest for modal
     *
     * @memberOf Appex
+    * @param {String} format format for the input
+    * @param {String} domID ID name
+    */
+    MaskedInput: function(domID,format){
+        $("#"+domID+"").mask(""+format+"");
+    },
+    /**
+    * Write XMLrequest for modal
+    *
+    * @memberOf Appex
     * @param {String} dataID Data id
     * @param {String} dataSrc File name
     * @param {String} domID ID name
@@ -111,7 +121,7 @@ Appex = {
             "scrollCollapse": false,
             "paging": true,
             "searching": true,
-            "ordering": true,
+            "ordering": false,
             "columns": [
     
                 { "mData": "DataID", sDefaultContent: ""},
@@ -162,7 +172,7 @@ Appex = {
     
     },
     /**
-    * DT for subject "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
+    * DT for class record "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
     * NOTE: nag labad pa ako head saon to populate the columns base on dynamic json data... :3
     * @memberOf Appex
     * @param {String} jsonSource json srouce for the table data
@@ -173,11 +183,6 @@ Appex = {
         $("#data-table").dataTable().fnDestroy();
 
         clientTableData = $('#data-table').DataTable({
-            responsive: true,
-            bAutoWidth:false,
-            dom:"Bfrtip",
-            buttons:[{extend:"csv",className:"btn-sm"}],
-
             "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
                 oSettings.jqXHR = $.ajax( {
                     "dataType": 'json',
@@ -203,11 +208,15 @@ Appex = {
             "columns": [
 
                 { "mData": "DataID", sDefaultContent: ""},
-                { "mData": "DataDesc", sDefaultContent: ""},
                 { "mData": "Data_A", sDefaultContent: ""},
+                { "mData": "Data_B", sDefaultContent: ""},
+                { "mData": "Data_C", sDefaultContent: ""},
+                { "mData": "Data_D", sDefaultContent: ""},
+                { "mData": "Data_E", sDefaultContent: ""},
+                { "mData": "Data_F", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-book"></i> Open Class Record</button> ');
                     }
                 },
             ]
@@ -702,5 +711,33 @@ Appex = {
                 alert("Please upload a valid CSV file.");
             }
         });
-    }
+    },
+    SaveCLr: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
+            var mclsy = $('#mclsy').val();
+            var mcltd = $('#mcltd').val();
+            var mclsch = $('#mclsch').val();
+            var mclt = $('#mclt').val();
+            var mclsubj = $('#mclsubj').val();
+            var FormVal = 'action=SaveCLr&mclsy='+mclsy+'&mcltd='+mcltd+'&mclsch='+mclsch+'&mclt='+mclt+'&mclsubj='+mclsubj;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expform').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
 }

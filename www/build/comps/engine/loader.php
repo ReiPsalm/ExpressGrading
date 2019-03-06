@@ -12,6 +12,7 @@ $Dept = new DeptMod($coms);
 $Dean = new DeanMod($coms);
 $Section = new SectionMod($coms);
 $subject = new SubjMod($coms);
+$classR = new ClrecordMod($coms);
 
 $tbljoins = new TblJoinsMod($coms);
 ?>
