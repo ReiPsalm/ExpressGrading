@@ -673,7 +673,6 @@ Appex = {
                             }
                         }
                         
-                        var coursecsv = $('#coursecsv').val();
                         var subjcsv = $('#subjcsv').val();
                         var FormVal = 'action=uploadcsv&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
                         $.ajax({
