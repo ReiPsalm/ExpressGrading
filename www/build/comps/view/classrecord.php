@@ -69,7 +69,7 @@ if(!isset($_SESSION['user_id'])){
 							<i class="fa fa-plus"></i> New Class Record
 						</button>
 			        </div>
-			        <h4 class="panel-title">Class Record</h4>
+			        <h4 class="panel-title">Class Records</h4>
 			    </div>
 			    <div class="panel-body">
 					<table id="data-table" class="table table-striped table-bordered">
@@ -105,7 +105,7 @@ if(!isset($_SESSION['user_id'])){
                                     <i class="fa fa-times"></i>
                                 </button>
                             </div>
-                            <h4 class="panel-title">Add new course</h4>
+                            <h4 class="panel-title">Add new class record</h4>
                         </div>
                         <div class="panel-body">
                             <div class="m-b-15 border-bottom-1">
@@ -147,6 +147,40 @@ if(!isset($_SESSION['user_id'])){
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalb">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Update class record</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="ExpEditform" method="POST" class="border-bottom-1 m-b-15">
+								
+							</form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="editdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>
@@ -209,7 +243,8 @@ if(!isset($_SESSION['user_id'])){
 			Appex.MaskedInput('mcltd','99:99-99:99/aaa');
 			Appex.MaskedInput('mclsy','9999-9999');
 			Appex.SaveCLr();
-			Appex.SeTupCLTable('getClassdb');
+			Appex.EditCLr();
+			Appex.SeTupCLTable('getClassdb','getEditCL');
 		});
 	</script>
 </body>

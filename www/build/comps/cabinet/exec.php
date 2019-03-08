@@ -242,6 +242,23 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "UpCLr"){
+    $classR->clrid = $_POST['upmclid'];
+    $classR->term = $_POST['upmclt'];
+    $classR->sy = $_POST['upmclsy'];
+    $classR->timeDay = $_POST['upmcltd'];
+    $classR->subjid = $_POST['upmclsubj'];
+    $classR->schid = $_POST['upmclsch'];
+
+    try{
+        if ($classR->EditClr()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }

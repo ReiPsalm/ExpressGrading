@@ -445,6 +445,7 @@ class SubjMod{
 class ClrecordMod{
     private $conn;
 
+    public $clrid;
     public $term;
     public $sy;
     public $timeDay;
@@ -478,6 +479,37 @@ class ClrecordMod{
             $resGetClr = $this->conn->query($sqlGetClr);
 
             return $resGetClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetEditClr(){
+        try{
+            $sqlGetEditClr = "SELECT * FROM tbl_classlist ";
+            $sqlGetEditClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetEditClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetEditClr .= "WHERE tbl_classlist.cr_id='".$this->clrid."'";
+            $resGetEditClr = $this->conn->query($sqlGetEditClr);
+
+            return $resGetEditClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditClr(){
+        try{
+            $sqlEditClr = "UPDATE tbl_classlist SET ";
+            $sqlEditClr .= "cr_term='".$this->term."',cr_sy='".$this->sy."',cr_timeDay='".$this->timeDay."',";
+            $sqlEditClr .= "subj_id='".$this->subjid."',sch_id='".$this->schid."' ";
+            $sqlEditClr .= "WHERE cr_id='".$this->clrid."'";
+
+            if($this->conn->exec($sqlEditClr)){
+                return true;
+            }else{
+                return false;
+            }
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

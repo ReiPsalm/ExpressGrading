@@ -183,6 +183,9 @@ Appex = {
         $("#data-table").dataTable().fnDestroy();
 
         clientTableData = $('#data-table').DataTable({
+            responsive: false,
+            bAutoWidth:false,
+
             "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
                 oSettings.jqXHR = $.ajax( {
                     "dataType": 'json',
@@ -216,7 +219,8 @@ Appex = {
                 { "mData": "Data_F", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-book"></i> Open Class Record</button> ');
+                        $(nTd).html('<button href="#exp_modalc" data-toggle="modal" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Open Class Record</button> '+
+                        '<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
             ]
@@ -740,4 +744,54 @@ Appex = {
             });
         });
     },
+    EditCLr: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var upmclid = $('#upmclid').val();
+                    var upmclsy = $('#upmclsy').val();
+                    var upmcltd = $('#upmcltd').val();
+                    var upmclsch = $('#upmclsch').val();
+                    var upmclt = $('#upmclt').val();
+                    var upmclsubj = $('#upmclsubj').val();
+                    var FormVal = 'action=UpCLr&upmclid='+upmclid+'&upmclsy='+upmclsy+'&upmcltd='+upmcltd+'&upmclsch='+upmclsch+'&upmclt='+upmclt+'&upmclsubj='+upmclsubj;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#ExpEditform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupCLTable('getClassdb','getEditCL');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#ExpEditform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    }
 }

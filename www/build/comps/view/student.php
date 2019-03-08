@@ -293,7 +293,7 @@ if(!isset($_SESSION['user_id'])){
 			Appex.GetDataSets('getSubjOpt','subj');
 			Appex.GetDataSets('getSubjOpt','subjcsv');
 			Appex.UpdateStud();
-			Appex.SelectSearch('Sort Subject','subjcsv-select2');
+			Appex.SelectSearch('Select Subject','subjcsv-select2');
 			Appex.SelectSearch('Select Subject','subj-select2');
 			Appex.SelectSearch('Select Course','course-select2');
 			Appex.UploadMl();
