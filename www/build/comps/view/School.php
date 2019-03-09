@@ -109,11 +109,11 @@ if(!isset($_SESSION['user_id'])){
                                     <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
                                 </p>
                             </div>
-                            <form id="ArgForm" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
-                                <label class="control-label">Input subject<i class="text text-danger">*</i></label>
+                            <form id="Schoolform" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Input school <i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
-                                    <div class="col-md-4 m-b-15">
-                                        <input type="text" class="form-control" id="mname" placeholder="School Name" />
+                                    <div class="col-md-12 m-b-15">
+                                        <input type="text" class="form-control" id="school" placeholder="School Name" />
                                     </div>
                                 </div>
                             </form>
@@ -175,6 +175,8 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.SaveSchool();	
+			Appex.SeTupTable('getSchool','getSchooldb');
 		});
 	</script>
 </body>

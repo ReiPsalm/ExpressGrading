@@ -225,6 +225,54 @@ class CourseMod{
     }
 }
 
+class SchoolMod{
+    private $conn;
+
+    public $schooldesc;
+    public $schoolid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveSchool(){
+        try{
+            $sqlSaveSchool = "INSERT INTO tbl_school (sch_desc) VALUES ('".$this->schooldesc."')";
+            if($this->conn->exec($sqlSaveSchool)){
+                return true;
+            }else{
+                return false;
+            }
+
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function GetSchool(){
+        try{
+            $sqlGetSchool = "SELECT * FROM tbl_school";
+            $restGetSchool = $this->conn->query($sqlGetSchool);
+
+            return $restGetSchool;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetSetSchool(){
+        try{
+            $sqlGetSetSchool = "SELECT * FROM tbl_school WHERE sch_id='".$this->sch_id."'";
+            $resGetSetSchool = $this->conn->query($sqlGetSetSchool);
+
+            return $resGetSetSchool;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+}
+
 class DeanMod{
     private $conn;
 
