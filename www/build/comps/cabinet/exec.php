@@ -67,10 +67,7 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "savestud"){
     $Students->studid = $_POST['studid'];
-    $Students->fname = $_POST['fname'];
-    $Students->mname = $_POST['mname'];
-    $Students->lname = $_POST['lname'];
-    $Students->exname = $_POST['exname'];
+    $Students->name = $_POST['fname'];
     $Students->yrlvl = $_POST['yrlvl'];
     $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];
@@ -85,10 +82,7 @@ if($_POST['action'] == "login"){
     }
 }else if($_POST['action'] == "editstud"){
     $Students->studid = $_POST['studid'];
-    $Students->fname = $_POST['fname'];
-    $Students->mname = $_POST['mname'];
-    $Students->lname = $_POST['lname'];
-    $Students->exname = $_POST['exname'];
+    $Students->name = $_POST['fname'];
     $Students->yrlvl = $_POST['yrlvl'];
     $Students->subj = $_POST['subj'];
     $Students->course = $_POST['course'];
@@ -174,6 +168,96 @@ if($_POST['action'] == "login"){
     $subject->Secid = $_POST['secid'];
     try{
         if ($subject->EditSubj()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "uploadcsv"){
+    $sample = json_decode($_POST['students'],true);
+    try{
+        $i=0;
+        foreach ($sample as $val) {
+            
+            //check existing student and update current classes
+            $Students->studid = $val['Id'];
+            $getDatas = $Students->GetNumtStud();
+            $rows = $getDatas->fetchArray();
+
+            if($rows['count'] == 1){
+                
+                try{
+                    //get current subj
+                    $Students->studid = $val['Id'];
+                    $getCurSubj = $Students->GetSetStud();
+                    $subjrows = $getCurSubj->fetchArray();
+                    
+                    $Students->studid = $val['Id'];
+                    $Students->subj = $subjrows['stud_classes'].','.$_POST['subjcsv'];
+                    if ($Students->UpStudSubj()) {
+                        echo "x";
+                    }else{
+                        echo "0";
+                    }
+                }catch(PDOException $e){
+                    echo 'Connection Error :'.$e->getMessage();
+                }
+            }else{
+
+                //fetch courseid
+                $Courses->coursedesc = $val['Course'];
+                $getData = $Courses->GetSetCourseid();
+                $row = $getData->fetchArray(SQLITE3_ASSOC);
+                
+                $Students->studid = $val['Id'];
+                $Students->name = $val['Name'];
+                $Students->yrlvl = $val['Level'];
+                $Students->subj = $_POST['subjcsv'];
+                $Students->course = $row['course_id'];
+                try{
+                    if ($Students->SaveStud()) {
+                        echo "1";
+                    }else{
+                        echo "0";
+                    }
+                }catch(PDOException $e){
+                    echo 'Connection Error :'.$e->getMessage();
+                }
+            }
+            
+            $i++;
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "SaveCLr"){
+    $classR->term = $_POST['mclt'];
+    $classR->sy = $_POST['mclsy'];
+    $classR->timeDay = $_POST['mcltd'];
+    $classR->subjid = $_POST['mclsubj'];
+    $classR->schid = $_POST['mclsch'];
+
+    try{
+        if ($classR->AddCLr()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "UpCLr"){
+    $classR->clrid = $_POST['upmclid'];
+    $classR->term = $_POST['upmclt'];
+    $classR->sy = $_POST['upmclsy'];
+    $classR->timeDay = $_POST['upmcltd'];
+    $classR->subjid = $_POST['upmclsubj'];
+    $classR->schid = $_POST['upmclsch'];
+
+    try{
+        if ($classR->EditClr()) {
             echo "1";
         }else{
             echo "0";

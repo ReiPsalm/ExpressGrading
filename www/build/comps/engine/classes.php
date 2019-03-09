@@ -199,6 +199,17 @@ class CourseMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+
+    public function GetSetCourseid(){
+        try{
+            $sqlGetSetCourse = "SELECT * FROM tbl_course WHERE course_desc='".$this->coursedesc."'";
+            $resGetSetCourse = $this->conn->query($sqlGetSetCourse);
+
+            return $resGetSetCourse;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
     
     public function EditCourse(){
         try{
@@ -287,10 +298,7 @@ class StudentMod{
     private $conn;
 
     public $studid;
-    public $fname;
-    public $mname;
-    public $lname;
-    public $exname;
+    public $name;
     public $yrlvl;
     public $subj;
     public $course;
@@ -302,8 +310,8 @@ class StudentMod{
     public function SaveStud(){
         try{
             $sqlSaveStud = "INSERT INTO tbl_student ";
-            $sqlSaveStud .= "(stud_id,stud_fname,stud_mname,stud_lname,stud_extname,stud_yearlvl,stud_classes,course_id) ";
-            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->fname."','".$this->mname."','".$this->lname."','".$this->exname."','".$this->yrlvl."','".$this->subj."','".$this->course."')";
+            $sqlSaveStud .= "(stud_id,stud_name,stud_yearlvl,stud_classes,course_id) ";
+            $sqlSaveStud .= "VALUES ('".$this->studid."','".$this->name."','".$this->yrlvl."','".$this->subj."','".$this->course."')";
             if($this->conn->exec($sqlSaveStud)){
                 return true;
             }else{
@@ -316,7 +324,7 @@ class StudentMod{
 
     public function GetStud(){
         try{
-            $sqlGetStud = "SELECT * FROM tbl_student";
+            $sqlGetStud = "SELECT * FROM tbl_student ORDER BY stud_name ASC";
             $resGetStud = $this->conn->query($sqlGetStud);
 
             return $resGetStud;
@@ -336,15 +344,39 @@ class StudentMod{
         }
     }
 
+    public function GetNumtStud(){
+        try{
+            $sqlGetNumtStud = "SELECT COUNT(*) as count FROM tbl_student WHERE stud_id='".$this->studid."'";
+            $resGetNumtStud = $this->conn->query($sqlGetNumtStud);
+
+            return $resGetNumtStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
     public function EditStud(){
         try{
             $sqlEditStud = "UPDATE tbl_student SET  ";
-            $sqlEditStud .= "stud_fname='".$this->fname."',stud_mname='".$this->mname."',";
-            $sqlEditStud .= "stud_lname='".$this->lname."',stud_extname='".$this->exname."',";
+            $sqlEditStud .= "stud_name='".$this->name."',";
             $sqlEditStud .= "stud_yearlvl='".$this->yrlvl."',stud_classes='".$this->subj."',";
             $sqlEditStud .= "course_id='".$this->course."' ";
             $sqlEditStud .= "WHERE stud_id='".$this->studid."'";
             if($this->conn->exec($sqlEditStud)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function UpStudSubj(){
+        try{
+            $sqlUpStudSubj = "UPDATE tbl_student SET ";
+            $sqlUpStudSubj .= "stud_classes='".$this->subj."' WHERE stud_id='".$this->studid."'";
+            if($this->conn->exec($sqlUpStudSubj)){
                 return true;
             }else{
                 return false;
@@ -421,6 +453,102 @@ class SubjMod{
     }
 }
 
+class ClrecordMod{
+    private $conn;
+
+    public $clrid;
+    public $term;
+    public $sy;
+    public $timeDay;
+    public $subjid;
+    public $schid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function AddCLr(){
+        try{
+            $sqlAddCLr = "INSERT INTO tbl_classlist ";
+            $sqlAddCLr .= "(cr_term,cr_sy,cr_timeDay,subj_id,sch_id) VALUES ";
+            $sqlAddCLr .= "('".$this->term."','".$this->sy."','".$this->timeDay."','".$this->subjid."','".$this->schid."')";
+            if($this->conn->exec($sqlAddCLr)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetClr(){
+        try{
+            $sqlGetClr = "SELECT * FROM tbl_classlist ";
+            $sqlGetClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id";
+            $resGetClr = $this->conn->query($sqlGetClr);
+
+            return $resGetClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetEditClr(){
+        try{
+            $sqlGetEditClr = "SELECT * FROM tbl_classlist ";
+            $sqlGetEditClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetEditClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetEditClr .= "WHERE tbl_classlist.cr_id='".$this->clrid."'";
+            $resGetEditClr = $this->conn->query($sqlGetEditClr);
+
+            return $resGetEditClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetDataClr(){
+        try{
+            $sqlGetDataClr = "SELECT * FROM tbl_classlist ";
+            $sqlGetDataClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetDataClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetDataClr .= "WHERE tbl_classlist.cr_id='".$this->clrid."'";
+            $resGetDataClr = $this->conn->query($sqlGetDataClr);
+
+            return $resGetDataClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetCLrStud(){
+        try{
+            //Get student from certain CLr base on subj_id
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditClr(){
+        try{
+            $sqlEditClr = "UPDATE tbl_classlist SET ";
+            $sqlEditClr .= "cr_term='".$this->term."',cr_sy='".$this->sy."',cr_timeDay='".$this->timeDay."',";
+            $sqlEditClr .= "subj_id='".$this->subjid."',sch_id='".$this->schid."' ";
+            $sqlEditClr .= "WHERE cr_id='".$this->clrid."'";
+
+            if($this->conn->exec($sqlEditClr)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
 class TblJoinsMod{
     private $conn;
 
@@ -428,6 +556,18 @@ class TblJoinsMod{
 
     public function __construct($db_get){
         $this->conn = $db_get;
+    }
+
+    public function getSubSec(){
+        try{
+            $sqlgetSubSec = "SELECT * FROM tbl_subject ";
+            $sqlgetSubSec .= "INNER JOIN tbl_section ON  tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $resgetSubSec = $this->conn->query($sqlgetSubSec);
+
+            return $resgetSubSec;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
     }
 }
 ?>

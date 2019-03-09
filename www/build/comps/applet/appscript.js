@@ -42,19 +42,11 @@ Appex = {
     * Write XMLrequest for modal
     *
     * @memberOf Appex
-    * @param {String} dataID Data id
-    * @param {String} dataSrc File name
+    * @param {String} format format for the input
     * @param {String} domID ID name
     */
-    GetSetupData: function (dataID,dataSrc,domID){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
-            }
-        };
-        xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
-        xmlhttp.send();
+    MaskedInput: function(domID,format){
+        $("#"+domID+"").mask(""+format+"");
     },
     /**
     * Write XMLrequest for fetching all data
@@ -63,15 +55,20 @@ Appex = {
     * @param {String} dataSrc File name
     * @param {String} domID ID name
     */
-    GetDataSets: function (dataSrc,domID){
+    GetDataSets: function (dataSrc,domID,dataID){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
             }
         };
-        xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
-        xmlhttp.send();
+        if(dataID == null){
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
+            xmlhttp.send();
+        }else{
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
+            xmlhttp.send();
+        }
     },
     /**
     * Write generic DataTable
@@ -111,7 +108,7 @@ Appex = {
             "scrollCollapse": false,
             "paging": true,
             "searching": true,
-            "ordering": true,
+            "ordering": false,
             "columns": [
     
                 { "mData": "DataID", sDefaultContent: ""},
@@ -129,7 +126,7 @@ Appex = {
         var dataSrc = SrcData;
         var domID = 'ExpEditform';
 
-        Appex.GetSetupData(dataID,dataSrc,domID);
+        Appex.GetDataSets(dataID,dataSrc,domID);
         console.log(dataID+' '+dataSrc);
     },
     UserLogin: function () {
@@ -162,7 +159,7 @@ Appex = {
     
     },
     /**
-    * DT for subject "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
+    * DT for class record "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
     * NOTE: nag labad pa ako head saon to populate the columns base on dynamic json data... :3
     * @memberOf Appex
     * @param {String} jsonSource json srouce for the table data
@@ -173,10 +170,8 @@ Appex = {
         $("#data-table").dataTable().fnDestroy();
 
         clientTableData = $('#data-table').DataTable({
-            responsive: true,
+            responsive: false,
             bAutoWidth:false,
-            dom:"Bfrtip",
-            buttons:[{extend:"csv",className:"btn-sm"}],
 
             "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
                 oSettings.jqXHR = $.ajax( {
@@ -203,11 +198,16 @@ Appex = {
             "columns": [
 
                 { "mData": "DataID", sDefaultContent: ""},
-                { "mData": "DataDesc", sDefaultContent: ""},
                 { "mData": "Data_A", sDefaultContent: ""},
+                { "mData": "Data_B", sDefaultContent: ""},
+                { "mData": "Data_C", sDefaultContent: ""},
+                { "mData": "Data_D", sDefaultContent: ""},
+                { "mData": "Data_E", sDefaultContent: ""},
+                { "mData": "Data_F", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                        $(nTd).html('<button value="'+oData.DataID+'" onclick="Appex.GetDataCLr(this.value)" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Open Class Record</button> '+
+                        '<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
             ]
@@ -476,13 +476,10 @@ Appex = {
             e.preventDefault();
             var studid = $('#studid').val();
             var fname = $('#fname').val();
-            var mname = $('#mname').val();
-            var lname = $('#lname').val();
-            var exname = $('#exname').val();
             var yrlvl = $('#yrlvl').val();
             var subj = $('#subj').val();
             var course = $('#course').val();
-            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
+            var FormVal = 'action=savestud&studid='+studid+'&fname='+fname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
             $.ajax({
                 type:'POST',
                 data:FormVal,
@@ -520,13 +517,10 @@ Appex = {
                 if (isConfirm) {
                     var studid = $('#upstudid').val();
                     var fname = $('#upfname').val();
-                    var mname = $('#upmname').val();
-                    var lname = $('#uplname').val();
-                    var exname = $('#upexname').val();
                     var yrlvl = $('#upyrlvl').val();
                     var subj = $('#upsubj').val();
                     var course = $('#upcourse').val();
-                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&exname='+exname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
+                    var FormVal = 'action=editstud&studid='+studid+'&fname='+fname+'&yrlvl='+yrlvl+'&subj='+subj+'&course='+course;
                     
                     $.ajax({
                         type:'POST',
@@ -656,5 +650,139 @@ Appex = {
             });
             /*end swal*/
         });
+    },
+    UploadMl: function(){
+        $('#csvdt').click(function (e) {
+            e.preventDefault();
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv)$/;
+            if (regex.test($("#csvUpload").val().toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var students = new Array();
+                        var rows = e.target.result.split("\r\n");
+                        for (var i = 0; i < rows.length; i++) {
+                            var cells = rows[i].split(",");
+                            if (cells.length > 1) {
+                                var student = {};
+                                student.Id = cells[0];
+                                student.Name = cells[1];
+                                student.Level = cells[2];
+                                student.Course = cells[3];
+                                students.push(student);
+                            }
+                        }
+                        
+                        var subjcsv = $('#subjcsv').val();
+                        var FormVal = 'action=uploadcsv&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
+                        console.log(FormVal);
+                        $.ajax({
+                            type:'POST',
+                            data:FormVal,
+                            cache:false,
+                            url:'../cabinet/exec.php',
+                            success: function(data){
+                                // console.log(JSON.stringify(students));
+                                if(data == data){
+                                    Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                                    $('#ExpMLform').trigger('reset');
+                                    $("#exp_modalc").modal("hide");
+                                    Appex.SeTupTable('getStudentdb','getEditStudent');
+                                }else if(data == "0"){
+                                    Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                    $('#ExpMLform').trigger('reset');
+                                }
+                            }
+                        });
+                    }
+                    reader.readAsText($("#csvUpload")[0].files[0]);
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid CSV file.");
+            }
+        });
+    },
+    SaveCLr: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
+            var mclsy = $('#mclsy').val();
+            var mcltd = $('#mcltd').val();
+            var mclsch = $('#mclsch').val();
+            var mclt = $('#mclt').val();
+            var mclsubj = $('#mclsubj').val();
+            var FormVal = 'action=SaveCLr&mclsy='+mclsy+'&mcltd='+mcltd+'&mclsch='+mclsch+'&mclt='+mclt+'&mclsubj='+mclsubj;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expform').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
+    EditCLr: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var upmclid = $('#upmclid').val();
+                    var upmclsy = $('#upmclsy').val();
+                    var upmcltd = $('#upmcltd').val();
+                    var upmclsch = $('#upmclsch').val();
+                    var upmclt = $('#upmclt').val();
+                    var upmclsubj = $('#upmclsubj').val();
+                    var FormVal = 'action=UpCLr&upmclid='+upmclid+'&upmclsy='+upmclsy+'&upmcltd='+upmcltd+'&upmclsch='+upmclsch+'&upmclt='+upmclt+'&upmclsubj='+upmclsubj;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#ExpEditform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupCLTable('getClassdb','getEditCL');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#ExpEditform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    },
+    GetDataCLr: function(clrID){
+        window.location.href = "clr.php?dataid="+clrID;
     }
 }

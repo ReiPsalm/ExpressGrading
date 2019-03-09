@@ -49,7 +49,7 @@ if(isset($_SESSION['user_id'])){
             <div class="login-header">
                 <div class="brand">
 				<img src="build/library/img/logoB.png" height="39" width="35" /> Express Grading
-                    <small>Desktop application class record</small>
+                    <small>Class Record Management</small>
                 </div>
             </div>
             <!-- end brand -->
