@@ -195,7 +195,7 @@ if($_POST['action'] == "login"){
                     $subjrows = $getCurSubj->fetchArray();
                     
                     $Students->studid = $val['Id'];
-                    $Students->subj = $subjrows['stud_classes'].','.$_POST['subjcsv'];
+                    $Students->subj = $subjrows['stud_classes'].','.$_POST['classcsv'];
                     if ($Students->UpStudSubj()) {
                         echo "x";
                     }else{
@@ -214,7 +214,7 @@ if($_POST['action'] == "login"){
                 $Students->studid = $val['Id'];
                 $Students->name = $val['Name'];
                 $Students->yrlvl = $val['Level'];
-                $Students->subj = $_POST['subjcsv'];
+                $Students->subj = $_POST['classcsv'];
                 $Students->course = $row['course_id'];
                 try{
                     if ($Students->SaveStud()) {
