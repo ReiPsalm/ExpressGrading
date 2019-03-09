@@ -240,7 +240,7 @@ if(!isset($_SESSION['user_id'])){
 			Appex.GetDataSets('getSubjOpts','mclsubj');
 			Appex.SelectSearch('Select Subject','mclsubj');
 			Appex.SelectSearch('Select Term','mclt');
-			Appex.MaskedInput('mcltd','99:99-99:99/aaa');
+			Appex.MaskedInput('mcltd','99:99-99:99 / aaa');
 			Appex.MaskedInput('mclsy','9999-9999');
 			Appex.SaveCLr();
 			Appex.EditCLr();

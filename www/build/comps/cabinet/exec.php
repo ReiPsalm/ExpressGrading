@@ -179,19 +179,25 @@ if($_POST['action'] == "login"){
     $sample = json_decode($_POST['students'],true);
     try{
         $i=0;
-        foreach ($sample as $val) {            
-
+        foreach ($sample as $val) {
+            
             //check existing student and update current classes
             $Students->studid = $val['Id'];
-            $getData = $Students->GetSetStud();
-            $subj = $getData->fetchArray(SQLITE3_ASSOC);
-            $row = count($getData);
-            if($row >= 1){
+            $getDatas = $Students->GetNumtStud();
+            $rows = $getDatas->fetchArray();
+
+            if($rows['count'] == 1){
+                
                 try{
+                    //get current subj
                     $Students->studid = $val['Id'];
-                    $Students->subj = $subj['stud_classes'].','.$_POST['subjcsv'];
+                    $getCurSubj = $Students->GetSetStud();
+                    $subjrows = $getCurSubj->fetchArray();
+                    
+                    $Students->studid = $val['Id'];
+                    $Students->subj = $subjrows['stud_classes'].','.$_POST['subjcsv'];
                     if ($Students->UpStudSubj()) {
-                        echo "1";
+                        echo "x";
                     }else{
                         echo "0";
                     }

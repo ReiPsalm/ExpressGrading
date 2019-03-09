@@ -344,6 +344,17 @@ class StudentMod{
         }
     }
 
+    public function GetNumtStud(){
+        try{
+            $sqlGetNumtStud = "SELECT COUNT(*) as count FROM tbl_student WHERE stud_id='".$this->studid."'";
+            $resGetNumtStud = $this->conn->query($sqlGetNumtStud);
+
+            return $resGetNumtStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
     public function EditStud(){
         try{
             $sqlEditStud = "UPDATE tbl_student SET  ";
@@ -493,6 +504,28 @@ class ClrecordMod{
             $resGetEditClr = $this->conn->query($sqlGetEditClr);
 
             return $resGetEditClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetDataClr(){
+        try{
+            $sqlGetDataClr = "SELECT * FROM tbl_classlist ";
+            $sqlGetDataClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetDataClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetDataClr .= "WHERE tbl_classlist.cr_id='".$this->clrid."'";
+            $resGetDataClr = $this->conn->query($sqlGetDataClr);
+
+            return $resGetDataClr;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetCLrStud(){
+        try{
+            //Get student from certain CLr base on subj_id
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

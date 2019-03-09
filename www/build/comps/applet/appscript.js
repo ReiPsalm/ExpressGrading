@@ -49,39 +49,26 @@ Appex = {
         $("#"+domID+"").mask(""+format+"");
     },
     /**
-    * Write XMLrequest for modal
-    *
-    * @memberOf Appex
-    * @param {String} dataID Data id
-    * @param {String} dataSrc File name
-    * @param {String} domID ID name
-    */
-    GetSetupData: function (dataID,dataSrc,domID){
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
-            }
-        };
-        xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
-        xmlhttp.send();
-    },
-    /**
     * Write XMLrequest for fetching all data
     *
     * @memberOf Appex
     * @param {String} dataSrc File name
     * @param {String} domID ID name
     */
-    GetDataSets: function (dataSrc,domID){
+    GetDataSets: function (dataSrc,domID,dataID){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
             }
         };
-        xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
-        xmlhttp.send();
+        if(dataID == null){
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
+            xmlhttp.send();
+        }else{
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
+            xmlhttp.send();
+        }
     },
     /**
     * Write generic DataTable
@@ -139,7 +126,7 @@ Appex = {
         var dataSrc = SrcData;
         var domID = 'ExpEditform';
 
-        Appex.GetSetupData(dataID,dataSrc,domID);
+        Appex.GetDataSets(dataID,dataSrc,domID);
         console.log(dataID+' '+dataSrc);
     },
     UserLogin: function () {
@@ -219,7 +206,7 @@ Appex = {
                 { "mData": "Data_F", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<button href="#exp_modalc" data-toggle="modal" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Open Class Record</button> '+
+                        $(nTd).html('<button value="'+oData.DataID+'" onclick="Appex.GetDataCLr(this.value)" class="btn btn-success btn-xs"><i class="fa fa-book"></i> Open Class Record</button> '+
                         '<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit</button> ');
                     }
                 },
@@ -688,6 +675,7 @@ Appex = {
                         
                         var subjcsv = $('#subjcsv').val();
                         var FormVal = 'action=uploadcsv&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
+                        console.log(FormVal);
                         $.ajax({
                             type:'POST',
                             data:FormVal,
@@ -793,5 +781,8 @@ Appex = {
             });
             /*end swal*/
         });
+    },
+    GetDataCLr: function(clrID){
+        window.location.href = "clr.php?dataid="+clrID;
     }
 }
