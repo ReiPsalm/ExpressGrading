@@ -309,6 +309,30 @@ Appex = {
             });
         });
     },
+    SaveSchool: function(){
+        $('#savedt').click(function (e) {
+            e.preventDefault();
+            var school = $('#school').val();
+            var FormVal = 'action=saveschool&school='+school;
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Schoolform').trigger('reset');
+                        $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getSchool');
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Schoolform').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
     SaveSection: function(){
         $('#savedt').click(function (e) {
             e.preventDefault();
