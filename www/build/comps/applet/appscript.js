@@ -55,20 +55,21 @@ Appex = {
     * @param {String} dataSrc File name
     * @param {String} domID ID name
     */
-    GetDataSets: function (dataSrc,domID,dataID){
+    GetDataSets: function (dataID,dataSrc,domID){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
             }
         };
-        if(dataID == null){
-            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
-            xmlhttp.send();
-        }else{
+        if(dataID != null){
             xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
             xmlhttp.send();
+        }else{
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
+            xmlhttp.send();
         }
+        console.log(dataSrc+domID+dataID);
     },
     /**
     * Write generic DataTable
@@ -698,7 +699,7 @@ Appex = {
                         }
                         
                         var subjcsv = $('#subjcsv').val();
-                        var FormVal = 'action=uploadcsv&subjcsv='+subjcsv+'&students='+JSON.stringify(students);
+                        var FormVal = 'action=uploadcsv&classcsv='+subjcsv+'&students='+JSON.stringify(students);
                         console.log(FormVal);
                         $.ajax({
                             type:'POST',
