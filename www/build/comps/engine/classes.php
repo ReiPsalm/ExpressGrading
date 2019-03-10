@@ -271,6 +271,19 @@ class SchoolMod{
         }
     }
 
+    public function EditSchool(){
+        try{
+            $sqlEditSchool = "UPDATE tbl_school SET  sch_desc='".$this->sch_desc."' WHERE sch_id='".$this->sch_id."'";
+            if($this->conn->exec($sqlEditSchool)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
 }
 
 class DeanMod{
