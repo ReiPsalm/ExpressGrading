@@ -89,7 +89,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets('getDataCLrSets','content',<?php echo $_GET['dataid']?>);
+			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','content');
 		});
 	</script>
 </body>

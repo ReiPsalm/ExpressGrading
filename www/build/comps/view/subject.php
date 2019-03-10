@@ -213,7 +213,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets('getSecOpt','Sec');
+			Appex.GetDataSets(null,'getSecOpt','Sec');
 			Appex.SeTupTable('getSubjdb','getEditsubj');
 			Appex.SaveSubj();
 			Appex.UpdateSubj();
