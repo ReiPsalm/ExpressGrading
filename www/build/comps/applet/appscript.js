@@ -496,6 +496,52 @@ Appex = {
             /*end swal*/
         });
     },
+    UpdateSchool: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var newSchooldesc = $('#upschool').val();
+                    var idData = $('#dataid').val();
+                    var FormVal = 'action=editschool&newschool='+newSchooldesc+'&idData='+idData;
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#Schoolform').trigger('reset');
+                                $("#exp_modalb").modal("hide");
+                                Appex.SeTupTable('getSchool');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#Schoolform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    },
     SaveStudent: function(){
         $('#savedt').click(function (e) {
             e.preventDefault();

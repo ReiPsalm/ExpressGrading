@@ -276,6 +276,18 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "editschool"){
+    $School->sch_id = $_POST['idData'];
+    $School->sch_desc = $_POST['newschool'];
+    try{
+        if ($School->EditSchool()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }
