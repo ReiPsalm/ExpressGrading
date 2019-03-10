@@ -237,7 +237,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets('getSubjOpts','mclsubj');
+			Appex.GetDataSets(null,'getSubjOpts','mclsubj');
 			Appex.SelectSearch('Select Subject','mclsubj');
 			Appex.SelectSearch('Select Term','mclt');
 			Appex.MaskedInput('mcltd','99:99-99:99 / aaa');

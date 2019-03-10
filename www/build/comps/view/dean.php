@@ -229,7 +229,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets('getDeptOpt','dept');
+			Appex.GetDataSets(null,'getDeptOpt','dept');
 			Appex.SeTupTable('getDeandb','getEditDean');
 			Appex.SaveDean();
 			Appex.UpdateDean();

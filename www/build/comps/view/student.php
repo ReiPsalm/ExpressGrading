@@ -289,9 +289,9 @@ if(!isset($_SESSION['user_id'])){
 			App.init();
 			Appex.SeTupTable('getStudentdb','getEditStudent');
 			Appex.SaveStudent();
-			Appex.GetDataSets('getCourseOpt','course');
-			Appex.GetDataSets('getSubjOpt','subj');
-			Appex.GetDataSets('getSubjOpt','subjcsv');
+			Appex.GetDataSets(null,'getCourseOpt','course');
+			Appex.GetDataSets(null,'getSubjOpt','subj');
+			Appex.GetDataSets(null,'getSubjOpt','subjcsv');
 			Appex.UpdateStud();
 			Appex.SelectSearch('Select Subject','subjcsv-select2');
 			Appex.SelectSearch('Select Subject','subj-select2');

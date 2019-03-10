@@ -62,11 +62,11 @@ Appex = {
                 document.getElementById(""+domID+"").innerHTML = xmlhttp.responseText;
             }
         };
-        if(dataID != null){
-            xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
+        if(dataID == null){
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
             xmlhttp.send();
         }else{
-            xmlhttp.open("GET", "../engine/"+dataSrc+".php", true);
+            xmlhttp.open("GET", "../engine/"+dataSrc+".php?dataid="+dataID, true);
             xmlhttp.send();
         }
         console.log(dataSrc+domID+dataID);
