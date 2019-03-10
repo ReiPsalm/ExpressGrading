@@ -51,7 +51,7 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #content -->
 		<div id="content" class="content">
-			
+		<div id="my"></div>
 		</div>
 		
 		<!-- begin #footer -->
@@ -84,12 +84,37 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.string/3.3.4/underscore.string.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+	<script src="https://bossanova.uk/components/jexcel/dist/js/excel-formula.min.js"></script>
+	<script src="https://bossanova.uk/components/jexcel/dist/js/formulas.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.0/js/jquery.jexcel.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.0/css/jquery.jexcel.min.css" type="text/css" />
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','content');
+			// Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','content');
+		});
+
+		var data1 = [
+			['Furnace', 10, 'AVERAGE', '=AVERAGE(B1:B4)'],
+			['Tower', 9, 'STDEVA', '=STDEVA(B1:B4)'],
+			['Drum', 44, 'MAX', '=MAX(B1,B2,B3,B4)'],
+			['Pump', 12, 'COUNT', '=COUNT(B1:B4)'],
+		];
+
+		$('#my').jexcel({
+			data:data1,
+			colWidths: [ 400, 80, 100, 200 ],
 		});
 	</script>
 </body>

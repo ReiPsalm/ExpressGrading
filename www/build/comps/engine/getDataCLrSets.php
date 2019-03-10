@@ -42,7 +42,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
         </div>
         <div class="panel-body">
             <div class="table-responsive">
-                <table id="user" class="table table-bordered table-striped">
+                <!-- <table id="user" class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>Student Name</th>
@@ -53,7 +53,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
                             <td>Firstname</td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
         </div>
     </div>

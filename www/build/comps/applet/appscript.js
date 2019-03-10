@@ -76,9 +76,10 @@ Appex = {
     * NOTE: still in further modification
     * @memberOf Appex
     * @param {String} jsonSource json srouce for the table data
-    * @param {String} domID file source for the modal form and any html elements
+    * @param {String} SrcData file source for the modal form and any html elements
     */
     SeTupTable: function(jsonSource,SrcData){
+        console.log(jsonSource+'-'+SrcData);
         $('#data-table').dataTable().fnClearTable();
         $("#data-table").dataTable().fnDestroy();
     
@@ -301,7 +302,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
-                        Appex.SeTupTable('getCourse');
+                        Appex.SeTupTable('getCourse','getCoursedb');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -434,7 +435,7 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#Expform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
-                                Appex.SeTupTable('getCourse');
+                                Appex.SeTupTable('getCourse','getCoursedb');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                                 $('#Expform').trigger('reset');
@@ -480,7 +481,7 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#ExpEditform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
-                                Appex.SeTupTable('getDeptdb');
+                                Appex.SeTupTable('getDeptdb','getEditDept');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                                 $('#ExpEditform').trigger('reset');
@@ -589,7 +590,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
-                        Appex.SeTupTable('getDeptdb');
+                        Appex.SeTupTable('getDeptdb','getEditDept');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -618,6 +619,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getDeandb','getEditDean');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
