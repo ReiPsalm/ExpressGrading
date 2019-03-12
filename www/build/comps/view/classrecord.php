@@ -126,7 +126,6 @@ if(!isset($_SESSION['user_id'])){
 								<div class="row row-space-10">
 									<div class="col-md-12 m-b-15">
 										<select id="mclsch" class="mclsch form-control" style="width: 100%">
-											<option value="">Select School</option>
 										</select>
 									</div>
 									<div class="col-md-12 m-b-15">
@@ -237,6 +236,7 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetDataSets(null,'getSchOpt','mclsch');
 			Appex.GetDataSets(null,'getSubjOpts','mclsubj');
 			Appex.SelectSearch('Select Subject','mclsubj');
 			Appex.SelectSearch('Select Term','mclt');

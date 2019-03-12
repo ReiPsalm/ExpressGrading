@@ -51,8 +51,37 @@ if(!isset($_SESSION['user_id'])){
 		
 		<!-- begin #content -->
 		<div id="content" class="content">
-		<div id="my"></div>
+		<!-- begin page-header -->
+		<h1 class="page-header">Class Record Module</h1>
+			<!-- end page-header -->
+
+			<!-- begin panel -->
+			<div class="panel panel-inverse" data-sortable-id="ui-typography-14">
+				<div class="panel-heading">
+					<h4 class="panel-title">Class Details</h4>
+				</div>
+				<div class="panel-body" id="cldata">
+					
+				</div>
+			</div>
+			<!-- end panel -->
+
+			<div class="panel panel-inverse">
+				<div class="panel-heading">
+					<div class="panel-heading-btn">
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+					</div>
+					<h4 class="panel-title">Class Record</h4>
+				</div>
+				<div class="panel-body">
+				<!--select * from student then check classes to refer on tbl_classlist if true display student-->
+				</div>
+			</div>
 		</div>
+		<!-- end #content -->
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
@@ -85,36 +114,13 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.string/3.3.4/underscore.string.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
-
-	<script src="https://bossanova.uk/components/jexcel/dist/js/excel-formula.min.js"></script>
-	<script src="https://bossanova.uk/components/jexcel/dist/js/formulas.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.0/js/jquery.jexcel.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.0.0/css/jquery.jexcel.min.css" type="text/css" />
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
 			App.init();
-			// Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','content');
-		});
-
-		var data1 = [
-			['Furnace', 10, 'AVERAGE', '=AVERAGE(B1:B4)'],
-			['Tower', 9, 'STDEVA', '=STDEVA(B1:B4)'],
-			['Drum', 44, 'MAX', '=MAX(B1,B2,B3,B4)'],
-			['Pump', 12, 'COUNT', '=COUNT(B1:B4)'],
-		];
-
-		$('#my').jexcel({
-			data:data1,
-			colWidths: [ 400, 80, 100, 200 ],
+			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','cldata');
+			
 		});
 	</script>
 </body>
