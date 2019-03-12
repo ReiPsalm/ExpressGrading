@@ -69,15 +69,46 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<div class="panel-heading-btn">
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-						<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+						<button href="#?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info" title="Add course">
+							<i class="fa fa-file" ></i> Export Class record
+						</button>
 					</div>
 					<h4 class="panel-title">Class Record</h4>
 				</div>
 				<div class="panel-body">
 				<!--select * from student then check classes to refer on tbl_classlist if true display student-->
+					<table id="data-table" class="table table-striped table-bordered">
+						<thead>
+						<tr>
+							<th>Student ID</th>
+							<th>Student Name</th>
+							<th>Action</th>
+						</tr>
+						</thead>
+						<tbody>
+							<td>01105205</td>
+							<td>SUSANA REI PSALM M.</td>
+							<td>
+								<div class="btn-group m-r-5 m-b-5">
+									<a href="javascript:;" data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle">Attendance <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="javascript:;">Present</a></li>
+										<li><a href="javascript:;">Excused</a></li>
+										<li><a href="javascript:;">Absent</a></li>
+									</ul>
+								</div>
+								<div class="btn-group m-r-5 m-b-5">
+									<button class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Add Quiz</button>
+								</div>
+								<div class="btn-group m-r-5 m-b-5">
+									<button class="btn btn-inverse btn-sm"><i class="fa fa-child"></i> Add Orals</button>
+								</div>
+								<div class="btn-group m-r-5 m-b-5">
+									<button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i> View Student Record</button>
+								</div>
+							</td>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
