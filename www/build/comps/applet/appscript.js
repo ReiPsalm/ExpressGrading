@@ -215,6 +215,58 @@ Appex = {
             ]
         });
     },
+    /**
+    * @memberOf Appex
+    * @param {String} jsonSource json srouce for the table data
+    * @param {String} domID file source for the modal form and any html elements
+    */
+   SeTupCLDt: function(jsonSource,SrcData){
+        // $('#data-table').dataTable().fnClearTable();
+        // $("#data-table").dataTable().fnDestroy();
+
+        clientTableData = $('#data-table').DataTable({
+            responsive: true,
+            bAutoWidth: true,
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/"+jsonSource+".php",
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "Data_A", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs">'+
+                                    '<option class="btn btn-success" value="">Attendance</option><option value="">Present</option><option value="">Absent</option><option value="">Excused</option>'+
+                                    '</select></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Add Quiz</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button class="btn btn-inverse btn-xs"><i class="fa fa-child"></i> Add Orals</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
+                    }
+                },
+            ]
+        });
+    },
     UpdateSubj: function(){
         $('#editdt').click(function (e) {
             e.preventDefault();

@@ -27,10 +27,18 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
-	<link href="../../library/plugins/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet" />
+	<link href="../../library/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
+	<!-- Lobibox return messages -->
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
+
+	<link href="../../library/plugins/sweetalert-master/dist/sweetalert.css" rel="stylesheet">
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
+	<link href="../../library/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<script src="../../library/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
@@ -76,7 +84,6 @@ if(!isset($_SESSION['user_id'])){
 					<h4 class="panel-title">Class Record</h4>
 				</div>
 				<div class="panel-body">
-				<!--select * from student then check classes to refer on tbl_classlist if true display student-->
 					<table id="data-table" class="table table-striped table-bordered">
 						<thead>
 						<tr>
@@ -86,27 +93,7 @@ if(!isset($_SESSION['user_id'])){
 						</tr>
 						</thead>
 						<tbody>
-							<td>01105205</td>
-							<td>SUSANA REI PSALM M.</td>
-							<td>
-								<div class="btn-group m-r-5 m-b-5">
-									<a href="javascript:;" data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle">Attendance <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="javascript:;">Present</a></li>
-										<li><a href="javascript:;">Excused</a></li>
-										<li><a href="javascript:;">Absent</a></li>
-									</ul>
-								</div>
-								<div class="btn-group m-r-5 m-b-5">
-									<button class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> Add Quiz</button>
-								</div>
-								<div class="btn-group m-r-5 m-b-5">
-									<button class="btn btn-inverse btn-sm"><i class="fa fa-child"></i> Add Orals</button>
-								</div>
-								<div class="btn-group m-r-5 m-b-5">
-									<button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i> View Student Record</button>
-								</div>
-							</td>
+							
 						</tbody>
 					</table>
 				</div>
@@ -141,17 +128,28 @@ if(!isset($_SESSION['user_id'])){
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
-	<script src="../../library/plugins/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="../../library/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../../library/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
-
+	<!-- Modal alerts -->
+	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
+	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
 			App.init();
 			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','cldata');
-			
+			Appex.SeTupCLDt('getDataCLrRec',null);
 		});
 	</script>
 </body>
