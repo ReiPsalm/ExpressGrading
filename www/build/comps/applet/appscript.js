@@ -219,8 +219,9 @@ Appex = {
     * @memberOf Appex
     * @param {String} jsonSource json srouce for the table data
     * @param {String} domID file source for the modal form and any html elements
+    * @param {String} dataID id parameter for clr reference
     */
-   SeTupCLDt: function(jsonSource,SrcData){
+   SeTupCLDt: function(jsonSource,SrcData,dataID){
         // $('#data-table').dataTable().fnClearTable();
         // $("#data-table").dataTable().fnDestroy();
 
@@ -243,7 +244,7 @@ Appex = {
                 });
             },
 
-            "sAjaxSource": "../engine/"+jsonSource+".php",
+            "sAjaxSource": "../engine/"+jsonSource+".php?dataid="+dataID,
             "sAjaxDataProp": "",
             "iDisplayLength": 10,
             "scrollCollapse": false,
