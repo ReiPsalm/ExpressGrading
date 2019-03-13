@@ -6,15 +6,20 @@ include_once "../engine/loader.php";
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-$classR->clrid = $_GET['dataid'];
-$getStud = $Students->GetStud();
 
-$getData = $Dept->GetDept();
+$getStud = $Students->GetStud();
 $outp = "[";
-while($row = $getStud->fetchArray(SQLITE3_ASSOC)) {
-    if ($outp != "[") {$outp .= ",";}
-    $outp .= '{"DataID":"'  . $row["stud_id"] . '",';
-    $outp .= '"Data_A":"'. $row["stud_name"].'"}';
+while($row = $getStud->fetchArray(SQLITE3_ASSOC)){
+    $sClass = explode(",",$row['stud_classes']);
+
+    foreach($sClass as $clr){
+        if($clr == $_GET['dataid']){
+            if ($outp != "[") {$outp .= ",";}
+            $outp .= '{"DataID":"'  . $row["stud_id"] . '",';
+            $outp .= '"Data_A":"'. $row["stud_name"].'"}';
+        }
+    }
+
 }
 $outp .="]";
 

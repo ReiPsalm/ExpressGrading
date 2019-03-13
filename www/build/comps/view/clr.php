@@ -149,7 +149,7 @@ if(!isset($_SESSION['user_id'])){
 		$(document).ready(function() {
 			App.init();
 			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','cldata');
-			Appex.SeTupCLDt('getDataCLrRec',null);
+			Appex.SeTupCLDt('getDataCLrRec',null,<?php echo $_GET['dataid']?>);
 		});
 	</script>
 </body>

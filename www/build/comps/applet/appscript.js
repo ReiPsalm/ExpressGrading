@@ -250,7 +250,7 @@ Appex = {
             "scrollCollapse": false,
             "paging": true,
             "searching": true,
-            "ordering": true,
+            "ordering": false,
             "columns": [
 
                 { "mData": "DataID", sDefaultContent: ""},
