@@ -39,6 +39,7 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
 	<link href="../../library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
 	<link href="../../library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
 	<script src="../../library/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
@@ -77,7 +78,7 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<div class="panel-heading-btn">
-						<button href="#?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info" title="Add course">
+						<button href="#?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
 							<i class="fa fa-file" ></i> Export Class record
 						</button>
 					</div>
@@ -101,6 +102,114 @@ if(!isset($_SESSION['user_id'])){
 		</div>
 		<!-- end #content -->
 		
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalq">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new quiz</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="Expformq" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Input dean<i class="text text-danger">*</i></label>
+                                <div class="row row-space-10">
+                                    <div class="col-md-6 m-b-15">
+										<input type="hidden" id="qcr" value="<?php echo $_GET['dataid']?>" />
+                                        <input type="text" class="form-control datepicker-default" id="qd" placeholder="Date" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="qp" placeholder="Quiz points" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="saveq" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalo">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new recitation points</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="Expformo" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Input dean<i class="text text-danger">*</i></label>
+                                <div class="row row-space-10">
+                                    <div class="col-md-6 m-b-15">
+									<input type="hidden" id="ocr" value="<?php echo $_GET['dataid']?>" />
+                                        <input type="text" class="form-control datepicker-default" id="od" placeholder="Date" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="op" placeholder="Recitation points" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="saveo" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalr">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Student Record</h4>
+                        </div>
+                        <div class="panel-body">
+                            
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
 		    Copyright &copy; <a target="_blank" href="https://reipsalm.github.io/SammySusana/">2019 Sammy Susana Web Development</a>
@@ -137,6 +246,7 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
 	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
+	<script src="../../library/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
 	<script src="../applet/appscript.js"></script>
 	<!-- Modal alerts -->
@@ -148,6 +258,9 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
+			$(".datepicker-default").datepicker({
+				todayHighlight: !0
+			});
 			Appex.GetDataSets(<?php echo $_GET['dataid']?>,'getDataCLrSets','cldata');
 			Appex.SeTupCLDt('getDataCLrRec',null,<?php echo $_GET['dataid']?>);
 		});

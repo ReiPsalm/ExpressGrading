@@ -614,6 +614,62 @@ class ClrecordMod{
     }
 }
 
+class QuizMod{
+    private $conn;
+
+    public $qid;
+    public $qpoints;
+    public $qdate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveQuiz(){
+        try{
+            $sqlSaveQuiz = "INSERT INTO tbl_quizes (quiz_points,quiz_date,stud_id,cr_id) ";
+            $sqlSaveQuiz .= "VALUES('".$this->qpoints."','".$this->qdate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveQuiz)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class OralsMod{
+    private $conn;
+
+    public $oid;
+    public $opoints;
+    public $odate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveOrals(){
+        try{
+            $sqlSaveOrals = "INSERT INTO tbl_orals (oral_points,oral_date,stud_id,cr_id) ";
+            $sqlSaveOrals .= "VALUES('".$this->opoints."','".$this->odate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveOrals)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
 class TblJoinsMod{
     private $conn;
 
