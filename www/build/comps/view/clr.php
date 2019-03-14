@@ -192,20 +192,16 @@ if(!isset($_SESSION['user_id'])){
         <div class="modal fade" id="exp_modalr">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
-                        <div class="panel-heading">
-                            <div class="panel-heading-btn">
-                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
-                                    <i class="fa fa-times"></i>
-                                </button>
-                            </div>
-                            <h4 class="panel-title">Student Record</h4>
-                        </div>
-                        <div class="panel-body">
-                            
-                        </div>
-                    </div>
-                    <!-- end panel -->
+					<ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile">
+						<li class="active"><a href="#default-tab-1" data-toggle="tab"><i class="fa fa-calendar"></i> Attendance</a></li>
+						<li class=""><a href="#default-tab-2" data-toggle="tab"><i class="fa fa-edit"></i> Quizzes</a></li>
+						<li class=""><a href="#default-tab-3" data-toggle="tab"><i class="fa fa-child"></i> Orals</a></li>
+						<li class=""><a href="#default-tab-4" data-toggle="tab"><i class="fa fa-tag"></i> Exams</a></li>
+						<li class=""><a href="#default-tab-5" data-toggle="tab"><i class="fa fa-subscript"></i> Term Grades</a></li>
+					</ul>
+					<div class="tab-content" id="studTabs">
+						
+					</div>
                 </div>
             </div>
         </div>

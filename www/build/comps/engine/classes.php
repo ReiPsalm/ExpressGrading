@@ -640,6 +640,18 @@ class QuizMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+
+    public function GetQuizStud(){
+        try{
+            $sqlGetQuizStud = "SELECT * FROM tbl_quizes WHERE ";
+            $sqlGetQuizStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetQuizStud = $this->conn->query($sqlGetQuizStud);
+
+            return $resGetQuizStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
 }
 
 class OralsMod{
@@ -664,6 +676,18 @@ class OralsMod{
             }else{
                 return false;
             }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetOralStud(){
+        try{
+            $sqlGetOralStud = "SELECT * FROM tbl_orals WHERE ";
+            $sqlGetOralStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetOralStud = $this->conn->query($sqlGetOralStud);
+
+            return $resGetOralStud;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }

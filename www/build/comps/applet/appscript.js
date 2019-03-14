@@ -262,7 +262,7 @@ Appex = {
                                     '</select></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveQuiz(this.value)" href="#exp_modalq" data-toggle="modal" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Add Quiz</button></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveOrals(this.value)" href="#exp_modalo" data-toggle="modal" class="btn btn-inverse btn-xs"><i class="fa fa-child"></i> Add Orals</button></div>'+
-                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
                     }
                 },
             ]
