@@ -123,7 +123,7 @@ if(!isset($_SESSION['user_id'])){
                                 </p>
                             </div>
                             <form id="Expformq" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
-                                <label class="control-label">Input dean<i class="text text-danger">*</i></label>
+                                <label class="control-label">Input Quiz<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-6 m-b-15">
 										<input type="hidden" id="qcr" value="<?php echo $_GET['dataid']?>" />
@@ -166,7 +166,7 @@ if(!isset($_SESSION['user_id'])){
                                 </p>
                             </div>
                             <form id="Expformo" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
-                                <label class="control-label">Input dean<i class="text text-danger">*</i></label>
+                                <label class="control-label">Input orals<i class="text text-danger">*</i></label>
                                 <div class="row row-space-10">
                                     <div class="col-md-6 m-b-15">
 									<input type="hidden" id="ocr" value="<?php echo $_GET['dataid']?>" />
@@ -180,6 +180,49 @@ if(!isset($_SESSION['user_id'])){
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="saveo" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modalx">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Add new exam</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="m-b-15 border-bottom-1">
+                                <p class="text- text-justify">
+                                    <b class="text text-danger">IMPORTANT!</b><br>
+                                    <i>All data are <i class="text text-danger"><b>"REQUIRED"</b></i> any data missing will cause the system to prompt the missing field and reset the form.</i>
+                                </p>
+                            </div>
+                            <form id="Expformx" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                                <label class="control-label">Input Exam<i class="text text-danger">*</i></label>
+                                <div class="row row-space-10">
+                                    <div class="col-md-6 m-b-15">
+									<input type="hidden" id="ocx" value="<?php echo $_GET['dataid']?>" />
+                                        <input type="text" class="form-control datepicker-default" id="odx" placeholder="Date" />
+                                    </div>
+									<div class="col-md-6 m-b-15">
+                                        <input type="text" class="form-control" id="opx" placeholder="Recitation points" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="savex" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
                             </div>
                         </div>
                     </div>

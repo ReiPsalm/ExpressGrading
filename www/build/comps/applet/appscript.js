@@ -262,6 +262,7 @@ Appex = {
                                     '</select></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveQuiz(this.value)" href="#exp_modalq" data-toggle="modal" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Add Quiz</button></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveOrals(this.value)" href="#exp_modalo" data-toggle="modal" class="btn btn-inverse btn-xs"><i class="fa fa-child"></i> Add Orals</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveExams(this.value)" href="#exp_modalx" data-toggle="modal" class="btn btn-info btn-xs"><i class="fa fa-tag"></i> Add Exams</button></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
                     }
                 },
@@ -362,6 +363,32 @@ Appex = {
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformo').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
+    SaveExams: function(studID){
+        $('#savex').click(function (e) {
+            e.preventDefault();
+            var ocx = $('#ocx').val();
+            var odx = $('#odx').val();
+            var opx = $('#opx').val();
+            var FormVal = 'action=savex&ocx='+ocx+'&odx='+odx+'&opx='+opx+'&studid='+studID;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expformx').trigger('reset');
+                        $("#exp_modalx").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expformx').trigger('reset');
                     }
                 }
             });

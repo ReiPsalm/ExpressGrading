@@ -694,6 +694,46 @@ class OralsMod{
     }
 }
 
+class ExamsMod{
+    private $conn;
+
+    public $xid;
+    public $xpoints;
+    public $xdate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveExams(){
+        try{
+            $sqlSaveExams = "INSERT INTO tbl_exams (exam_points,exam_date,stud_id,cr_id) ";
+            $sqlSaveExams .= "VALUES('".$this->xpoints."','".$this->xdate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveExams)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetExamStud(){
+        try{
+            $sqlGetExamStud = "SELECT * FROM tbl_exams WHERE ";
+            $sqlGetExamStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetExamStud = $this->conn->query($sqlGetExamStud);
+
+            return $resGetExamStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
 class TblJoinsMod{
     private $conn;
 
