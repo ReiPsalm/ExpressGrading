@@ -14,6 +14,9 @@ $Section = new SectionMod($coms);
 $subject = new SubjMod($coms);
 $classR = new ClrecordMod($coms);
 $School = new SchoolMod($coms);
+$quizzes = new QuizMod($coms);
+$Orals = new OralsMod($coms);
+$Exams = new ExamsMod($coms);
 
 $tbljoins = new TblJoinsMod($coms);
 ?>

@@ -288,6 +288,48 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "saveq"){
+    $quizzes->qpoints = $_POST['qp'];
+    $quizzes->qdate = $_POST['qd'];
+    $quizzes->studid = $_POST['studid'];
+    $quizzes->crid = $_POST['qcr'];
+    try{
+        if ($quizzes->SaveQuiz()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "saveo"){
+    $Orals->opoints = $_POST['op'];
+    $Orals->odate = $_POST['od'];
+    $Orals->studid = $_POST['studid'];
+    $Orals->crid = $_POST['ocr'];
+    try{
+        if ($Orals->SaveOrals()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "savex"){
+    $Exams->xpoints = $_POST['opx'];
+    $Exams->xdate = $_POST['odx'];
+    $Exams->studid = $_POST['studid'];
+    $Exams->crid = $_POST['ocx'];
+    try{
+        if ($Exams->SaveExams()) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }

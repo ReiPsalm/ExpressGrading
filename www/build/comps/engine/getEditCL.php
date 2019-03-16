@@ -16,7 +16,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
 <div class="row row-space-10">
     <div class="col-md-12 m-b-15">
         <select id="upmclsch" class="form-control">
-            <option value="">Select School</option>
+            <?php include_once "getSchOpt.php"; ?>
         </select>
     </div>
     <div class="col-md-12 m-b-15">

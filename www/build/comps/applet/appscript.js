@@ -76,9 +76,10 @@ Appex = {
     * NOTE: still in further modification
     * @memberOf Appex
     * @param {String} jsonSource json srouce for the table data
-    * @param {String} domID file source for the modal form and any html elements
+    * @param {String} SrcData file source for the modal form and any html elements
     */
     SeTupTable: function(jsonSource,SrcData){
+        console.log(jsonSource+'-'+SrcData);
         $('#data-table').dataTable().fnClearTable();
         $("#data-table").dataTable().fnDestroy();
     
@@ -214,6 +215,60 @@ Appex = {
             ]
         });
     },
+    /**
+    * @memberOf Appex
+    * @param {String} jsonSource json srouce for the table data
+    * @param {String} domID file source for the modal form and any html elements
+    * @param {String} dataID id parameter for clr reference
+    */
+   SeTupCLDt: function(jsonSource,SrcData,dataID){
+        // $('#data-table').dataTable().fnClearTable();
+        // $("#data-table").dataTable().fnDestroy();
+
+        clientTableData = $('#data-table').DataTable({
+            responsive: true,
+            bAutoWidth: true,
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/"+jsonSource+".php?dataid="+dataID,
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": false,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "Data_A", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs">'+
+                                    '<option class="btn btn-success" value="x">Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
+                                    '</select></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveQuiz(this.value)" href="#exp_modalq" data-toggle="modal" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Add Quiz</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveOrals(this.value)" href="#exp_modalo" data-toggle="modal" class="btn btn-inverse btn-xs"><i class="fa fa-child"></i> Add Orals</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveExams(this.value)" href="#exp_modalx" data-toggle="modal" class="btn btn-info btn-xs"><i class="fa fa-tag"></i> Add Exams</button></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
+                    }
+                },
+            ]
+        });
+    },
     UpdateSubj: function(){
         $('#editdt').click(function (e) {
             e.preventDefault();
@@ -261,6 +316,84 @@ Appex = {
             /*end swal*/
         });
     },
+    SaveQuiz: function(studID){
+        $('#saveq').click(function (e) {
+            e.preventDefault();
+            var qcr = $('#qcr').val();
+            var qd = $('#qd').val();
+            var qp = $('#qp').val();
+            var FormVal = 'action=saveq&qcr='+qcr+'&qd='+qd+'&qp='+qp+'&studid='+studID;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expformq').trigger('reset');
+                        $("#exp_modalq").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expformq').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
+    SaveOrals: function(studID){
+        $('#saveo').click(function (e) {
+            e.preventDefault();
+            var ocr = $('#ocr').val();
+            var od = $('#od').val();
+            var op = $('#op').val();
+            var FormVal = 'action=saveo&ocr='+ocr+'&od='+od+'&op='+op+'&studid='+studID;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expformo').trigger('reset');
+                        $("#exp_modalo").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expformo').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
+    SaveExams: function(studID){
+        $('#savex').click(function (e) {
+            e.preventDefault();
+            var ocx = $('#ocx').val();
+            var odx = $('#odx').val();
+            var opx = $('#opx').val();
+            var FormVal = 'action=savex&ocx='+ocx+'&odx='+odx+'&opx='+opx+'&studid='+studID;
+            console.log(FormVal);
+            $.ajax({
+                type:'POST',
+                data:FormVal,
+                cache:false,
+                url:'../cabinet/exec.php',
+                success: function(data){
+                    if(data == "1"){
+                        Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
+                        $('#Expformx').trigger('reset');
+                        $("#exp_modalx").modal("hide");
+                    }else{
+                        Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                        $('#Expformx').trigger('reset');
+                    }
+                }
+            });
+        });
+    },
     SaveSubj: function(){
         $('#savedt').click(function (e) {
             e.preventDefault();
@@ -301,7 +434,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
-                        Appex.SeTupTable('getCourse');
+                        Appex.SeTupTable('getCourse','getCoursedb');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -434,7 +567,7 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#Expform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
-                                Appex.SeTupTable('getCourse');
+                                Appex.SeTupTable('getCourse','getCoursedb');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                                 $('#Expform').trigger('reset');
@@ -480,7 +613,7 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                                 $('#ExpEditform').trigger('reset');
                                 $("#exp_modalb").modal("hide");
-                                Appex.SeTupTable('getDeptdb');
+                                Appex.SeTupTable('getDeptdb','getEditDept');
                             }else{
                                 Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                                 $('#ExpEditform').trigger('reset');
@@ -635,7 +768,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
-                        Appex.SeTupTable('getDeptdb');
+                        Appex.SeTupTable('getDeptdb','getEditDept');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -664,6 +797,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
+                        Appex.SeTupTable('getDeandb','getEditDean');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
@@ -795,6 +929,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
+                        Appex.SeTupCLTable('getClassdb','getEditCL');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');

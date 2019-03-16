@@ -575,6 +575,7 @@ class ClrecordMod{
             $sqlGetDataClr = "SELECT * FROM tbl_classlist ";
             $sqlGetDataClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
             $sqlGetDataClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetDataClr .= "INNER JOIN tbl_school ON tbl_classlist.sch_id=tbl_school.sch_id ";
             $sqlGetDataClr .= "WHERE tbl_classlist.cr_id='".$this->clrid."'";
             $resGetDataClr = $this->conn->query($sqlGetDataClr);
 
@@ -586,7 +587,10 @@ class ClrecordMod{
 
     public function GetCLrStud(){
         try{
-            //Get student from certain CLr base on subj_id
+            $sqlGetCLrStud = "SELCT * FROM tbl_classlist WHERE cr_id='".$this->clrid."'";
+            $resGetCLrStud = $this->conn->query($sqlGetCLrStud);
+            
+            return $resGetCLrStud;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
@@ -604,6 +608,126 @@ class ClrecordMod{
             }else{
                 return false;
             }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class QuizMod{
+    private $conn;
+
+    public $qid;
+    public $qpoints;
+    public $qdate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveQuiz(){
+        try{
+            $sqlSaveQuiz = "INSERT INTO tbl_quizes (quiz_points,quiz_date,stud_id,cr_id) ";
+            $sqlSaveQuiz .= "VALUES('".$this->qpoints."','".$this->qdate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveQuiz)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetQuizStud(){
+        try{
+            $sqlGetQuizStud = "SELECT * FROM tbl_quizes WHERE ";
+            $sqlGetQuizStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetQuizStud = $this->conn->query($sqlGetQuizStud);
+
+            return $resGetQuizStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class OralsMod{
+    private $conn;
+
+    public $oid;
+    public $opoints;
+    public $odate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveOrals(){
+        try{
+            $sqlSaveOrals = "INSERT INTO tbl_orals (oral_points,oral_date,stud_id,cr_id) ";
+            $sqlSaveOrals .= "VALUES('".$this->opoints."','".$this->odate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveOrals)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetOralStud(){
+        try{
+            $sqlGetOralStud = "SELECT * FROM tbl_orals WHERE ";
+            $sqlGetOralStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetOralStud = $this->conn->query($sqlGetOralStud);
+
+            return $resGetOralStud;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+}
+
+class ExamsMod{
+    private $conn;
+
+    public $xid;
+    public $xpoints;
+    public $xdate;
+    public $studid;
+    public $crid;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function SaveExams(){
+        try{
+            $sqlSaveExams = "INSERT INTO tbl_exams (exam_points,exam_date,stud_id,cr_id) ";
+            $sqlSaveExams .= "VALUES('".$this->xpoints."','".$this->xdate."','".$this->studid."','".$this->crid."')";
+            if($this->conn->exec($sqlSaveExams)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetExamStud(){
+        try{
+            $sqlGetExamStud = "SELECT * FROM tbl_exams WHERE ";
+            $sqlGetExamStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
+            $resGetExamStud = $this->conn->query($sqlGetExamStud);
+
+            return $resGetExamStud;
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
