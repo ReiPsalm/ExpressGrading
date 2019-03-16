@@ -25,6 +25,12 @@ Appex = {
             msg: setmsg
         });//lobibox end
     },
+    DatePicker: function(){
+        $(".datepicker-default").datepicker({
+            todayHighlight: !0
+        });
+        console.log('datepicker clicked');
+    },
     /**
     * Write XMLrequest for modal
     *
@@ -260,9 +266,6 @@ Appex = {
                         $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs">'+
                                     '<option class="btn btn-success" value="x">Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
                                     '</select></div>'+
-                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveQuiz(this.value)" href="#exp_modalq" data-toggle="modal" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Add Quiz</button></div>'+
-                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveOrals(this.value)" href="#exp_modalo" data-toggle="modal" class="btn btn-inverse btn-xs"><i class="fa fa-child"></i> Add Orals</button></div>'+
-                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.SaveExams(this.value)" href="#exp_modalx" data-toggle="modal" class="btn btn-info btn-xs"><i class="fa fa-tag"></i> Add Exams</button></div>'+
                                     '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
                     }
                 },
@@ -316,10 +319,13 @@ Appex = {
             /*end swal*/
         });
     },
-    SaveQuiz: function(studID){
+    SaveQuiz: function(){
+        console.log('Save quiz func');
+        Appex.DatePicker();
         $('#saveq').click(function (e) {
             e.preventDefault();
             var qcr = $('#qcr').val();
+            var studID = $('#studq').val();
             var qd = $('#qd').val();
             var qp = $('#qp').val();
             var FormVal = 'action=saveq&qcr='+qcr+'&qd='+qd+'&qp='+qp+'&studid='+studID;
@@ -333,7 +339,7 @@ Appex = {
                     if(data == "1"){
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformq').trigger('reset');
-                        $("#exp_modalq").modal("hide");
+                        // $("#exp_modalq").modal("hide");
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformq').trigger('reset');
@@ -342,10 +348,12 @@ Appex = {
             });
         });
     },
-    SaveOrals: function(studID){
+    SaveOrals: function(){
+        Appex.DatePicker();
         $('#saveo').click(function (e) {
             e.preventDefault();
             var ocr = $('#ocr').val();
+            var studID = $('#studo').val();
             var od = $('#od').val();
             var op = $('#op').val();
             var FormVal = 'action=saveo&ocr='+ocr+'&od='+od+'&op='+op+'&studid='+studID;
@@ -369,9 +377,11 @@ Appex = {
         });
     },
     SaveExams: function(studID){
+        Appex.DatePicker();
         $('#savex').click(function (e) {
             e.preventDefault();
             var ocx = $('#ocx').val();
+            var studID = $('#studx').val();
             var odx = $('#odx').val();
             var opx = $('#opx').val();
             var FormVal = 'action=savex&ocx='+ocx+'&odx='+odx+'&opx='+opx+'&studid='+studID;
