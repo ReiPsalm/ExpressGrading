@@ -929,6 +929,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expform').trigger('reset');
                         $("#exp_modal").modal("hide");
+                        Appex.SeTupCLTable('getClassdb','getEditCL');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expform').trigger('reset');
