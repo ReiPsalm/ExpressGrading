@@ -92,7 +92,7 @@ $getxData = $Exams->GetExamStud();
         </div>
         <div id="collapseOral" class="panel-collapse collapse">
             <div class="panel-body">
-                <form id="Expformo" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                <form id="Expformo" enctype="multipart/form-data" method="POST" class="m-b-15">
                     <label class="control-label">Input Orals<i class="text text-danger">*</i></label>
                     <div class="row row-space-10">
                         <div class="col-md-6 m-b-15">
@@ -148,7 +148,7 @@ $getxData = $Exams->GetExamStud();
         </div>
         <div id="collapseExam" class="panel-collapse collapse">
             <div class="panel-body">
-                <form id="Expformo" enctype="multipart/form-data" method="POST" class="border-bottom-1 m-b-15">
+                <form id="Expformo" enctype="multipart/form-data" method="POST" class="m-b-15">
                     <label class="control-label">Input Exams<i class="text text-danger">*</i></label>
                     <div class="row row-space-10">
                         <div class="col-md-6 m-b-15">

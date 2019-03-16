@@ -340,6 +340,7 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformq').trigger('reset');
                         // $("#exp_modalq").modal("hide");
+                        // Appex.GetDataSets(studID+'-'+qcr,'getTabsClr','studTabs');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformq').trigger('reset');
