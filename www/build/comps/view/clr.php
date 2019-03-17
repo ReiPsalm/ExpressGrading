@@ -78,9 +78,9 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<div class="panel-heading-btn">
-						<button href="#?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
+						<a href="../engine/gradespdf.php?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
 							<i class="fa fa-file" ></i> Export Class record
-						</button>
+						</a>
 					</div>
 					<h4 class="panel-title">Class Record</h4>
 				</div>
@@ -111,7 +111,7 @@ if(!isset($_SESSION['user_id'])){
 						<li class=""><a href="#default-tab-2" data-toggle="tab"><i class="fa fa-edit"></i> Quizzes</a></li>
 						<li class=""><a href="#default-tab-3" data-toggle="tab"><i class="fa fa-child"></i> Orals</a></li>
 						<li class=""><a href="#default-tab-4" data-toggle="tab"><i class="fa fa-tag"></i> Exams</a></li>
-						<li class=""><a href="#default-tab-5" data-toggle="tab"><i class="fa fa-subscript"></i> Term Grades</a></li>
+						<li class=""><a href="#default-tab-5" data-toggle="tab"><i class="fa fa-subscript"></i> Periodicals</a></li>
 					</ul>
 					<div class="tab-content" id="studTabs">
 						
