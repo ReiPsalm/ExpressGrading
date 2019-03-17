@@ -232,6 +232,20 @@ Appex = {
         // $("#data-table").dataTable().fnDestroy();
 
         clientTableData = $('#data-table').DataTable({
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'collection',
+                    text: 'Period <i class="fa fa-caret-down"></i> ',
+                    buttons: [
+                        { text: 'Prelim',   action: function () { document.getElementById("pr").innerHTML = "Prelim"; } },
+                        { text: 'Midterm', action: function () { document.getElementById("pr").innerHTML = "Midterm"; } },
+                        { text: 'Semi',    action: function () { document.getElementById("pr").innerHTML = "Semi"; } },
+                        { text: 'Finals',    action: function () { document.getElementById("pr").innerHTML = "Finals"; } }
+                    ],
+                    fade: true
+                }
+            ],
             responsive: true,
             bAutoWidth: true,
 
@@ -326,9 +340,10 @@ Appex = {
             e.preventDefault();
             var qcr = $('#qcr').val();
             var studID = $('#studq').val();
+            var qperiod = $('#pr').html();
             var qd = $('#qd').val();
             var qp = $('#qp').val();
-            var FormVal = 'action=saveq&qcr='+qcr+'&qd='+qd+'&qp='+qp+'&studid='+studID;
+            var FormVal = 'action=saveq&qcr='+qcr+'&qd='+qd+'&qp='+qp+'&studid='+studID+'&qperiod='+qperiod;
             console.log(FormVal);
             $.ajax({
                 type:'POST',
@@ -357,7 +372,8 @@ Appex = {
             var studID = $('#studo').val();
             var od = $('#od').val();
             var op = $('#op').val();
-            var FormVal = 'action=saveo&ocr='+ocr+'&od='+od+'&op='+op+'&studid='+studID;
+            var operiod = $('#pr').html();
+            var FormVal = 'action=saveo&ocr='+ocr+'&od='+od+'&op='+op+'&studid='+studID+'&operiod='+operiod;
             console.log(FormVal);
             $.ajax({
                 type:'POST',
@@ -385,7 +401,8 @@ Appex = {
             var studID = $('#studx').val();
             var odx = $('#odx').val();
             var opx = $('#opx').val();
-            var FormVal = 'action=savex&ocx='+ocx+'&odx='+odx+'&opx='+opx+'&studid='+studID;
+            var xperiod = $('#pr').html();
+            var FormVal = 'action=savex&ocx='+ocx+'&odx='+odx+'&opx='+opx+'&studid='+studID+'&xperiod='+xperiod;
             console.log(FormVal);
             $.ajax({
                 type:'POST',

@@ -620,6 +620,7 @@ class QuizMod{
     public $qid;
     public $qpoints;
     public $qdate;
+    public $qperiod;
     public $studid;
     public $crid;
 
@@ -629,8 +630,8 @@ class QuizMod{
 
     public function SaveQuiz(){
         try{
-            $sqlSaveQuiz = "INSERT INTO tbl_quizes (quiz_points,quiz_date,stud_id,cr_id) ";
-            $sqlSaveQuiz .= "VALUES('".$this->qpoints."','".$this->qdate."','".$this->studid."','".$this->crid."')";
+            $sqlSaveQuiz = "INSERT INTO tbl_quizes (quiz_points,quiz_date,quiz_period,stud_id,cr_id) ";
+            $sqlSaveQuiz .= "VALUES('".$this->qpoints."','".$this->qdate."','".$this->qperiod."','".$this->studid."','".$this->crid."')";
             if($this->conn->exec($sqlSaveQuiz)){
                 return true;
             }else{
@@ -660,6 +661,7 @@ class OralsMod{
     public $oid;
     public $opoints;
     public $odate;
+    public $operiod;
     public $studid;
     public $crid;
 
@@ -669,8 +671,8 @@ class OralsMod{
 
     public function SaveOrals(){
         try{
-            $sqlSaveOrals = "INSERT INTO tbl_orals (oral_points,oral_date,stud_id,cr_id) ";
-            $sqlSaveOrals .= "VALUES('".$this->opoints."','".$this->odate."','".$this->studid."','".$this->crid."')";
+            $sqlSaveOrals = "INSERT INTO tbl_orals (oral_points,oral_date,oral_period,stud_id,cr_id) ";
+            $sqlSaveOrals .= "VALUES('".$this->opoints."','".$this->odate."','".$this->operiod."','".$this->studid."','".$this->crid."')";
             if($this->conn->exec($sqlSaveOrals)){
                 return true;
             }else{
@@ -700,6 +702,7 @@ class ExamsMod{
     public $xid;
     public $xpoints;
     public $xdate;
+    public $xperiod;
     public $studid;
     public $crid;
 
@@ -709,8 +712,8 @@ class ExamsMod{
 
     public function SaveExams(){
         try{
-            $sqlSaveExams = "INSERT INTO tbl_exams (exam_points,exam_date,stud_id,cr_id) ";
-            $sqlSaveExams .= "VALUES('".$this->xpoints."','".$this->xdate."','".$this->studid."','".$this->crid."')";
+            $sqlSaveExams = "INSERT INTO tbl_exams (exam_points,exam_date,exam_period,stud_id,cr_id) ";
+            $sqlSaveExams .= "VALUES('".$this->xpoints."','".$this->xdate."','".$this->xperiod."','".$this->studid."','".$this->crid."')";
             if($this->conn->exec($sqlSaveExams)){
                 return true;
             }else{

@@ -291,6 +291,7 @@ if($_POST['action'] == "login"){
 }else if($_POST['action'] == "saveq"){
     $quizzes->qpoints = $_POST['qp'];
     $quizzes->qdate = $_POST['qd'];
+    $quizzes->qperiod = $_POST['qperiod'];
     $quizzes->studid = $_POST['studid'];
     $quizzes->crid = $_POST['qcr'];
     try{
@@ -305,6 +306,7 @@ if($_POST['action'] == "login"){
 }else if($_POST['action'] == "saveo"){
     $Orals->opoints = $_POST['op'];
     $Orals->odate = $_POST['od'];
+    $Orals->operiod = $_POST['operiod'];
     $Orals->studid = $_POST['studid'];
     $Orals->crid = $_POST['ocr'];
     try{
@@ -319,6 +321,7 @@ if($_POST['action'] == "login"){
 }else if($_POST['action'] == "savex"){
     $Exams->xpoints = $_POST['opx'];
     $Exams->xdate = $_POST['odx'];
+    $Exams->xperiod = $_POST['xperiod'];
     $Exams->studid = $_POST['studid'];
     $Exams->crid = $_POST['ocx'];
     try{
