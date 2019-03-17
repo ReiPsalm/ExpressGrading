@@ -9,6 +9,7 @@ $getxData = $Exams->GetExamStud();
 ?>
 
 <div class="tab-pane fade active in" id="default-tab-1">
+<<<<<<< HEAD
     <!-- quizzes form -->
     <div class="panel panel-inverse overflow-hidden">
         <div class="panel-heading">
@@ -52,6 +53,8 @@ $getxData = $Exams->GetExamStud();
             </div>
         </div>
     </div>
+=======
+>>>>>>> 7d7aaa2d4528d0f4e803efa63aa29936a9fd47f3
     <!-- attendance table -->
     <table class="table table-bordered">
         <thead>
@@ -191,7 +194,7 @@ $getxData = $Exams->GetExamStud();
         </div>
         <div id="collapseExam" class="panel-collapse collapse">
             <div class="panel-body">
-                <form id="Expformx" enctype="multipart/form-data" method="POST" class="m-b-15">
+                <form id="Expformo" enctype="multipart/form-data" method="POST" class="m-b-15">
                     <label class="control-label">Input Exams<i class="text text-danger">*</i></label>
                     <div class="row row-space-10">
                         <div class="col-md-6 m-b-15">
