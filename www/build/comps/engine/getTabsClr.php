@@ -197,9 +197,9 @@ $getxData = $Exams->GetExamStud();
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Term ID</th>
-                <th>Term</th>
-                <th>Term Grade</th>
+                <th>Periodical ID</th>
+                <th>Periodical Date</th>
+                <th>Periodical Grade</th>
             </tr>
         </thead>
         <tbody>
