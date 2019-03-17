@@ -263,7 +263,10 @@ Appex = {
                 { "mData": "Data_A", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
+                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs">'+
+                                    '<option class="btn btn-success" value="x">Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
+                                    '</select></div>'+
+                                    '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
                     }
                 },
             ]
