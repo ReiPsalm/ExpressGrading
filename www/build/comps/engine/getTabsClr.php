@@ -27,7 +27,7 @@ $getxData = $Exams->GetExamStud();
                         <div class="col-md-4 m-b-15">
                             <input type="hidden" id="atcrid" value="<?php echo $sepData[1]?>" />
                             <input type="hidden" id="atstudid" value="<?php echo $sepData[0]?>" />
-                            <input type="text" class="form-control datepicker-default" id="atDate" placeholder="Date" />
+                            <input type="text" class="form-control datepicker-default" id="atDate" placeholder="Date" value="<?php echo date('m/d/Y');?>"/>
                         </div>
                         <div class="col-md-4 m-b-15">
                             <select id="atPoints" class="form-control">
