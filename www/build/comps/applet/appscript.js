@@ -393,7 +393,7 @@ Appex = {
             });
         });
     },
-    SaveExams: function(studID){
+    SaveExams: function(){
         Appex.DatePicker();
         $('#savex').click(function (e) {
             e.preventDefault();
