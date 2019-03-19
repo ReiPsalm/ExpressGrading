@@ -295,7 +295,9 @@ if($_POST['action'] == "login"){
     $quizzes->studid = $_POST['studid'];
     $quizzes->crid = $_POST['qcr'];
     try{
-        if ($quizzes->SaveQuiz()) {
+        if(empty($quizzes->qperiod)){
+            echo "2";
+        }else if ($quizzes->SaveQuiz()) {
             echo "1";
         }else{
             echo "0";
@@ -310,7 +312,9 @@ if($_POST['action'] == "login"){
     $Orals->studid = $_POST['studid'];
     $Orals->crid = $_POST['ocr'];
     try{
-        if ($Orals->SaveOrals()) {
+        if(empty($Orals->operiod)){
+            echo "2";
+        }else if ($Orals->SaveOrals()) {
             echo "1";
         }else{
             echo "0";
@@ -325,7 +329,9 @@ if($_POST['action'] == "login"){
     $Exams->studid = $_POST['studid'];
     $Exams->crid = $_POST['ocx'];
     try{
-        if ($Exams->SaveExams()) {
+        if(empty($Exams->xperiod)){
+            echo "2";
+        }else if ($Exams->SaveExams()) {
             echo "1";
         }else{
             echo "0";

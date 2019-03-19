@@ -356,6 +356,8 @@ Appex = {
                         $('#Expformq').trigger('reset');
                         // $("#exp_modalq").modal("hide");
                         // Appex.GetDataSets(studID+'-'+qcr,'getTabsClr','studTabs');
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformq').trigger('reset');
@@ -385,6 +387,8 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformo').trigger('reset');
                         $("#exp_modalo").modal("hide");
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformo').trigger('reset');
@@ -414,6 +418,8 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformx').trigger('reset');
                         $("#exp_modalx").modal("hide");
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformx').trigger('reset');
