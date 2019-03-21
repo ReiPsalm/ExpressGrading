@@ -9,52 +9,6 @@ $getxData = $Exams->GetExamStud();
 ?>
 
 <div class="tab-pane fade active in" id="default-tab-1">
-<<<<<<< HEAD
-    <!-- quizzes form -->
-    <div class="panel panel-inverse overflow-hidden">
-        <div class="panel-heading">
-            <h3 class="panel-title">
-                <a onclick="Appex.SaveQuiz()" class="btn btn-inverse accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseAtt">
-                    <i class="fa fa-plus-circle"></i> 
-                    Add new Data
-                </a>
-            </h3>
-        </div>
-        <div id="collapseAtt" class="panel-collapse collapse">
-            <div class="panel-body">
-                <form id="Expformat" class="m-b-15">
-                    <label class="control-label">Input Quiz<i class="text text-danger">*</i></label>
-                    <div class="row row-space-10">
-                        <div class="col-md-4 m-b-15">
-                            <input type="hidden" id="atcrid" value="<?php echo $sepData[1]?>" />
-                            <input type="hidden" id="atstudid" value="<?php echo $sepData[0]?>" />
-                            <input type="text" class="form-control datepicker-default" id="atDate" placeholder="Date" value="<?php echo date('m/d/Y');?>"/>
-                        </div>
-                        <div class="col-md-4 m-b-15">
-                            <select id="atPoints" class="form-control">
-                                <option value="5">Present</option>
-                                <option value="0">Absent</option>
-                                <option value="3">Excused</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4 m-b-15">
-                            <select id="atPeriod" class="form-control">
-                                <option value="Prelim">Prelim</option>
-                                <option value="Midterm">Midterm</option>
-                                <option value="Semi">Semi</option>
-                                <option value="Final">Final</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-                <div class="border-bottom-1">
-                    <button type="submit" id="saveat" class="saveq btn btn-sm btn-primary btn-block"><i class="fa fa-check"></i> Save Quiz</button>
-                </div>
-            </div>
-        </div>
-    </div>
-=======
->>>>>>> 7d7aaa2d4528d0f4e803efa63aa29936a9fd47f3
     <!-- attendance table -->
     <table class="table table-bordered">
         <thead>
