@@ -238,6 +238,7 @@ if($_POST['action'] == "login"){
     $classR->timeDay = $_POST['mcltd'];
     $classR->subjid = $_POST['mclsubj'];
     $classR->schid = $_POST['mclsch'];
+    $classR->mcldean = $_POST['mcldean'];
 
     try{
         if ($classR->AddCLr()) {
@@ -255,6 +256,7 @@ if($_POST['action'] == "login"){
     $classR->timeDay = $_POST['upmcltd'];
     $classR->subjid = $_POST['upmclsubj'];
     $classR->schid = $_POST['upmclsch'];
+    $classR->mcldean = $_POST['upmcldean'];
 
     try{
         if ($classR->EditClr()) {
@@ -336,6 +338,34 @@ if($_POST['action'] == "login"){
         }else{
             echo "0";
         }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "saveprof"){
+
+    try{
+        $Users->fname = $_POST['fname'];
+        $Users->mname = $_POST['mname'];
+        $Users->lname = $_POST['lname'];
+        $Users->ename = $_POST['ename'];
+        $Users->mobile = $_POST['mobile'];
+        $Users->home = $_POST['home'];
+        $Users->city = $_POST['city'];
+        $Users->sex = $_POST['sex'];
+        $Users->bday = $_POST['bday'];
+        $Users->work = $_POST['work'];
+        $Users->id = $_POST['dataid'];
+
+        try{
+            if ($Users->Edituser()) {
+                echo "1";
+            }else{
+                echo "0";
+            }
+        }catch(PDOException $e){
+            echo 'Connection Error :'.$e->getMessage();
+        }
+            
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }

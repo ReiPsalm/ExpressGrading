@@ -66,6 +66,9 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">
 					<div class="panel-heading-btn">
+						<button href="#exp_sort" data-toggle="modal" class="btn btn-xs btn-success" title="Add course">
+							<i class="fa fa-group" ></i> Sort Student
+						</button>
 						<button href="#exp_modal" data-toggle="modal" class="btn btn-xs btn-info" title="Add course">
 							<i class="fa fa-plus" ></i> Add Student
 						</button>
@@ -152,6 +155,40 @@ if(!isset($_SESSION['user_id'])){
                             <div class="pull-right">
                                 <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
                                 <button type="submit" id="savedt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end panel -->
+                </div>
+            </div>
+        </div>
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_sort">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="panel panel-inverse" data-sortable-id="form-validation-1">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <button class="btn btn-xs btn-icon btn-circle btn-danger" id="close" data-dismiss="modal">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                            <h4 class="panel-title">Sort student</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form id="ExpSortform" method="POST" class="border-bottom-1 m-b-15">
+								<label class="control-label">Subject<i class="text text-danger">*</i></label>
+								<div class="row row-space-10">
+									<div class="col-md-12 m-b-15">
+										<select id="sortSubj" class="sortSubj form-control" style="width: 100%">
+										</select>
+									</div>
+								</div>
+                            </form>
+                            <div class="pull-right">
+                                <button type="button" id="close" class="btn btn-sm btn-white" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+                                <button type="submit" id="sortdt" class="btn btn-sm btn-primary"><i class="fa fa-check"></i> Sort</button>
                             </div>
                         </div>
                     </div>
@@ -287,14 +324,17 @@ if(!isset($_SESSION['user_id'])){
 	<script>
 		$(document).ready(function() {
 			App.init();
-			Appex.SeTupTable('getStudentdb','getEditStudent');
+			Appex.SeTupTableStud('getStudentdb','getEditStudent','*');
+			Appex.SortStudent();
 			Appex.SaveStudent();
 			Appex.GetDataSets(null,'getCourseOpt','course');
 			Appex.GetDataSets(null,'getSubjOpt','subj');
+			Appex.GetDataSets(null,'getSubjOpt','sortSubj');
 			Appex.GetDataSets(null,'getSubjOpt','subjcsv');
 			Appex.UpdateStud();
 			Appex.SelectSearch('Select Subject','subjcsv-select2');
 			Appex.SelectSearch('Select Subject','subj-select2');
+			Appex.SelectSearch('Select Subject','sortSubj');
 			Appex.SelectSearch('Select Course','course-select2');
 			Appex.UploadMl();
 		});

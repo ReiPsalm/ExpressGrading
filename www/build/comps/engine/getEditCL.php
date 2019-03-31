@@ -33,4 +33,10 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
             <?php include_once "getSubjOpts.php"; ?>
         </select>
     </div>
+    <div class="col-md-12 m-b-15">
+        <select id="upmcldean" class="upmcldean form-control" style="width: 100%">
+            <option value="">Select Dean</option>
+            <?php include_once "getDeanOpt.php"; ?>
+        </select>
+    </div>
 </div>

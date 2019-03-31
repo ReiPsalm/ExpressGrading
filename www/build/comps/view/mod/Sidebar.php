@@ -5,7 +5,7 @@
         <ul class="nav">
             <li class="nav-profile">
                 <div class="image">
-                    <a href="javascript:;"><img src="../../library/img/<?php echo $_SESSION['ins_fname'].$_SESSION['ins_lname']; ?>.jpg" alt="" /></a>
+                    <a href="javascript:;"><img src="../../library/img/<?php echo $_SESSION['ins_img']; ?>" alt="" /></a>
                 </div>
                 <div class="info">
                 <?php echo $_SESSION['ins_fname']." ".$_SESSION['ins_lname']; ?>
