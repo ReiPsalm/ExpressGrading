@@ -8,6 +8,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
 <div class="row row-space-10">
     <div class="col-md-6 m-b-15">
         <input type="hidden" id="dataid" value="<?php echo $row['ins_id']; ?>" />
+        <input type="hidden" id="acctid" value="<?php echo $row['user_id']; ?>" />
         <input type="text" class="form-control" id="upfname" value="<?php echo $row['ins_fname']; ?>" />
     </div>
     <div class="col-md-6 m-b-15">
@@ -44,5 +45,14 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
     </div>
     <div class="col-md-6 m-b-15">
         <input type="text" class="form-control" id="upoffice" value="<?php echo $row['ins_office']; ?>" />
+    </div>
+</div>
+<label class="control-label">Account info<i class="text text-danger">*</i></label>
+<div class="row row-space-10">
+    <div class="col-md-6 m-b-15">
+        <input type="text" class="form-control" id="upuser" value="<?php echo $row['user_name']; ?>" />
+    </div>
+    <div class="col-md-6 m-b-15">
+        <input type="text" class="form-control" id="uppass" value="<?php echo $row['user_pass']; ?>" />
     </div>
 </div>

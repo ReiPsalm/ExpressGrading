@@ -4,6 +4,7 @@ class UsersClass{
 
     public $uname;
     public $upass;
+    public $uid;
 
     public $fname;
     public $mname;
@@ -60,9 +61,17 @@ class UsersClass{
         }
     }
 
-    public function UserImage(){
+    public function UserAcct(){
         try{
+            $sqlUserAcct = "UPDATE tbl_users SET ";
+            $sqlUserAcct .= "user_name='".$this->uname."', user_pass='".$this->upass."' ";
+            $sqlUserAcct .= "WHERE user_id='".$this->uid."'";
 
+            if($this->conn->exec($sqlUserAcct)){
+                return true;
+            }else{
+                return false;
+            }
         }catch (PDOException $e) {
             echo "Connection Error: " . $e->getMessage();
         }
@@ -467,7 +476,7 @@ class StudentMod{
 
     public function GetStud(){
         try{
-            $sqlGetStud = "SELECT * FROM tbl_student ORDER BY stud_name ASC";
+            $sqlGetStud = "SELECT * FROM tbl_course INNER JOIN tbl_student ON tbl_course.course_id=tbl_student.course_id ORDER BY stud_name ASC";
             $resGetStud = $this->conn->query($sqlGetStud);
 
             return $resGetStud;

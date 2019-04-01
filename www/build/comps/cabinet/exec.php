@@ -358,7 +358,15 @@ if($_POST['action'] == "login"){
 
         try{
             if ($Users->Edituser()) {
-                echo "1";
+                $Users->uid = $_POST['acctid'];
+                $Users->uname = $_POST['user'];
+                $Users->upass = $_POST['pass'];
+
+                if ($Users->UserAcct()) {
+                    echo "1";
+                }else{
+                echo "00";
+                }
             }else{
                 echo "0";
             }

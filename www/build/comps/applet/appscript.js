@@ -477,7 +477,11 @@ Appex = {
                     var work = $('#upoffice').val();
                     var dataid = $('#dataid').val();
 
-                    var b = '&mobile='+mobile+'&home='+home+'&city='+pcity+'&sex='+gender+'&bday='+bday+'&work='+work;
+                    var acctid= $('#acctid').val();
+                    var user= $('#upuser').val();
+                    var pass= $('#uppass').val();
+
+                    var b = '&mobile='+mobile+'&home='+home+'&city='+pcity+'&sex='+gender+'&bday='+bday+'&work='+work+'&acctid='+acctid+'&user='+user+'&pass='+pass;
                     var FormVal = 'action=saveprof&dataid='+dataid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&ename='+ename+b;
                     
                     console.log(FormVal);
