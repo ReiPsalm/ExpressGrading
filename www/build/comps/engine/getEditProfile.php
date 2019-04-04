@@ -55,4 +55,7 @@ $row = $getData->fetchArray(SQLITE3_ASSOC);
     <div class="col-md-6 m-b-15">
         <input type="text" class="form-control" id="uppass" value="<?php echo $row['user_pass']; ?>" />
     </div>
+    <div class="col-md-6 m-b-15">
+        <input type="text" class="form-control" id="uprole" value="<?php echo $row['user_role']; ?>" />
+    </div>
 </div>

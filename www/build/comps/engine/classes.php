@@ -5,6 +5,7 @@ class UsersClass{
     public $uname;
     public $upass;
     public $uid;
+    public $role;
 
     public $fname;
     public $mname;
@@ -64,7 +65,7 @@ class UsersClass{
     public function UserAcct(){
         try{
             $sqlUserAcct = "UPDATE tbl_users SET ";
-            $sqlUserAcct .= "user_name='".$this->uname."', user_pass='".$this->upass."' ";
+            $sqlUserAcct .= "user_name='".$this->uname."',user_pass='".$this->upass."',user_role='".$this->role."' ";
             $sqlUserAcct .= "WHERE user_id='".$this->uid."'";
 
             if($this->conn->exec($sqlUserAcct)){

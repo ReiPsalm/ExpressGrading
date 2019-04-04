@@ -480,8 +480,9 @@ Appex = {
                     var acctid= $('#acctid').val();
                     var user= $('#upuser').val();
                     var pass= $('#uppass').val();
+                    var role= $('#uprole').val();
 
-                    var b = '&mobile='+mobile+'&home='+home+'&city='+pcity+'&sex='+gender+'&bday='+bday+'&work='+work+'&acctid='+acctid+'&user='+user+'&pass='+pass;
+                    var b = '&mobile='+mobile+'&home='+home+'&city='+pcity+'&sex='+gender+'&bday='+bday+'&work='+work+'&acctid='+acctid+'&user='+user+'&pass='+pass+'&role='+role;
                     var FormVal = 'action=saveprof&dataid='+dataid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&ename='+ename+b;
                     
                     console.log(FormVal);

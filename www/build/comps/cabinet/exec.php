@@ -361,6 +361,7 @@ if($_POST['action'] == "login"){
                 $Users->uid = $_POST['acctid'];
                 $Users->uname = $_POST['user'];
                 $Users->upass = $_POST['pass'];
+                $Users->role = $_POST['role'];
 
                 if ($Users->UserAcct()) {
                     echo "1";
