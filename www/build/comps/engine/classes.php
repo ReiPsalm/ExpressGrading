@@ -617,13 +617,6 @@ class ClrecordMod{
 class QuizMod{
     private $conn;
 
-    public $qid;
-    public $qpoints;
-    public $qdate;
-    public $qperiod;
-    public $studid;
-    public $crid;
-
     public function __construct($db_get){
         $this->conn = $db_get;
     }
@@ -631,7 +624,7 @@ class QuizMod{
     public function SaveQuiz(){
         try{
             $sqlSaveQuiz = "INSERT INTO tbl_quizes (quiz_points,quiz_date,quiz_period,stud_id,cr_id) ";
-            $sqlSaveQuiz .= "VALUES('".$this->qpoints."','".$this->qdate."','".$this->qperiod."','".$this->studid."','".$this->crid."')";
+            $sqlSaveQuiz .= "VALUES('".$this->points."','".$this->quiz_date."','".$this->period."','".$this->student_id."','".$this->cr_id."')";
             if($this->conn->exec($sqlSaveQuiz)){
                 return true;
             }else{
@@ -644,11 +637,26 @@ class QuizMod{
 
     public function GetQuizStud(){
         try{
-            $sqlGetQuizStud = "SELECT * FROM tbl_quizes WHERE ";
-            $sqlGetQuizStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
-            $resGetQuizStud = $this->conn->query($sqlGetQuizStud);
+            $sqlGetQuiz = "SELECT COUNT(*) as result FROM tbl_quizes WHERE quiz_date='".$this->quiz_date."' AND quiz_period='".$this->period."' AND cr_id='".$this->cr_id."' AND stud_id='".$this->student_id."'";
+            $sqlGetQuiz_result = $this->conn->query($sqlGetQuiz);
+            $sqlGetQuiz_row    = $sqlGetQuiz_result->fetchArray();
+        
+            return $sqlGetQuiz_row['result'];
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
 
-            return $resGetQuizStud;
+    public function UpdateQuizStud(){
+        try{
+            $sqlUpdateQuiz = "UPDATE tbl_quizes SET  ";
+            $sqlUpdateQuiz .= "quiz_points='".$this->points."'";
+            $sqlUpdateQuiz .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND quiz_date ='".$this->quiz_date."'";
+            if($this->conn->exec($sqlUpdateQuiz)){
+                return true;
+            }else{
+                return false;
+            }
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
@@ -658,13 +666,6 @@ class QuizMod{
 class OralsMod{
     private $conn;
 
-    public $oid;
-    public $opoints;
-    public $odate;
-    public $operiod;
-    public $studid;
-    public $crid;
-
     public function __construct($db_get){
         $this->conn = $db_get;
     }
@@ -672,7 +673,8 @@ class OralsMod{
     public function SaveOrals(){
         try{
             $sqlSaveOrals = "INSERT INTO tbl_orals (oral_points,oral_date,oral_period,stud_id,cr_id) ";
-            $sqlSaveOrals .= "VALUES('".$this->opoints."','".$this->odate."','".$this->operiod."','".$this->studid."','".$this->crid."')";
+            $sqlSaveOrals .= "VALUES('".$this->points."','".$this->oral_date."','".$this->period."','".$this->student_id."','".$this->cr_id."')";
+
             if($this->conn->exec($sqlSaveOrals)){
                 return true;
             }else{
@@ -685,11 +687,26 @@ class OralsMod{
 
     public function GetOralStud(){
         try{
-            $sqlGetOralStud = "SELECT * FROM tbl_orals WHERE ";
-            $sqlGetOralStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
-            $resGetOralStud = $this->conn->query($sqlGetOralStud);
+            $sqlGetOral = "SELECT COUNT(*) as result FROM tbl_orals WHERE oral_date='".$this->oral_date."' AND oral_period='".$this->period."' AND cr_id='".$this->cr_id."' AND stud_id='".$this->student_id."'";
+            $sqlGetOral_result = $this->conn->query($sqlGetOral);
+            $sqlGetOral_row    = $sqlGetOral_result->fetchArray();
+        
+            return $sqlGetOral_row['result'];
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
 
-            return $resGetOralStud;
+    public function UpdateOralStud(){
+        try{
+            $sqlUpdateOral = "UPDATE tbl_orals SET  ";
+            $sqlUpdateOral .= "oral_points='".$this->points."'";
+            $sqlUpdateOral .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND oral_date ='".$this->oral_date."'";
+            if($this->conn->exec($sqlUpdateOral)){
+                return true;
+            }else{
+                return false;
+            }
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
@@ -699,13 +716,6 @@ class OralsMod{
 class ExamsMod{
     private $conn;
 
-    public $xid;
-    public $xpoints;
-    public $xdate;
-    public $xperiod;
-    public $studid;
-    public $crid;
-
     public function __construct($db_get){
         $this->conn = $db_get;
     }
@@ -713,7 +723,7 @@ class ExamsMod{
     public function SaveExams(){
         try{
             $sqlSaveExams = "INSERT INTO tbl_exams (exam_points,exam_date,exam_period,stud_id,cr_id) ";
-            $sqlSaveExams .= "VALUES('".$this->xpoints."','".$this->xdate."','".$this->xperiod."','".$this->studid."','".$this->crid."')";
+            $sqlSaveExams .= "VALUES('".$this->points."','".$this->exam_date."','".$this->period."','".$this->student_id."','".$this->cr_id."')";
             if($this->conn->exec($sqlSaveExams)){
                 return true;
             }else{
@@ -726,15 +736,30 @@ class ExamsMod{
 
     public function GetExamStud(){
         try{
-            $sqlGetExamStud = "SELECT * FROM tbl_exams WHERE ";
-            $sqlGetExamStud .= "stud_id='".$this->studid."' AND cr_id='".$this->crid."' LIMIT 10";
-            $resGetExamStud = $this->conn->query($sqlGetExamStud);
-
-            return $resGetExamStud;
+            $sqlGetExam = "SELECT COUNT(*) as result FROM tbl_exams WHERE exam_date='".$this->exam_date."' AND exam_period='".$this->period."' AND cr_id='".$this->cr_id."' AND stud_id='".$this->student_id."'";
+            $sqlGetExam_result = $this->conn->query($sqlGetExam);
+            $sqlGetExam_row    = $sqlGetExam_result->fetchArray();
+        
+            return $sqlGetExam_row['result'];
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
     }
+
+    public function UpdateExamStud(){
+        try{
+            $sqlUpdateExam = "UPDATE tbl_exams SET  ";
+            $sqlUpdateExam .= "exam_points='".$this->points."'";
+            $sqlUpdateExam .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND exam_date ='".$this->exam_date."'";
+            if($this->conn->exec($sqlUpdateExam)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }   
 }
 
 class TblJoinsMod{
@@ -757,5 +782,60 @@ class TblJoinsMod{
             echo "Connection Error: ". $e->getMessage();
         }
     }
+}
+
+class AttendanceMod{
+    private $conn;
+
+    public $id;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function GetAttendance(){
+        $sqlGetAttendance = "SELECT COUNT(*) as result FROM tbl_attendance WHERE att_date='".$this->att_date."' AND att_period='".$this->period."' AND cr_id='".$this->cr_id."' AND stud_id='".$this->student_id."'";
+        $result = $this->conn->query($sqlGetAttendance);
+        $row    = $result->fetchArray();
+        
+        return $row['result'];
+       
+    }
+
+    public function SaveAttendance(){
+        try{
+            $sqlSaveAttendance  = "INSERT INTO tbl_attendance (att_date,att_points,att_period,stud_id,cr_id) ";
+            $sqlSaveAttendance .= "VALUES('".$this->att_date."','".$this->points."','".$this->period."','".$this->student_id."','".$this->cr_id."')";
+            if($this->conn->exec($sqlSaveAttendance)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function UpdateAttendance(){
+        try{
+            $sqlUpdateAttendance = "UPDATE tbl_attendance SET  ";
+            $sqlUpdateAttendance .= "att_points='".$this->points."'";
+            $sqlUpdateAttendance .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND att_date ='".$this->att_date."'";
+            if($this->conn->exec($sqlUpdateAttendance)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function saveAttendance_qoe($points,$period,$student_id,$cr_id,$date){
+        $sqlSaveAttendance  = "INSERT INTO tbl_attendance (att_date,att_points,att_period,stud_id,cr_id) ";
+        $sqlSaveAttendance .= "VALUES('".$date."','".$points."','".$period."','".$student_id."','".$cr_id."')";
+        $this->conn->exec($sqlSaveAttendance);
+    }
+
 }
 ?>

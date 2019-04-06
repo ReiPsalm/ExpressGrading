@@ -82,7 +82,7 @@ if(!isset($_SESSION['user_id'])){
 							<i class="fa fa-file" ></i> Export Class record
 						</a>
 					</div>
-					<h4 class="panel-title">Class Record <b><i><span class="text-info" id="pr"></span></i></b></h4>
+					<h4 class="panel-title">Class Record for: <b><i><span class="text-info" id="pr"></span></i></b></h4>
 				</div>
 				<div class="panel-body">
 					<table id="data-table" class="table table-striped table-bordered">
@@ -90,7 +90,10 @@ if(!isset($_SESSION['user_id'])){
 						<tr>
 							<th>Student ID</th>
 							<th>Student Name</th>
-							<th>Action</th>
+							<th>Attendance</th>
+							<th>Oral</th>
+							<th>Quiz</th>
+							<th>Exam</th>
 						</tr>
 						</thead>
 						<tbody>
