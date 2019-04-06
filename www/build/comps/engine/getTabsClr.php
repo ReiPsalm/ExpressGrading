@@ -9,6 +9,7 @@ $getxData = $Exams->GetExamStud();
 ?>
 
 <div class="tab-pane fade active in" id="default-tab-1">
+<<<<<<< HEAD
     <!-- quizzes form -->
     <div class="panel panel-inverse overflow-hidden">
         <div class="panel-heading">
@@ -52,6 +53,8 @@ $getxData = $Exams->GetExamStud();
             </div>
         </div>
     </div>
+=======
+>>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
     <!-- attendance table -->
     <table class="table table-bordered">
         <thead>

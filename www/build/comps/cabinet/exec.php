@@ -238,6 +238,7 @@ if($_POST['action'] == "login"){
     $classR->timeDay = $_POST['mcltd'];
     $classR->subjid = $_POST['mclsubj'];
     $classR->schid = $_POST['mclsch'];
+    $classR->mcldean = $_POST['mcldean'];
 
     try{
         if ($classR->AddCLr()) {
@@ -255,6 +256,7 @@ if($_POST['action'] == "login"){
     $classR->timeDay = $_POST['upmcltd'];
     $classR->subjid = $_POST['upmclsubj'];
     $classR->schid = $_POST['upmclsch'];
+    $classR->mcldean = $_POST['upmcldean'];
 
     try{
         if ($classR->EditClr()) {
@@ -288,6 +290,7 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveAtt'){
     $Attendance->points     = $_POST['points'];
     $Attendance->att_date   = date('m/d/Y');
@@ -300,6 +303,19 @@ if($_POST['action'] == "login"){
             if($Attendance->SaveAttendance()){
                 echo "Saved";
             }
+=======
+}else if($_POST['action'] == "saveq"){
+    $quizzes->qpoints = $_POST['qp'];
+    $quizzes->qdate = $_POST['qd'];
+    $quizzes->qperiod = $_POST['qperiod'];
+    $quizzes->studid = $_POST['studid'];
+    $quizzes->crid = $_POST['qcr'];
+    try{
+        if(empty($quizzes->qperiod)){
+            echo "2";
+        }else if ($quizzes->SaveQuiz()) {
+            echo "1";
+>>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }else{
            
             if($Attendance->UpdateAttendance()){
@@ -309,6 +325,7 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveOral'){
     $Orals->points     = $_POST['points'];
     $Orals->oral_date  = date('m/d/Y');
@@ -326,10 +343,26 @@ if($_POST['action'] == "login"){
             if($Orals->UpdateOralStud()){
                 echo "Updated";
             }
+=======
+}else if($_POST['action'] == "saveo"){
+    $Orals->opoints = $_POST['op'];
+    $Orals->odate = $_POST['od'];
+    $Orals->operiod = $_POST['operiod'];
+    $Orals->studid = $_POST['studid'];
+    $Orals->crid = $_POST['ocr'];
+    try{
+        if(empty($Orals->operiod)){
+            echo "2";
+        }else if ($Orals->SaveOrals()) {
+            echo "1";
+        }else{
+            echo "0";
+>>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveExam'){
     $Exams->points     = $_POST['points'];
     $Exams->exam_date  = date('m/d/Y');
@@ -368,7 +401,59 @@ if($_POST['action'] == "login"){
             if($Quiz->UpdateQuizStud()){
                 echo "Updated";
             }
+=======
+}else if($_POST['action'] == "savex"){
+    $Exams->xpoints = $_POST['opx'];
+    $Exams->xdate = $_POST['odx'];
+    $Exams->xperiod = $_POST['xperiod'];
+    $Exams->studid = $_POST['studid'];
+    $Exams->crid = $_POST['ocx'];
+    try{
+        if(empty($Exams->xperiod)){
+            echo "2";
+        }else if ($Exams->SaveExams()) {
+            echo "1";
+        }else{
+            echo "0";
+>>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "saveprof"){
+
+    try{
+        $Users->fname = $_POST['fname'];
+        $Users->mname = $_POST['mname'];
+        $Users->lname = $_POST['lname'];
+        $Users->ename = $_POST['ename'];
+        $Users->mobile = $_POST['mobile'];
+        $Users->home = $_POST['home'];
+        $Users->city = $_POST['city'];
+        $Users->sex = $_POST['sex'];
+        $Users->bday = $_POST['bday'];
+        $Users->work = $_POST['work'];
+        $Users->id = $_POST['dataid'];
+
+        try{
+            if ($Users->Edituser()) {
+                $Users->uid = $_POST['acctid'];
+                $Users->uname = $_POST['user'];
+                $Users->upass = $_POST['pass'];
+                $Users->role = $_POST['role'];
+
+                if ($Users->UserAcct()) {
+                    echo "1";
+                }else{
+                echo "00";
+                }
+            }else{
+                echo "0";
+            }
+        }catch(PDOException $e){
+            echo 'Connection Error :'.$e->getMessage();
+        }
+            
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }

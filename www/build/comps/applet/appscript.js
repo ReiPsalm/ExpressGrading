@@ -1,6 +1,58 @@
 var Appex = null;
 
 Appex = {
+    upload: function(dataid){
+        $('input[type=file]').trigger('click');
+
+        $('input[type=file]').change(function() {
+            
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var fd = new FormData();
+                    var files = $('#file')[0].files[0];
+                    fd.append('file',files);
+
+                    $.ajax({
+                        type: 'POST',
+                        data: fd,
+                        url: '../cabinet/media.php',
+                        contentType: false,
+                        processData: false,
+                        success: function(data){
+                            console.log(data);
+                            
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#imgForm').trigger('reset');
+                                Appex.GetDataSets(dataid,'getProfile','profile');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#imgForm').trigger('reset');
+                            }
+                        },
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+            
+        });
+        
+    },
     /**
     * Write message for notification
     *
@@ -305,6 +357,70 @@ Appex = {
             ]
         });
     },
+    SortStudent: function(){
+        $('#sortdt').click(function (e) {
+            e.preventDefault();
+            var sortSubj = $('#sortSubj').val();
+
+            Appex.Notifier('success','Data Sorted','../..','top right','Data Successfuly sorted!');
+            $('#ExpSortform').trigger('reset');
+            $("#exp_sort").modal("hide");
+            Appex.SeTupTableStud('getStudentdb','getEditStudent',sortSubj);
+        });
+    },
+    /**
+    * Write generic DataTable
+    * NOTE: still in further modification
+    * @memberOf Appex
+    * @param {String} jsonSource json srouce for the table data
+    * @param {String} SrcData file source for the modal form and any html elements
+    * @param {String} dataID file source for the modal form and any html elements
+    */
+    SeTupTableStud: function(jsonSource,SrcData,dataID){
+        console.log(jsonSource+'-'+SrcData);
+        $('#data-table').dataTable().fnClearTable();
+        $("#data-table").dataTable().fnDestroy();
+
+        clientTableData = $('#data-table').DataTable({
+            responsive: true,
+            bAutoWidth:false,
+            dom:"Bfrtip",
+            buttons:[{extend:"csv",className:"btn-sm"}],
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/"+jsonSource+".php?subjid="+dataID,
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": false,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "DataDesc", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<button value="'+oData.DataID+'" href="#exp_modalb" data-toggle="modal" onclick="Appex.GetDataModal(this.value,\''+SrcData+'\')" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</button> ');
+                    }
+                },
+            ]
+        });
+    },
     UpdateSubj: function(){
         $('#editdt').click(function (e) {
             e.preventDefault();
@@ -352,6 +468,69 @@ Appex = {
             /*end swal*/
         });
     },
+    UpdateInfo: function(){
+        $('#editdt').click(function (e) {
+            e.preventDefault();
+            swal({
+                title: "Are you sure?",
+                text: "Your data will be changed!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, update it!",
+                cancelButtonText: "No, cancel pls!",
+                closeOnConfirm: true,
+                closeOnCancel: false
+            },
+            function(isConfirm){
+                if (isConfirm) {
+                    var fname = $('#upfname').val();
+                    var mname = $('#upmname').val();
+                    var lname = $('#uplname').val();
+                    var ename = $('#upename').val();
+                    var mobile = $('#upmobile').val();
+                    var home = $('#uphome').val();
+                    var pcity = $('#upcity').val();
+                    var gender = $('#upgender').val();
+                    var bday = $('#upbday').val();
+                    var work = $('#upoffice').val();
+                    var dataid = $('#dataid').val();
+
+                    var acctid= $('#acctid').val();
+                    var user= $('#upuser').val();
+                    var pass= $('#uppass').val();
+                    var role= $('#uprole').val();
+
+                    var b = '&mobile='+mobile+'&home='+home+'&city='+pcity+'&sex='+gender+'&bday='+bday+'&work='+work+'&acctid='+acctid+'&user='+user+'&pass='+pass+'&role='+role;
+                    var FormVal = 'action=saveprof&dataid='+dataid+'&fname='+fname+'&mname='+mname+'&lname='+lname+'&ename='+ename+b;
+                    
+                    console.log(FormVal);
+                    $.ajax({
+                        type:'POST',
+                        data:FormVal,
+                        cache:false,
+                        url:'../cabinet/exec.php',
+                        success: function(data){
+                            if(data == "1"){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                                $('#ExpEditform').trigger('reset');
+                                $("#exp_infoForm").modal("hide");
+                                Appex.GetDataSets(dataid,'getProfile','profile');
+                            }else{
+                                Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
+                                $('#ExpEditform').trigger('reset');
+                            }
+                        }
+                    });
+                }else{
+                    $("#exp_modalb").modal("hide");
+                    $('#ExpEditform').trigger('reset');
+                    swal("Cancelled", "You cancelled your action.", "error");
+                }
+            });
+            /*end swal*/
+        });
+    },
     SaveQuiz: function(){
         console.log('Save quiz func');
         Appex.DatePicker();
@@ -375,6 +554,8 @@ Appex = {
                         $('#Expformq').trigger('reset');
                         // $("#exp_modalq").modal("hide");
                         // Appex.GetDataSets(studID+'-'+qcr,'getTabsClr','studTabs');
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformq').trigger('reset');
@@ -404,6 +585,8 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformo').trigger('reset');
                         $("#exp_modalo").modal("hide");
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformo').trigger('reset');
@@ -412,7 +595,7 @@ Appex = {
             });
         });
     },
-    SaveExams: function(studID){
+    SaveExams: function(){
         Appex.DatePicker();
         $('#savex').click(function (e) {
             e.preventDefault();
@@ -433,6 +616,8 @@ Appex = {
                         Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly added!');
                         $('#Expformx').trigger('reset');
                         $("#exp_modalx").modal("hide");
+                    }else if(data == "2"){
+                        Appex.Notifier('warning','Data Not Saved','../..','top right','Please select period first!');
                     }else{
                         Appex.Notifier('error','Data Not Saved','../..','top right','Data was not saved, please try again!');
                         $('#Expformx').trigger('reset');
@@ -964,7 +1149,8 @@ Appex = {
             var mclsch = $('#mclsch').val();
             var mclt = $('#mclt').val();
             var mclsubj = $('#mclsubj').val();
-            var FormVal = 'action=SaveCLr&mclsy='+mclsy+'&mcltd='+mcltd+'&mclsch='+mclsch+'&mclt='+mclt+'&mclsubj='+mclsubj;
+            var mcldean = $('#mcldean').val();
+            var FormVal = 'action=SaveCLr&mclsy='+mclsy+'&mcltd='+mcltd+'&mclsch='+mclsch+'&mclt='+mclt+'&mclsubj='+mclsubj+'&mcldean='+mcldean;
             console.log(FormVal);
             $.ajax({
                 type:'POST',
@@ -1007,7 +1193,8 @@ Appex = {
                     var upmclsch = $('#upmclsch').val();
                     var upmclt = $('#upmclt').val();
                     var upmclsubj = $('#upmclsubj').val();
-                    var FormVal = 'action=UpCLr&upmclid='+upmclid+'&upmclsy='+upmclsy+'&upmcltd='+upmcltd+'&upmclsch='+upmclsch+'&upmclt='+upmclt+'&upmclsubj='+upmclsubj;
+                    var upmcldean = $('#upmcldean').val();
+                    var FormVal = 'action=UpCLr&upmclid='+upmclid+'&upmclsy='+upmclsy+'&upmcltd='+upmcltd+'&upmclsch='+upmclsch+'&upmclt='+upmclt+'&upmclsubj='+upmclsubj+'&upmcldean='+upmcldean;
                     console.log(FormVal);
                     $.ajax({
                         type:'POST',

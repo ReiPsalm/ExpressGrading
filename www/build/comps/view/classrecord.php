@@ -141,6 +141,10 @@ if(!isset($_SESSION['user_id'])){
 											<option value="">Select Subject</option>
 										</select>
 									</div>
+									<div class="col-md-12 m-b-15">
+										<select id="mcldean" class="mcldean form-control" style="width: 100%">
+										</select>
+									</div>
 								</div>
 							</form>
                             <div class="pull-right">
@@ -238,8 +242,10 @@ if(!isset($_SESSION['user_id'])){
 			App.init();
 			Appex.GetDataSets(null,'getSchOpt','mclsch');
 			Appex.GetDataSets(null,'getSubjOpts','mclsubj');
+			Appex.GetDataSets(null,'getDeanOpt','mcldean');
 			Appex.SelectSearch('Select Subject','mclsubj');
 			Appex.SelectSearch('Select Term','mclt');
+			Appex.SelectSearch('Select Dean','mcldean');
 			Appex.MaskedInput('mcltd','99:99-99:99 / aaa');
 			Appex.MaskedInput('mclsy','9999-9999');
 			Appex.SaveCLr();

@@ -4,6 +4,21 @@ class UsersClass{
 
     public $uname;
     public $upass;
+    public $uid;
+    public $role;
+
+    public $fname;
+    public $mname;
+    public $lname;
+    public $ename;
+    public $mobile;
+    public $home;
+    public $img;
+    public $city;
+    public $sex;
+    public $bday;
+    public $work;
+    public $id;
 
     public function __construct($db_get){
         $this->conn = $db_get;
@@ -20,16 +35,93 @@ class UsersClass{
                 $_SESSION['user_name'] = $row['user_name'];
                 $_SESSION['user_pass'] = $row['user_pass'];
                 $_SESSION['user_role'] = $row['user_role'];
+
+                $_SESSION['ins_id'] = $row['ins_id'];
                 $_SESSION['ins_fname'] = $row['ins_fname'];
                 $_SESSION['ins_mname'] = $row['ins_mname'];
                 $_SESSION['ins_lname'] = $row['ins_lname'];
                 $_SESSION['ins_extname'] = $row['ins_extname'];
+                $_SESSION['ins_img'] = $row['ins_img'];
                 return true;
             }else{
                 return false;
             }
         }catch (PDOException $e) {
             echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function Getuser(){
+        try{
+            $sqlGetuser = "SELECT * FROM tbl_users LEFT JOIN tbl_instructor ON tbl_users.ins_id=tbl_instructor.ins_id WHERE tbl_users.ins_id='".$this->id."'";
+            $resGetuser = $this->conn->query($sqlGetuser);
+
+            return $resGetuser;
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function UserAcct(){
+        try{
+            $sqlUserAcct = "UPDATE tbl_users SET ";
+            $sqlUserAcct .= "user_name='".$this->uname."',user_pass='".$this->upass."',user_role='".$this->role."' ";
+            $sqlUserAcct .= "WHERE user_id='".$this->uid."'";
+
+            if($this->conn->exec($sqlUserAcct)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e) {
+            echo "Connection Error: " . $e->getMessage();
+        }
+    }
+
+    public function Edituser(){
+        try{
+            $sqlEdituser = "UPDATE tbl_instructor SET ";
+            $sqlEdituser .= "ins_fname='".$this->fname."',ins_mname='".$this->mname."',ins_lname='".$this->lname."',";
+            $sqlEdituser .= "ins_extname='".$this->ename."',ins_mobile='".$this->mobile."',ins_address='".$this->home."',";
+            $sqlEdituser .= "ins_city='".$this->city."',ins_gender='".$this->sex."',ins_bday='".$this->bday."',";
+            $sqlEdituser .= "ins_office='".$this->work."' ";
+            $sqlEdituser .= "WHERE ins_id='".$this->id."'";
+
+            if($this->conn->exec($sqlEdituser)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function Uploadimg(){
+        try{
+            $sqlUploadimg = "UPDATE tbl_instructor SET ";
+            $sqlUploadimg .= "ins_img='".$this->img."' WHERE ins_id='".$this->id."'";
+
+            if($this->conn->exec($sqlUploadimg)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function EditAcct(){
+        try{
+            $sqlEditAcct = "UPDATE tbl_users SET ".$this->col."='".$this->valset."' WHERE user_id='".$this->id."'";
+            if($this->conn->exec($sqlEditAcct)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
         }
     }
 }
@@ -385,7 +477,7 @@ class StudentMod{
 
     public function GetStud(){
         try{
-            $sqlGetStud = "SELECT * FROM tbl_student ORDER BY stud_name ASC";
+            $sqlGetStud = "SELECT * FROM tbl_course INNER JOIN tbl_student ON tbl_course.course_id=tbl_student.course_id ORDER BY stud_name ASC";
             $resGetStud = $this->conn->query($sqlGetStud);
 
             return $resGetStud;
@@ -523,6 +615,7 @@ class ClrecordMod{
     public $timeDay;
     public $subjid;
     public $schid;
+    public $mcldean;
 
     public function __construct($db_get){
         $this->conn = $db_get;
@@ -531,8 +624,8 @@ class ClrecordMod{
     public function AddCLr(){
         try{
             $sqlAddCLr = "INSERT INTO tbl_classlist ";
-            $sqlAddCLr .= "(cr_term,cr_sy,cr_timeDay,subj_id,sch_id) VALUES ";
-            $sqlAddCLr .= "('".$this->term."','".$this->sy."','".$this->timeDay."','".$this->subjid."','".$this->schid."')";
+            $sqlAddCLr .= "(cr_term,cr_sy,cr_timeDay,subj_id,sch_id,dean_id) VALUES ";
+            $sqlAddCLr .= "('".$this->term."','".$this->sy."','".$this->timeDay."','".$this->subjid."','".$this->schid."','".$this->mcldean."')";
             if($this->conn->exec($sqlAddCLr)){
                 return true;
             }else{
@@ -600,7 +693,7 @@ class ClrecordMod{
         try{
             $sqlEditClr = "UPDATE tbl_classlist SET ";
             $sqlEditClr .= "cr_term='".$this->term."',cr_sy='".$this->sy."',cr_timeDay='".$this->timeDay."',";
-            $sqlEditClr .= "subj_id='".$this->subjid."',sch_id='".$this->schid."' ";
+            $sqlEditClr .= "subj_id='".$this->subjid."',sch_id='".$this->schid."',dean_id='".$this->mcldean."' ";
             $sqlEditClr .= "WHERE cr_id='".$this->clrid."'";
 
             if($this->conn->exec($sqlEditClr)){
