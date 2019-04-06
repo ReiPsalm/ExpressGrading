@@ -290,7 +290,6 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
-<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveAtt'){
     $Attendance->points     = $_POST['points'];
     $Attendance->att_date   = date('m/d/Y');
@@ -303,19 +302,6 @@ if($_POST['action'] == "login"){
             if($Attendance->SaveAttendance()){
                 echo "Saved";
             }
-=======
-}else if($_POST['action'] == "saveq"){
-    $quizzes->qpoints = $_POST['qp'];
-    $quizzes->qdate = $_POST['qd'];
-    $quizzes->qperiod = $_POST['qperiod'];
-    $quizzes->studid = $_POST['studid'];
-    $quizzes->crid = $_POST['qcr'];
-    try{
-        if(empty($quizzes->qperiod)){
-            echo "2";
-        }else if ($quizzes->SaveQuiz()) {
-            echo "1";
->>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }else{
            
             if($Attendance->UpdateAttendance()){
@@ -325,7 +311,6 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
-<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveOral'){
     $Orals->points     = $_POST['points'];
     $Orals->oral_date  = date('m/d/Y');
@@ -343,26 +328,10 @@ if($_POST['action'] == "login"){
             if($Orals->UpdateOralStud()){
                 echo "Updated";
             }
-=======
-}else if($_POST['action'] == "saveo"){
-    $Orals->opoints = $_POST['op'];
-    $Orals->odate = $_POST['od'];
-    $Orals->operiod = $_POST['operiod'];
-    $Orals->studid = $_POST['studid'];
-    $Orals->crid = $_POST['ocr'];
-    try{
-        if(empty($Orals->operiod)){
-            echo "2";
-        }else if ($Orals->SaveOrals()) {
-            echo "1";
-        }else{
-            echo "0";
->>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
-<<<<<<< HEAD
 }else if($_POST['action'] == 'SaveExam'){
     $Exams->points     = $_POST['points'];
     $Exams->exam_date  = date('m/d/Y');
@@ -401,21 +370,6 @@ if($_POST['action'] == "login"){
             if($Quiz->UpdateQuizStud()){
                 echo "Updated";
             }
-=======
-}else if($_POST['action'] == "savex"){
-    $Exams->xpoints = $_POST['opx'];
-    $Exams->xdate = $_POST['odx'];
-    $Exams->xperiod = $_POST['xperiod'];
-    $Exams->studid = $_POST['studid'];
-    $Exams->crid = $_POST['ocx'];
-    try{
-        if(empty($Exams->xperiod)){
-            echo "2";
-        }else if ($Exams->SaveExams()) {
-            echo "1";
-        }else{
-            echo "0";
->>>>>>> c26f2747f83d350fef6941a5d34e32975a99a258
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
