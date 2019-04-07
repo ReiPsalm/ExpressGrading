@@ -302,8 +302,7 @@ if($_POST['action'] == "login"){
             if($Attendance->SaveAttendance()){
                 echo "Saved";
             }
-        }else{
-           
+        }else{         
             if($Attendance->UpdateAttendance()){
                 echo "Updated";
             }
@@ -321,10 +320,12 @@ if($_POST['action'] == "login"){
     try{ 
         if ($Orals->GetOralStud() == 0) {
             if($Orals->SaveOrals()){
-                $Attendance->saveAttendance_qoe('5',$Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date);
+                if($Attendance->checkAttendance_qoe($Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date) == 0){
+                    $Attendance->saveAttendance_qoe('5',$Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date);
+                }               
                 echo "Saved";
             }
-        }else{          
+        }else if($Orals->GetOralStud() >= 1){          
             if($Orals->UpdateOralStud()){
                 echo "Updated";
             }
@@ -342,7 +343,9 @@ if($_POST['action'] == "login"){
     try{ 
         if ($Exams->GetExamStud() == 0) {
             if($Exams->SaveExams()){
-                $Attendance->saveAttendance_qoe('5',$Exams->period,$Exams->student_id,$Exams->cr_id,$Exams->exam_date);
+                if($Attendance->checkAttendance_qoe($Exams->period,$Exams->student_id,$Exams->cr_id,$Exams->exam_date) == 0){
+                    $Attendance->saveAttendance_qoe('5',$Exams->period,$Exams->student_id,$Exams->cr_id,$Exams->exam_date);
+                }  
                 echo "Saved";
             }
         }else{          
@@ -363,7 +366,9 @@ if($_POST['action'] == "login"){
     try{ 
         if ($Quiz->GetQuizStud() == 0) {
             if($Quiz->SaveQuiz()){
-                $Attendance->saveAttendance_qoe('5',$Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date);
+                if($Attendance->checkAttendance_qoe($Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date) == 0){
+                    $Attendance->saveAttendance_qoe('5',$Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date);
+                }
                 echo "Saved";
             }
         }else{          
