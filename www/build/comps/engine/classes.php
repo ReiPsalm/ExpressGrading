@@ -794,7 +794,7 @@ class OralsMod{
         try{
             $sqlUpdateOral = "UPDATE tbl_orals SET  ";
             $sqlUpdateOral .= "oral_points='".$this->points."'";
-            $sqlUpdateOral .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND oral_date ='".$this->oral_date."'";
+            $sqlUpdateOral .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND oral_date ='".$this->oral_date."' AND oral_period='".$this->period."'";
             if($this->conn->exec($sqlUpdateOral)){
                 return true;
             }else{
@@ -928,6 +928,14 @@ class AttendanceMod{
         $sqlSaveAttendance  = "INSERT INTO tbl_attendance (att_date,att_points,att_period,stud_id,cr_id) ";
         $sqlSaveAttendance .= "VALUES('".$date."','".$points."','".$period."','".$student_id."','".$cr_id."')";
         $this->conn->exec($sqlSaveAttendance);
+    }
+
+    public function checkAttendance_qoe($period,$student_id,$cr_id,$date){
+        $sqlGetAttendance = "SELECT COUNT(*) as result FROM tbl_attendance WHERE att_date='".$date."' AND att_period='".$period."' AND cr_id='".$cr_id."' AND stud_id='".$student_id."'";
+        $result = $this->conn->query($sqlGetAttendance);
+        $row    = $result->fetchArray();
+        
+        return $row['result'];
     }
 
 }

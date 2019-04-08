@@ -282,18 +282,18 @@ Appex = {
    SeTupCLDt: function(jsonSource,SrcData,dataID){
         // $('#data-table').dataTable().fnClearTable();
         // $("#data-table").dataTable().fnDestroy();
-
         clientTableData = $('#data-table').DataTable({
             dom: 'Bfrtip',
             buttons: [
                 {
                     extend: 'collection',
                     text: 'Choose Period <i class="fa fa-caret-down"></i> ',
+                    className:'cr_period',
                     buttons: [
-                        { text: 'Prelim',   action: function () { $('#pr').html("Prelim");  $('.period_value').attr('data-att',"Prelim"); } },
-                        { text: 'Midterm', action: function () { $('#pr').text("Midterm");  $('.period_value').attr('data-att',"Midterm");} },
-                        { text: 'Semi',    action: function () { $('#pr').text("Semi");     $('.period_value').attr('data-att',"Semi");} },
-                        { text: 'Finals',    action: function () { $('#pr').text("Finals"); $('.period_value').attr('data-att',"Finals");} }
+                        { text: 'Prelim'},
+                        { text: 'Midterm'},
+                        { text: 'Semi'},
+                        { text: 'Finals'}
                     ],
                     fade: true
                 }
@@ -341,21 +341,26 @@ Appex = {
                 },
                 {sDefaultContent: "",
                     "fnCreatedCell": function (nTd, sData, oData) {
+<<<<<<< HEAD
                         $(nTd).html('<input type="text" data-att="oral" class="form-control oral_value period_value" onfocus="Appex.GetOralVal(this.value,'+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
+=======
+                        $(nTd).html('<input type="text" class="form-control oral_value period_value" onfocus="Appex.GetPointsVal('+"'oral_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
+>>>>>>> a0feea89e10a685dcc8ba0cd37e80bae806e9a84
                     }
                 },
                 {sDefaultContent: "",
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<input type="text" class="form-control quiz_value period_value" onfocus="Appex.GetQuizVal(this.value,'+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
+                        $(nTd).html('<input type="text" class="form-control quiz_value period_value" onfocus="Appex.GetPointsVal('+"'quiz_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
                     }
                 },
                 {sDefaultContent: "",
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<input type="text" class="form-control exam_value period_value" onfocus="Appex.GetExamVal(this.value,'+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
+                        $(nTd).html('<input type="text" class="form-control exam_value period_value" onfocus="Appex.GetPointsVal('+"'exam_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
                     }
                 },
             ]
         });
+
     },
     SortStudent: function(){
         $('#sortdt').click(function (e) {
@@ -1228,7 +1233,7 @@ Appex = {
     GetAttendanceVal: function(points,student_id,cr_id){
     var period = $('.period_value').attr('data-att');
     if(period == 'undefined' || period == '' || period == 'x'){
-        swal("Select Period First");
+        Appex.Notifier('warning','Warning','build','top right','Please select period first!');
         $('.period_value').find('option:eq(0)').prop('selected', true);
     }else{
         var FormVal = 'action=SaveAtt&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
@@ -1244,20 +1249,33 @@ Appex = {
         })
     }       
     },
-    GetOralVal: function(points,student_id,cr_id){    
-        var period = $('.period_value').attr('data-att');
+    GetPointsVal: function(points_type,student_id,cr_id){           
+        var period      = $('.period_value').attr('data-att');
         if(period == 'undefined' || period == '' || period == 'x'){
-            swal("Select Period First");
+            Appex.Notifier('warning','Warning','build','top right','Please select period first!');
         }else{
-            $('.oral_value').on('click',function(e){
+            $("."+points_type+"").on('click',function(e){
                 $(this).attr('readonly',false);
+                
             })
     
-            $('.oral_value').on('blur',function(e){
+            $("."+points_type+"").one('blur',function(e){
+                var save;
+                var points;
+                var class_type = $(this).attr('class').split(' ')[1];
                 var points = $(this).val();
-                var FormVal = 'action=SaveOral&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
+                
+                if(class_type == 'oral_value'){
+                    save    = 'SaveOral';
+                }else if(class_type == 'exam_value'){
+                    save    = 'SaveExam';
+                }else if(class_type == 'quiz_value'){
+                    save    = 'SaveQuiz';
+                }
+                
                 $(this).attr('readonly',true);
-    
+                var FormVal = 'action='+save+'&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
+                 
                 if(points != ''){           
                     $.ajax({
                         type:'POST',
@@ -1265,68 +1283,15 @@ Appex = {
                         url: '../cabinet/exec.php',
                         data: FormVal,
                         success: function(e){
-                            console.log(e);
-                            
+                            if(e == 'Saved'){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly submitted!');
+                            }else if(e == 'Updated'){
+                                Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+                            }                  
                         }     
                     })
                 }
             })
-        }       
-    },
-    GetQuizVal: function(points,student_id,cr_id){    
-        var period = $('.quiz_value').attr('data-att');
-        if(period == 'undefined' || period == '' || period == 'x'){
-            swal("Select Period First");
-        }else{
-            $('.quiz_value').on('click',function(e){
-                $(this).attr('readonly',false);
-            })
-    
-            $('.quiz_value').on('blur',function(e){
-                var points = $(this).val();
-                var FormVal = 'action=SaveQuiz&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
-                $(this).attr('readonly',true);
-    
-                if(points != ''){           
-                    $.ajax({
-                        type:'POST',
-                        cache: false,
-                        url: '../cabinet/exec.php',
-                        data: FormVal,
-                        success: function(e){
-                            console.log(e);                           
-                        }     
-                    })
-                }
-            })
-        }       
-    },
-    GetExamVal: function(points,student_id,cr_id){    
-        var period = $('.exam_value').attr('data-att');
-        if(period == 'undefined' || period == '' || period == 'x'){
-            swal("Select Period First");
-        }else{
-            $('.exam_value').on('click',function(e){
-                $(this).attr('readonly',false);
-            })
-    
-            $('.exam_value').on('blur',function(e){
-                var points = $(this).val();
-                var FormVal = 'action=SaveExam&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
-                $(this).attr('readonly',true);
-    
-                if(points != ''){           
-                    $.ajax({
-                        type:'POST',
-                        cache: false,
-                        url: '../cabinet/exec.php',
-                        data: FormVal,
-                        success: function(e){
-                            console.log(e);                           
-                        }     
-                    })
-                }
-            })
-        }       
+        }     
     }
 }
