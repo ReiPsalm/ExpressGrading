@@ -82,19 +82,7 @@ if(!isset($_SESSION['user_id'])){
 							<i class="fa fa-file" ></i> Export Class record
 						</a>
 					</div>
-<<<<<<< HEAD
 					<h4 class="panel-title">Class Record for: <b><i><span class="text-info" id="pr"></span></i></b></h4>
-=======
-					<h4 class="panel-title">Class Record for:</h4>
-					<input id="pr" type="hidden" value="undefined">
-                    <select name="cr_period" class="form-control btn-primary">
-					    <option selected disabled>Choose Period</option>
-						<option>Prelim</option>
-						<option>Midterm</option>
-						<option>Semi</option>
-						<option>Finals</option>
-                    </select>
->>>>>>> a0feea89e10a685dcc8ba0cd37e80bae806e9a84
 				</div>
 				<div class="panel-body">
 					<table id="data-table" class="table table-striped table-bordered">
