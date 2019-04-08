@@ -341,11 +341,7 @@ Appex = {
                 },
                 {sDefaultContent: "",
                     "fnCreatedCell": function (nTd, sData, oData) {
-<<<<<<< HEAD
                         $(nTd).html('<input type="text" data-att="oral" class="form-control oral_value period_value" onfocus="Appex.GetOralVal(this.value,'+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
-=======
-                        $(nTd).html('<input type="text" class="form-control oral_value period_value" onfocus="Appex.GetPointsVal('+"'oral_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
->>>>>>> a0feea89e10a685dcc8ba0cd37e80bae806e9a84
                     }
                 },
                 {sDefaultContent: "",
