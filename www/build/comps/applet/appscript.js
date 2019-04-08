@@ -280,24 +280,9 @@ Appex = {
     * @param {String} dataID id parameter for clr reference
     */
    SeTupCLDt: function(jsonSource,SrcData,dataID){
-        // $('#data-table').dataTable().fnClearTable();
-        // $("#data-table").dataTable().fnDestroy();
+        $('#data-table').dataTable().fnClearTable();
+        $("#data-table").dataTable().fnDestroy();
         clientTableData = $('#data-table').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                {
-                    extend: 'collection',
-                    text: 'Choose Period <i class="fa fa-caret-down"></i> ',
-                    className:'cr_period',
-                    buttons: [
-                        { text: 'Prelim'},
-                        { text: 'Midterm'},
-                        { text: 'Semi'},
-                        { text: 'Finals'}
-                    ],
-                    fade: true
-                }
-            ],
             responsive: true,
             bAutoWidth: true,
 
@@ -341,7 +326,7 @@ Appex = {
                 },
                 {sDefaultContent: "",
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        $(nTd).html('<input type="text" data-att="oral" class="form-control oral_value period_value" onfocus="Appex.GetOralVal(this.value,'+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
+                        $(nTd).html('<input type="text" class="form-control oral_value period_value" onfocus="Appex.GetPointsVal('+"'oral_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
                     }
                 },
                 {sDefaultContent: "",
@@ -1227,33 +1212,32 @@ Appex = {
         window.location.href = "clr.php?dataid="+clrID;
     },
     GetAttendanceVal: function(points,student_id,cr_id){
-    var period = $('.period_value').attr('data-att');
-    if(period == 'undefined' || period == '' || period == 'x'){
-        Appex.Notifier('warning','Warning','build','top right','Please select period first!');
-        $('.period_value').find('option:eq(0)').prop('selected', true);
-    }else{
-        var FormVal = 'action=SaveAtt&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
-        $.ajax({
-            type:'POST',
-            cache: false,
-            url: '../cabinet/exec.php',
-            data: FormVal,
-            success: function(e){
-                console.log(e);
-            }
-
-        })
-    }       
+        var period = $('#cr_period').val();
+        if(period == 'undefined' || period == '' || period == 'x' ||period == null){
+            Appex.Notifier('warning','Warning','build','top right','Please select period first!');
+            $('.period_value').find('option:eq(0)').prop('selected', true);
+        }else{
+            var FormVal = 'action=SaveAtt&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
+            $.ajax({
+                type:'POST',
+                cache: false,
+                url: '../cabinet/exec.php',
+                data: FormVal,
+                success: function(e){
+                    console.log(e);
+                }
+            });
+        }       
     },
     GetPointsVal: function(points_type,student_id,cr_id){           
-        var period      = $('.period_value').attr('data-att');
-        if(period == 'undefined' || period == '' || period == 'x'){
-            Appex.Notifier('warning','Warning','build','top right','Please select period first!');
+        var period = $('#cr_period').val();
+        if(period == 'undefined' || period == '' || period == 'x' ||period == null){
+            Appex.Notifier('warning','Warning','../..','top right','Please select period first!');
         }else{
+            console.log(period+points_type);
             $("."+points_type+"").on('click',function(e){
                 $(this).attr('readonly',false);
-                
-            })
+            });
     
             $("."+points_type+"").one('blur',function(e){
                 var save;
@@ -1285,9 +1269,54 @@ Appex = {
                                 Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
                             }                  
                         }     
-                    })
+                    });
                 }
-            })
+            });
         }     
     }
+    // GetPointsVal: function(points_type,student_id,cr_id){           
+    //     var period = $('.period_value').attr('data-att');
+    //     if(period == 'undefined' || period == '' || period == 'x'){
+    //         Appex.Notifier('warning','Warning','build','top right','Please select period first!');
+    //     }else{
+    //         $("."+points_type+"").on('click',function(e){
+    //             $(this).attr('readonly',false);
+                
+    //         });
+    
+    //         $("."+points_type+"").one('blur',function(e){
+    //             var save;
+    //             var points;
+    //             var class_type = $(this).attr('class').split(' ')[1];
+    //             var points = $(this).val();
+                
+    //             if(class_type == 'oral_value'){
+    //                 save    = 'SaveOral';
+    //             }else if(class_type == 'exam_value'){
+    //                 save    = 'SaveExam';
+    //             }else if(class_type == 'quiz_value'){
+    //                 save    = 'SaveQuiz';
+    //             }
+                
+    //             $(this).attr('readonly',true);
+    //             var FormVal = 'action='+save+'&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;
+                 
+    //             if(points != ''){           
+    //                 $.ajax({
+    //                     type:'POST',
+    //                     cache: false,
+    //                     url: '../cabinet/exec.php',
+    //                     data: FormVal,
+    //                     success: function(e){
+    //                         if(e == 'Saved'){
+    //                             Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly submitted!');
+    //                         }else if(e == 'Updated'){
+    //                             Appex.Notifier('success','Data Saved','../..','top right','Data Successfuly updated!');
+    //                         }                  
+    //                     }     
+    //                 });
+    //             }
+    //         });
+    //     }     
+    // }
 }
