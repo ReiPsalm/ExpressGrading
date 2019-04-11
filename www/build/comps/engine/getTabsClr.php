@@ -1,9 +1,9 @@
 <?php
 include_once "../engine/loader.php";
 $sepData = explode("-",$_GET['dataid']);
-$Exams->studid = $Orals->studid = $quizzes->studid = $sepData[0];
-$Exams->crid = $Orals->crid = $quizzes->crid = $sepData[1];
-$getqData = $quizzes->GetQuizStud();
+$Exams->studid = $Orals->studid = $Quiz->studid = $sepData[0];
+$Exams->crid = $Orals->crid = $Quiz->crid = $sepData[1];
+$getqData = $Quiz->GetQuizStud();
 $getoData = $Orals->GetOralStud();
 $getxData = $Exams->GetExamStud();
 ?>
