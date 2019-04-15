@@ -58,16 +58,91 @@ $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 
 // Add some data
 echo date('H:i:s') , " Add some data" , EOL;
-$ML = $objPHPExcel->setActiveSheetIndex();
-$ML->setCellValue('A1', 'STUDENT ID');
-$ML->setCellValue('B1', 'STUDENT NAME');
+$CL = $objPHPExcel->setActiveSheetIndex();
+$CL->setCellValue('A1', 'STUDENT ID');
+$CL->setCellValue('B1', 'STUDENT NAME');
+$CL->setCellValue('C1', 'TOTAL Q, A, O');
+$CL->setCellValue('D1', 'ITEMS 50-110');
+$CL->setCellValue('E1', 'MID 40%');
+$CL->setCellValue('F1', 'PRELIM');
+$CL->setCellValue('G1', 'PRELIM FOR 50-110');
 $i=2;
+
+// $str = file_get_contents('TrTable.json');
+// $json = json_decode($str, true);
+// echo print_r($json, true), EOL;
+// echo $json['TPS70'][0]['score'], EOL;
+$index=0;
+$midval = 0.4;
+$str = file_get_contents('TrTable.json');
+$json = json_decode($str, true);
+//Fetch students
 while($rows = $getStud->fetchArray(SQLITE3_ASSOC)){
     $sClass = explode(",",$rows['stud_classes']);
     foreach($sClass as $clr){
         if($clr == $row['cr_id']){
-            $ML->setCellValue('A'.$i, $rows["stud_id"]);
-            $ML->setCellValue('B'.$i, $rows["stud_name"]);
+            $CL->setCellValue('A'.$i, $rows["stud_id"]);
+            $CL->setCellValue('B'.$i, $rows["stud_name"]);
+        }
+    }
+    /*Prelim and midterm calculations*/
+    //Total Q,A,O
+    $getAtt = $GradeCalc->GetQAO('attendance','att',$rows["stud_id"],'Prelim','Midterm',$_GET['dataID']);
+    while($rowAtt = $getAtt->fetchArray(SQLITE3_ASSOC)){
+        $getQz = $GradeCalc->GetQAO('quizes','quiz',$rows["stud_id"],'Prelim','Midterm',$_GET['dataID']);
+        while($rowQz = $getQz->fetchArray(SQLITE3_ASSOC)){
+            $getOr = $GradeCalc->GetQAO('orals','oral',$rows["stud_id"],'Prelim','Midterm',$_GET['dataID']);
+            while($rowOr = $getOr->fetchArray(SQLITE3_ASSOC)){
+                $totalQAO = $rowAtt['PtSum'] + $rowQz['PtSum'] + $rowOr['PtSum'];
+                //total items Q,A,O
+                // $totalPfpoints = ($rowAtt['PtCount'] * 5) + ($rowQz['PtCount'] * 10) + ($rowOr['PtCount'] * 10);
+                $totalPfpoints = 80; // to be set on the class record creation *add tbl on DB and input on form*
+                if($totalQAO != ''){
+                    $CL->setCellValue('C'.$i, $totalQAO);
+                }else{
+                    $CL->setCellValue('C'.$i, '0');
+                }
+                echo $rows["stud_id"].'-'.$totalQAO, EOL;
+            }
+
+            /*for items 50-110*/
+            if($totalQAO == 0){
+                $CL->setCellValue('D'.$i, '65%');
+                $CL->setCellValue('E'.$i, (floatval('65%') * $midval).'%');
+            }else if($totalQAO != 0){
+                // echo date('H:i:s').'=' , count($json['TPS50']), EOL;
+                while($index != count($json['TPS'.$totalPfpoints])){
+                    if(is_numeric($json['TPS'.$totalPfpoints][$index]['score'])){
+                        if($totalQAO == $json['TPS'.$totalPfpoints][$index]['score']){
+                            $CL->setCellValue('D'.$i, $json['TPS'.$totalPfpoints][$index]['rating']);
+                            $CL->setCellValue('E'.$i, (floatval($json['TPS'.$totalPfpoints][$index]['rating']) * $midval).'%');
+                            // echo date('H:i:s').'RAW'.$totalQAO.'TPS:' , $json['TPS'.$totalPfpoints][$index]['score'], EOL;
+                        }
+                        // echo date('H:i:s').'==' , $json['TPS'.$totalPfpoints][$index]['score'].' is numeric', EOL;
+                    }else{
+                        $rangeval = explode("-",$json['TPS'.$totalPfpoints][$index]['score']);
+                        if(($totalQAO >= $rangeval[0]) && ($totalQAO <= $rangeval[1])){
+                            $CL->setCellValue('D'.$i, $json['TPS'.$totalPfpoints][$index]['rating']);
+                            $CL->setCellValue('E'.$i, (floatval($json['TPS'.$totalPfpoints][$index]['rating']) * $midval).'%');
+                            // echo date('H:i:s').'RAW'.$totalQAO.'TPS:' , $json['TPS'.$totalPfpoints][$index]['score'], EOL;
+                        }
+                        // echo date('H:i:s').'==' , $json['TPS'.$totalPfpoints][$index]['score'].' is string', EOL;
+                    }
+                    $index++;
+                }
+            }
+            
+            //Prelim Exam
+            $getPExam = $GradeCalc->GetExam($rows["stud_id"],'Prelim',$_GET['dataID']);
+            while($rowEx = $getPExam->fetchArray(SQLITE3_ASSOC)){
+                //Prelim points
+                $Extotalpoints = 50; // to be set on the class record creation *add tbl on DB and input on form*
+                if($rowEx['Expoints'] != ''){
+                    $CL->setCellValue('F'.$i, $rowEx['Expoints']);
+                }else{
+                    $CL->setCellValue('F'.$i, '0');
+                }
+            }
         }
     }
     ++$i;
@@ -83,7 +158,7 @@ $objPHPExcel->setActiveSheetIndex(0);
 // Freeze third column
 $objPHPExcel->getActiveSheet()->freezePane('C1');
 //Set auto width on column A & B
-foreach(range('A','B') as $columnID){
+foreach(range('A','Z') as $columnID){
     $objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 }
 

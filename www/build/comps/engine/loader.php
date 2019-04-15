@@ -19,4 +19,5 @@ $Orals      = new OralsMod($coms);
 $Exams      = new ExamsMod($coms);
 $Attendance = new AttendanceMod($coms);
 $tbljoins   = new TblJoinsMod($coms);
+$GradeCalc  = new GradeCalc($coms);
 ?>

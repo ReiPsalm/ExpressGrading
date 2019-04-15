@@ -88,7 +88,7 @@ if(!isset($_SESSION['user_id'])){
 						<option value ="Prelim">Prelim</option>
 						<option value ="Midterm">Midterm</option>
 						<option value ="Semi">Semi</option>
-						<option value ="Finals">Finals</option>
+						<option value ="Final">Finals</option>
                     </select>
 				</div>
 				<div class="panel-body">

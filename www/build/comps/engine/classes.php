@@ -855,6 +855,43 @@ class ExamsMod{
     }   
 }
 
+class GradeCalc{
+    private $conn;
+
+    public function __construct($db_get){
+        $this->conn = $db_get;
+    }
+
+    public function GetQAO($tbl,$col,$studid,$pfrom,$pto,$crid){
+        try{
+            // $sqlGetQAO = "SELECT * FROM tbl_".$tbl." WHERE stud_id='".$studid."'";
+            $sqlGetQAO = "SELECT COUNT(".$col."_points) as PtCount, SUM(".$col."_points) as PtSum,".$col."_period ";
+            $sqlGetQAO .= "FROM tbl_".$tbl." WHERE stud_id='".$studid."' ";
+            $sqlGetQAO .= "AND (".$col."_period='".$pfrom."' OR ".$col."_period='".$pto."' AND (cr_id='".$crid."'))";
+            $resGetQAO = $this->conn->query($sqlGetQAO);
+
+            return $resGetQAO;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function GetExam($studid,$experiod,$crid){
+        try{
+            $sqlGetExam = "SELECT SUM(exam_points) as Expoints FROM tbl_exams ";
+            $sqlGetExam .= "WHERE stud_id='".$studid."' ";
+            $sqlGetExam .= "AND (exam_period='".$experiod."' AND cr_id='".$crid."')";
+            $resGetExam = $this->conn->query($sqlGetExam);
+
+            return $resGetExam;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    
+}
+
 class TblJoinsMod{
     private $conn;
 
