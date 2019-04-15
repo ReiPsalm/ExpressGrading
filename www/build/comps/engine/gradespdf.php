@@ -42,11 +42,11 @@ define('EOL',(PHP_SAPI == 'cli') ? PHP_EOL : '<br />');
 require_once 'PHPExcel-1.8/Classes/PHPExcel.php';
 
 // Create new PHPExcel object
-echo date('H:i:s') , " Create new PHPExcel object" , EOL;
+// echo date('H:i:s') , " Create new PHPExcel object" , EOL;
 $objPHPExcel = new PHPExcel();
 
 // Set document properties
-echo date('H:i:s') , " Set document properties" , EOL;
+// echo date('H:i:s') , " Set document properties" , EOL;
 $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 							 ->setLastModifiedBy("Maarten Balliauw")
 							 ->setTitle("PHPExcel Test Document")
@@ -57,7 +57,7 @@ $objPHPExcel->getProperties()->setCreator("Maarten Balliauw")
 
 
 // Add some data
-echo date('H:i:s') , " Add some data" , EOL;
+// echo date('H:i:s') , " Add some data" , EOL;
 $CL = $objPHPExcel->setActiveSheetIndex();
 $CL->setCellValue('A1', 'STUDENT ID');
 $CL->setCellValue('B1', 'STUDENT NAME');
@@ -402,7 +402,7 @@ while($rows = $getStud->fetchArray(SQLITE3_ASSOC)){
                 $CL->setCellValue('W'.$i, $MD40 + ($MDavr * 0.6).'%');
                 $CL->setCellValue('Y'.$i, round((($MD40 + ($MDavr * 0.6)) / 3) * 2).'%');
                 $CL->setCellValue('Z'.$i, $Xval + round((($MD40 + ($MDavr * 0.6)) / 3) * 2).'%');
-                $MidGrade = round($MD40 + ($MDavr * 0.6));
+                $MidGrade = $Xval + round((($MD40 + ($MDavr * 0.6)) / 3) * 2);
                 while($Midgx != count($json['GSF'])){
                     if($MidGrade == $json['GSF'][$Midgx]['PG']){
                         $CL->setCellValue('AA'.$i, $json['GSF'][$Midgx]['EQ']);
@@ -418,7 +418,7 @@ while($rows = $getStud->fetchArray(SQLITE3_ASSOC)){
 }
 
 // Rename worksheet
-echo date('H:i:s') , " Rename worksheet" , EOL;
+// echo date('H:i:s') , " Rename worksheet" , EOL;
 $objPHPExcel->getActiveSheet()->setTitle($row['Sec_desc']);
 
 
@@ -437,7 +437,7 @@ foreach(range('AA','ZZ') as $columnID){
 
 
 // Save Excel 2007 file
-echo date('H:i:s') , " Write to Excel2007 format" , EOL;
+// echo date('H:i:s') , " Write to Excel2007 format" , EOL;
 $callStartTime = microtime(true);
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
@@ -446,17 +446,20 @@ $objWriter->save('C:/Users/user/Downloads/'.$row['subj_desc'].'('.$row['Sec_desc
 $callEndTime = microtime(true);
 $callTime = $callEndTime - $callStartTime;
 
-echo date('H:i:s') , " File written to " , str_replace('.php', '.xlsx', pathinfo(__FILE__, PATHINFO_BASENAME)) , EOL;
-echo 'Call time to write Workbook was ' , sprintf('%.4f',$callTime) , " seconds" , EOL;
-// Echo memory usage
-echo date('H:i:s') , ' Current memory usage: ' , (memory_get_usage(true) / 1024 / 1024) , " MB" , EOL;
+// echo date('H:i:s') , " File written to " , str_replace('.php', '.xlsx', pathinfo(__FILE__, PATHINFO_BASENAME)) , EOL;
+// echo 'Call time to write Workbook was ' , sprintf('%.4f',$callTime) , " seconds" , EOL;
+// // Echo memory usage
+// echo date('H:i:s') , ' Current memory usage: ' , (memory_get_usage(true) / 1024 / 1024) , " MB" , EOL;
 
 
-// Echo memory peak usage
-echo date('H:i:s') , " Peak memory usage: " , (memory_get_peak_usage(true) / 1024 / 1024) , " MB" , EOL;
+// // Echo memory peak usage
+// echo date('H:i:s') , " Peak memory usage: " , (memory_get_peak_usage(true) / 1024 / 1024) , " MB" , EOL;
 
-// Echo done
-echo date('H:i:s') , " Done writing files" , EOL;
+// // Echo done
+// echo date('H:i:s') , " Done writing files" , EOL;
 // echo 'Files have been created in ' , getcwd() , EOL;
+
+
+echo "1";
 
 ?>

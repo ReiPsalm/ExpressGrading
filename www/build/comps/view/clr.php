@@ -78,9 +78,12 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<div class="panel-heading-btn">
-						<a href="../engine/gradespdf.php?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
+						<!-- <a href="../engine/gradespdf.php?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
 							<i class="fa fa-file" ></i> Export Class record
-						</a>
+						</a> -->
+						<button value="<?php echo $_GET['dataid']?>" onclick="Appex.ExportCLR(this.value)" class="btn btn-xs btn-info">
+							<i class="fa fa-file" ></i> Export Class record
+						</button>
 					</div>
 					<h4 class="panel-title">Class Record for:</h4>
                     <select name="cr_period" id="cr_period" class="form-control btn-primary">

@@ -218,6 +218,21 @@ Appex = {
         });
     
     },
+    ExportCLR: function(dataID){
+        $.ajax({
+            type:'POST',
+            data:dataID,
+            cache:false,
+            url:'../engine/gradespdf.php?dataID='+dataID,
+            success: function(data){
+                if(data == "1"){
+                    Appex.Notifier('success','Data Export Complete','../..','top right','Class record Exported!');
+                }else{
+                    Appex.Notifier('error','Data Not Complete','../..','top right','Class record not exported, please try again!');
+                }
+            }
+        });
+    },
     /**
     * DT for class record "HAAAYS SAMMYGONG YOUR LOGICAL SKILLS IS GOING DOWN :( "
     * NOTE: nag labad pa ako head saon to populate the columns base on dynamic json data... :3
