@@ -78,10 +78,10 @@ if(!isset($_SESSION['user_id'])){
 			<div class="panel panel-inverse">
 				<div class="panel-heading">
 					<div class="panel-heading-btn">
-						<!-- <a href="../engine/gradespdf.php?dataID=<?php echo $_GET['dataid']?>" class="btn btn-xs btn-info">
-							<i class="fa fa-file" ></i> Export Class record
-						</a> -->
-						<button value="<?php echo $_GET['dataid']?>" onclick="Appex.ExportCLR(this.value)" class="btn btn-xs btn-info">
+						<button value="<?php echo $_GET['dataid']?>" onclick="Appex.ExportCLR(this.value,'FinalGr')" class="btn btn-xs btn-success">
+							<i class="fa fa-file" ></i> Export Final Grade
+						</button>
+						<button value="<?php echo $_GET['dataid']?>" onclick="Appex.ExportCLR(this.value,'FullGr')" class="btn btn-xs btn-info">
 							<i class="fa fa-file" ></i> Export Class record
 						</button>
 					</div>

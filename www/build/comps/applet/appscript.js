@@ -218,12 +218,12 @@ Appex = {
         });
     
     },
-    ExportCLR: function(dataID){
+    ExportCLR: function(dataID,dataGr){
         $.ajax({
             type:'POST',
-            data:dataID,
+            data:'dataID='+dataID+'&Grinfo='+dataGr,
             cache:false,
-            url:'../engine/gradespdf.php?dataID='+dataID,
+            url:'../engine/gradespdf.php',
             success: function(data){
                 if(data == "1"){
                     Appex.Notifier('success','Data Export Complete','../..','top right','Class record Exported!');
