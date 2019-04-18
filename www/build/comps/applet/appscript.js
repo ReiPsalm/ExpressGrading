@@ -1128,13 +1128,97 @@ Appex = {
             /*end swal*/
         });
     },
+    GetCurrSY: function(){
+        // console.log(curSy);
+        $('#data-table').dataTable().fnClearTable();
+        $("#data-table").dataTable().fnDestroy();
+
+        clientTableData = $('#data-table').DataTable({
+            responsive: false,
+            bAutoWidth:false,
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/getClassdb.php",
+            "sAjaxDataProp": "",
+            "iDisplayLength": 5,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "Data_A", sDefaultContent: ""},
+                { "mData": "Data_B", sDefaultContent: ""},
+                { "mData": "Data_C", sDefaultContent: ""},
+                { "mData": "Data_D", sDefaultContent: ""},
+                { "mData": "Data_E", sDefaultContent: ""},
+                { "mData": "Data_F", sDefaultContent: ""},
+                { sDefaultContent: "" ,
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<button value="'+oData.DataID+'" onclick="Appex.MoveArchive(this.value)" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Archive</button> ');
+                    }
+                },
+            ]
+        });
+    },
+    MoveArchive: function(dataID){
+        swal({
+            title: "Are you sure?",
+            text: "Archived data will only have a lifespan of only 90 days!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, Move to Archive",
+            cancelButtonText: "No, cancel pls!",
+            closeOnConfirm: true,
+            closeOnCancel: false
+        },
+        function(isConfirm){
+            if (isConfirm) {
+                $.ajax({
+                    type:'POST',
+                    data:'action=clArchive&crid='+dataID,
+                    cache:false,
+                    url:'../cabinet/exec.php',
+                    success: function(data){
+                        if(data == "1"){
+                            Appex.Notifier('success','Data Saved','../..','top right','Data move to Archive!');
+                            Appex.GetCurrSY();
+                        }else{
+                            Appex.Notifier('error','Data Not Saved','../..','top right','Data move failed, please try again!');
+                        }
+                    }
+                });
+            }else{
+                $("#exp_modalb").modal("hide");
+                $('#ExpEditform').trigger('reset');
+                swal("Cancelled", "You cancelled your action.", "error");
+            }
+        });
+        /*end swal*/
+    },
     GetDataCLr: function(clrID){
         window.location.href = "clr.php?dataid="+clrID;
     },
     GetAttendanceVal: function(points,student_id,cr_id){
         var period = $('#cr_period').val();
         if(period == 'undefined' || period == '' || period == 'x' ||period == null){
-            Appex.Notifier('warning','Warning','build','top right','Please select period first!');
+            Appex.Notifier('warning','Warning','../..','top right','Please select period first!');
             $('.period_value').find('option:eq(0)').prop('selected', true);
         }else{
             var FormVal = 'action=SaveAtt&points='+points+'&student_id='+student_id+'&period='+period+'&cr_id='+cr_id;

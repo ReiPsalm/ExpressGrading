@@ -624,8 +624,8 @@ class ClrecordMod{
     public function AddCLr(){
         try{
             $sqlAddCLr = "INSERT INTO tbl_classlist ";
-            $sqlAddCLr .= "(cr_term,cr_sy,cr_timeDay,subj_id,sch_id,dean_id) VALUES ";
-            $sqlAddCLr .= "('".$this->term."','".$this->sy."','".$this->timeDay."','".$this->subjid."','".$this->schid."','".$this->mcldean."')";
+            $sqlAddCLr .= "(cr_term,cr_sy,cr_arch,cr_archdate,cr_timeDay,subj_id,sch_id,dean_id) VALUES ";
+            $sqlAddCLr .= "('".$this->term."','".$this->sy."','0','x','".$this->timeDay."','".$this->subjid."','".$this->schid."','".$this->mcldean."')";
             if($this->conn->exec($sqlAddCLr)){
                 return true;
             }else{
@@ -636,11 +636,13 @@ class ClrecordMod{
         }
     }
 
-    public function GetClr(){
+    public function GetClr($crstat){
         try{
             $sqlGetClr = "SELECT * FROM tbl_classlist ";
-            $sqlGetClr .= "INNER JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
-            $sqlGetClr .= "INNER JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id";
+            $sqlGetClr .= "LEFT JOIN tbl_subject ON tbl_classlist.subj_id=tbl_subject.subj_id ";
+            $sqlGetClr .= "LEFT JOIN tbl_school ON tbl_classlist.sch_id=tbl_school.sch_id ";
+            $sqlGetClr .= "LEFT JOIN tbl_section ON tbl_subject.Sec_id=tbl_section.Sec_id ";
+            $sqlGetClr .= "WHERE cr_arch='".$crstat."'";
             $resGetClr = $this->conn->query($sqlGetClr);
 
             return $resGetClr;
@@ -697,6 +699,34 @@ class ClrecordMod{
             $sqlEditClr .= "WHERE cr_id='".$this->clrid."'";
 
             if($this->conn->exec($sqlEditClr)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function AcrhiveClr($crid,$archdate){
+        try{
+            $sqlAcrhiveClr = "UPDATE tbl_classlist SET cr_arch='1',cr_archdate='".$archdate."' WHERE cr_id='".$crid."'";
+            
+            if($this->conn->exec($sqlAcrhiveClr)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function ArchDel($crid){
+        try{
+            $sqlArchDel = "DELETE FROM tbl_classlist WHERE cr_id='".$crid."'";
+
+            if($this->conn->exec($sqlArchDel)){
                 return true;
             }else{
                 return false;

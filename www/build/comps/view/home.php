@@ -27,9 +27,17 @@ if(!isset($_SESSION['user_id'])){
 	<link href="../../library/css/style.min.css" rel="stylesheet" />
 	<link href="../../library/css/style-responsive.min.css" rel="stylesheet" />
 	<link href="../../library/css/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- Lobibox return messages -->
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/demo/demo.css"/>
+    <link rel="stylesheet" href="../../library/plugins/lobibox-master/dist/css/lobibox.min.css"/>
+
+	<link href="../../library/plugins/sweetalert-master/dist/sweetalert.css" rel="stylesheet">
 	<!-- ================== END BASE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
+	<link href="../../library/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" rel="stylesheet" />
+	<link href="../../library/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" rel="stylesheet" />
 	<script src="../../library/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
@@ -103,13 +111,32 @@ if(!isset($_SESSION['user_id'])){
 			
 			<div class="panel panel-inverse">
 			    <div class="panel-heading">
-			        <div class="panel-heading-btn">
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-			            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-			        </div>
-			        <h4 class="panel-title">Active Classes</h4>
+			        <h4 class="panel-title">Current Active Class record</h4>
+			    </div>
+			    <div class="panel-body">
+					<table id="data-table" class="table table-striped table-bordered">
+						<thead>
+						<tr>
+							<th>Class ID</th>
+							<th>School year</th>
+							<th>Term</th>
+							<th>Subject</th>
+							<th>Section</th>
+							<th>Time/Day</th>
+							<th>School</th>
+							<th>Action</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+			    </div>
+			</div>
+
+			<div class="panel panel-inverse">
+			    <div class="panel-heading">
+			        <h4 class="panel-title">Student Statistical Outcome</h4>
 			    </div>
 			    <div class="panel-body">
 			        Panel Content Here
@@ -140,17 +167,30 @@ if(!isset($_SESSION['user_id'])){
 		<script src="assets/crossbrowserjs/respond.min.js"></script>
 		<script src="assets/crossbrowserjs/excanvas.min.js"></script>
 	<![endif]-->
+	<script src="../../library/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../../library/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="../../library/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
 	<script src="../../library/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="../../library/plugins/jquery-cookie/jquery.cookie.js"></script>
+	<script src="../applet/appscript.js"></script>
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="../../library/js/apps.min.js"></script>
+	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>
+	<script src="../../library/plugins/lobibox-master/demo/demo.js"></script>
+	<script src="../../library/plugins/sweetalert-master/dist/sweetalert-dev.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 	
 	<script>
 		$(document).ready(function() {
 			App.init();
+			Appex.GetCurrSY();
 		});
 	</script>
 </body>

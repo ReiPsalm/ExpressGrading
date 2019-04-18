@@ -416,6 +416,16 @@ if($_POST['action'] == "login"){
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
     }
+}else if($_POST['action'] == "clArchive"){
+    try{
+        if ($classR->AcrhiveClr($_POST['crid'],date("Y-m-d"))) {
+            echo "1";
+        }else{
+            echo "0";
+        }
+    }catch(PDOException $e){
+        echo 'Connection Error :'.$e->getMessage();
+    }
 }else{
     echo "6";
 }
