@@ -104,6 +104,7 @@ if(!isset($_SESSION['user_id'])){
 							<th>Oral</th>
 							<th>Quiz</th>
 							<th>Exam</th>
+							<th>Action</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -120,11 +121,10 @@ if(!isset($_SESSION['user_id'])){
             <div class="modal-dialog">
                 <div class="modal-content">
 					<ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile">
-						<li class="active"><a href="#default-tab-1" data-toggle="tab"><i class="fa fa-calendar"></i> Attendance</a></li>
-						<li class=""><a href="#default-tab-2" data-toggle="tab"><i class="fa fa-edit"></i> Quizzes</a></li>
-						<li class=""><a href="#default-tab-3" data-toggle="tab"><i class="fa fa-child"></i> Orals</a></li>
-						<li class=""><a href="#default-tab-4" data-toggle="tab"><i class="fa fa-tag"></i> Exams</a></li>
-						<li class=""><a href="#default-tab-5" data-toggle="tab"><i class="fa fa-subscript"></i> Periodicals</a></li>
+						<li class="active"><a href="#default-tab-1" data-toggle="tab"><i class="fa fa-edit"></i> Quizzes</a></li>
+						<li class=""><a href="#default-tab-2" data-toggle="tab"><i class="fa fa-child"></i> Orals</a></li>
+						<li class=""><a href="#default-tab-3" data-toggle="tab"><i class="fa fa-tag"></i> Exams</a></li>
+						<li class=""><a href="#default-tab-4" data-toggle="tab"><i class="fa fa-subscript"></i> Periodicals</a></li>
 					</ul>
 					<div class="tab-content" id="studTabs">
 						

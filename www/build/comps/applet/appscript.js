@@ -354,6 +354,11 @@ Appex = {
                         $(nTd).html('<input type="text" class="form-control exam_value period_value" onfocus="Appex.GetPointsVal('+"'exam_value'"+','+oData.DataID+','+dataID+')" placeholder="Click here" data-att="undefined" readonly>');
                     }
                 },
+                {sDefaultContent: "",
+                    "fnCreatedCell": function (nTd, sData, oData) {
+                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Record</button></div>');
+                    }
+                }
             ]
         });
 
