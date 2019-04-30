@@ -329,14 +329,9 @@ Appex = {
                 { "mData": "Data_A", sDefaultContent: ""},
                 { sDefaultContent: "" ,
                     "fnCreatedCell": function (nTd, sData, oData) {
-                        // $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs attendance_value" onchange="Appex.GetAttendanceVal(this.value,'+oData.DataID+','+dataID+')" data-att="undefined">'+
-                        //             '<option class="btn btn-success" value="x" disabled selected>Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
-                        //             '</select></div>'+
-                        //             '<div class="btn-group m-r-5 m-b-5"><button value="'+oData.DataID+'" onclick="Appex.GetDataSets(\''+oData.DataID+'-'+dataID+'\',\'getTabsClr\',\'studTabs\')" href="#exp_modalr" data-toggle="modal" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View Student Record</button></div>');
-
-                        $(nTd).html('<div class="btn-group m-r-5 m-b-5"><select class="btn btn-success btn-xs period_value" onchange="Appex.GetAttendanceVal(this.value,'+oData.DataID+','+dataID+')" data-att="undefined">'+
-                                    '<option class="btn btn-success" value="x" disabled selected>Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
-                                    '</select></div>');
+                        $(nTd).html('<select class="btn btn-block btn-success btn-xs period_value" onchange="Appex.GetAttendanceVal(this.value,'+oData.DataID+','+dataID+')" data-att="undefined">'+
+                        '<option class="btn btn-success" value="x" disabled selected>Attendance</option><option value="5">Present</option><option value="0">Absent</option><option value="3">Excused</option>'+
+                        '</select>');
                     }
                 },
                 {sDefaultContent: "",
@@ -362,6 +357,56 @@ Appex = {
             ]
         });
 
+    },
+    SeTupCLRec: function(jsonSource){
+        // $('#data-table-stud').dataTable().fnClearTable();
+        // $("#data-table-stud").dataTable().fnDestroy();
+        clientTableData = $('#data-table-stud').DataTable({
+            responsive: true,
+            bAutoWidth: true,
+
+            "fnServerData": function ( sSource, aoData, fnCallback, oSettings ) {
+                oSettings.jqXHR = $.ajax( {
+                    "dataType": 'json',
+                    "type": "GET",
+                    "url": sSource,
+                    "cache": false,
+                    "data": aoData,
+                    "success": function (data) {
+                        clientList = data;
+                        console.log(clientList);
+                        fnCallback(clientList);
+                    }
+                });
+            },
+
+            "sAjaxSource": "../engine/"+jsonSource+".php",
+            "sAjaxDataProp": "",
+            "iDisplayLength": 10,
+            "scrollCollapse": false,
+            "paging": true,
+            "searching": true,
+            "ordering": false,
+            "columns": [
+
+                { "mData": "DataID", sDefaultContent: ""},
+                { "mData": "Data_A", sDefaultContent: ""},
+                { "mData": "Data_B", sDefaultContent: ""}
+            ]
+        });
+
+    },
+    TblRecUpdate: function(recType,dataVal,tbldata,dID){
+        var FormVal = 'action=UpdateRecord&rtype='+recType+'&dataVal='+dataVal+'&tbldata='+tbldata+'&dID='+dID
+        $.ajax({
+            type:'POST',
+            data:FormVal,
+            cache:false,
+            url:'../cabinet/exec.php',
+            success: function(data){
+                console.log(data);
+            }
+        });
     },
     SortStudent: function(){
         $('#sortdt').click(function (e) {

@@ -104,7 +104,7 @@ if(!isset($_SESSION['user_id'])){
 							<th>Oral</th>
 							<th>Quiz</th>
 							<th>Exam</th>
-							<th>Action</th>
+							<th>Record</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -119,16 +119,10 @@ if(!isset($_SESSION['user_id'])){
 		<!-- #modal-dialog -->
         <div class="modal fade" id="exp_modalr">
             <div class="modal-dialog">
-                <div class="modal-content">
-					<ul class="nav nav-tabs nav-tabs-inverse nav-justified nav-justified-mobile">
-						<li class="active"><a href="#default-tab-1" data-toggle="tab"><i class="fa fa-edit"></i> Quizzes</a></li>
-						<li class=""><a href="#default-tab-2" data-toggle="tab"><i class="fa fa-child"></i> Orals</a></li>
-						<li class=""><a href="#default-tab-3" data-toggle="tab"><i class="fa fa-tag"></i> Exams</a></li>
-						<li class=""><a href="#default-tab-4" data-toggle="tab"><i class="fa fa-subscript"></i> Periodicals</a></li>
-					</ul>
-					<div class="tab-content" id="studTabs">
-						
+                <div class="modal-content" >
+					<div id="studTabs">
 					</div>
+                    <!-- end panel -->
                 </div>
             </div>
         </div>
@@ -171,6 +165,7 @@ if(!isset($_SESSION['user_id'])){
 	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="../../library/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 	<script src="../../library/js/apps.min.js"></script>
+	<script src="../../library/plugins/select2/dist/js/select2.min.js"></script>
 	<script src="../applet/appscript.js"></script>
 	<!-- Modal alerts -->
 	<script src="../../library/plugins/lobibox-master/js/lobibox.js"></script>

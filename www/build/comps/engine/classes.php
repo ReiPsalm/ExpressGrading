@@ -579,9 +579,9 @@ class SubjMod{
         }
     }
 
-    public function GetSetSubj(){
+    public function GetSetSubj($subjid){
         try{
-            $sqlGetSetSubj = "SELECT * FROM tbl_subject WHERE subj_id='".$this->subjid."'";
+            $sqlGetSetSubj = "SELECT * FROM tbl_subject WHERE subj_id='".$subjid."'";
             $resGetSetSubj = $this->conn->query($sqlGetSetSubj);
 
             return $resGetSetSubj;
@@ -770,12 +770,23 @@ class QuizMod{
         }
     }
 
-    public function UpdateQuizStud(){
+    public function GetQzRecord($studid,$clrid){
         try{
-            $sqlUpdateQuiz = "UPDATE tbl_quizes SET  ";
-            $sqlUpdateQuiz .= "quiz_points='".$this->points."'";
-            $sqlUpdateQuiz .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND quiz_date ='".$this->quiz_date."'";
-            if($this->conn->exec($sqlUpdateQuiz)){
+            $sqlGetQzRecord = "SELECT * FROM tbl_quizes WHERE stud_id='".$studid."' AND cr_id='".$clrid."'";
+            $resGetQzRecord = $this->conn->query($sqlGetQzRecord);
+
+            return $resGetQzRecord;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function UpdateQuizStud($qz_tbl,$qz_data,$qz_id){
+        try{
+            $sqlUpdateQuizStud = "UPDATE tbl_quizes SET ";
+            $sqlUpdateQuizStud .= "quiz_".$qz_tbl."='".$qz_data."' ";
+            $sqlUpdateQuizStud .= "WHERE quiz_id='".$qz_id."'";
+            if($this->conn->exec($sqlUpdateQuizStud)){
                 return true;
             }else{
                 return false;
@@ -820,12 +831,23 @@ class OralsMod{
         }
     }
 
-    public function UpdateOralStud(){
+    public function GetOrRecord($studid,$clrid){
         try{
-            $sqlUpdateOral = "UPDATE tbl_orals SET  ";
-            $sqlUpdateOral .= "oral_points='".$this->points."'";
-            $sqlUpdateOral .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND oral_date ='".$this->oral_date."' AND oral_period='".$this->period."'";
-            if($this->conn->exec($sqlUpdateOral)){
+            $sqlGetOrRecord = "SELECT * FROM tbl_orals WHERE stud_id='".$studid."' AND cr_id='".$clrid."'";
+            $resGetOrRecord = $this->conn->query($sqlGetOrRecord);
+
+            return $resGetOrRecord;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+
+    public function UpdateOralStud($or_tbl,$or_data,$or_id){
+        try{
+            $sqlUpdateOralStud = "UPDATE tbl_orals SET ";
+            $sqlUpdateOralStud .= "oral_".$or_tbl."='".$or_data."' ";
+            $sqlUpdateOralStud .= "WHERE quiz_id='".$or_id."'";
+            if($this->conn->exec($sqlUpdateOralStud)){
                 return true;
             }else{
                 return false;
@@ -869,12 +891,23 @@ class ExamsMod{
         }
     }
 
-    public function UpdateExamStud(){
+    public function GetExRecord($studid,$clrid){
         try{
-            $sqlUpdateExam = "UPDATE tbl_exams SET  ";
-            $sqlUpdateExam .= "exam_points='".$this->points."'";
-            $sqlUpdateExam .= "WHERE stud_id='".$this->student_id."' AND cr_id='".$this->cr_id."' AND exam_date ='".$this->exam_date."'";
-            if($this->conn->exec($sqlUpdateExam)){
+            $sqlGetExRecord= "SELECT * FROM tbl_exams WHERE stud_id='".$studid."' AND cr_id='".$clrid."'";
+            $resGetExRecord = $this->conn->query($sqlGetExRecord);
+
+            return $resGetExRecord;
+        }catch (PDOException $e){
+            echo "Connection Error: ". $e->getMessage();
+        }
+    }
+    
+    public function UpdateExamStud($ex_tbl,$ex_data,$ex_id){
+        try{
+            $sqlUpdateExamStud = "UPDATE tbl_orals SET ";
+            $sqlUpdateExamStud .= "oral_".$ex_tbl."='".$ex_data."' ";
+            $sqlUpdateExamStud .= "WHERE quiz_id='".$ex_id."'";
+            if($this->conn->exec($sqlUpdateExamStud)){
                 return true;
             }else{
                 return false;
@@ -882,7 +915,7 @@ class ExamsMod{
         }catch (PDOException $e){
             echo "Connection Error: ". $e->getMessage();
         }
-    }   
+    }
 }
 
 class GradeCalc{

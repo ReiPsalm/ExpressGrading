@@ -69,7 +69,7 @@ if(!isset($_SESSION['user_id'])){
 					<div class="widget widget-stats bg-red">
 						<div class="stats-icon"><i class="fa fa-thumbs-down"></i></div>
 						<div class="stats-info">
-							<h4>FAILING STUDENTS</h4>
+							<h4>TARDY STUDENTS</h4>
 							<p>10</p>	
 						</div>
 						<div class="stats-link">
@@ -83,7 +83,7 @@ if(!isset($_SESSION['user_id'])){
 					<div class="widget widget-stats bg-orange">
 						<div class="stats-icon"><i class="fa fa-warning"></i></div>
 						<div class="stats-info">
-							<h4>WARNING STUDENTS</h4>
+							<h4>MEDIOCRE STUDENTS</h4>
 							<p>5</p>	
 						</div>
 						<div class="stats-link">
@@ -139,11 +139,30 @@ if(!isset($_SESSION['user_id'])){
 			        <h4 class="panel-title">Student Statistical Outcome</h4>
 			    </div>
 			    <div class="panel-body">
-			        Panel Content Here
+					<table id="data-table-stud" class="table table-striped table-bordered">
+						<thead>
+						<tr>
+							<th>Student ID</th>
+							<th>Student Name</th>
+							<th>Subjects</th>
+						</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
 			    </div>
 			</div>
 		</div>
 		<!-- end #content -->
+
+		<!-- #modal-dialog -->
+        <div class="modal fade" id="exp_modal">
+            <div class="modal-dialog">
+                <div class="modal-content" id="TabStat">
+                </div>
+            </div>
+        </div>
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
@@ -191,6 +210,7 @@ if(!isset($_SESSION['user_id'])){
 		$(document).ready(function() {
 			App.init();
 			Appex.GetCurrSY();
+			Appex.SeTupCLRec('getDataStat');
 		});
 	</script>
 </body>

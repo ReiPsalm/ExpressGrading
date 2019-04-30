@@ -1,7 +1,7 @@
 <?php
 include_once "../engine/loader.php";
-$subject->subjid = $_GET['dataid'];
-$getData = $subject->GetSetSubj();
+// $subject->subjid = $_GET['dataid'];
+$getData = $subject->GetSetSubj($_GET['dataid']);
 $row = $getData->fetchArray(SQLITE3_ASSOC);
 ?>
 <label class="control-label">Input subject<i class="text text-danger">*</i></label>

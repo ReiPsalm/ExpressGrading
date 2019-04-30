@@ -318,17 +318,11 @@ if($_POST['action'] == "login"){
     $Orals->cr_id      = $_POST['cr_id'];
 
     try{ 
-        if ($Orals->GetOralStud() == 0) {
-            if($Orals->SaveOrals()){
-                if($Attendance->checkAttendance_qoe($Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date) == 0){
-                    $Attendance->saveAttendance_qoe('5',$Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date);
-                }               
-                echo "Saved";
-            }
-        }else if($Orals->GetOralStud() >= 1){          
-            if($Orals->UpdateOralStud()){
-                echo "Updated";
-            }
+        if($Orals->SaveOrals()){
+            if($Attendance->checkAttendance_qoe($Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date) == 0){
+                $Attendance->saveAttendance_qoe('5',$Orals->period,$Orals->student_id,$Orals->cr_id,$Orals->oral_date);
+            }               
+            echo "Saved";
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
@@ -364,17 +358,11 @@ if($_POST['action'] == "login"){
     $Quiz->cr_id      = $_POST['cr_id'];
 
     try{ 
-        if ($Quiz->GetQuizStud() == 0) {
-            if($Quiz->SaveQuiz()){
-                if($Attendance->checkAttendance_qoe($Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date) == 0){
-                    $Attendance->saveAttendance_qoe('5',$Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date);
-                }
-                echo "Saved";
+        if($Quiz->SaveQuiz()){
+            if($Attendance->checkAttendance_qoe($Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date) == 0){
+                $Attendance->saveAttendance_qoe('5',$Quiz->period,$Quiz->student_id,$Quiz->cr_id,$Quiz->quiz_date);
             }
-        }else{          
-            if($Quiz->UpdateQuizStud()){
-                echo "Updated";
-            }
+            echo "Saved";
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
@@ -425,6 +413,40 @@ if($_POST['action'] == "login"){
         }
     }catch(PDOException $e){
         echo 'Connection Error :'.$e->getMessage();
+    }
+}else if($_POST['action'] == "UpdateRecord"){
+    if($_POST['rtype'] == "quiz"){
+        try{
+            if($Quiz->UpdateQuizStud($_POST['tbldata'],$_POST['dataVal'],$_POST['dID'])){
+                echo "Points type Quiz!";
+            }else{
+                echo "Data Cramped!";
+            }
+        }catch(PDOException $e){
+            echo 'Connection Error :'.$e->getMessage();
+        }
+    }else if($_POST['rtype'] == "oral"){
+        try{
+            if($Orals->UpdateOralStud($_POST['tbldata'],$_POST['dataVal'],$_POST['dID'])){
+                echo "Points type Oral!";
+            }else{
+                echo "Data Cramped!";
+            }
+        }catch(PDOException $e){
+            echo 'Connection Error :'.$e->getMessage();
+        }
+    }else if($_POST['rtype'] == "exam"){
+        try{
+            if($Exams->UpdateExamStud($_POST['tbldata'],$_POST['dataVal'],$_POST['dID'])){
+                echo "Points type Exam!";
+            }else{
+                echo "Data Cramped!";
+            }
+        }catch(PDOException $e){
+            echo 'Connection Error :'.$e->getMessage();
+        }
+    }else{
+        echo "Points type undefined!";
     }
 }else{
     echo "6";

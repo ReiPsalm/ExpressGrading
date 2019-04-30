@@ -608,7 +608,7 @@ if($_POST['Grinfo'] == 'FinalGr'){
                     }
                 }
                 
-                //Prelim Exam
+                //Semi Exam
                 $getPExam = $GradeCalc->GetExam($rows["stud_id"],'Semi',$_POST['dataID']);
                 while($rowEx = $getPExam->fetchArray(SQLITE3_ASSOC)){
                     //Prelim points
@@ -644,7 +644,7 @@ if($_POST['Grinfo'] == 'FinalGr'){
                     }
                 }
 
-                //Midterm Exam
+                //Final Exam
                 $getMdEx = $GradeCalc->GetExam($rows["stud_id"],'Final',$_POST['dataID']);
                 while($rowMdEx = $getMdEx->fetchArray(SQLITE3_ASSOC)){
                     $mdix = 0;
