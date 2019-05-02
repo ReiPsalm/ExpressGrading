@@ -36,7 +36,7 @@
             <li><a href="student.php"><i class="fa fa-clipboard"></i> <span>Student List</span></a></li>
             <!-- <li><a href="attendance.php"><i class="fa fa-group"></i> <span>Class Attendance</span></a></li> -->
             <li><a href="classrecord.php"><i class="fa fa-table"></i> <span>Class Record</span></a></li>
-            <li><a href="#"><i class="fa fa-life-ring"></i> <span>Help</span></a></li>
+            <li><a href="help.php"><i class="fa fa-life-ring"></i> <span>Help</span></a></li>
             <!-- begin sidebar minify button -->
             <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->

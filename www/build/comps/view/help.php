@@ -59,71 +59,34 @@ if(!isset($_SESSION['user_id'])){
 		<!-- begin #content -->
 		<div id="content" class="content">
 			<!-- begin page-header -->
-			<h1 class="page-header">Dashboard</h1>
+			<h1 class="page-header">User manual</h1>
 			<!-- end page-header -->
 
 			<!-- begin row -->
 			<div class="row">
 				<!-- begin col-3 -->
-				<div id="badgePF"></div>
+				<div class="col-md-12 m-b-15 text-center">
+                    <img src="../../library/img/logoB.png" height="100" width="90" />
+                    <div class="row">
+                        <h2 class="text-center">Express Grading</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-12 m-b-15 text-left">
+                    <h3>
+                        Welcome to Express Grading!
+                    </h3>
+                    <p>
+                        Thank you for purchasing our product, before setting up the 
+                    </p>
+                    <p>
+                        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. 
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    </p>
+                </div>
 				<!-- end col-3 -->
 			</div>
 			<!-- end row -->
-			
-			<div class="panel panel-inverse">
-			    <div class="panel-heading">
-			        <h4 class="panel-title">Current Active Class record</h4>
-			    </div>
-			    <div class="panel-body">
-					<table id="data-table" class="table table-striped table-bordered">
-						<thead>
-						<tr>
-							<th>Class ID</th>
-							<th>School year</th>
-							<th>Term</th>
-							<th>Subject</th>
-							<th>Section</th>
-							<th>Time/Day</th>
-							<th>School</th>
-							<th>Action</th>
-						</tr>
-						</thead>
-						<tbody>
-
-						</tbody>
-					</table>
-			    </div>
-			</div>
-
-			<div class="panel panel-inverse">
-			    <div class="panel-heading">
-			        <h4 class="panel-title">Student Statistical Outcome</h4>
-			    </div>
-			    <div class="panel-body">
-					<table id="data-table-stud" class="table table-striped table-bordered">
-						<thead>
-						<tr>
-							<th>Student ID</th>
-							<th>Student Name</th>
-							<th>Subjects</th>
-						</tr>
-						</thead>
-						<tbody>
-							
-						</tbody>
-					</table>
-			    </div>
-			</div>
-		</div>
-		<!-- end #content -->
-
-		<!-- #modal-dialog -->
-        <div class="modal fade" id="exp_modal">
-            <div class="modal-dialog">
-                <div class="modal-content" id="TabStat">
-                </div>
-            </div>
-        </div>
 		
 		<!-- begin #footer -->
 		<div id="footer" class="footer">
@@ -171,8 +134,6 @@ if(!isset($_SESSION['user_id'])){
 		$(document).ready(function() {
 			App.init();
 			Appex.GetCurrSY();
-			Appex.SeTupCLRec('getDataStat');
-			Appex.GetDataSets(null,'PFBadgedata','badgePF');
 		});
 	</script>
 </body>
